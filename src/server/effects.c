@@ -1045,7 +1045,8 @@ static int valid_inscription(struct player *p, const char *inscription, int curr
                     (2 == sscanf(inscription, "%d,%d", &grid.x, &grid.y)))
                 {
                     /* Forbid if no wilderness */
-                    if ((cfg_diving_mode > 1) || OPT(p, birth_no_recall))
+                    if ((cfg_diving_mode > 1) || OPT(p, birth_no_recall) ||
+						player_has(p, PF_NO_RECALL))
                     {
                         /* Deactivate recall */
                         memcpy(&p->recall_wpos, &p->wpos, sizeof(struct worldpos));
@@ -5770,7 +5771,8 @@ static bool effect_handler_RECALL(effect_handler_context_t *context)
     context->ident = true;
 
     /* No recall */
-    if (((cfg_diving_mode == 3) || OPT(context->origin->player, birth_no_recall)) &&
+    if (((cfg_diving_mode == 3) || OPT(context->origin->player, birth_no_recall) ||
+		player_has(context->origin->player, PF_NO_RECALL)) &&
         !context->origin->player->total_winner)
     {
         msg(context->origin->player, "Nothing happens.");

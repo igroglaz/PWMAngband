@@ -379,3 +379,10 @@ type:element
 name:Vulnerability
 desc:You are vulnerable to
 value:-1
+
+# etc
+
+type:player
+code:NO_RECALL
+name:No recall
+desc:You can not recall.
