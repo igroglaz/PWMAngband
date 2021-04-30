@@ -1,21 +1,7 @@
-# PWMAngband 1.5.0
+# Tangaria
 
-PWMAngband is a graphical dungeon adventure game that uses textual characters
-to represent the walls and floors of a dungeon and the inhabitants therein,
-in the vein of games like NetHack and Rogue. If you need help in-game,
-press '?'.
+Tangaria – free open-source multiplayer roguelike game loosely based on Tolkien’s lore and powered by [PWMAngband](https://github.com/draconisPW/PWMAngband).
 
-### More Information:
+It combines the complexity and unpredictability of **roguelike genre** and social features of **MMORPG**: kill monsters together with your friends, chat, PvP (on demand), buy a house and open a store to trade your goods with other players… with advanced real-time gameplay – game become semi turn-based when your character is injured.
 
-1. For more information, somewhere to upload your characters and screenshots, and discuss the game, try [Angband Website](http://angband.oook.cz/).
-
-2. If you're compiling the game yourself, check the compiling instructions in the Manual.
-
-3. To get the latest binaries, try [PowerWyrm's Website](https://powerwyrm.monsite-orange.fr/).
-
-4. To get the latest info about Tangar's variant, try [Tangaria's Website](https://tangaria.com/).
-
-
-Enjoy!
-
--- The PWMAngband Wyrms Team
+### Web-site: [https://tangaria.com](https://tangaria.com/)
