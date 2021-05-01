@@ -1,9 +1,4 @@
-# File: pain.txt
-
-
-# This file is used to initialize the monster pain messages for PWMAngband.
-
-# === Understanding pain.txt ===
+# === Understanding pain.txt (monster pain messages) ===
 
 # type: serial number
 # message: message

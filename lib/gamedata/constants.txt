@@ -1,8 +1,4 @@
-# File: constants.txt
-
-
-# This file is used to initialize game constants for PWMAngband.
-
+# === constants.txt initialize game constants ===
 
 #---------------------------------------------------------------------
 # Level Maxima
@@ -23,10 +19,11 @@ mon-gen:chance:500
 mon-gen:level-min:14
 
 # Number of townsfolk generated in the day */
-mon-gen:town-day:4
-
+#4
+mon-gen:town-day:32
+#8
 # Number of townsfolk generated in the night */
-mon-gen:town-night:8
+mon-gen:town-night:64
 
 # Maximum number of breeding monsters allowed on a level
 mon-gen:repro-max:100
@@ -52,7 +49,7 @@ mon-gen:group-dist:5
 mon-play:break-glyph:550
 
 # High value slows multiplication
-mon-play:mult-rate:8
+mon-play:mult-rate:9
 
 # Percent of player exp drained per hit
 mon-play:life-drain:2
@@ -94,10 +91,12 @@ dun-gen:amt-gold:3
 dun-gen:pit-max:2
 
 # Depth where labyrinths start to be generated unlit/unknown/with hard walls
+# eg Maze is 40 depth.
+# if you put 25 that's 25 out of 40 yeah that's high
+# if you put 5 that's 5 out of 40 (1/8 chance)
 dun-gen:lab-depth-lit:25
-dun-gen:lab-depth-known:25
+dun-gen:lab-depth-known:1
 dun-gen:lab-depth-soft:35
-
 
 #---------------------------------------------------------------------
 # Game World
@@ -142,7 +141,7 @@ world:move-energy:100
 #---------------------------------------------------------------------
 
 # Max number of pack slots for carrying inventory
-carry-cap:pack-size:23
+carry-cap:pack-size:24
 
 # Max number of quiver slots for carrying missiles
 carry-cap:quiver-size:8
@@ -172,10 +171,10 @@ store:inven-max:24
 
 # Maximum number of discrete objects in home inventory
 # Note: by default, half of inven-max -- should not be higher than inven-max
-store:home-inven-max:12
+store:home-inven-max:24
 
 # Number of turns between turnovers
-store:turns:250
+store:turns:100
 
 # 1/Chance (per day) of an owner changing
 store:shuffle:25
@@ -190,19 +189,33 @@ store:magic-level:5
 
 # Maximum depth used in object allocation
 obj-make:max-depth:100
+##it means you can get objects from level 0 to 100
+##if for example you reduce it to 50, anything that is greater level than 50
+## would never be generated like deep books or rings of speed or power dsm
 
 # Chance of object being "good"
 # The actual chance is MIN(good-obj + object level, 100)
 obj-make:good-obj:33
+##eg for '33': chance of beign good is 33% in town, 100% after dungeon level 67
+
 
 # Chance of object being "great"
-obj-make:ego-obj:30
+obj-make:ego-obj:15
+##currently any object has % chance flat of becoming ego
+###30->15
 
 # 1/chance of inflating the requested object level
-obj-make:great-obj:20
+obj-make:great-obj:40
+##1/.. chance to get an out of depth item
+## (for example the potion of experience you got at 50ft)
+###20->40
 
 # 1/chance of inflating the requested ego item level
-obj-make:great-ego:20
+obj-make:great-ego:25
+##the chance of getting a better ego
+##armor of resist acid -> low levle, armor of elvenkind = high level
+##so 1/.. chance of getting a higher level ego (out of depth ego)
+###20->25
 
 # Maximum amount of fuel in a torch
 obj-make:fuel-torch:5000

@@ -1,12 +1,3 @@
-# File: town.txt
-
-
-# This file is used to initialize the "town" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # === Understanding town.txt ===
 
 # name : town name
@@ -19,51 +10,294 @@
 # Base town should ALWAYS be the second entry in the list.
 
 
-# Starting town for non-ironman level 1 characters
-name:Hobbiton
-short:Hobbiton
-wpos:-21:20
+############### Tiled got INVERTED _Y_ AXIS!!!
+
+
+name:Hunter's Valley
+# Starting town
+short:0_0
+wpos:0:0
+max-townies:40
+symbol:newbie star
+
+name:Carn Dum
+# Base town containing the main Angband dungeon
+short:Carn
+wpos:-43:43
 max-townies:100
 
-# Base town containing the main Angband dungeon
-name:Carn Dûm
-short:Carn Dûm
-wpos:-9:37
+############################### 0
+
+name:Endless Sea
+# was Lukomorye.. now empty
+short:0_5
+wpos:0:5
+max-townies:20
+
+name:Ice Lands
+# Helcaraxe
+short:0_4
+wpos:0:4
+max-townies:10
+
+name:The North Sea
+##################
+short:0_3
+wpos:0:3
+max-townies:20
+
+name:Deadmen hills
+# Barrow Downs
+short:0_2
+wpos:0:2
+max-townies:10
+#teeth stone
+symbol:obj_grass2 b
+
+name:Farfest
+# TOWN
+short:0_1
+wpos:0:1
 max-townies:100
+#red tower
+symbol:obj_grass2 e
+
+name:Old Forest
+# The Old forest
+short:0_-1
+wpos:0:-1
+max-townies:10
+
+name:Widelands
+# The Land Of Rhun
+short:0_-2
+wpos:0:-2
+max-townies:20
+
+name:Mirkwood
+# Mirkwood
+short:0_-3
+wpos:0:-3
+max-townies:5
+
+name:South Mirkwood
+##################
+short:0_-4
+wpos:0:-4
+max-townies:7
+
+name:Moarih
+# Utumno
+short:0_-5
+wpos:0:-5
+max-townies:11
+
+############################### -1
+
+name:Sea of Bermados
+# The Small Water Cave
+short:-1_3
+wpos:-1:3
+max-townies:5
+
+name:Old manor
+# Abandoned Manor
+short:-1_2
+wpos:-1:2
+max-townies:10
+
+#name:-1_1
+# PLAYER HOUSING
+#short:-1_1
+#wpos:-1:1
+
+name:Mosquito Marshes
+# Fetid Swamps
+short:-1_0
+wpos:-1:0
+max-townies:20
+
+name:Minotaur Thorns
+# The Maze
+short:-1_-1
+wpos:-1:-1
+max-townies:10
+
+name:Ancient Mountains
+# The Heart of the Earth
+short:-1_-2
+wpos:-1:-2
+max-townies:20
+
+name:Lakelands
+# Erebor
+short:-1_-3
+wpos:-1:-3
+max-townies:7
+
+name:Unnamed Lands
+# The Paths of the Dead
+short:-1_-4
+wpos:-1:-4
+max-townies:20
+
+############################### -2
+
+name:Ancient City
+# Numenor
+short:-2_3
+wpos:-2:3
+max-townies:3
+
+name:Worm Beach
+# The Sandworm Lair
+short:-2_2
+wpos:-2:2
+max-townies:10
+
+name:Magery Peninsula
+# The Illusory Castle
+short:-2_1
+wpos:-2:1
+max-townies:10
+
+name:Deadlands
+# Dol Guldur
+short:-2_0
+wpos:-2:0
+max-townies:13
+
+name:Websnout
+# Cirith Ungol
+short:-2_-1
+wpos:-2:-1
+max-townies:3
+
+name:The Straight Road
+###########
+short:-3_0
+wpos:-3:0
+max-townies:5
+
+name:Valinor
+###########
+short:-5_0
+wpos:-5:0
+max-townies:11
+
+############################### 1
+
+name:Iron Mountains
+# The Mines of Moria
+short:1_3
+wpos:1:3
+max-townies:11
+
+name:Old Mines
+# The Orc Mountains
+short:1_2
+wpos:1:2
+max-townies:20
+
+name:Abandoned Outpost
+# The Orc Cave
+short:1_1
+wpos:1:1
+max-townies:15
+# high snowy mountain #3
+symbol:grass mountain y
+
+name:Mountain Gorge
+# The Mountain Gorge
+short:1_0
+wpos:1:0
+max-townies:4
+#high rocky peaks (brown)
+symbol:grass mountain H
+
+name:Cursed Valley
+# Mordor
+short:1_-1
+wpos:1:-1
+max-townies:6
+
+name:River of Fire
+# Mount Doom
+short:1_-2
+wpos:1:-2
+max-townies:6
+
+name:Upper Ashes
+###########
+short:1_-3
+wpos:1:-3
+max-townies:5
+
+name:Damned Ashes
+# Angband
+short:1_-4
+wpos:1:-4
+max-townies:7
+
+name:Sandskull
+###########
+short:1_-5
+wpos:1:-5
+max-townies:10
+
+############################### 2
+
+name:North Sea
+###########
+short:2_3
+wpos:2:3
+max-townies:20
+
+name:Dragon Mountain
+# The Sacred Land Of Mountains
+short:2_2
+wpos:2:2
+max-townies:7
+
+name:Ettendales
+########### Ettenmoors
+short:2_1
+wpos:2:1
+max-townies:7
+
+name:Low Mountans
+###########
+short:2_0
+wpos:2:0
+max-townies:20
+
+###
+
 
 # Bree
-name:Bree
-short:Bree
-wpos:-15:20
-max-townies:100
+#name:Bree
+#wpos:1:0
+
+# Starting town for non-ironman level 1 characters
+# name:Hobbiton
+# wpos:-21:20
+
+# Base town containing the main Angband dungeon
+# name:Carn Dûm
+# wpos:-9:37
 
 # Lothlorien
-name:Lothlorien
-short:Lothlorien
-wpos:0:8
-max-townies:100
+# name:Lothlorien
+# wpos:0:8
 
 # Minas Anor
-name:Minas Anor
-short:Minas Anor
-wpos:10:-16
-max-townies:100
+# name:Minas Anor
+# wpos:10:-16
 
 # Umbar
-name:Umbar
-short:Umbar
-wpos:2:-42
-max-townies:100
+# name:Umbar
+# wpos:2:-42
 
 # Gondolin
-name:Gondolin
-short:Gondolin
-wpos:-31:37
-max-townies:100
-
-# The Brandywine Bridge
-name:The Brandywine Bridge
-short:Brandywine
-wpos:-19:21
-max-townies:10
-symbol:drawbridge
+# name:Gondolin
+# wpos:-31:37

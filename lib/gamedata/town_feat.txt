@@ -1,12 +1,3 @@
-# File: town_feat.txt
-
-
-# This file is used to initialize the "town feats" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # === Understanding town_feat.txt ===
 
 # feat : symbol : special symbol : terrain type
@@ -17,34 +8,3826 @@
 # to distinguish different terrain types that are using the same symbol.
 
 
+###############
+
+#     % w -> L (empty)
+
+
+######################### C w-` empty
+
+###############
+
+
 # fake blank feature
 
 feat: : :unknown grid
 
 # terrain types
 
-feat:.:.:open floor
+#door
+feat:0:0:Tavern
+
 feat:1:1:General Store
 feat:2:2:Armoury
 feat:3:3:Weapon Smiths
 feat:4:4:Temple
 feat:5:5:Alchemy Shop
 feat:6:6:Magic Shop
-feat:9:9:Bookseller
-feat:7:7:Black Market
-feat:B:B:Expensive Black Market
-feat:8:8:Tavern
-feat:#:#:permanent wall
-feat:V:V:water
-feat:@:@:mud
+feat:7:7:Bookseller
+feat:8:8:Black Market
+feat:9:9:Expensive Black Market
+
+#Home NOT WORK
+feat:0:1:Home
+
+feat:>:>:down staircase
+
 feat:C:C:loose dirt
 feat:,:,:packed dirt
-feat:~:~:safe floor
+
+feat:T:T:tree
+feat:t:t:dark tree
+
+feat:.:.:open floor
+feat:#:#:permanent wall
+feat:V:V:water
+#feat:@:@:mud
+feat:,:;:mud
 feat:O:O:street
 feat:-:-:grass
-feat:T:T:tree
 feat:^:^:mountain
-feat:>:>:down staircase
+
 feat:x:x:safe floor
-feat:=:=:drawbridge
-feat:T:D:dark tree
+feat:~:~:safe floor
+
+feat:#:0:illusion wall
+feat:#:1:illusion brick wall
+# short grass tile:
+feat:#:2:training grounds
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# 96 - walls                            0x96:0xBC - web ... next:
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+# :
+feat:_:.:broken door
+feat:%:x:pile of rubble
+feat:%:y:pile of passable rubble
+feat:%:z:magma vein
+feat:%:A:quartz vein
+feat:%:B:magma vein with treasure
+feat:%:C:quartz vein with treasure
+# base lava (red square):
+feat:;:*:lava
+# yellow lattice lave:
+feat:;:~:solid lava
+# feat:%:E:packed dirt <<< feat:,:,:packed dirt
+# feat:%:F:mud         <<< feat:,:;:mud
+feat:%:G:sand
+feat:%:H:ice wall
+# :
+feat:.:;:ash
+# :
+feat:;:&:nether mist
+feat:%:K:dark wall
+feat:%:L:web
+#### new walls:
+feat:%:M:96 wall M
+feat:%:N:96 wall N
+feat:%:O:96 wall O
+feat:%:P:96 wall P
+feat:%:Q:96 wall Q
+feat:%:R:96 wall R
+feat:%:S:96 wall S
+feat:%:T:96 wall T
+feat:%:U:96 wall U
+feat:%:V:96 wall V
+feat:%:W:96 wall W
+feat:%:X:96 wall X
+feat:%:Y:96 wall Y
+feat:%:Z:96 wall Z
+feat:%:~:96 wall ~
+feat:%:`:96 wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# 98 wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:&:0:98 wall 0
+feat:&:1:98 wall 1
+feat:&:2:98 wall 2
+feat:&:3:98 wall 3
+feat:&:4:98 wall 4
+feat:&:5:98 wall 5
+feat:&:6:98 wall 6
+feat:&:7:98 wall 7
+feat:&:8:98 wall 8
+feat:&:9:98 wall 9
+feat:&:a:98 wall a
+feat:&:b:98 wall b
+feat:&:c:98 wall c
+feat:&:d:98 wall d
+#empty:
+feat:&:e:98 wall e
+feat:&:f:98 wall f
+feat:&:g:98 wall g
+feat:&:h:98 wall h
+feat:&:i:98 wall i
+feat:&:j:98 wall j
+feat:&:k:98 wall k
+feat:&:l:98 wall l
+feat:&:m:98 wall m
+feat:&:n:98 wall n
+feat:&:o:98 wall o
+feat:&:p:98 wall p
+feat:&:q:98 wall q
+feat:&:r:98 wall r
+feat:&:s:98 wall s
+feat:&:t:98 wall t
+feat:&:u:98 wall u
+feat:&:v:98 wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# 9D walls
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:=:0:9D wall 0
+feat:=:1:9D wall 1
+feat:=:2:9D wall 2
+feat:=:3:9D wall 3
+feat:=:4:9D wall 4
+feat:=:5:9D wall 5
+feat:=:6:9D wall 6
+feat:=:7:9D wall 7
+feat:=:8:9D wall 8
+feat:=:9:9D wall 9
+feat:=:a:9D wall a
+feat:=:b:9D wall b
+feat:=:c:9D wall c
+feat:=:d:9D wall d
+feat:=:e:9D wall e
+feat:=:f:9D wall f
+feat:=:g:9D wall g
+feat:=:h:9D wall h
+feat:=:i:9D wall i
+feat:=:j:9D wall j
+feat:=:k:9D wall k
+feat:=:l:9D wall l
+feat:=:m:9D wall m
+feat:=:n:9D wall n
+feat:=:o:9D wall o
+feat:=:p:9D wall p
+feat:=:q:9D wall q
+feat:=:r:9D wall r
+feat:=:s:9D wall s
+feat:=:t:9D wall t
+feat:=:u:9D wall u
+feat:=:v:9D wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# 9E NPC
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:@:0:Halbarad, the old ranger
+feat:@:1:Sonya the cat
+feat:@:2:Morinehtar the Wizard
+feat:@:3:Old guard Barry
+feat:@:4:Bob the villager
+feat:@:5:Marta the villager
+feat:@:6:Shtukensia the tavernkeeper
+feat:@:7:Danny the dog
+feat:@:8:Arthur the Archer
+feat:@:9:Deckard Coin
+feat:@:a:Boris the Guard
+feat:@:b:Tom Bombadil
+#####
+feat:@:c:Mr. Underhill
+feat:@:d:Gildor
+feat:@:e:Squint-eyed Southerner
+feat:@:f:Bill Ferny
+feat:@:g:Boromir
+feat:@:h:Barliman
+feat:@:i:Torog
+feat:@:j:Nob, a servant
+feat:@:k:Rose
+#
+feat:@:l:NPC l
+feat:@:m:NPC m
+feat:@:n:NPC n
+feat:@:o:NPC o
+feat:@:p:NPC p
+feat:@:q:NPC q
+feat:@:r:NPC r
+feat:@:s:NPC s
+feat:@:t:NPC t
+feat:@:u:NPC u
+feat:@:v:NPC v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# 9F - misc: stairs, traps..
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+#no need town feat for now
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A1 - trees
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:T:0:tree 0 stump
+feat:T:1:tree 1
+feat:T:2:tree 2 little
+feat:T:3:tree 3
+feat:T:4:tree 4 maple
+feat:T:5:tree 5 maple
+feat:T:6:tree 6 coniferous
+feat:T:7:tree 7 coniferous small
+feat:T:8:tree 8 coniferous
+feat:T:9:tree 9 willow
+feat:T:a:tree a small willow
+feat:T:b:tree b broken log
+feat:T:c:tree c broken log
+feat:T:d:tree d birch
+feat:T:e:tree e linden
+feat:T:f:tree f linden small
+feat:T:g:tree g larch
+feat:T:h:tree h larch small
+feat:T:i:tree i bush
+feat:T:j:tree j gervais
+feat:T:k:tree k gervais small
+feat:T:l:tree l palm
+feat:T:m:tree m palm small
+feat:T:n:tree n dead tree
+feat:T:o:tree o dead tree
+feat:T:p:tree p stump
+feat:T:q:tree q stump
+feat:T:r:tree r branch
+feat:T:s:tree s branch
+feat:T:t:tree t branch
+feat:T:u:tree u branch
+feat:T:v:tree v branch
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A2 - trees
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:T:w:tree w fallen
+feat:T:x:tree x fallen
+feat:T:y:tree y fallen
+feat:T:z:tree z fallen
+feat:T:A:tree A fallen
+feat:T:B:tree B fallen
+feat:T:C:tree C small tree
+feat:T:D:tree D tree
+feat:T:E:tree E tree
+feat:T:F:tree F tree
+feat:T:G:tree G small tree
+#### FURTHER ON: SMALL TREES
+feat:T:H:tree H
+feat:T:I:tree I
+feat:T:J:tree J
+feat:T:K:tree K
+feat:T:L:tree L
+feat:T:M:tree M
+feat:T:N:tree N
+feat:T:O:tree O
+feat:T:P:tree P
+feat:T:Q:tree Q
+feat:T:R:tree R
+feat:T:S:tree S
+#!!!!!!!!!!!!!!!!!!!!!!! t:& is a basic symbol
+feat:T:&:tree T
+#!!!!!!!!!!!!!!!!!!!!!!!
+feat:T:U:tree U
+feat:T:V:tree V
+feat:T:W:tree W
+feat:T:X:tree X
+feat:T:Y:tree Y
+feat:T:Z:tree Z
+feat:T:z:tree ~
+feat:T:`:tree `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A3 - severs
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+feat:%:0:A3 severs 0
+feat:%:1:A3 severs 1
+feat:%:2:A3 severs 2
+feat:%:3:A3 severs 3
+feat:%:4:A3 severs 4
+feat:%:5:A3 severs 5
+feat:%:6:A3 severs 6
+feat:%:7:A3 severs 7
+feat:%:8:A3 severs 8
+feat:%:9:A3 severs 9
+feat:%:a:A3 severs a
+feat:%:b:A3 severs b
+feat:%:c:A3 severs c
+feat:%:d:A3 severs d
+feat:%:e:A3 severs e
+feat:%:f:A3 severs f
+feat:%:g:A3 severs g
+feat:%:h:A3 severs h
+feat:%:i:A3 severs i
+feat:%:j:A3 severs j
+feat:%:k:A3 severs k
+feat:%:l:A3 severs l
+feat:%:m:A3 severs m
+feat:%:n:A3 severs n
+feat:%:o:A3 severs o
+feat:%:p:A3 severs p
+feat:%:q:A3 severs q
+feat:%:r:A3 severs r
+feat:%:s:A3 severs s
+feat:%:t:A3 severs t
+feat:%:u:A3 severs u
+feat:%:v:A3 severs v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A4 - flowers
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+feat:,:0:flower 0 green
+feat:,:1:flower 1 green
+feat:,:2:flower 2 green
+feat:,:3:flower 3 green
+feat:,:4:flower 4 green
+feat:,:5:flower 5 green
+feat:,:6:flower 6 green
+feat:,:7:flower 7 grass
+feat:,:8:flower 8 grass
+feat:,:9:flower 9 grass yellow
+feat:,:a:flower a grass brown
+feat:,:b:flower b orange
+feat:,:c:flower c white
+feat:,:d:flower d orange
+feat:,:e:flower e red
+feat:,:f:flower f violet
+feat:,:g:flower g yellow
+feat:,:h:flower h red
+feat:,:i:flower i white
+feat:,:j:flower j red
+feat:,:k:flower k yellow
+feat:,:l:flower l rose
+feat:,:m:flower m purple
+feat:,:n:flower n orange
+feat:,:o:flower o rose
+feat:,:p:flower p blue
+feat:,:q:flower q rose
+feat:,:r:flower r red
+feat:,:s:flower s rose
+feat:,:t:flower t white
+feat:,:u:flower u red white
+feat:,:v:flower v blue white
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A5 - flowers
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:,:w:flower w rose
+feat:,:x:flower x blue
+feat:,:y:flower y purple
+feat:,:z:flower z blue
+feat:,:A:flower A red
+feat:,:B:flower B orange
+feat:,:C:flower C pink
+feat:,:D:flower D red
+feat:,:E:flower E blue
+feat:,:F:flower F red
+#continue
+feat:,:G:A5 plants G
+feat:,:H:A5 plants H
+feat:,:I:A5 plants I
+feat:,:J:A5 plants J
+#mushrooms:
+feat:,:K:A5 plants K
+feat:,:L:A5 plants L
+#small tree:
+feat:,:M:A5 plants M
+#fir-tree:
+feat:,:N:A5 plants N
+#bush:
+feat:,:O:A5 plants O
+feat:,:P:A5 plants P
+feat:,:Q:A5 plants Q
+feat:,:R:A5 plants R
+feat:,:S:A5 plants S
+feat:,:T:A5 plants T
+feat:,:U:A5 plants U
+feat:,:V:A5 plants V
+feat:,:W:A5 plants W
+feat:,:X:A5 plants X
+feat:,:Y:A5 plants Y
+feat:,:Z:A5 plants Z
+feat:,:~:A5 plants ~
+feat:,:`:A5 plants `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A6 - grass objects
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+feat:::0:obj_grass 0 coffin
+feat:::1:obj_grass 1 skull altar
+feat:::2:obj_grass 2 well
+feat:::3:obj_grass 3 cart
+feat:::4:obj_grass 4 bonfire
+feat:::5:obj_grass 5 skulls pile
+feat:::6:obj_grass 6 grave
+feat:::7:obj_grass 7 bowler fire
+feat:::8:obj_grass 8 old ruins
+feat:::9:obj_grass 9 fountain
+feat:::a:obj_grass a down bowler
+feat:::b:obj_grass b broken chest
+feat:::c:obj_grass c sealed portal
+feat:::d:obj_grass d gravestone
+feat:::e:obj_grass e bone pile
+feat:::f:obj_grass f dog house
+feat:::g:obj_grass g barrel
+feat:::h:obj_grass h graves
+feat:::i:obj_grass i graves
+feat:::j:obj_grass j wagon
+feat:::k:obj_grass k street lamp
+feat:::l:obj_grass l altar
+feat:::m:obj_grass m bowl grass
+feat:::n:obj_grass n hole
+feat:::o:obj_grass o provision
+feat:::p:obj_grass p provision
+feat:::q:obj_grass q provision
+feat:::r:obj_grass r crate
+feat:::s:obj_grass s bench
+feat:::t:obj_grass t provision
+feat:::u:obj_grass u provision
+feat:::v:obj_grass v statue
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A7 - grass objects
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+feat:::w:obj_grass w anvil
+feat:::x:obj_grass x crate
+feat:::y:obj_grass y crates
+feat:::z:obj_grass z barrel
+feat:::A:obj_grass A puddle
+feat:::B:obj_grass B weapon stand
+feat:::C:obj_grass C weapon stand
+feat:::D:obj_grass D weapon stand
+feat:::E:obj_grass E signpost
+feat:::F:obj_grass F signpost
+feat:::G:obj_grass G signpost
+feat:::H:obj_grass H ladder down
+feat:::I:obj_grass I bench
+feat:::J:obj_grass J bench
+feat:::K:obj_grass K puddle
+feat:::L:obj_grass L ruins
+feat:::M:obj_grass M ruins
+feat:::N:obj_grass N ruins
+feat:::O:obj_grass O ruins
+feat:::P:obj_grass P ruins
+feat:::Q:obj_grass Q ruins
+feat:::R:obj_grass R sign
+feat:::S:obj_grass S fence
+feat:::T:obj_grass T fence
+feat:::U:obj_grass U fence
+feat:::V:obj_grass V fence
+feat:::W:obj_grass W fence
+feat:::X:obj_grass X fence left
+feat:::Y:obj_grass Y fence right
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A8 - obj_grass2
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:`:0:obj_grass2 0
+feat:`:1:obj_grass2 1
+feat:`:2:obj_grass2 2
+feat:`:3:obj_grass2 3
+feat:`:4:obj_grass2 4
+feat:`:5:obj_grass2 5
+feat:`:6:obj_grass2 6
+feat:`:7:obj_grass2 7
+feat:`:8:obj_grass2 8
+feat:`:9:obj_grass2 9
+feat:`:a:obj_grass2 a
+feat:`:b:obj_grass2 b
+feat:`:c:obj_grass2 c
+feat:`:d:obj_grass2 d
+feat:`:e:obj_grass2 e
+# old ruins:
+feat:`:f:obj_grass2 f
+feat:`:g:obj_grass2 g
+feat:`:h:obj_grass2 h
+feat:`:i:obj_grass2 i
+feat:`:j:obj_grass2 j
+feat:`:k:obj_grass2 k
+feat:`:l:obj_grass2 l
+feat:`:m:obj_grass2 m
+feat:`:n:obj_grass2 n
+feat:`:o:obj_grass2 o
+# end
+feat:`:p:obj_grass2 p
+feat:`:q:obj_grass2 q
+feat:`:r:obj_grass2 r
+feat:`:s:obj_grass2 s
+feat:`:t:obj_grass2 t
+feat:`:u:obj_grass2 u
+feat:`:v:obj_grass2 v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# A9 - obj_grass2
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:`:w:obj_grass2 w
+feat:`:x:obj_grass2 x
+feat:`:y:obj_grass2 y
+feat:`:z:obj_grass2 z
+feat:`:A:obj_grass2 A
+feat:`:B:obj_grass2 B
+feat:`:C:obj_grass2 C
+# obj_grass2 D
+feat:`:D:A9 dried fountain
+# obj_grass2 E
+feat:`:E::A9 dried well
+# obj_grass2 F
+feat:`:F:A9 stair down leaf
+# obj_grass2 G
+feat:`:G:A9 stair up leaf
+# obj_grass2 H
+feat:`:H:A9 stair down gloomy
+# obj_grass2 I
+feat:`:I:A9 stair up gloomy
+##########################
+feat:`:J:obj_grass2 J
+feat:`:K:obj_grass2 K
+feat:`:L:obj_grass2 L
+feat:`:M:obj_grass2 M
+feat:`:N:obj_grass2 N
+feat:`:O:obj_grass2 O
+feat:`:P:obj_grass2 P
+feat:`:Q:obj_grass2 Q
+feat:`:R:obj_grass2 R
+feat:`:S:obj_grass2 S
+feat:`:T:obj_grass2 T
+feat:`:U:obj_grass2 U
+feat:`:V:obj_grass2 V
+feat:`:W:obj_grass2 W
+feat:`:X:obj_grass2 X
+feat:`:Y:obj_grass2 Y
+feat:`:Z:obj_grass2 Z
+feat:`:z:obj_grass2 ~
+feat:`:`:obj_grass2 `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AA wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:&:w:AA wall w
+feat:&:x:AA wall x
+feat:&:y:AA wall y
+feat:&:z:AA wall z
+feat:&:A:AA wall A
+feat:&:B:AA wall B
+# brown-green walls:
+feat:&:C:AA wall C
+feat:&:D:AA wall D
+feat:&:E:AA wall E
+feat:&:F:AA wall F
+feat:&:G:AA wall G
+feat:&:H:AA wall H
+#
+feat:&:I:AA wall I
+feat:&:J:AA wall J
+feat:&:K:AA wall K
+feat:&:L:AA wall L
+feat:&:M:AA wall M
+feat:&:N:AA wall N
+feat:&:O:AA wall O
+feat:&:P:AA wall P
+feat:&:Q:AA wall Q
+feat:&:R:AA wall R
+feat:&:S:AA wall S
+feat:&:T:AA wall T
+feat:&:U:AA wall U
+feat:&:V:AA wall V
+feat:&:W:AA wall W
+feat:&:X:AA wall X
+feat:&:Y:AA wall Y
+feat:&:Z:AA wall Z
+feat:&:~:AA wall ~
+feat:&:`:AA wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AB - grass mountains
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:^:0:grass mountain 0
+feat:^:1:grass mountain 1
+feat:^:2:grass mountain 2
+feat:^:3:grass mountain 3
+feat:^:4:grass mountain 4
+feat:^:5:grass mountain 5
+feat:^:6:grass mountain 6
+feat:^:7:grass mountain 7
+feat:^:8:grass mountain 8
+feat:^:9:grass mountain 9
+feat:^:a:grass mountain a
+feat:^:b:grass mountain b
+feat:^:c:grass mountain c rocks
+feat:^:d:grass mountain d small rocks
+feat:^:e:grass mountain e rubble
+feat:^:f:grass mountain f passable rubble
+feat:^:g:grass mountain g big rocks
+feat:^:h:grass mountain h moss rubble
+feat:^:i:grass mountain i boulders
+feat:^:j:grass mountain j boulders
+feat:^:k:grass mountain k boulders
+feat:^:l:grass mountain l big boulders
+feat:^:m:grass mountain m rocks
+feat:^:n:grass mountain n rocks
+feat:^:o:grass mountain o rock
+feat:^:p:grass mountain p rocks
+feat:^:q:grass mountain q rock
+feat:^:r:grass mountain r rocks
+feat:^:s:grass mountain s rocks
+feat:^:t:grass mountain t rocks
+feat:^:u:grass mountain u rocks
+feat:^:v:grass mountain v rock
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AC - grass mountains
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:^:w:grass mountain w
+feat:^:x:grass mountain x
+feat:^:y:grass mountain y
+feat:^:z:grass mountain z
+feat:^:A:grass mountain A
+feat:^:B:grass mountain B
+feat:^:C:grass mountain C
+feat:^:D:grass mountain D
+feat:^:E:grass mountain E
+feat:^:F:grass mountain F
+feat:^:G:grass mountain G
+feat:^:H:grass mountain H
+feat:^:I:grass mountain I
+feat:^:J:grass mountain J
+feat:^:K:grass mountain K
+feat:^:L:grass mountain L
+feat:^:M:grass mountain M
+feat:^:N:grass mountain N
+feat:^:O:grass mountain O
+feat:^:P:grass mountain P
+feat:^:Q:grass mountain Q
+feat:^:R:grass mountain R
+feat:^:S:grass mountain S
+feat:^:T:grass mountain T
+feat:^:U:grass mountain U
+feat:^:V:grass mountain V
+feat:^:W:grass mountain W
+feat:^:X:grass mountain X
+feat:^:Y:grass mountain Y
+feat:^:Z:grass mountain Z
+feat:^:z:grass mountain ~
+feat:^:`:grass mountain `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AD - wooden floor object
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:w:0:wood floor 0 bed
+feat:w:1:wood floor 1 bed
+feat:w:2:wood floor 2 cabinet
+feat:w:3:wood floor 3 cabinet
+feat:w:4:wood floor 4 locker
+feat:w:5:wood floor 5 locker
+feat:w:6:wood floor 6 provision
+feat:w:7:wood floor 7 provision
+feat:w:8:wood floor 8 provision
+feat:w:9:wood floor 9 chairs
+feat:w:a:wood floor a chairs
+feat:w:b:wood floor b alchemy table
+feat:w:c:wood floor c alchemy table
+feat:w:d:wood floor d alchemy table
+feat:w:e:wood floor e bookcase
+feat:w:f:wood floor f table
+feat:w:g:wood floor g fireplace
+feat:w:h:wood floor h trapdoor
+feat:w:i:wood floor i throne
+feat:w:j:wood floor j bench
+feat:w:k:wood floor k bench
+feat:w:l:wood floor l provision
+feat:w:m:wood floor m provision
+feat:w:n:wood floor n bookcase
+feat:w:o:wood floor o bookcase
+feat:w:p:wood floor p statue
+feat:w:q:wood floor q crate
+feat:w:r:wood floor r crates
+feat:w:s:wood floor s weapon stand
+feat:w:t:wood floor t weapon stand
+feat:w:u:wood floor u weapon stand
+feat:w:v:wood floor v chest
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AE - wooden floor object
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:w:w:wood floor w candelabra
+feat:w:x:wood floor x candelabra
+# ... other stuff added earlier
+feat:w:y:wood floor y grey cat
+feat:w:z:wood floor z rat
+feat:w:A:wood floor A white cat
+feat:w:B:wood floor B
+feat:w:C:wood floor C
+feat:w:D:wood floor D
+feat:w:E:wood floor E
+feat:w:F:wood floor F
+feat:w:G:wood floor G
+feat:w:H:wood floor H
+feat:w:I:wood floor I
+feat:w:J:wood floor J
+feat:w:K:wood floor K
+feat:w:L:wood floor L
+feat:w:M:wood floor M
+feat:w:N:wood floor N
+feat:w:O:wood floor O
+feat:w:P:wood floor P
+############################
+# END OF AE.... Q - ` is ampty
+############################
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# AF wood floor
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:x:0:AF wood floor 0
+feat:x:1:AF wood floor 1
+feat:x:2:AF wood floor 2
+feat:x:3:AF wood floor 3
+feat:x:4:AF wood floor 4
+feat:x:5:AF wood floor 5
+feat:x:6:AF wood floor 6
+feat:x:7:AF wood floor 7
+feat:x:8:AF wood floor 8
+feat:x:9:AF wood floor 9
+feat:x:a:AF wood floor a
+feat:x:b:AF wood floor b
+feat:x:c:AF wood floor c
+feat:x:d:AF wood floor d
+feat:x:e:AF wood floor e
+feat:x:f:AF wood floor f
+feat:x:g:AF wood floor g
+feat:x:h:AF wood floor h
+feat:x:i:AF wood floor i
+feat:x:j:AF wood floor j
+feat:x:k:AF wood floor k
+feat:x:l:AF wood floor l
+feat:x:m:AF wood floor m
+feat:x:n:AF wood floor n
+feat:x:o:AF wood floor o
+feat:x:p:AF wood floor p
+feat:x:q:AF wood floor q
+feat:x:r:AF wood floor r
+feat:x:s:AF wood floor s
+feat:x:t:AF wood floor t
+feat:x:u:AF wood floor u
+feat:x:v:AF wood floor v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B0 wood floor
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:x:w:B0 wood floor w
+
+
+######## feat:x:x: - safe floor!!!!!!!!!!!!!!!!!!!!!
+feat:x:&:B0 wood floor x
+
+
+feat:x:y:B0 wood floor y
+feat:x:z:B0 wood floor z
+feat:x:A:B0 wood floor A
+feat:x:B:B0 wood floor B
+feat:x:C:B0 wood floor C
+feat:x:D:B0 wood floor D
+feat:x:E:B0 wood floor E
+feat:x:F:B0 wood floor F
+feat:x:G:B0 wood floor G
+feat:x:H:B0 wood floor H
+feat:x:I:B0 wood floor I
+feat:x:J:B0 wood floor J
+feat:x:K:B0 wood floor K
+feat:x:L:B0 wood floor L
+feat:x:M:B0 wood floor M
+feat:x:N:B0 wood floor N
+feat:x:O:B0 wood floor O
+feat:x:P:B0 wood floor P
+feat:x:Q:B0 wood floor Q
+feat:x:R:B0 wood floor R
+feat:x:S:B0 wood floor S
+feat:x:T:B0 wood floor T
+feat:x:U:B0 wood floor U
+feat:x:V:B0 wood floor V
+feat:x:W:B0 wood floor W
+feat:x:X:B0 wood floor X
+feat:x:Y:B0 wood floor Y
+feat:x:Z:B0 wood floor Z
+feat:x:z:B0 wood floor ~
+feat:x:`:B0 wood floor `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B1 - floors
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:.:0:floor 0 grass
+feat:.:1:floor 1 grass
+feat:.:2:floor 2 parquet
+feat:.:3:floor 3 parquet
+feat:.:4:floor 4 dungeon
+feat:.:5:floor 5 marsh
+feat:.:6:floor 6 dry soil
+feat:.:7:floor 7 salty soil
+feat:.:8:floor 8 desert grass
+feat:.:9:floor 9 stony soil
+feat:.:a:floor a watery soil
+feat:.:b:floor b swamp
+feat:.:c:floor c bog
+feat:.:d:floor d hills
+feat:.:e:floor e snow hills
+feat:.:f:floor f ice wall
+feat:.:g:floor g ice
+feat:.:h:floor h ice grass
+feat:.:i:floor i iced soil
+feat:.:j:floor j farm field
+feat:.:k:floor k farm field
+feat:.:l:floor l farm field
+feat:.:m:floor m farm field
+feat:.:n:floor n farm field
+feat:.:o:floor o bridge
+feat:.:p:floor p bridge
+feat:.:q:floor q soil
+feat:.:r:floor r fresh sprouts
+feat:.:s:floor s puddle
+feat:.:t:floor t puddle
+feat:.:u:floor u puddle
+feat:.:v:floor v puddle
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B2 - floors
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:.:w:floor w grass
+feat:.:x:floor x grass
+feat:.:y:floor y grass
+feat:.:z:floor z grass
+feat:.:A:floor A grass
+feat:.:B:floor B grass
+feat:.:C:floor C grass
+feat:.:D:floor D grass
+feat:.:E:floor E grass
+feat:.:F:floor F grass
+feat:.:G:floor G rocks
+feat:.:H:floor H rocks
+feat:.:I:floor I rocks
+feat:.:J:floor J rocks
+feat:.:K:floor K rocks
+feat:.:L:floor L rock
+feat:.:M:floor M rock
+feat:.:N:floor N rock
+feat:.:O:floor O rock
+feat:.:P:floor P rocks
+feat:.:Q:floor Q dirt
+feat:.:R:floor R dirt
+feat:.:S:floor S dirt
+feat:.:T:floor T dirt
+feat:.:U:floor U dirt
+feat:.:V:floor V dirt
+feat:.:W:floor W hills
+feat:.:X:floor X hill
+feat:.:Y:floor Y hill
+feat:.:Z:floor Z lowland
+feat:.:z:floor ~ lowland
+feat:.:`:floor ` lowland
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B3 floors
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:y:0:B3 floors 0
+feat:y:1:B3 floors 1
+feat:y:2:B3 floors 2
+feat:y:3:B3 floors 3
+feat:y:4:B3 floors 4
+feat:y:5:B3 floors 5
+feat:y:6:B3 floors 6
+feat:y:7:B3 floors 7
+feat:y:8:B3 floors 8
+feat:y:9:B3 floors 9
+feat:y:a:B3 floors a
+feat:y:b:B3 floors b
+feat:y:c:B3 floors c
+feat:y:d:B3 floors d
+feat:y:e:B3 floors e
+feat:y:f:B3 floors f
+feat:y:g:B3 floors g
+feat:y:h:B3 floors h
+feat:y:i:B3 floors i
+feat:y:j:B3 floors j
+feat:y:k:B3 floors k
+feat:y:l:B3 floors l
+feat:y:m:B3 floors m
+feat:y:n:B3 floors n
+feat:y:o:B3 floors o
+feat:y:p:B3 floors p
+feat:y:q:B3 floors q
+feat:y:r:B3 floors r
+feat:y:s:B3 floors s
+feat:y:t:B3 floors t
+feat:y:u:B3 floors u
+feat:y:v:B3 floors v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B4 floors
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:y:w:B4 floors w
+feat:y:x:B4 floors x
+feat:y:y:B4 floors y
+feat:y:z:B4 floors z
+feat:y:A:B4 floors A
+feat:y:B:B4 floors B
+feat:y:C:B4 floors C
+feat:y:D:B4 floors D
+feat:y:E:B4 floors E
+feat:y:F:B4 floors F
+feat:y:G:B4 floors G
+feat:y:H:B4 floors H
+feat:y:I:B4 floors I
+feat:y:J:B4 floors J
+feat:y:K:B4 floors K
+#
+feat:y:L:B4 walls L
+feat:y:M:B4 walls M
+feat:y:N:B4 walls N
+feat:y:O:B4 walls O
+feat:y:P:B4 walls P
+feat:y:Q:B4 walls Q
+feat:y:R:B4 walls R
+feat:y:S:B4 walls S
+#
+feat:y:T:B4 floors T
+feat:y:U:B4 floors U
+feat:y:V:B4 floors V
+feat:y:W:B4 floors W
+feat:y:X:B4 floors X
+feat:y:Y:B4 floors Y
+feat:y:Z:B4 floors Z
+feat:y:z:B4 floors ~
+feat:y:`:B4 floors `
+
+##########################################
+### B4 WALLS (same pic as b4 black floors)
+### ------- NO TOWN FEAT ------ (no space)
+#.....####################################
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B5 floors
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:z:0:B5 floors 0
+feat:z:1:B5 floors 1
+feat:z:2:B5 floors 2
+feat:z:3:B5 floors 3
+feat:z:4:B5 floors 4
+feat:z:5:B5 floors 5
+feat:z:6:B5 floors 6
+feat:z:7:B5 floors 7
+feat:z:8:B5 floors 8
+feat:z:9:B5 floors 9
+feat:z:a:B5 floors a
+feat:z:b:B5 floors b
+feat:z:c:B5 floors c
+feat:z:d:B5 floors d
+feat:z:e:B5 floors e
+feat:z:f:B5 floors f
+feat:z:g:B5 floors g
+feat:z:h:B5 floors h
+feat:z:i:B5 floors i
+feat:z:j:B5 floors j
+feat:z:k:B5 floors k
+feat:z:l:B5 floors l
+feat:z:m:B5 floors m
+feat:z:n:B5 floors n
+feat:z:o:B5 floors o
+feat:z:p:B5 floors p
+feat:z:q:B5 floors q
+feat:z:r:B5 floors r
+feat:z:s:B5 floors s
+feat:z:t:B5 floors t
+feat:z:u:B5 floors u
+feat:z:v:B5 floors v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B6 - floors luquid
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:z:w:B6 floors luquid w
+feat:z:x:B6 floors luquid x
+feat:z:y:B6 floors luquid y
+feat:z:z:B6 floors luquid z
+feat:z:A:B6 floors luquid A
+feat:z:B:B6 floors luquid B
+feat:z:C:B6 floors luquid C
+feat:z:D:B6 floors luquid D
+feat:z:E:B6 floors luquid E
+feat:z:F:B6 floors luquid F
+feat:z:G:B6 floors luquid G
+feat:z:H:B6 floors luquid H
+feat:z:I:B6 floors luquid I
+feat:z:J:B6 floors luquid J
+feat:z:K:B6 floors luquid K
+feat:z:L:B6 floors luquid L
+feat:z:M:B6 floors luquid M
+feat:z:N:B6 floors luquid N
+feat:z:O:B6 floors luquid O
+feat:z:P:B6 floors luquid P
+feat:z:Q:B6 floors luquid Q
+feat:z:R:B6 floors luquid R
+feat:z:S:B6 floors luquid S
+feat:z:T:B6 floors luquid T
+feat:z:U:B6 floors luquid U
+feat:z:V:B6 floors luquid V
+feat:z:W:B6 floors luquid W
+feat:z:X:B6 floors luquid X
+feat:z:Y:B6 floors luquid Y
+feat:z:Z:B6 floors luquid Z
+feat:z:~:B6 floors luquid ~
+feat:z:`:B6 floors luquid `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B7 - wooden walls
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:a:0:wooden walls 0 solid
+feat:a:1:wooden walls 1 solid corner
+feat:a:2:wooden walls 2 empty window
+feat:a:3:wooden walls 3 window
+feat:a:4:wooden walls 4 barred window
+feat:a:5:wooden walls 5 door
+feat:a:6:wooden walls 6 door
+feat:a:7:wooden walls 7
+feat:a:8:wooden walls 8
+feat:a:9:wooden walls 9
+feat:a:a:wooden walls a
+feat:a:b:wooden walls b
+feat:a:c:wooden walls c
+feat:a:d:wooden walls d
+feat:a:e:wooden walls e
+feat:a:f:wooden walls f
+feat:a:g:wooden walls g
+feat:a:h:wooden walls h
+feat:a:i:wooden walls i
+feat:a:j:wooden walls j
+feat:a:k:wooden walls k
+feat:a:l:wooden walls l
+feat:a:m:wooden walls m
+feat:a:n:wooden walls n
+feat:a:o:wooden walls o
+feat:a:p:wooden walls p
+feat:a:q:wooden walls q
+feat:a:r:wooden walls r
+feat:a:s:wooden walls s
+feat:a:t:wooden walls t
+feat:a:u:wooden walls u
+feat:a:v:wooden walls v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B8 - wooden walls
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:a:w:wooden walls w
+feat:a:x:wooden walls x
+feat:a:y:wooden walls y
+feat:a:z:wooden walls z
+feat:a:A:wooden walls A
+feat:a:B:wooden walls B
+feat:a:C:wooden walls C
+feat:a:D:wooden walls D
+feat:a:E:wooden walls E
+feat:a:F:wooden walls F
+feat:a:G:wooden walls G
+feat:a:H:wooden walls H
+feat:a:I:wooden walls I
+feat:a:J:wooden walls J
+feat:a:K:wooden walls K
+feat:a:L:wooden walls L
+feat:a:M:wooden walls M
+feat:a:N:wooden walls N
+feat:a:O:wooden walls O
+feat:a:P:wooden walls P
+feat:a:Q:wooden walls Q
+feat:a:R:wooden walls R
+feat:a:S:wooden walls S
+feat:a:T:wooden walls T
+feat:a:U:wooden walls U
+feat:a:V:wooden walls V
+feat:a:W:wooden walls W
+feat:a:X:wooden walls X
+feat:a:Y:wooden walls Y
+feat:a:Z:wooden walls Z
+feat:a:~:wooden walls ~
+feat:a:`:wooden walls `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# B9 - dark wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:b:0:dark wall 0
+feat:b:1:dark wall 1 narrow window
+feat:b:2:dark wall 2 window
+feat:b:3:dark wall 3 candelabra
+feat:b:4:dark wall 4 torch
+feat:b:5:dark wall 5 lamp
+feat:b:6:dark wall 6 niche
+feat:b:7:dark wall 7 swords
+feat:b:8:dark wall 8 shield
+feat:b:9:dark wall 9 statue
+feat:b:a:dark wall a fountain
+feat:b:b:dark wall b portrait
+feat:b:c:dark wall c portrait
+feat:b:d:dark wall d portrait
+feat:b:e:dark wall e portrait
+feat:b:f:dark wall f banner
+feat:b:g:dark wall g banner
+feat:b:h:dark wall h banner
+feat:b:i:dark wall i banner
+feat:b:j:dark wall j banner
+feat:b:k:dark wall k empty window
+feat:b:l:dark wall l window
+feat:b:m:dark wall m barred window
+feat:b:n:dark wall n glass window
+feat:b:o:dark wall o up staircase
+feat:b:p:dark wall p down staircase
+feat:b:q:dark wall q jail window
+feat:b:r:dark wall r prison bars
+feat:b:s:dark wall s
+feat:b:t:dark wall t
+feat:b:u:dark wall u
+feat:b:v:dark wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BA - dark wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:b:w:dark wall w
+feat:b:x:dark wall x
+feat:b:y:dark wall y
+feat:b:z:dark wall z
+feat:b:A:dark wall A
+feat:b:B:dark wall B
+feat:b:C:dark wall C
+feat:b:D:dark wall D
+feat:b:E:dark wall E
+feat:b:F:dark wall F
+feat:b:G:dark wall G
+feat:b:H:dark wall H
+feat:b:I:dark wall I
+feat:b:J:dark wall J
+feat:b:K:dark wall K
+feat:b:L:dark wall L
+feat:b:M:dark wall M
+feat:b:N:dark wall N
+feat:b:O:dark wall O
+feat:b:P:dark wall P
+feat:b:Q:dark wall Q
+feat:b:R:dark wall R
+feat:b:S:dark wall S
+feat:b:T:dark wall T
+feat:b:U:dark wall U
+feat:b:V:dark wall V
+feat:b:W:dark wall W
+feat:b:X:dark wall X
+feat:b:Y:dark wall Y
+feat:b:Z:dark wall Z
+feat:b:~:dark wall ~
+feat:b:`:dark wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BB - big white wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:c:0:big white wall 0
+feat:c:1:big white wall 1 emtpy window
+feat:c:2:big white wall 2 barred window
+feat:c:3:big white wall 3 window
+feat:c:4:big white wall 4 door
+feat:c:5:big white wall 5
+feat:c:6:big white wall 6
+feat:c:7:big white wall 7
+feat:c:8:big white wall 8
+feat:c:9:big white wall 9
+feat:c:a:big white wall a
+feat:c:b:big white wall b
+feat:c:c:big white wall c
+feat:c:d:big white wall d
+feat:c:e:big white wall e
+feat:c:f:big white wall f
+feat:c:g:big white wall g
+feat:c:h:big white wall h
+feat:c:i:big white wall i
+feat:c:j:big white wall j
+feat:c:k:big white wall k
+feat:c:l:big white wall l
+feat:c:m:big white wall m
+feat:c:n:big white wall n
+feat:c:o:big white wall o
+feat:c:p:big white wall p
+feat:c:q:big white wall q
+feat:c:r:big white wall r
+feat:c:s:big white wall s
+feat:c:t:big white wall t
+feat:c:u:big white wall u
+feat:c:v:big white wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BC - big white wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:c:w:big white wall w
+feat:c:x:big white wall x
+feat:c:y:big white wall y
+feat:c:z:big white wall z
+feat:c:A:big white wall A
+feat:c:B:big white wall B
+feat:c:C:big white wall C
+feat:c:D:big white wall D
+feat:c:E:big white wall E
+feat:c:F:big white wall F
+feat:c:G:big white wall G
+feat:c:H:big white wall H
+feat:c:I:big white wall I
+feat:c:J:big white wall J
+feat:c:K:big white wall K
+feat:c:L:big white wall L
+feat:c:M:big white wall M
+feat:c:N:big white wall N
+feat:c:O:big white wall O
+feat:c:P:big white wall P
+feat:c:Q:big white wall Q
+feat:c:R:big white wall R
+feat:c:S:big white wall S
+feat:c:T:big white wall T
+feat:c:U:big white wall U
+feat:c:V:big white wall V
+feat:c:W:big white wall W
+feat:c:X:big white wall X
+feat:c:Y:big white wall Y
+feat:c:Z:big white wall Z
+feat:c:~:big white wall ~
+feat:c:`:big white wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BD - big dark wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:d:0:big dark wall 0
+feat:d:1:big dark wall 1
+feat:d:2:big dark wall 2 window
+feat:d:3:big dark wall 3 empty window
+feat:d:4:big dark wall 4 barred window
+feat:d:5:big dark wall 5 door
+feat:d:6:big dark wall 6 doorway
+feat:d:7:big dark wall 7 door
+feat:d:8:big dark wall 8 doorway
+feat:d:9:big dark wall 9 entrance
+feat:d:a:big dark wall a low entrance
+feat:d:b:big dark wall b window
+feat:d:c:big dark wall c
+feat:d:d:big dark wall d
+feat:d:e:big dark wall e
+feat:d:f:big dark wall f
+feat:d:g:big dark wall g
+feat:d:h:big dark wall h
+feat:d:i:big dark wall i
+feat:d:j:big dark wall j
+feat:d:k:big dark wall k
+feat:d:l:big dark wall l
+feat:d:m:big dark wall m
+feat:d:n:big dark wall n
+feat:d:o:big dark wall o
+feat:d:p:big dark wall p
+feat:d:q:big dark wall q
+feat:d:r:big dark wall r
+feat:d:s:big dark wall s
+feat:d:t:big dark wall t
+feat:d:u:big dark wall u
+feat:d:v:big dark wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BE - big dark wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:d:w:big dark wall w
+feat:d:x:big dark wall x
+feat:d:y:big dark wall y
+feat:d:z:big dark wall z
+feat:d:A:big dark wall A
+feat:d:B:big dark wall B
+feat:d:C:big dark wall C
+feat:d:D:big dark wall D
+feat:d:E:big dark wall E
+feat:d:F:big dark wall F
+feat:d:G:big dark wall G
+feat:d:H:big dark wall H
+feat:d:I:big dark wall I
+feat:d:J:big dark wall J
+feat:d:K:big dark wall K
+feat:d:L:big dark wall L
+feat:d:M:big dark wall M
+feat:d:N:big dark wall N
+feat:d:O:big dark wall O
+feat:d:P:big dark wall P
+feat:d:Q:big dark wall Q
+feat:d:R:big dark wall R
+feat:d:S:big dark wall S
+feat:d:T:big dark wall T
+feat:d:U:big dark wall U
+feat:d:V:big dark wall V
+feat:d:W:big dark wall W
+feat:d:X:big dark wall X
+feat:d:Y:big dark wall Y
+feat:d:Z:big dark wall Z
+feat:d:~:big dark wall ~
+feat:d:`:big dark wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# BF - brick wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:e:0:brick wall 0
+feat:e:1:brick wall 1 window
+feat:e:2:brick wall 2 empty window
+feat:e:3:brick wall 3 barred window
+feat:e:4:brick wall 4 door
+feat:e:5:brick wall 5
+feat:e:6:brick wall 6
+feat:e:7:brick wall 7
+feat:e:8:brick wall 8
+feat:e:9:brick wall 9
+feat:e:a:brick wall a
+feat:e:b:brick wall b
+feat:e:c:brick wall c
+feat:e:d:brick wall d
+feat:e:e:brick wall e
+feat:e:f:brick wall f
+feat:e:g:brick wall g
+feat:e:h:brick wall h
+feat:e:i:brick wall i
+feat:e:j:brick wall j
+feat:e:k:brick wall k
+feat:e:l:brick wall l
+feat:e:m:brick wall m
+feat:e:n:brick wall n
+feat:e:o:brick wall o
+feat:e:p:brick wall p
+feat:e:q:brick wall q
+feat:e:r:brick wall r
+feat:e:s:brick wall s
+feat:e:t:brick wall t
+feat:e:u:brick wall u
+feat:e:v:brick wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C0 - brick wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:e:w:brick wall w
+feat:e:x:brick wall x
+feat:e:y:brick wall y
+feat:e:z:brick wall z
+feat:e:A:brick wall A
+feat:e:B:brick wall B
+feat:e:C:brick wall C
+feat:e:D:brick wall D
+feat:e:E:brick wall E
+feat:e:F:brick wall F
+feat:e:G:brick wall G
+feat:e:H:brick wall H
+feat:e:I:brick wall I
+feat:e:J:brick wall J
+feat:e:K:brick wall K
+feat:e:L:brick wall L
+feat:e:M:brick wall M
+feat:e:N:brick wall N
+feat:e:O:brick wall O
+feat:e:P:brick wall P
+feat:e:Q:brick wall Q
+feat:e:R:brick wall R
+feat:e:S:brick wall S
+feat:e:T:brick wall T
+feat:e:U:brick wall U
+feat:e:V:brick wall V
+feat:e:W:brick wall W
+feat:e:X:brick wall X
+feat:e:Y:brick wall Y
+feat:e:Z:brick wall Z
+feat:e:~:brick wall ~
+feat:e:`:brick wall `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C1 - coast
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:f:0:coast 0
+feat:f:1:coast 1
+feat:f:2:coast 2
+feat:f:3:coast 3
+feat:f:4:coast 4
+feat:f:5:coast 5
+feat:f:6:coast 6
+feat:f:7:coast 7
+feat:f:8:coast 8
+feat:f:9:coast 9
+feat:f:a:coast a
+feat:f:b:coast b
+feat:f:c:coast c
+feat:f:d:coast d
+feat:f:e:coast e
+feat:f:f:coast f
+feat:f:g:coast g
+feat:f:h:coast h
+feat:f:i:coast i
+feat:f:j:coast j
+feat:f:k:coast k
+feat:f:l:coast l
+feat:f:m:coast m
+feat:f:n:coast n
+feat:f:o:coast o
+feat:f:p:coast p
+feat:f:q:coast q
+feat:f:r:coast r
+feat:f:s:coast s
+feat:f:t:coast t
+feat:f:u:coast u
+feat:f:v:coast v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C2 - coast
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:f:w:coast w
+feat:f:x:coast x
+feat:f:y:coast y
+feat:f:z:coast z
+feat:f:A:coast A
+feat:f:B:coast B
+feat:f:C:coast C
+feat:f:D:coast D
+feat:f:E:coast E
+feat:f:F:coast F
+feat:f:G:coast G
+feat:f:H:coast H
+feat:f:I:coast I
+feat:f:J:coast J
+feat:f:K:coast K
+feat:f:L:coast L
+feat:f:M:coast M
+feat:f:N:coast N
+feat:f:O:coast O
+feat:f:P:coast P
+feat:f:Q:coast Q
+feat:f:R:coast R
+feat:f:S:coast S
+feat:f:T:coast T
+feat:f:U:coast U
+feat:f:V:coast V
+feat:f:W:coast W
+feat:f:X:coast X
+feat:f:Y:coast Y
+feat:f:Z:coast Z
+feat:f:~:coast ~
+feat:f:`:coast `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C3 - coast_
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:g:0:coast_ 0
+feat:g:1:coast_ 1
+feat:g:2:coast_ 2
+feat:g:3:coast_ 3
+feat:g:4:coast_ 4
+feat:g:5:coast_ 5
+feat:g:6:coast_ 6
+feat:g:7:coast_ 7
+feat:g:8:coast_ 8
+feat:g:9:coast_ 9
+feat:g:a:coast_ a
+feat:g:b:coast_ b
+feat:g:c:coast_ c
+feat:g:d:coast_ d
+feat:g:e:coast_ e
+feat:g:f:coast_ f
+feat:g:g:coast_ g
+feat:g:h:coast_ h
+feat:g:i:coast_ i
+feat:g:j:coast_ j
+feat:g:k:coast_ k
+feat:g:l:coast_ l
+feat:g:m:coast_ m
+feat:g:n:coast_ n
+feat:g:o:coast_ o
+feat:g:p:coast_ p
+feat:g:q:coast_ q
+feat:g:r:coast_ r
+feat:g:s:coast_ s
+feat:g:t:coast_ t
+feat:g:u:coast_ u
+feat:g:v:coast_ v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C4 - coast_
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:g:w:coast_ w
+feat:g:x:coast_ x
+feat:g:y:coast_ y
+feat:g:z:coast_ z
+feat:g:A:coast_ A
+feat:g:B:coast_ B
+feat:g:C:coast_ C
+feat:g:D:coast_ D
+feat:g:E:coast_ E
+feat:g:F:coast_ F
+feat:g:G:coast_ G
+feat:g:H:coast_ H
+feat:g:I:coast_ I
+feat:g:J:coast_ J
+feat:g:K:coast_ K
+feat:g:L:coast_ L
+feat:g:M:coast_ M
+feat:g:N:coast_ N
+feat:g:O:coast_ O
+feat:g:P:coast_ P
+feat:g:Q:coast_ Q
+feat:g:R:coast_ R
+feat:g:S:coast_ S
+feat:g:T:coast_ T
+feat:g:U:coast_ U
+feat:g:V:coast_ V
+feat:g:W:coast_ W
+feat:g:X:coast_ X
+feat:g:Y:coast_ Y
+feat:g:Z:coast_ Z
+feat:g:~:coast_ ~
+feat:g:`:coast_ `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C5 - road
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:h:0:road 0
+feat:h:1:road 1
+feat:h:2:road 2
+feat:h:3:road 3
+feat:h:4:road 4
+feat:h:5:road 5
+feat:h:6:road 6
+feat:h:7:road 7
+feat:h:8:road 8
+feat:h:9:road 9
+feat:h:a:road a
+feat:h:b:road b
+feat:h:c:road c
+feat:h:d:road d
+feat:h:e:road e
+feat:h:f:road f
+feat:h:g:road g
+feat:h:h:road h
+feat:h:i:road i
+feat:h:j:road j
+feat:h:k:road k
+feat:h:l:road l
+feat:h:m:road m
+feat:h:n:road n
+feat:h:o:road o
+feat:h:p:road p
+feat:h:q:road q
+feat:h:r:road r
+feat:h:s:road s
+feat:h:t:road t
+feat:h:u:road u
+feat:h:v:road v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C6 - road
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:h:w:road w
+feat:h:x:road x
+feat:h:y:road y
+feat:h:z:road z
+feat:h:A:road A
+feat:h:B:road B
+feat:h:C:road C
+feat:h:D:road D
+feat:h:E:road E
+feat:h:F:road F
+feat:h:G:road G
+feat:h:H:road H
+feat:h:I:road I
+feat:h:J:road J
+feat:h:K:road K
+feat:h:L:road L
+feat:h:M:road M
+feat:h:N:road N
+feat:h:O:road O
+feat:h:P:road P
+feat:h:Q:road Q
+feat:h:R:road R
+feat:h:S:road S
+feat:h:T:road T
+feat:h:U:road U
+feat:h:V:road V
+feat:h:W:road W
+feat:h:X:road X
+feat:h:Y:road Y
+feat:h:Z:road Z
+feat:h:~:road ~
+feat:h:`:road `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C7 - road_
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:i:0:road_ 0
+feat:i:1:road_ 1
+feat:i:2:road_ 2
+feat:i:3:road_ 3
+feat:i:4:road_ 4
+feat:i:5:road_ 5
+feat:i:6:road_ 6
+feat:i:7:road_ 7
+feat:i:8:road_ 8
+feat:i:9:road_ 9
+feat:i:a:road_ a
+feat:i:b:road_ b
+feat:i:c:road_ c
+feat:i:d:road_ d
+feat:i:e:road_ e
+feat:i:f:road_ f
+feat:i:g:road_ g
+feat:i:h:road_ h
+feat:i:i:road_ i
+feat:i:j:road_ j
+feat:i:k:road_ k
+feat:i:l:road_ l
+feat:i:m:road_ m
+feat:i:n:road_ n
+feat:i:o:road_ o
+feat:i:p:road_ p
+feat:i:q:road_ q
+feat:i:r:road_ r
+feat:i:s:road_ s
+feat:i:t:road_ t
+feat:i:u:road_ u
+feat:i:v:road_ v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C8 - road_
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:i:w:road_ w
+feat:i:x:road_ x
+feat:i:y:road_ y
+feat:i:z:road_ z
+feat:i:A:road_ A
+feat:i:B:road_ B
+feat:i:C:road_ C
+feat:i:D:road_ D
+feat:i:E:road_ E
+feat:i:F:road_ F
+feat:i:G:road_ G
+feat:i:H:road_ H
+feat:i:I:road_ I
+feat:i:J:road_ J
+feat:i:K:road_ K
+feat:i:L:road_ L
+feat:i:M:road_ M
+feat:i:N:road_ N
+feat:i:O:road_ O
+feat:i:P:road_ P
+feat:i:Q:road_ Q
+feat:i:R:road_ R
+feat:i:S:road_ S
+feat:i:T:road_ T
+feat:i:U:road_ U
+feat:i:V:road_ V
+feat:i:W:road_ W
+feat:i:X:road_ X
+feat:i:Y:road_ Y
+feat:i:Z:road_ Z
+feat:i:~:road_ ~
+feat:i:`:road_ `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# C9 earth j
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:j:0:C9 earth 0
+feat:j:1:C9 earth 1
+feat:j:2:C9 earth 2
+feat:j:3:C9 earth 3
+feat:j:4:C9 earth 4
+feat:j:5:C9 earth 5
+feat:j:6:C9 earth 6
+feat:j:7:C9 earth 7
+feat:j:8:C9 earth 8
+feat:j:9:C9 earth 9
+feat:j:a:C9 earth a
+feat:j:b:C9 earth b
+feat:j:c:C9 earth c
+feat:j:d:C9 earth d
+feat:j:e:C9 earth e
+feat:j:f:C9 earth f
+feat:j:g:C9 earth g
+feat:j:h:C9 earth h
+feat:j:i:C9 earth i
+feat:j:j:C9 earth j
+feat:j:k:C9 earth k
+feat:j:l:C9 earth l
+feat:j:m:C9 earth m
+feat:j:n:C9 earth n
+feat:j:o:C9 earth o
+feat:j:p:C9 earth p
+feat:j:q:C9 earth q
+feat:j:r:C9 earth r
+feat:j:s:C9 earth s
+feat:j:t:C9 earth t
+feat:j:u:C9 earth u
+feat:j:v:C9 earth v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CA earth j
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:j:w:CA earth w
+feat:j:x:CA earth x
+feat:j:y:CA earth y
+feat:j:z:CA earth z
+feat:j:A:CA earth A
+feat:j:B:CA earth B
+feat:j:C:CA earth C
+feat:j:D:CA earth D
+feat:j:E:CA earth E
+feat:j:F:CA earth F
+feat:j:G:CA earth G
+feat:j:H:CA earth H
+feat:j:I:CA earth I
+feat:j:J:CA earth J
+feat:j:K:CA earth K
+feat:j:L:CA earth L
+feat:j:M:CA earth M
+feat:j:N:CA earth N
+feat:j:O:CA earth O
+feat:j:P:CA earth P
+feat:j:Q:CA earth Q
+feat:j:R:CA earth R
+feat:j:S:CA earth S
+feat:j:T:CA earth T
+feat:j:U:CA earth U
+feat:j:V:CA earth V
+feat:j:W:CA earth W
+feat:j:X:CA earth X
+feat:j:Y:CA earth Y
+feat:j:Z:CA earth Z
+feat:j:~:CA earth ~
+feat:j:`:CA earth `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CB earth_ k
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:k:0:CB earth_ 0
+feat:k:1:CB earth_ 1
+feat:k:2:CB earth_ 2
+feat:k:3:CB earth_ 3
+feat:k:4:CB earth_ 4
+feat:k:5:CB earth_ 5
+feat:k:6:CB earth_ 6
+feat:k:7:CB earth_ 7
+feat:k:8:CB earth_ 8
+feat:k:9:CB earth_ 9
+feat:k:a:CB earth_ a
+feat:k:b:CB earth_ b
+feat:k:c:CB earth_ c
+feat:k:d:CB earth_ d
+feat:k:e:CB earth_ e
+feat:k:f:CB earth_ f
+feat:k:g:CB earth_ g
+feat:k:h:CB earth_ h
+feat:k:i:CB earth_ i
+feat:k:j:CB earth_ j
+feat:k:k:CB earth_ k
+feat:k:l:CB earth_ l
+feat:k:m:CB earth_ m
+feat:k:n:CB earth_ n
+feat:k:o:CB earth_ o
+feat:k:p:CB earth_ p
+feat:k:q:CB earth_ q
+feat:k:r:CB earth_ r
+feat:k:s:CB earth_ s
+feat:k:t:CB earth_ t
+feat:k:u:CB earth_ u
+feat:k:v:CB earth_ v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CC earth_ k
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:k:w:CC earth_ w
+feat:k:x:CC earth_ x
+feat:k:y:CC earth_ y
+feat:k:z:CC earth_ z
+feat:k:A:CC earth_ A
+feat:k:B:CC earth_ B
+feat:k:C:CC earth_ C
+feat:k:D:CC earth_ D
+feat:k:E:CC earth_ E
+feat:k:F:CC earth_ F
+feat:k:G:CC earth_ G
+feat:k:H:CC earth_ H
+feat:k:I:CC earth_ I
+feat:k:J:CC earth_ J
+feat:k:K:CC earth_ K
+feat:k:L:CC earth_ L
+feat:k:M:CC earth_ M
+feat:k:N:CC earth_ N
+feat:k:O:CC earth_ O
+feat:k:P:CC earth_ P
+feat:k:Q:CC earth_ Q
+feat:k:R:CC earth_ R
+feat:k:S:CC earth_ S
+feat:k:T:CC earth_ T
+feat:k:U:CC earth_ U
+feat:k:V:CC earth_ V
+feat:k:W:CC earth_ W
+feat:k:X:CC earth_ X
+feat:k:Y:CC earth_ Y
+feat:k:Z:CC earth_ Z
+feat:k:~:CC earth_ ~
+feat:k:`:CC earth_ `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CD water l
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:l:0:CD water 0
+feat:l:1:CD water 1
+feat:l:2:CD water 2
+feat:l:3:CD water 3
+feat:l:4:CD water 4
+feat:l:5:CD water 5
+feat:l:6:CD water 6
+feat:l:7:CD water 7
+feat:l:8:CD water 8
+feat:l:9:CD water 9
+feat:l:a:CD water a
+feat:l:b:CD water b
+feat:l:c:CD water c
+feat:l:d:CD water d
+feat:l:e:CD water e
+feat:l:f:CD water f
+feat:l:g:CD water g
+feat:l:h:CD water h
+feat:l:i:CD water i
+feat:l:j:CD water j
+feat:l:k:CD water k
+feat:l:l:CD water l
+feat:l:m:CD water m
+feat:l:n:CD water n
+feat:l:o:CD water o
+feat:l:p:CD water p
+feat:l:q:CD water q
+feat:l:r:CD water r
+feat:l:s:CD water s
+feat:l:t:CD water t
+feat:l:u:CD water u
+feat:l:v:CD water v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CE water l
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:l:w:CE water w
+feat:l:x:CE water x
+feat:l:y:CE water y
+feat:l:z:CE water z
+feat:l:A:CE water A
+feat:l:B:CE water B
+feat:l:C:CE water C
+feat:l:D:CE water D
+feat:l:E:CE water E
+feat:l:F:CE water F
+feat:l:G:CE water G
+feat:l:H:CE water H
+feat:l:I:CE water I
+feat:l:J:CE water J
+feat:l:K:CE water K
+feat:l:L:CE water L
+feat:l:M:CE water M
+feat:l:N:CE water N
+feat:l:O:CE water O
+feat:l:P:CE water P
+feat:l:Q:CE water Q
+feat:l:R:CE water R
+feat:l:S:CE water S
+feat:l:T:CE water T
+feat:l:U:CE water U
+feat:l:V:CE water V
+feat:l:W:CE water W
+feat:l:X:CE water X
+feat:l:Y:CE water Y
+feat:l:Z:CE water Z
+feat:l:~:CE water ~
+feat:l:`:CE water `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CF water_ m
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:m:0:CF water_ 0
+feat:m:1:CF water_ 1
+feat:m:2:CF water_ 2
+feat:m:3:CF water_ 3
+feat:m:4:CF water_ 4
+feat:m:5:CF water_ 5
+feat:m:6:CF water_ 6
+feat:m:7:CF water_ 7
+feat:m:8:CF water_ 8
+feat:m:9:CF water_ 9
+feat:m:a:CF water_ a
+feat:m:b:CF water_ b
+feat:m:c:CF water_ c
+feat:m:d:CF water_ d
+feat:m:e:CF water_ e
+feat:m:f:CF water_ f
+feat:m:g:CF water_ g
+feat:m:h:CF water_ h
+feat:m:i:CF water_ i
+feat:m:j:CF water_ j
+feat:m:k:CF water_ k
+feat:m:l:CF water_ l
+feat:m:m:CF water_ m
+feat:m:n:CF water_ n
+feat:m:o:CF water_ o
+feat:m:p:CF water_ p
+feat:m:q:CF water_ q
+feat:m:r:CF water_ r
+feat:m:s:CF water_ s
+feat:m:t:CF water_ t
+feat:m:u:CF water_ u
+feat:m:v:CF water_ v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D0 water_ m
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:m:w:D0 water_ w
+feat:m:x:D0 water_ x
+feat:m:y:D0 water_ y
+feat:m:z:D0 water_ z
+feat:m:A:D0 water_ A
+feat:m:B:D0 water_ B
+feat:m:C:D0 water_ C
+feat:m:D:D0 water_ D
+feat:m:E:D0 water_ E
+feat:m:F:D0 water_ F
+feat:m:G:D0 water_ G
+feat:m:H:D0 water_ H
+feat:m:I:D0 water_ I
+feat:m:J:D0 water_ J
+feat:m:K:D0 water_ K
+feat:m:L:D0 water_ L
+feat:m:M:D0 water_ M
+feat:m:N:D0 water_ N
+feat:m:O:D0 water_ O
+feat:m:P:D0 water_ P
+feat:m:Q:D0 water_ Q
+feat:m:R:D0 water_ R
+feat:m:S:D0 water_ S
+feat:m:T:D0 water_ T
+feat:m:U:D0 water_ U
+feat:m:V:D0 water_ V
+feat:m:W:D0 water_ W
+feat:m:X:D0 water_ X
+feat:m:Y:D0 water_ Y
+feat:m:Z:D0 water_ Z
+feat:m:~:D0 water_ ~
+feat:m:`:D0 water_ `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D1 table n
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:n:0:D1 table 0
+feat:n:1:D1 table 1
+feat:n:2:D1 table 2
+feat:n:3:D1 table 3
+feat:n:4:D1 table 4
+feat:n:5:D1 table 5
+feat:n:6:D1 table 6
+feat:n:7:D1 table 7
+feat:n:8:D1 table 8
+feat:n:9:D1 table 9
+feat:n:a:D1 table a
+feat:n:b:D1 table b
+feat:n:c:D1 table c
+feat:n:d:D1 table d
+feat:n:e:D1 table e
+feat:n:f:D1 table f
+feat:n:g:D1 table g
+feat:n:h:D1 table h
+feat:n:i:D1 table i
+feat:n:j:D1 table j
+feat:n:k:D1 table k
+feat:n:l:D1 table l
+feat:n:m:D1 table m
+feat:n:n:D1 table n
+feat:n:o:D1 table o
+feat:n:p:D1 table p
+feat:n:q:D1 table q
+feat:n:r:D1 table r
+feat:n:s:D1 table s
+feat:n:t:D1 table t
+feat:n:u:D1 table u
+feat:n:v:D1 table v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D2 chair n
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:n:w:D2 chair w
+feat:n:x:D2 chair x
+feat:n:y:D2 chair y
+feat:n:z:D2 chair z
+feat:n:A:D2 chair A
+feat:n:B:D2 chair B
+feat:n:C:D2 chair C
+feat:n:D:D2 chair D
+feat:n:E:D2 chair E
+feat:n:F:D2 chair F
+feat:n:G:D2 chair G
+feat:n:H:D2 chair H
+feat:n:I:D2 chair I
+feat:n:J:D2 chair J
+feat:n:K:D2 chair K
+feat:n:L:D2 chair L
+feat:n:M:D2 chair M
+feat:n:N:D2 chair N
+feat:n:O:D2 chair O
+feat:n:P:D2 chair P
+feat:n:Q:D2 chair Q
+feat:n:R:D2 chair R
+feat:n:S:D2 chair S
+feat:n:T:D2 chair T
+feat:n:U:D2 chair U
+feat:n:V:D2 chair V
+feat:n:W:D2 chair W
+feat:n:X:D2 chair X
+feat:n:Y:D2 chair Y
+feat:n:Z:D2 chair Z
+feat:n:~:D2 chair ~
+feat:n:`:D2 chair `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D3 cabinet o
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:o:0:D3 cabinet 0
+feat:o:1:D3 cabinet 1
+feat:o:2:D3 cabinet 2
+feat:o:3:D3 cabinet 3
+feat:o:4:D3 cabinet 4
+feat:o:5:D3 cabinet 5
+feat:o:6:D3 cabinet 6
+feat:o:7:D3 cabinet 7
+feat:o:8:D3 cabinet 8
+feat:o:9:D3 cabinet 9
+feat:o:a:D3 cabinet a
+feat:o:b:D3 cabinet b
+feat:o:c:D3 cabinet c
+feat:o:d:D3 cabinet d
+feat:o:e:D3 cabinet e
+feat:o:f:D3 cabinet f
+feat:o:g:D3 cabinet g
+feat:o:h:D3 cabinet h
+feat:o:i:D3 cabinet i
+feat:o:j:D3 cabinet j
+feat:o:k:D3 cabinet k
+feat:o:l:D3 cabinet l
+feat:o:m:D3 cabinet m
+feat:o:n:D3 cabinet n
+feat:o:o:D3 cabinet o
+feat:o:p:D3 cabinet p
+feat:o:q:D3 cabinet q
+feat:o:r:D3 cabinet r
+feat:o:s:D3 cabinet s
+feat:o:t:D3 cabinet t
+feat:o:u:D3 cabinet u
+feat:o:v:D3 cabinet v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D4 bed o
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:o:w:D4 bed w
+feat:o:x:D4 bed x
+feat:o:y:D4 bed y
+feat:o:z:D4 bed z
+feat:o:A:D4 bed A
+feat:o:B:D4 bed B
+feat:o:C:D4 bed C
+feat:o:D:D4 bed D
+feat:o:E:D4 bed E
+feat:o:F:D4 bed F
+feat:o:G:D4 bed G
+feat:o:H:D4 bed H
+feat:o:I:D4 bed I
+feat:o:J:D4 bed J
+feat:o:K:D4 bed K
+feat:o:L:D4 bed L
+feat:o:M:D4 bed M
+feat:o:N:D4 bed N
+feat:o:O:D4 bed O
+feat:o:P:D4 bed P
+feat:o:Q:D4 bed Q
+feat:o:R:D4 bed R
+feat:o:S:D4 bed S
+feat:o:T:D4 bed T
+feat:o:U:D4 bed U
+feat:o:V:D4 bed V
+feat:o:W:D4 bed W
+feat:o:X:D4 bed X
+feat:o:Y:D4 bed Y
+feat:o:Z:D4 bed Z
+feat:o:~:D4 bed ~
+feat:o:`:D4 bed `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D5 furniture p
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:p:0:D5 furniture 0
+feat:p:1:D5 furniture 1
+feat:p:2:D5 furniture 2
+feat:p:3:D5 furniture 3
+feat:p:4:D5 furniture 4
+feat:p:5:D5 furniture 5
+feat:p:6:D5 furniture 6
+feat:p:7:D5 furniture 7
+feat:p:8:D5 furniture 8
+feat:p:9:D5 furniture 9
+feat:p:a:D5 furniture a
+feat:p:b:D5 furniture b
+feat:p:c:D5 furniture c
+feat:p:d:D5 furniture d
+feat:p:e:D5 furniture e
+feat:p:f:D5 furniture f
+feat:p:g:D5 furniture g
+feat:p:h:D5 furniture h
+feat:p:i:D5 furniture i
+feat:p:j:D5 furniture j
+feat:p:k:D5 furniture k
+feat:p:l:D5 furniture l
+feat:p:m:D5 furniture m
+feat:p:n:D5 furniture n
+feat:p:o:D5 furniture o
+feat:p:p:D5 furniture p
+feat:p:q:D5 furniture q
+feat:p:r:D5 furniture r
+feat:p:s:D5 furniture s
+feat:p:t:D5 furniture t
+feat:p:u:D5 furniture u
+feat:p:v:D5 furniture v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D6 flower p
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:p:w:D6 flower w
+feat:p:x:D6 flower x
+feat:p:y:D6 flower y
+feat:p:z:D6 flower z
+feat:p:A:D6 flower A
+feat:p:B:D6 flower B
+feat:p:C:D6 flower C
+feat:p:D:D6 flower D
+feat:p:E:D6 flower E
+feat:p:F:D6 flower F
+feat:p:G:D6 flower G
+feat:p:H:D6 flower H
+feat:p:I:D6 flower I
+feat:p:J:D6 flower J
+feat:p:K:D6 flower K
+feat:p:L:D6 flower L
+feat:p:M:D6 flower M
+feat:p:N:D6 flower N
+feat:p:O:D6 flower O
+feat:p:P:D6 flower P
+feat:p:Q:D6 flower Q
+feat:p:R:D6 flower R
+feat:p:S:D6 flower S
+feat:p:T:D6 flower T
+feat:p:U:D6 flower U
+feat:p:V:D6 flower V
+feat:p:W:D6 flower W
+feat:p:X:D6 flower X
+feat:p:Y:D6 flower Y
+feat:p:Z:D6 flower Z
+feat:p:~:D6 flower ~
+feat:p:`:D6 flower `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D7 flower q
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:q:0:D7 flower 0
+feat:q:1:D7 flower 1
+feat:q:2:D7 flower 2
+feat:q:3:D7 flower 3
+feat:q:4:D7 flower 4
+feat:q:5:D7 flower 5
+feat:q:6:D7 flower 6
+feat:q:7:D7 flower 7
+feat:q:8:D7 flower 8
+feat:q:9:D7 flower 9
+feat:q:a:D7 flower a
+feat:q:b:D7 flower b
+feat:q:c:D7 flower c
+feat:q:d:D7 flower d
+feat:q:e:D7 flower e
+feat:q:f:D7 flower f
+feat:q:g:D7 flower g
+feat:q:h:D7 flower h
+feat:q:i:D7 flower i
+feat:q:j:D7 flower j
+feat:q:k:D7 flower k
+feat:q:l:D7 flower l
+feat:q:m:D7 flower m
+feat:q:n:D7 flower n
+feat:q:o:D7 flower o
+feat:q:p:D7 flower p
+feat:q:q:D7 flower q
+feat:q:r:D7 flower r
+feat:q:s:D7 flower s
+feat:q:t:D7 flower t
+feat:q:u:D7 flower u
+feat:q:v:D7 flower v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D8 pot q
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:q:w:D8 pot w
+feat:q:x:D8 pot x
+feat:q:y:D8 pot y
+feat:q:z:D8 pot z
+feat:q:A:D8 pot A
+feat:q:B:D8 pot B
+feat:q:C:D8 pot C
+feat:q:D:D8 pot D
+feat:q:E:D8 pot E
+feat:q:F:D8 pot F
+feat:q:G:D8 pot G
+feat:q:H:D8 pot H
+feat:q:I:D8 pot I
+feat:q:J:D8 pot J
+feat:q:K:D8 pot K
+feat:q:L:D8 pot L
+feat:q:M:D8 pot M
+feat:q:N:D8 pot N
+feat:q:O:D8 pot O
+feat:q:P:D8 pot P
+feat:q:Q:D8 pot Q
+feat:q:R:D8 pot R
+feat:q:S:D8 pot S
+feat:q:T:D8 pot T
+feat:q:U:D8 pot U
+feat:q:V:D8 pot V
+feat:q:W:D8 pot W
+feat:q:X:D8 pot X
+feat:q:Y:D8 pot Y
+feat:q:Z:D8 pot Z
+feat:q:~:D8 pot ~
+feat:q:`:D8 pot `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# D9 side r
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:r:0:D9 side 0
+feat:r:1:D9 side 1
+feat:r:2:D9 side 2
+feat:r:3:D9 side 3
+feat:r:4:D9 side 4
+feat:r:5:D9 side 5
+feat:r:6:D9 side 6
+feat:r:7:D9 side 7
+feat:r:8:D9 side 8
+feat:r:9:D9 side 9
+feat:r:a:D9 side a
+feat:r:b:D9 side b
+feat:r:c:D9 side c
+feat:r:d:D9 side d
+feat:r:e:D9 side e
+feat:r:f:D9 side f
+feat:r:g:D9 side g
+feat:r:h:D9 side h
+feat:r:i:D9 side i
+feat:r:j:D9 side j
+feat:r:k:D9 side k
+feat:r:l:D9 side l
+feat:r:m:D9 side m
+feat:r:n:D9 side n
+feat:r:o:D9 side o
+feat:r:p:D9 side p
+feat:r:q:D9 side q
+feat:r:r:D9 side r
+feat:r:s:D9 side s
+feat:r:t:D9 side t
+feat:r:u:D9 side u
+feat:r:v:D9 side v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DA side r
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:r:w:DA side w
+feat:r:x:DA side x
+feat:r:y:DA side y
+feat:r:z:DA side z
+feat:r:A:DA side A
+feat:r:B:DA side B
+feat:r:C:DA side C
+feat:r:D:DA side D
+feat:r:E:DA side E
+feat:r:F:DA side F
+feat:r:G:DA side G
+feat:r:H:DA side H
+feat:r:I:DA side I
+feat:r:J:DA side J
+feat:r:K:DA side K
+feat:r:L:DA side L
+feat:r:M:DA side M
+feat:r:N:DA side N
+feat:r:O:DA side O
+feat:r:P:DA side P
+feat:r:Q:DA side Q
+feat:r:R:DA side R
+feat:r:S:DA side S
+feat:r:T:DA side T
+feat:r:U:DA side U
+feat:r:V:DA side V
+feat:r:W:DA side W
+feat:r:X:DA side X
+feat:r:Y:DA side Y
+feat:r:Z:DA side Z
+feat:r:~:DA side ~
+feat:r:`:DA side `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DB side s
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:s:0:DB side 0
+feat:s:1:DB side 1
+feat:s:2:DB side 2
+feat:s:3:DB side 3
+feat:s:4:DB side 4
+feat:s:5:DB side 5
+feat:s:6:DB side 6
+feat:s:7:DB side 7
+feat:s:8:DB side 8
+feat:s:9:DB side 9
+feat:s:a:DB side a
+feat:s:b:DB side b
+feat:s:c:DB side c
+feat:s:d:DB side d
+feat:s:e:DB side e
+feat:s:f:DB side f
+feat:s:g:DB side g
+feat:s:h:DB side h
+feat:s:i:DB side i
+feat:s:j:DB side j
+feat:s:k:DB side k
+feat:s:l:DB side l
+feat:s:m:DB side m
+feat:s:n:DB side n
+feat:s:o:DB side o
+feat:s:p:DB side p
+feat:s:q:DB side q
+feat:s:r:DB side r
+feat:s:s:DB side s
+feat:s:t:DB side t
+feat:s:u:DB side u
+feat:s:v:DB side v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DC dark stone s
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:s:w:DC dark stone w
+feat:s:x:DC dark stone x
+feat:s:y:DC dark stone y
+feat:s:z:DC dark stone z
+feat:s:A:DC dark stone A
+feat:s:B:DC dark stone B
+feat:s:C:DC dark stone C
+feat:s:D:DC dark stone D
+feat:s:E:DC dark stone E
+feat:s:F:DC dark stone F
+feat:s:G:DC dark stone G
+feat:s:H:DC dark stone H
+feat:s:I:DC dark stone I
+feat:s:J:DC dark stone J
+feat:s:K:DC dark stone K
+feat:s:L:DC dark stone L
+feat:s:M:DC dark stone M
+feat:s:N:DC dark stone N
+feat:s:O:DC dark stone O
+feat:s:P:DC dark stone P
+feat:s:Q:DC dark stone Q
+feat:s:R:DC dark stone R
+feat:s:S:DC dark stone S
+feat:s:T:DC dark stone T
+feat:s:U:DC dark stone U
+feat:s:V:DC dark stone V
+feat:s:W:DC dark stone W
+feat:s:X:DC dark stone X
+feat:s:Y:DC dark stone Y
+feat:s:Z:DC dark stone Z
+feat:s:~:DC dark stone ~
+feat:s:`:DC dark stone `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DD wood wall t
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:t:0:DD wood wall 0
+feat:t:1:DD wood wall 1
+feat:t:2:DD wood wall 2
+feat:t:3:DD wood wall 3
+feat:t:4:DD wood wall 4
+feat:t:5:DD wood wall 5
+feat:t:6:DD wood wall 6
+feat:t:7:DD wood wall 7
+feat:t:8:DD wood wall 8
+feat:t:9:DD wood wall 9
+feat:t:a:DD wood wall a
+feat:t:b:DD wood wall b
+feat:t:c:DD wood wall c
+feat:t:d:DD wood wall d
+feat:t:e:DD wood wall e
+feat:t:f:DD wood wall f
+feat:t:g:DD wood wall g
+feat:t:h:DD wood wall h
+feat:t:i:DD wood wall i
+feat:t:j:DD wood wall j
+feat:t:k:DD wood wall k
+feat:t:l:DD wood wall l
+feat:t:m:DD wood wall m
+feat:t:n:DD wood wall n
+feat:t:o:DD wood wall o
+feat:t:p:DD wood wall p
+feat:t:q:DD wood wall q
+feat:t:r:DD wood wall r
+feat:t:s:DD wood wall s
+#!!!!!!!!!!!!!!!!!!!!!!!!!!! t:t is BASIC - occupied
+feat:t:&:DD wood wall t
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+feat:t:u:DD wood wall u
+feat:t:v:DD wood wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DE door t
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:t:w:DE door w
+feat:t:x:DE door x
+feat:t:y:DE door y
+feat:t:z:DE door z
+feat:t:A:DE door A
+feat:t:B:DE door B
+feat:t:C:DE door C
+feat:t:D:DE door D
+feat:t:E:DE door E
+feat:t:F:DE door F
+feat:t:G:DE door G
+feat:t:H:DE door H
+feat:t:I:DE door I
+feat:t:J:DE door J
+feat:t:K:DE door K
+feat:t:L:DE door L
+feat:t:M:DE door M
+feat:t:N:DE door N
+feat:t:O:DE door O
+feat:t:P:DE door P
+feat:t:Q:DE door Q
+feat:t:R:DE door R
+feat:t:S:DE door S
+feat:t:T:DE door T
+feat:t:U:DE door U
+feat:t:V:DE door V
+feat:t:W:DE door W
+feat:t:X:DE door X
+feat:t:Y:DE door Y
+feat:t:Z:DE door Z
+feat:t:~:DE door ~
+feat:t:`:DE door `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# DF dark floor u
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:u:0:DF dark floor 0
+feat:u:1:DF dark floor 1
+feat:u:2:DF dark floor 2
+feat:u:3:DF dark floor 3
+feat:u:4:DF dark floor 4
+feat:u:5:DF dark floor 5
+feat:u:6:DF dark floor 6
+feat:u:7:DF dark floor 7
+feat:u:8:DF dark floor 8
+feat:u:9:DF dark floor 9
+feat:u:a:DF dark floor a
+feat:u:b:DF dark floor b
+feat:u:c:DF dark floor c
+feat:u:d:DF dark floor d
+feat:u:e:DF dark floor e
+feat:u:f:DF dark floor f
+#end:
+feat:u:g:DF dark floor g
+feat:u:h:DF dark floor h
+feat:u:i:DF dark floor i
+feat:u:j:DF dark floor j
+feat:u:k:DF dark floor k
+feat:u:l:DF dark floor l
+feat:u:m:DF dark floor m
+feat:u:n:DF dark floor n
+feat:u:o:DF dark floor o
+feat:u:p:DF dark floor p
+feat:u:q:DF dark floor q
+feat:u:r:DF dark floor r
+feat:u:s:DF dark floor s
+feat:u:t:DF dark floor t
+feat:u:u:DF dark floor u
+feat:u:v:DF dark floor v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E0 dark floor u
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:u:w:E0 dark floor w
+feat:u:x:E0 dark floor x
+feat:u:y:E0 dark floor y
+feat:u:z:E0 dark floor z
+feat:u:A:E0 dark floor A
+feat:u:B:E0 dark floor B
+feat:u:C:E0 dark floor C
+feat:u:D:E0 dark floor D
+feat:u:E:E0 dark floor E
+feat:u:F:E0 dark floor F
+feat:u:G:E0 dark floor G
+feat:u:H:E0 dark floor H
+feat:u:I:E0 dark floor I
+feat:u:J:E0 dark floor J
+feat:u:K:E0 dark floor K
+feat:u:L:E0 dark floor L
+feat:u:M:E0 dark floor M
+feat:u:N:E0 dark floor N
+feat:u:O:E0 dark floor O
+feat:u:P:E0 dark floor P
+feat:u:Q:E0 dark floor Q
+feat:u:R:E0 dark floor R
+feat:u:S:E0 dark floor S
+feat:u:T:E0 dark floor T
+feat:u:U:E0 dark floor U
+# end
+feat:u:V:E0 dark floor V
+feat:u:W:E0 dark floor W
+feat:u:X:E0 dark floor X
+feat:u:Y:E0 dark floor Y
+feat:u:Z:E0 dark floor Z
+feat:u:~:E0 dark floor ~
+feat:u:`:E0 dark floor `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E1 moss wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:v:0:E1 moss wall 0
+feat:v:1:E1 moss wall 1
+feat:v:2:E1 moss wall 2
+feat:v:3:E1 moss wall 3
+feat:v:4:E1 moss wall 4
+feat:v:5:E1 moss wall 5
+feat:v:6:E1 moss wall 6
+feat:v:7:E1 moss wall 7
+feat:v:8:E1 moss wall 8
+feat:v:9:E1 moss wall 9
+feat:v:a:E1 moss wall a
+feat:v:b:E1 moss wall b
+feat:v:c:E1 moss wall c
+feat:v:d:E1 moss wall d
+feat:v:e:E1 moss wall e
+feat:v:f:E1 moss wall f
+feat:v:g:E1 moss wall g
+feat:v:h:E1 moss wall h
+feat:v:i:E1 moss wall i
+feat:v:j:E1 moss wall j
+feat:v:k:E1 moss wall k
+feat:v:l:E1 moss wall l
+feat:v:m:E1 moss wall m
+feat:v:n:E1 moss wall n
+feat:v:o:E1 moss wall o
+feat:v:p:E1 moss wall p
+feat:v:q:E1 moss wall q
+feat:v:r:E1 moss wall r
+feat:v:s:E1 moss wall s
+feat:v:t:E1 moss wall t
+feat:v:u:E1 moss wall u
+feat:v:v:E1 moss wall v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E2 jail wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:v:w:E2 jail wall w
+feat:v:x:E2 jail wall x
+feat:v:y:E2 jail wall y
+feat:v:z:E2 jail wall z
+feat:v:A:E2 jail wall A
+feat:v:B:E2 jail wall B
+feat:v:C:E2 jail wall C
+feat:v:D:E2 jail wall D
+feat:v:E:E2 jail wall E
+feat:v:F:E2 jail wall F
+feat:v:G:E2 jail wall G
+feat:v:H:E2 jail wall H
+feat:v:I:E2 jail wall I
+feat:v:J:E2 jail wall J
+feat:v:K:E2 jail wall K
+feat:v:L:E2 jail wall L
+feat:v:M:E2 jail wall M
+feat:v:N:E2 jail wall N
+feat:v:O:E2 jail wall O
+feat:v:P:E2 jail wall P
+feat:v:Q:E2 jail wall Q
+feat:v:R:E2 jail wall R
+feat:v:S:E2 jail wall S
+feat:v:T:E2 jail wall T
+feat:v:U:E2 jail wall U
+feat:v:V:E2 jail wall V
+feat:v:W:E2 jail wall W
+feat:v:X:E2 jail wall X
+feat:v:Y:E2 jail wall Y
+feat:v:Z:E2 jail wall Z
+feat:v:~:E2 jail wall ~
+feat:v:`:E2 jail wall `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E3 dungeon wall W CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:W:0:E3 dungeon wall 0
+feat:W:1:E3 dungeon wall 1
+feat:W:2:E3 dungeon wall 2
+feat:W:3:E3 dungeon wall 3
+feat:W:4:E3 dungeon wall 4
+feat:W:5:E3 dungeon wall 5
+feat:W:6:E3 dungeon wall 6
+feat:W:7:E3 dungeon wall 7
+feat:W:8:E3 dungeon wall 8
+feat:W:9:E3 dungeon wall 9
+feat:W:a:E3 dungeon wall a
+feat:W:b:E3 dungeon wall b
+feat:W:c:E3 dungeon wall c
+feat:W:d:E3 dungeon wall d
+feat:W:e:E3 dungeon wall e
+feat:W:f:E3 dungeon wall f
+feat:W:g:E3 dungeon wall g
+feat:W:h:E3 dungeon wall h
+feat:W:i:E3 dungeon wall i
+feat:W:j:E3 dungeon wall j
+feat:W:k:E3 dungeon wall k
+feat:W:l:E3 dungeon wall l
+feat:W:m:E3 dungeon wall m
+feat:W:n:E3 dungeon wall n
+feat:W:o:E3 dungeon wall o
+feat:W:p:E3 dungeon wall p
+feat:W:q:E3 dungeon wall q
+feat:W:r:E3 dungeon wall r
+feat:W:s:E3 dungeon wall s
+feat:W:t:E3 dungeon wall t
+feat:W:u:E3 dungeon wall u
+feat:W:v:E3 dungeon wall v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E4 wall
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+
+feat:W:w:E4 wall w
+feat:W:x:E4 wall x
+feat:W:y:E4 wall y
+feat:W:z:E4 wall z
+feat:W:A:E4 wall A
+feat:W:B:E4 wall B
+feat:W:C:E4 wall C
+feat:W:D:E4 wall D
+feat:W:E:E4 wall E
+feat:W:F:E4 wall F
+feat:W:G:E4 wall G
+feat:W:H:E4 wall H
+feat:W:I:E4 wall I
+feat:W:J:E4 wall J
+feat:W:K:E4 wall K
+feat:W:L:E4 wall L
+feat:W:M:E4 wall M
+feat:W:N:E4 wall N
+feat:W:O:E4 wall O
+feat:W:P:E4 wall P
+feat:W:Q:E4 wall Q
+feat:W:R:E4 wall R
+feat:W:S:E4 wall S
+feat:W:T:E4 wall T
+feat:W:U:E4 wall U
+feat:W:V:E4 wall V
+feat:W:W:E4 wall W
+feat:W:X:E4 wall X
+feat:W:Y:E4 wall Y
+feat:W:Z:E4 wall Z
+feat:W:~:E4 wall ~
+feat:W:`:E4 wall `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E5 blood X CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:X:0:E5 blood 0
+feat:X:1:E5 blood 1
+feat:X:2:E5 blood 2
+feat:X:3:E5 blood 3
+feat:X:4:E5 blood 4
+feat:X:5:E5 blood 5
+feat:X:6:E5 blood 6
+feat:X:7:E5 blood 7
+feat:X:8:E5 blood 8
+feat:X:9:E5 blood 9
+feat:X:a:E5 blood a
+feat:X:b:E5 blood b
+feat:X:c:E5 blood c
+feat:X:d:E5 blood d
+feat:X:e:E5 blood e
+feat:X:f:E5 blood f
+feat:X:g:E5 blood g
+feat:X:h:E5 blood h
+feat:X:i:E5 blood i
+feat:X:j:E5 blood j
+feat:X:k:E5 blood k
+feat:X:l:E5 blood l
+feat:X:m:E5 blood m
+feat:X:n:E5 blood n
+feat:X:o:E5 blood o
+feat:X:p:E5 blood p
+feat:X:q:E5 blood q
+feat:X:r:E5 blood r
+feat:X:s:E5 blood s
+feat:X:t:E5 blood t
+feat:X:u:E5 blood u
+feat:X:v:E5 blood v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E6 blood X CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:X:w:E6 blood w
+feat:X:x:E6 blood x
+feat:X:y:E6 blood y
+feat:X:z:E6 blood z
+feat:X:A:E6 blood A
+feat:X:B:E6 blood B
+feat:X:C:E6 blood C
+feat:X:D:E6 blood D
+feat:X:E:E6 blood E
+feat:X:F:E6 blood F
+feat:X:G:E6 blood G
+feat:X:H:E6 blood H
+feat:X:I:E6 blood I
+feat:X:J:E6 blood J
+feat:X:K:E6 blood K
+feat:X:L:E6 blood L
+feat:X:M:E6 blood M
+feat:X:N:E6 blood N
+feat:X:O:E6 blood O
+feat:X:P:E6 blood P
+feat:X:Q:E6 blood Q
+feat:X:R:E6 blood R
+feat:X:S:E6 blood S
+feat:X:T:E6 blood T
+feat:X:U:E6 blood U
+feat:X:V:E6 blood V
+feat:X:W:E6 blood W
+#end from there
+feat:X:X:E6 blood X
+feat:X:Y:E6 blood Y
+feat:X:Z:E6 blood Z
+feat:X:~:E6 blood ~
+#feat:X:`:E6 dark floor rubble
+#feat:X:-----:E6 dark floor pass rubble
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E7 desert Y CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:Y:0:E7 desert 0
+feat:Y:1:E7 desert 1
+feat:Y:2:E7 desert 2
+feat:Y:3:E7 desert 3
+feat:Y:4:E7 desert 4
+feat:Y:5:E7 desert 5
+feat:Y:6:E7 desert 6
+feat:Y:7:E7 desert 7
+feat:Y:8:E7 desert 8
+feat:Y:9:E7 desert 9
+feat:Y:a:E7 desert a
+feat:Y:b:E7 desert b
+feat:Y:c:E7 desert c
+feat:Y:d:E7 desert d
+feat:Y:e:E7 desert e
+feat:Y:f:E7 desert f
+feat:Y:g:E7 desert g
+feat:Y:h:E7 desert h
+feat:Y:i:E7 desert i
+feat:Y:j:E7 desert j
+feat:Y:k:E7 desert k
+feat:Y:l:E7 desert l
+feat:Y:m:E7 desert m
+feat:Y:n:E7 desert n
+feat:Y:o:E7 desert o
+feat:Y:p:E7 desert p
+feat:Y:q:E7 desert q
+feat:Y:r:E7 desert r
+feat:Y:s:E7 desert s
+feat:Y:t:E7 desert t
+feat:Y:u:E7 desert u
+feat:Y:v:E7 desert v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E8 desert Y CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:Y:w:E8 desert w
+feat:Y:x:E8 desert x
+feat:Y:y:E8 desert y
+feat:Y:z:E8 desert z
+feat:Y:A:E8 desert A
+feat:Y:B:E8 desert B
+feat:Y:C:E8 desert C
+feat:Y:D:E8 desert D
+feat:Y:E:E8 desert E
+feat:Y:F:E8 desert F
+feat:Y:G:E8 desert G
+feat:Y:H:E8 desert H
+feat:Y:I:E8 desert I
+feat:Y:J:E8 desert J
+feat:Y:K:E8 desert K
+feat:Y:L:E8 desert L
+feat:Y:M:E8 desert M
+feat:Y:N:E8 desert N
+feat:Y:O:E8 desert O
+feat:Y:P:E8 desert P
+feat:Y:Q:E8 desert Q
+feat:Y:R:E8 desert R
+feat:Y:S:E8 desert S
+feat:Y:T:E8 desert T
+feat:Y:U:E8 desert U
+feat:Y:V:E8 desert V
+feat:Y:W:E8 desert W
+feat:Y:X:E8 desert X
+feat:Y:Y:E8 desert Y
+feat:Y:Z:E8 desert Z
+feat:Y:~:E8 desert ~
+feat:Y:`:E8 desert `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E9 desert Z CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:Z:0:E9 desert 0
+feat:Z:1:E9 desert 1
+feat:Z:2:E9 desert 2
+feat:Z:3:E9 desert 3
+feat:Z:4:E9 desert 4
+feat:Z:5:E9 desert 5
+feat:Z:6:E9 desert 6
+feat:Z:7:E9 desert 7
+feat:Z:8:E9 desert 8
+feat:Z:9:E9 desert 9
+feat:Z:a:E9 desert a
+feat:Z:b:E9 desert b
+feat:Z:c:E9 desert c
+feat:Z:d:E9 desert d
+feat:Z:e:E9 desert e
+feat:Z:f:E9 desert f
+feat:Z:g:E9 desert g
+feat:Z:h:E9 desert h
+feat:Z:i:E9 desert i
+feat:Z:j:E9 desert j
+feat:Z:k:E9 desert k
+feat:Z:l:E9 desert l
+feat:Z:m:E9 desert m
+feat:Z:n:E9 desert n
+feat:Z:o:E9 desert o
+feat:Z:p:E9 desert p
+feat:Z:q:E9 desert q
+feat:Z:r:E9 desert r
+feat:Z:s:E9 desert s
+feat:Z:t:E9 desert t
+feat:Z:u:E9 desert u
+feat:Z:v:E9 desert v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EA sand
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:Z:w:EA sand w
+feat:Z:x:EA sand x
+feat:Z:y:EA sand y
+feat:Z:z:EA sand z
+feat:Z:A:EA sand A
+feat:Z:B:EA sand B
+feat:Z:C:EA sand C
+feat:Z:D:EA sand D
+feat:Z:E:EA sand E
+feat:Z:F:EA sand F
+feat:Z:G:EA sand G
+feat:Z:H:EA sand H
+feat:Z:I:EA sand I
+feat:Z:J:EA sand J
+feat:Z:K:EA sand K
+feat:Z:L:EA sand L
+feat:Z:M:EA sand M
+# lots of stones
+feat:Z:N:EA sand N
+#
+feat:Z:O:EA sand O
+feat:Z:P:EA sand P
+feat:Z:Q:EA sand Q
+feat:Z:R:EA sand R
+feat:Z:S:EA sand S
+feat:Z:T:EA sand T
+feat:Z:U:EA sand U
+feat:Z:V:EA sand V
+feat:Z:W:EA sand W
+feat:Z:X:EA sand X
+feat:Z:Y:EA sand Y
+feat:Z:Z:EA sand Z
+feat:Z:~:EA sand ~
+feat:Z:`:EA sand `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EB dirt A
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:A:0:EB dirt 0
+feat:A:1:EB dirt 1
+feat:A:2:EB dirt 2
+feat:A:3:EB dirt 3
+feat:A:4:EB dirt 4
+feat:A:5:EB dirt 5
+feat:A:6:EB dirt 6
+feat:A:7:EB dirt 7
+feat:A:8:EB dirt 8
+feat:A:9:EB dirt 9
+feat:A:a:EB dirt a
+feat:A:b:EB dirt b
+feat:A:c:EB dirt c
+feat:A:d:EB dirt d
+feat:A:e:EB dirt e
+feat:A:f:EB dirt f
+feat:A:g:EB dirt g
+feat:A:h:EB dirt h
+feat:A:i:EB dirt i
+feat:A:j:EB dirt j
+feat:A:k:EB dirt k
+feat:A:l:EB dirt l
+feat:A:m:EB dirt m
+feat:A:n:EB dirt n
+feat:A:o:EB dirt o
+feat:A:p:EB dirt p
+feat:A:q:EB dirt q
+feat:A:r:EB dirt r
+feat:A:s:EB dirt s
+feat:A:t:EB dirt t
+feat:A:u:EB dirt u
+feat:A:v:EB dirt v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EC dirt A
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:A:w:EC dirt w
+feat:A:x:EC dirt x
+feat:A:y:EC dirt y
+feat:A:z:EC dirt z
+feat:A:A:EC dirt A
+feat:A:B:EC dirt B
+feat:A:C:EC dirt C
+feat:A:D:EC dirt D
+feat:A:E:EC dirt E
+feat:A:F:EC dirt F
+feat:A:G:EC dirt G
+feat:A:H:EC dirt H
+feat:A:I:EC dirt I
+feat:A:J:EC dirt J
+feat:A:K:EC dirt K
+feat:A:L:EC dirt L
+feat:A:M:EC dirt M
+feat:A:N:EC dirt N
+feat:A:O:EC dirt O
+feat:A:P:EC dirt P
+feat:A:Q:EC dirt Q
+feat:A:R:EC dirt R
+feat:A:S:EC dirt S
+feat:A:T:EC dirt T
+#rocks:
+feat:A:U:EC dirt U
+feat:A:V:EC dirt V
+feat:A:W:EC dirt W
+feat:A:X:EC dirt X
+feat:A:Y:EC dirt Y
+feat:A:Z:EC dirt Z
+feat:A:~:EC dirt ~
+feat:A:`:EC dirt `
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# ED dirt B
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:B:0:ED dirt 0
+feat:B:1:ED dirt 1
+feat:B:2:ED dirt 2
+feat:B:3:ED dirt 3
+feat:B:4:ED dirt 4
+feat:B:5:ED dirt 5
+feat:B:6:ED dirt 6
+feat:B:7:ED dirt 7
+feat:B:8:ED dirt 8
+feat:B:9:ED dirt 9
+feat:B:a:ED dirt a
+feat:B:b:ED dirt b
+feat:B:c:ED dirt c
+feat:B:d:ED dirt d
+feat:B:e:ED dirt e
+feat:B:f:ED dirt f
+feat:B:g:ED dirt g
+feat:B:h:ED dirt h
+feat:B:i:ED dirt i
+feat:B:j:ED dirt j
+feat:B:k:ED dirt k
+feat:B:l:ED dirt l
+feat:B:m:ED dirt m
+feat:B:n:ED dirt n
+feat:B:o:ED dirt o
+feat:B:p:ED dirt p
+feat:B:q:ED dirt q
+feat:B:r:ED dirt r
+feat:B:s:ED dirt s
+feat:B:t:ED dirt t
+feat:B:u:ED dirt u
+feat:B:v:ED dirt v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EE dirt
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:B:w:EE dirt w
+feat:B:x:EE dirt x
+feat:B:y:EE dirt y
+feat:B:z:EE dirt z
+feat:B:A:EE dirt A
+feat:B:B:EE dirt B
+feat:B:C:EE dirt C
+feat:B:D:EE dirt D
+feat:B:E:EE dirt E
+feat:B:F:EE dirt F
+feat:B:G:EE dirt G
+feat:B:H:EE dirt H
+feat:B:I:EE dirt I
+feat:B:J:EE dirt J
+feat:B:K:EE dirt K
+feat:B:L:EE dirt L
+feat:B:M:EE dirt M
+feat:B:N:EE dirt N
+feat:B:O:EE dirt O
+feat:B:P:EE dirt P
+feat:B:Q:EE dirt Q
+feat:B:R:EE dirt R
+feat:B:S:EE dirt S
+feat:B:T:EE dirt T
+feat:B:U:EE dirt U
+feat:B:V:EE dirt V
+feat:B:W:EE dirt W
+feat:B:X:EE dirt X
+feat:B:Y:EE dirt Y
+feat:B:Z:EE dirt Z
+feat:B:~:EE dirt ~
+feat:B:`:EE dirt `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EF dirt D w-`
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:D:w:EF dirt w
+feat:D:x:EF dirt x
+feat:D:y:EF dirt y
+feat:D:z:EF dirt z
+feat:D:A:EF dirt A
+feat:D:B:EF dirt B
+feat:D:C:EF dirt C
+feat:D:D:EF dirt D
+feat:D:E:EF dirt E
+feat:D:F:EF dirt F
+feat:D:G:EF dirt G
+feat:D:H:EF dirt H
+feat:D:I:EF dirt I
+feat:D:J:EF dirt J
+feat:D:K:EF dirt K
+feat:D:L:EF dirt L
+#TOOTH STONE:
+feat:D:M:EF dirt M
+feat:D:N:EF dirt N
+feat:D:O:EF dirt O
+feat:D:P:EF dirt P
+feat:D:Q:EF dirt Q
+feat:D:R:EF dirt R
+feat:D:S:EF dirt S
+feat:D:T:EF dirt T
+feat:D:U:EF dirt U
+feat:D:V:EF dirt V
+feat:D:W:EF dirt W
+feat:D:X:EF dirt X
+feat:D:Y:EF dirt Y
+feat:D:Z:EF dirt Z
+feat:D:~:EF dirt ~
+feat:D:`:EF dirt `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F0 dirt mountain !!!!! C w-~
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:C:w:F0 dirt mountain w
+feat:C:x:F0 dirt mountain x
+feat:C:y:F0 dirt mountain y
+feat:C:z:F0 dirt mountain z
+feat:C:A:F0 dirt mountain A
+feat:C:B:F0 dirt mountain B
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!! C:C is BASIC !
+feat:C:&:F0 dirt mountain C
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+feat:C:D:F0 dirt mountain D
+feat:C:E:F0 dirt mountain E
+feat:C:F:F0 dirt mountain F
+feat:C:G:F0 dirt mountain G
+feat:C:H:F0 dirt mountain H
+feat:C:I:F0 dirt mountain I
+feat:C:J:F0 dirt mountain J
+feat:C:K:F0 dirt mountain K
+feat:C:L:F0 dirt mountain L
+feat:C:M:F0 dirt mountain M
+feat:C:N:F0 dirt mountain N
+feat:C:O:F0 dirt mountain O
+feat:C:P:F0 dirt mountain P
+feat:C:Q:F0 dirt mountain Q
+feat:C:R:F0 dirt mountain R
+feat:C:S:F0 dirt mountain S
+feat:C:T:F0 dirt mountain T
+feat:C:U:F0 dirt mountain U
+feat:C:V:F0 dirt mountain V
+feat:C:W:F0 dirt mountain W
+feat:C:X:F0 dirt mountain X
+feat:C:Y:F0 dirt mountain Y
+feat:C:Z:F0 dirt mountain Z
+feat:C:~:F0 dirt mountain ~
+feat:C:`:F0 dirt mountain `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F1 snow C     !!! 0 - v (vice versa above)
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:C:0:F1 snow 0
+feat:C:1:F1 snow 1
+feat:C:2:F1 snow 2
+feat:C:3:F1 snow 3
+feat:C:4:F1 snow 4
+feat:C:5:F1 snow 5
+feat:C:6:F1 snow 6
+feat:C:7:F1 snow 7
+feat:C:8:F1 snow 8
+feat:C:9:F1 snow 9
+feat:C:a:F1 snow a
+feat:C:b:F1 snow b
+feat:C:c:F1 snow c
+feat:C:d:F1 snow d
+feat:C:e:F1 snow e
+feat:C:f:F1 snow f
+feat:C:g:F1 snow g
+feat:C:h:F1 snow h
+feat:C:i:F1 snow i
+feat:C:j:F1 snow j
+feat:C:k:F1 snow k
+feat:C:l:F1 snow l
+# ice:
+feat:C:m:F1 snow m
+# wrong ice:
+feat:C:n:F1 snow n
+# empty:
+feat:C:o:F1 snow o
+feat:C:p:F1 snow p
+feat:C:q:F1 snow q
+feat:C:r:F1 snow r
+feat:C:s:F1 snow s
+feat:C:t:F1 snow t
+feat:C:u:F1 snow u
+feat:C:v:F1 snow v
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F2 snow D
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:D:0:F2 snow 0
+feat:D:1:F2 snow 1
+feat:D:2:F2 snow 2
+feat:D:3:F2 snow 3
+feat:D:4:F2 snow 4
+feat:D:5:F2 snow 5
+feat:D:6:F2 snow 6
+feat:D:7:F2 snow 7
+feat:D:8:F2 snow 8
+feat:D:9:F2 snow 9
+feat:D:a:F2 snow a
+feat:D:b:F2 snow b
+feat:D:c:F2 snow c
+feat:D:d:F2 snow d
+feat:D:e:F2 snow e
+feat:D:f:F2 snow f
+feat:D:g:F2 snow g
+feat:D:h:F2 snow h
+feat:D:i:F2 snow i
+feat:D:j:F2 snow j
+feat:D:k:F2 snow k
+feat:D:l:F2 snow l
+feat:D:m:F2 snow m
+feat:D:n:F2 snow n
+feat:D:o:F2 snow o
+feat:D:p:F2 snow p
+feat:D:q:F2 snow q
+feat:D:r:F2 snow r
+feat:D:s:F2 snow s
+feat:D:t:F2 snow t
+feat:D:u:F2 snow u
+feat:D:v:F2 snow v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F3 shallow water E
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:E:0:F3 shallow water 0
+feat:E:1:F3 shallow water 1
+feat:E:2:F3 shallow water 2
+feat:E:3:F3 shallow water 3
+feat:E:4:F3 shallow water 4
+feat:E:5:F3 shallow water 5
+feat:E:6:F3 shallow water 6
+feat:E:7:F3 shallow water 7
+feat:E:8:F3 shallow water 8
+feat:E:9:F3 shallow water 9
+feat:E:a:F3 shallow water a
+feat:E:b:F3 shallow water b
+feat:E:c:F3 shallow water c
+feat:E:d:F3 shallow water d
+feat:E:e:F3 shallow water e
+feat:E:f:F3 shallow water f
+feat:E:g:F3 shallow water g
+feat:E:h:F3 shallow water h
+feat:E:i:F3 shallow water i
+feat:E:j:F3 shallow water j
+feat:E:k:F3 shallow water k
+feat:E:l:F3 shallow water l
+feat:E:m:F3 shallow water m
+feat:E:n:F3 shallow water n
+feat:E:o:F3 shallow water o
+feat:E:p:F3 shallow water p
+feat:E:q:F3 shallow water q
+feat:E:r:F3 shallow water r
+feat:E:s:F3 shallow water s
+feat:E:t:F3 shallow water t
+feat:E:u:F3 shallow water u
+feat:E:v:F3 shallow water v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F4 E
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:E:w:F4 shallow water w
+feat:E:x:F4 shallow water x
+feat:E:y:F4 shallow water y
+feat:E:z:F4 shallow water z
+feat:E:A:F4 shallow water A
+feat:E:B:F4 shallow water B
+feat:E:C:F4 shallow water C
+feat:E:D:F4 shallow water D
+feat:E:E:F4 shallow water E
+feat:E:F:F4 shallow water F
+feat:E:G:F4 shallow water G
+feat:E:H:F4 shallow water H
+feat:E:I:F4 shallow water I
+feat:E:J:F4 shallow water J
+feat:E:K:F4 shallow water K
+feat:E:L:F4 shallow water L
+feat:E:M:F4 shallow water M
+feat:E:N:F4 shallow water N
+feat:E:O:F4 shallow water O
+feat:E:P:F4 shallow water P
+feat:E:Q:F4 shallow water Q
+feat:E:R:F4 shallow water R
+feat:E:S:F4 shallow water S
+feat:E:T:F4 shallow water T
+feat:E:U:F4 shallow water U
+feat:E:V:F4 shallow water V
+feat:E:W:F4 shallow water W
+feat:E:X:F4 shallow water X
+feat:E:Y:F4 shallow water Y
+feat:E:Z:F4 shallow water Z
+feat:E:~:F4 shallow water ~
+feat:E:`:F4 shallow water `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F5 deep water F
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:F:0:F5 deep water 0
+feat:F:1:F5 deep water 1
+feat:F:2:F5 deep water 2
+feat:F:3:F5 deep water 3
+feat:F:4:F5 deep water 4
+feat:F:5:F5 deep water 5
+feat:F:6:F5 deep water 6
+feat:F:7:F5 deep water 7
+feat:F:8:F5 deep water 8
+feat:F:9:F5 deep water 9
+feat:F:a:F5 deep water a
+feat:F:b:F5 deep water b
+feat:F:c:F5 deep water c
+feat:F:d:F5 deep water d
+feat:F:e:F5 deep water e
+feat:F:f:F5 deep water f
+feat:F:g:F5 deep water g
+feat:F:h:F5 deep water h
+feat:F:i:F5 deep water i
+feat:F:j:F5 deep water j
+feat:F:k:F5 deep water k
+feat:F:l:F5 deep water l
+#low grassy sea stones:
+feat:F:m:F5 deep water m
+feat:F:n:F5 deep water n
+feat:F:o:F5 deep water o
+feat:F:p:F5 deep water p
+feat:F:q:F5 deep water q
+feat:F:r:F5 deep water r
+feat:F:s:F5 deep water s
+feat:F:t:F5 deep water t
+feat:F:u:F5 deep water u
+feat:F:v:F5 deep water v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F6 deep water
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:F:w:F6 deep water w
+feat:F:x:F6 deep water x
+feat:F:y:F6 deep water y
+feat:F:z:F6 deep water z
+feat:F:A:F6 deep water A
+feat:F:B:F6 deep water B
+feat:F:C:F6 deep water C
+feat:F:D:F6 deep water D
+feat:F:E:F6 deep water E
+feat:F:F:F6 deep water F
+feat:F:G:F6 deep water G
+feat:F:H:F6 deep water H
+feat:F:I:F6 deep water I
+feat:F:J:F6 deep water J
+feat:F:K:F6 deep water K
+feat:F:L:F6 deep water L
+feat:F:M:F6 deep water M
+feat:F:N:F6 deep water N
+feat:F:O:F6 deep water O
+feat:F:P:F6 deep water P
+feat:F:Q:F6 deep water Q
+feat:F:R:F6 deep water R
+feat:F:S:F6 deep water S
+feat:F:T:F6 deep water T
+feat:F:U:F6 deep water U
+feat:F:V:F6 deep water V
+feat:F:W:F6 deep water W
+feat:F:X:F6 deep water X
+feat:F:Y:F6 deep water Y
+feat:F:Z:F6 deep water Z
+feat:F:~:F6 deep water ~
+feat:F:`:F6 deep water `
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F7 
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F8 stair down
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:>:0:stair down 0
+feat:>:1:stair down 1
+feat:>:2:stair down 2
+feat:>:3:stair down 3
+feat:>:4:stair down 4
+feat:>:5:stair down 5
+feat:>:6:stair down 6
+feat:>:7:stair down 7
+feat:>:8:stair down 8
+feat:>:9:stair down 9
+feat:>:a:stair down a
+feat:>:b:stair down b
+feat:>:c:stair down c
+feat:>:d:stair down d
+feat:>:e:stair down e
+feat:>:f:stair down f
+feat:>:g:stair down g
+feat:>:h:stair down h
+feat:>:i:stair down i
+feat:>:j:stair down j
+feat:>:k:stair down k
+feat:>:l:stair down l
+feat:>:m:stair down m
+feat:>:n:stair down n
+feat:>:o:stair down o
+feat:>:p:stair down p
+feat:>:q:stair down q
+feat:>:r:stair down r
+feat:>:s:stair down s
+feat:>:t:stair down t
+feat:>:u:stair down u
+feat:>:v:stair down v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F9 - end
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:*:0:end 0 mountains dark
+feat:*:1:end 1 mountain
+feat:*:2:end 2 mountain
+feat:*:3:end 3 mountain
+feat:*:4:end 4 mountain
+feat:*:5:end 5 water
+feat:*:6:end 6 deep water
+feat:*:7:end 7 lava
+feat:*:8:end 8 water mountain
+feat:*:9:end 9 deep water mountain
+#
+feat:*:a:F9 end a
+feat:*:b:F9 end b
+feat:*:c:F9 end c
+feat:*:d:F9 end d
+feat:*:e:F9 end e
+feat:*:f:F9 end f
+feat:*:g:F9 end g
+feat:*:h:F9 end h
+feat:*:i:F9 end i
+feat:*:j:F9 end j
+feat:*:k:F9 end k
+feat:*:l:F9 end l
+feat:*:m:F9 end m
+feat:*:n:F9 end n
+feat:*:o:F9 end o
+feat:*:p:F9 end p
+feat:*:q:F9 end q
+feat:*:r:F9 end r
+feat:*:s:F9 end s
+feat:*:t:F9 end t
+feat:*:u:F9 end u
+feat:*:v:F9 end v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# FA - mountains end top
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:(:0:mountains end top 0
+feat:(:1:mountains end top 1
+feat:(:2:mountains end top 2
+feat:(:3:mountains end top 3
+feat:(:4:mountains end top 4
+feat:(:5:mountains end top 5
+feat:(:6:mountains end top 6
+feat:(:7:mountains end top 7
+feat:(:8:mountains end top 8
+feat:(:9:mountains end top 9
+feat:(:a:mountains end top a
+feat:(:b:mountains end top b
+feat:(:c:mountains end top c
+feat:(:d:mountains end top d
+feat:(:e:mountains end top e
+feat:(:f:mountains end top f
+feat:(:g:mountains end top g
+# NO town feat: FA lava rubble
+# NO town feat: FA lava pass rubble
+feat:(:h:FA lava h
+feat:(:i:FA lava i
+feat:(:j:FA lava j
+feat:(:k:FA lava k
+feat:(:l:FA lava l
+feat:(:m:FA lava m
+feat:(:n:FA lava n
+feat:(:o:FA lava o
+feat:(:p:FA lava p
+feat:(:q:FA lava q
+feat:(:r:FA lava r
+feat:(:s:FA lava s
+feat:(:t:FA lava t
+feat:(:u:FA lava u
+feat:(:v:FA lava v
+feat:(:w:FA lava w
+####################
+feat:(:x:FA lava x
+feat:(:y:FA lava y
+feat:(:z:FA lava z
+feat:(:A:FA lava A
+feat:(:B:FA lava B
+feat:(:C:FA lava C
+feat:(:D:FA lava D
+feat:(:E:FA lava E
+feat:(:F:FA lava F
+feat:(:G:FA bizarre rubble
+feat:(:H:FA bizarre pass rubble
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# FB - mountains end bot
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+#### ATTENTION! `)` should be only for one FB!
+# cause it has no lightning, so ( a-v w-` won't
+# fit there in one!
+
+feat:):0:mountains end bot 0
+feat:):1:mountains end bot 1
+feat:):2:mountains end bot 2
+feat:):3:mountains end bot 3
+feat:):4:mountains end bot 4
+feat:):5:mountains end bot 5
+feat:):6:mountains end bot 6
+feat:):7:mountains end bot 7
+feat:):8:mountains end bot 8
+feat:):9:mountains end bot 9
+feat:):a:mountains end bot a
+feat:):b:mountains end bot b
+feat:):c:mountains end bot c
+feat:):d:mountains end bot d
+feat:):e:mountains end bot e
+feat:):f:mountains end bot f
+feat:):g:mountains end bot g
+feat:):h:FB lava h
+feat:):i:FB lava i
+feat:):j:FB lava j
+feat:):k:FB lava k
+feat:):l:FB lava l
+feat:):m:FB lava m
+feat:):n:FB lava n
+feat:):o:FB lava o
+feat:):p:FB lava p
+feat:):q:FB lava q
+feat:):r:FB lava r
+feat:):s:FB lava s
+feat:):t:FB lava t
+feat:):u:FB lava u
+feat:):v:FB lava v
+feat:):w:FB lava w
+feat:):x:FB lava x
+feat:):y:FB lava y
+feat:):z:FB lava z
+feat:):A:FB lava A
+feat:):B:FB lava B
+feat:):C:FB lava C
+feat:):D:FB lava D
+feat:):E:FB lava E
+feat:):F:FB lava F
+feat:):G:FB lava G
+feat:):H:FB lava H
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# FC double
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:_:0:FC double 0
+feat:_:1:FC double 1
+feat:_:2:FC double 2
+feat:_:3:FC double 3
+feat:_:4:FC double 4
+feat:_:5:FC double 5
+feat:_:6:FC double 6
+feat:_:7:FC double 7
+feat:_:8:FC double 8
+feat:_:9:FC double 9
+feat:_:a:FC double a
+feat:_:b:FC double b
+feat:_:c:FC double c
+feat:_:d:FC double d
+feat:_:e:FC double e
+feat:_:f:FC double f
+feat:_:g:FC double g
+feat:_:h:FC double h
+feat:_:i:FC double i
+feat:_:j:FC double j
+feat:_:k:FC double k
+feat:_:l:FC double l
+feat:_:m:FC double m
+feat:_:n:FC double n
+feat:_:o:FC double o
+feat:_:p:FC double p
+feat:_:q:FC double q
+feat:_:r:FC double r
+feat:_:s:FC double s
+feat:_:t:FC double t
+feat:_:u:FC double u
+feat:_:v:FC double v
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# FD double
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:_:w:FD double w
+feat:_:x:FD double x
+feat:_:y:FD double y
+feat:_:z:FD double z
+feat:_:A:FD double A
+feat:_:B:FD double B
+feat:_:C:FD double C
+feat:_:D:FD double D
+feat:_:E:FD double E
+feat:_:F:FD double F
+feat:_:G:FD double G
+feat:_:H:FD double H
+feat:_:I:FD double I
+feat:_:J:FD double J
+feat:_:K:FD double K
+feat:_:L:FD double L
+feat:_:M:FD double M
+feat:_:N:FD double N
+feat:_:O:FD double O
+feat:_:P:FD double P
+feat:_:Q:FD double Q
+feat:_:R:FD double R
+feat:_:S:FD double S
+feat:_:T:FD double T
+feat:_:U:FD double U
+feat:_:V:FD double V
+feat:_:W:FD double W
+feat:_:X:FD double X
+feat:_:Y:FD double Y
+feat:_:Z:FD double Z
+feat:_:~:FD double ~
+feat:_:`:FD double `
+
+
+###########DARK TILE NO PASS
+feat:*:,:end , dark
+feat:*:.:end . white
+###########DARK TILE NO PASS
+
+###########LIGHTENED TILES (dungeons at open air)
+feat:.:!:light grass
+feat:.:@:light grass plants
+feat:.:#:light grass flowers
+###########LIGHTENED TILES (dungeons at open air)
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# WORLD MAP ^w
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+feat:*:*:newbie star
+
+################################################ EXCLUSIVE F2W!!! F7 is NOT clone
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# F7 deep water F2W F
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+
+feat:G:0:F7 deep water F2W 0
+feat:G:1:F7 deep water F2W 1
+feat:G:2:F7 deep water F2W 2
+feat:G:3:F7 deep water F2W 3
+feat:G:4:F7 deep water F2W 4
+feat:G:5:F7 deep water F2W 5
+feat:G:6:F7 deep water F2W 6
+feat:G:7:F7 deep water F2W 7
+feat:G:8:F7 deep water F2W 8
+feat:G:9:F7 deep water F2W 9
+feat:G:a:F7 deep water F2W a
+feat:G:b:F7 deep water F2W b
+feat:G:c:F7 deep water F2W c
+feat:G:d:F7 deep water F2W d
+feat:G:e:F7 deep water F2W e
+# empty:
+feat:G:f:F7 deep water F2W f
+feat:G:g:F7 deep water F2W g
+feat:G:h:F7 deep water F2W h
+feat:G:i:F7 deep water F2W i
+feat:G:j:F7 deep water F2W j
+feat:G:k:F7 deep water F2W k
+feat:G:l:F7 deep water F2W l
+feat:G:m:F7 deep water F2W m
+feat:G:n:F7 deep water F2W n
+feat:G:o:F7 deep water F2W o
+feat:G:p:F7 deep water F2W p
+feat:G:q:F7 deep water F2W q
+feat:G:r:F7 deep water F2W r
+feat:G:s:F7 deep water F2W s
+feat:G:t:F7 deep water F2W t
+feat:G:u:F7 deep water F2W u
+feat:G:v:F7 deep water F2W v
+
+##################################################################
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# CLONE TERRAIN: FLOORS _AS_ WALLS DECORATIONS
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+
+# EB - EE dirt.. No stairs / no monsters... for dungeons
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EB dirt F2W A
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+#G
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EC dirt F2W A
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+#G
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# ED dirt F2W B
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+#H
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EE dirt F2W 
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+#H
+
+# the same No stairs / no monsters for sand, trees...

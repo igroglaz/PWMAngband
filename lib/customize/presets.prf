@@ -7,8 +7,8 @@
 
 ##### Load presets if appropriate #####
 
-# David Gervais' tiles
-P:gervais:xtra-dvg.prf
+# Tangaria' tiles
+P:tangaria:xtra-tan.prf
 N:0:0x82:0xE4
 N:1:0x82:0xE5
 N:2:0x82:0xE6

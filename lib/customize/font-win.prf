@@ -11,7 +11,6 @@
 # one special wall type, so we have to use special "colors".
 #
 
-
 ### Terrain features ###
 
 # Floors (white : centered dot)
@@ -22,16 +21,137 @@ feat:open floor:*:1:8
 # glyph:open floor:8
 
 
-### Monster features ###
+###################
+###################
+###################
 
-# Regular version to bypass default value from monster.txt
-# monster : name : attr : char
-# monster:Uvatha the Horseman:1:205
+
+### NPC
+
+#feat:Tavern:*:3:127
+
+feat:Halbarad, the old ranger:*:13:188
+feat:Sonya the cat:*:15:173
+feat:Morinehtar the Wizard:*:12:186
+feat:Old guard Barry:*:3:188
+#feat:Bob the villager:*:2:177
+#feat:Marta the villager:*:7:164
+feat:Shtukensia the tavernkeeper:*:10:164
+feat:Danny the dog:*:15:167
+#feat:Arthur the Archer:*:5:187
+#feat:Deckard Coin:*:8:186
+#feat:Boris the Guard:*:9:188
+#feat:Tom Bombadil:*::
+#feat:Mr. Underhill:*:11:175
+#feat:Gildor:*:1:178
+#feat:Squint-eyed Southerner:*::
+#feat:Bill Ferny:*::
+#feat:Boromir:*:9:188
+#feat:Barliman:*::
+#feat:Torog:*:3:199
+#feat:Nob, a servant:*::
+#feat:Rose:*::
+
+
+
+
+### Monster ###
+
+# if we don't need color:
+# monster-char-char : name : char
 #
-# Simplified version to specify default attribute (client only)
-# monster-char : name : char
-# monster-char:Uvatha the Horseman:205
+# if we need color:
+# monster-char-attr:name:attr:char
 #
-# Alternate version to specify attr by symbol (client only)
-# monster-attr : name : attr : char
-# monster-attr:Uvatha the Horseman:w:205
+# NO TILES:
+# It
+# Null, the Living Void
+
+monster-char:Target Dummy:131
+
+##################
+#
+# Dungeon bosses #
+#
+##################
+
+monster-char:Baba Yaga:183
+monster-char:Vasilisa the Beautiful:164
+monster-char:Solovei the Robber:188
+monster-char:Shtukensia the Rogue:164
+monster-char:Kikimora:183
+monster-char:Azog, the Great Orc:185
+monster-char:Old Man Willow:135
+monster-char:Koschei the Deathless:203
+monster-char:Bert the Stone Troll:199
+monster-char:Tom the Stone Troll:199
+monster-char:Bill the Stone Troll:199
+monster-char:The Sandworm Queen:164
+monster-char:Ulfang the Black:188
+monster-char:The Wight-King of the Barrow-downs:205
+monster-char:The Minotaur of the Labyrinth:179
+# not fish, but tentacles:
+monster-char:The Watcher in the Water:159
+monster-char:Golgarach, the Living Rock:148
+monster-char:The Balrog of Moria:201
+monster-char:The White Balrog:201
+monster-char:The Glass Golem:160
+monster-char:Shelob, Spider of Darkness:198
+monster-char:Ar-Pharazon the Golden:182
+monster-char:Radagast the Brown:186
+monster-char:The Mouth of Sauron:186
+monster-char:Trone, the Rebel Thunderlord:170
+monster-char:Glaurung, Father of the Dragons:169
+monster-char:The Necromancer of Dol Guldur:197
+monster-char:Feagwath, the Undead Sorcerer:182
+monster-char:The Balrog of the Sammath Naur:201
+monster-char:Sauron, the Sorcerer:189
+monster-char:Wolf-Sauron:167
+monster-char:Serpent-Sauron:181
+monster-char:Vampire-Sauron:203
+monster-char:Morgoth, Lord of Darkness:190
+monster-char:Tulkas, Champion of the Valar:188
+monster-char:Varda, Queen of the Valar:183
+monster-char:Manwe, King of the Valar:189
+monster-char:Melkor, Lord of Darkness:190
+monster-char:Eru Iluvatar:149
+
+
+
+
+############################
+
+monster-char:The Stormbringer:161
+
+#monster-char:The Queen Ant:164
+
+monster-char:Uriel, Angel of Fire:165
+monster-char:Azriel, Angel of Death:165
+monster-char:Gabriel, the Messenger:165
+monster-char:Michael, the Guardian:165
+
+#monster-char:The Phoenix:166
+#monster-char:Grip, Farmer Maggot's dog:167
+#monster-char:Wolf, Farmer Maggot's dog:167
+#monster-char:Fang, Farmer Maggot's dog:167
+#monster-char:Bloodfang, the Wolf:167
+#monster-char:Draugluin, Sire of All Werewolves:167
+#monster-char:Carcharoth, the Jaws of Thirst:167
+#monster-char:Huan, Wolfhound of the Valar:167
+
+#monster-char:Kavlax the Many-Headed:168
+#monster-char:The Lernaean Hydra:168
+#monster-char:Chudo Yudo:168
+
+monster-char:Uvatha the Horseman:205
+monster-char:Adunaphel the Quiet:205
+monster-char:Akhorahil the Blind:205
+monster-char:Ren the Unclean:205
+monster-char:Ji Indur Dawndeath:205
+monster-char:Dwar, Dog Lord of Waw:205
+monster-char:Hoarmurath of Dir:205
+monster-char:Khamul, the Black Easterling:205
+
+monster-char:The Witch-King of Angmar:2
+
+

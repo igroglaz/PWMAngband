@@ -1,12 +1,4 @@
-# File: object.txt
-
-
-# This file is used to initialize the "object kind" information for PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding object.txt ===
+# === Understanding object.txt ("object kind") ===
 
 # name: & object name~
 # graphics: symbol : color
@@ -178,7 +170,7 @@ graphics:~:u
 type:light
 level:1
 weight:22
-cost:2
+cost:8
 alloc:70:1 to 40
 attack:1d1:0:0
 armor:0:0
@@ -191,8 +183,8 @@ graphics:~:U
 type:light
 level:5
 weight:50
-cost:35
-alloc:70:5 to 100
+cost:150
+alloc:70:10 to 100
 attack:1d1:0:0
 armor:0:0
 flags:TAKES_FUEL | LIGHT_3 | IGNORE_FIRE
@@ -204,7 +196,7 @@ graphics:!:y
 type:flask
 level:1
 weight:20
-cost:3
+cost:12
 alloc:50:1 to 100
 attack:1d4:0:0
 armor:0:0
@@ -220,15 +212,43 @@ desc: damage (which occurs even against creatures resistant to fire).
 
 ### Normal Food ###
 
+name:& Sprig~ of Athelas
+graphics:,:g
+type:food
+level:0
+weight:1
+cost:0
+alloc:1:1 to 127
+pile:10:1d2
+effect:CURE:BLACKBREATH
+effect:CURE:STUN
+effect:CURE:POISONED
+effect:CURE:CUT
+effect:HEAL_HP
+dice:5d2
+effect:NOURISH:INC_BY
+dice:5
+msg_self:Refreshing!..
+desc:Cures all cuts, poison, stunning and black breath.
+
 name:& Hard Biscuit~
 graphics:,:M
 type:food
 level:0
 weight:2
-cost:1
+cost:300
+alloc:3:1 to 20
+pile:10:2d4
 effect:NOURISH:INC_BY
-dice:10
+dice:4
+effect:NOURISH:INC_BY
+dice:5
+effect:NOURISH:INC_BY
+dice:6
+effect:RANDOM
+dice:3
 effect:CRUNCH
+msg_self:Crunch!..
 desc:A filling if tooth-breaking biscuit made mostly of rye.
 
 name:& Apple~
@@ -236,8 +256,8 @@ graphics:,:I
 type:food
 level:0
 weight:4
-cost:3
-alloc:40:0 to 20
+cost:0
+alloc:3:1 to 20
 pile:10:1d2
 effect:NOURISH:INC_BY
 dice:10
@@ -249,10 +269,10 @@ graphics:,:u
 type:food
 level:0
 weight:3
-cost:3
-alloc:40:0 to 50
+cost:0
+alloc:3:1 to 50
 effect:NOURISH:INC_BY
-dice:15
+dice:10
 msg_self:That tastes good.
 desc:Fruit roughly chopped and sun-dried, prepared as marching rations for the
 desc: rangers of Ithilien.
@@ -260,13 +280,13 @@ desc: rangers of Ithilien.
 name:& Slime Mold~
 graphics:,:t
 type:food
-level:30
+level:5
 weight:2
-cost:2
-alloc:40:30 to 100
-pile:100:2d3
+cost:0
+alloc:3:5 to 60
+pile:100:1d3
 effect:NOURISH:INC_BY
-dice:15
+dice:25
 msg_self:That tastes better than nothing.
 desc:A strange fungal growth, prone to moving if not observed. Not very tasty
 desc: but quite filling.
@@ -274,17 +294,16 @@ desc: but quite filling.
 name:& Ration~ of Food
 graphics:,:U
 type:food
-level:0
+level:1
 weight:8
-cost:3
-alloc:40:0 to 50
-pile:100:1d5
+cost:0
+alloc:25:1 to 50
+pile:100:1d2
 effect:NOURISH:INC_BY
-dice:30
+dice:40
 msg_self:That tastes good.
-desc:This nutritious but fairly bland food, called cram by the Lake-men who
-desc: make it is familiar to anyone contemplating long journeys. It is
-desc: sustaining, but very uninteresting except as a chewing exercise.
+desc:This nutritious but fairly bland food is familiar to anyone contemplating
+desc: long journeys.
 
 name:& Scrap~ of Flesh
 graphics:,:D
@@ -295,9 +314,9 @@ cost:0
 alloc:30:50 to 100
 pile:50:1d3
 effect:NOURISH:SET_TO
-dice:5+1d4
+dice:7+1d4
 effect:NOURISH:SET_TO
-dice:1d4
+dice:7+3d2
 effect:NOURISH:INC_BY
 dice:10
 effect:NOURISH:INC_BY
@@ -315,8 +334,22 @@ graphics:,:W
 type:food
 level:10
 weight:10
-cost:3
-alloc:30:10 to 50
+cost:0
+alloc:3:10 to 50
+pile:50:1d3
+effect:NOURISH:INC_BY
+dice:40
+msg_self:That tastes good.
+desc:A thick slice of pork, salted to keep it from spoiling. It is very
+desc: filling.
+
+name:& Strip~ of Beef Jerky
+graphics:,:W
+type:food
+level:10
+weight:10
+cost:0
+alloc:3:10 to 50
 pile:50:1d3
 effect:NOURISH:INC_BY
 dice:40
@@ -329,8 +362,8 @@ graphics:,:i
 type:food
 level:20
 weight:10
-cost:10
-alloc:30:20 to 70
+cost:0
+alloc:3:20 to 70
 pile:40:1d3
 effect:NOURISH:INC_TO
 dice:60
@@ -344,9 +377,9 @@ graphics:,:T
 type:food
 level:30
 weight:3
-cost:10
-alloc:20:30 to 100
-pile:10:1d3
+cost:0
+alloc:10:30 to 100
+pile:10:1d2
 effect:CURE:POISONED
 effect:HEAL_HP
 dice:20
@@ -361,24 +394,65 @@ graphics:,:p
 type:food
 level:0
 weight:5
-cost:1
-effect:TIMED_INC:CONFUSED
-dice:1d5
+cost:75
+alloc:5:0 to 50
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:11+1d8
+effect:TIMED_INC:BLIND
+dice:11+1d8
+effect:TIMED_INC:IMAGE
+dice:11+1d5
+effect:TIMED_INC:AMNESIA
+dice:11+1d8
+effect:TIMED_INC:POISONED
+dice:8+1d8
+effect:TIMED_INC:SLOW
+dice:11+1d11
+effect:RANDOM
+dice:6
 effect:NOURISH:INC_BY
-dice:3
-msg_self:That tastes great!
-desc:It raises your spirits.
+dice:1
+effect:TIMED_INC:CONFUSED
+dice:8+1d8
+effect:TIMED_INC:BOLD
+dice:50+1d20
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:CON
+######################
+effect:DRAIN_STAT:INT
+dice:1
+msg_self:*Hic... Hic...*
+desc:It pretty strong and could raise your spirits.
 
 name:& Pint~ of Fine Wine
 graphics:,:v
 type:food
 level:0
 weight:10
-cost:2
-effect:TIMED_INC:BOLD
-dice:80+1d40
+cost:100
+alloc:10:0 to 50
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:1+1d8
+effect:TIMED_INC:BLIND
+dice:1+1d4
+effect:TIMED_INC:IMAGE
+dice:1+1d2
+effect:TIMED_INC:AMNESIA
+dice:1+1d8
+effect:TIMED_INC:POISONED
+dice:1+1d12
+effect:TIMED_INC:SLOW
+dice:1+1d8
+effect:RANDOM
+dice:6
 effect:NOURISH:INC_BY
 dice:3
+effect:TIMED_INC:CONFUSED
+dice:1+1d8
+effect:TIMED_INC:BOLD
+dice:30+1d20
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:CON
 msg_self:That tastes great! A fine vintage.
 desc:A fine way to wash down some otherwise unappetising rations.
 
@@ -388,11 +462,11 @@ type:food
 level:10
 weight:2
 cost:100
-alloc:20:10 to 50
+alloc:5:10 to 50
 effect:RESTORE_STAT:CON
 effect:RESTORE_STAT:STR
 effect:NOURISH:INC_BY
-dice:3
+dice:7
 msg_self:You feel your heart warm.
 desc:Just a little of this warm and fragrant liquor gives you fresh hope and
 desc: vigour.
@@ -402,13 +476,13 @@ graphics:,:m
 type:food
 level:20
 weight:2
-cost:1
-alloc:20:20 to 100
+cost:0
+alloc:3:20 to 100
 pile:10:1d3
-effect:TIMED_SET:SLOW
-dice:2+1d3
-effect:TIMED_SET:STUN
-dice:2+1d3
+effect:HEAL_HP
+dice:3
+effect:TIMED_INC:FAST:0:5
+dice:1d3
 effect:NOURISH:INC_BY
 dice:5
 msg_self:It burns your throat.
@@ -419,14 +493,14 @@ graphics:,:Z
 type:food
 level:60
 weight:10
-cost:2000
-alloc:10:60 to 100
+cost:22000
+alloc:3:60 to 100
 effect:GAIN_STAT:CON
 effect:GAIN_STAT:STR
 effect:RESTORE_STAT:CON
 effect:RESTORE_STAT:STR
 effect:NOURISH:INC_TO
-dice:60
+dice:80
 msg_self:Refreshing!
 desc:This looks like pure water, but its scent reminds you of the smell of a
 desc: distant wood borne from afar by a cool breeze at night.
@@ -438,21 +512,21 @@ graphics:,:d
 type:mushroom
 level:5
 weight:1
-cost:200
+cost:600
 alloc:10:5 to 100
 pile:70:1d4
 effect:TIMED_INC:ESP
 dice:50+7d7
 effect:CURE:BLIND
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Fast Recovery
 graphics:,:d
 type:mushroom
 level:5
 weight:1
-cost:200
+cost:600
 alloc:10:5 to 40
 pile:70:1d4
 effect:CURE:BLIND
@@ -462,14 +536,14 @@ effect:CURE:STUN
 effect:HEAL_HP
 dice:30
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Vigor
 graphics:,:d
 type:mushroom
 level:20
 weight:1
-cost:200
+cost:800
 alloc:25:20 to 100
 pile:13:1d3
 effect:RESTORE_STAT:CON
@@ -478,14 +552,14 @@ effect:RESTORE_STAT:WIS
 effect:RESTORE_STAT:INT
 effect:RESTORE_STAT:STR
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Clear Mind
 graphics:,:d
 type:mushroom
 level:5
 weight:1
-cost:200
+cost:600
 alloc:10:5 to 40
 pile:70:1d4
 effect:TIMED_INC:OPP_CONF
@@ -496,14 +570,14 @@ effect:CURE:CONFUSED
 effect:RESTORE_MANA
 dice:10
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Emergency
 graphics:,:d
 type:mushroom
 level:5
 weight:1
-cost:60
+cost:150
 alloc:10:5 to 100
 pile:70:1d4
 effect:HEAL_HP
@@ -515,20 +589,22 @@ dice:25+5d5
 effect:TIMED_INC:IMAGE
 dice:25+5d5
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Terror
 graphics:,:d
 type:mushroom
 level:5
 weight:1
-cost:60
-alloc:10:5 to 40
+cost:150
+alloc:5:5 to 40
 pile:70:1d4
+effect:TIMED_INC_NO_RES:IMAGE
+dice:25+5d5
 effect:TIMED_SET:TERROR
 dice:25+5d5
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 desc:It allows you to run for your life.
 
 name:Stoneskin
@@ -536,13 +612,13 @@ graphics:,:d
 type:mushroom
 level:10
 weight:1
-cost:60
+cost:150
 alloc:10:10 to 40
 pile:70:1d4
 effect:TIMED_SET:STONESKIN
 dice:50+7d7
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 desc:Its poison turns your skin to stone, albeit briefly.
 
 name:Debility
@@ -550,7 +626,7 @@ graphics:,:d
 type:mushroom
 level:10
 weight:1
-cost:20
+cost:100
 alloc:10:10 to 40
 pile:70:1d4
 effect:DRAIN_STAT:CON
@@ -559,20 +635,20 @@ effect:RANDOM
 dice:2
 effect:RESTORE_MANA
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 
 name:Sprinting
 graphics:,:d
 type:mushroom
 level:15
 weight:1
-cost:100
+cost:300
 alloc:1:15 to 100
 pile:70:1d4
 effect:TIMED_INC:SPRINT
 dice:100
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 desc:It hastes you for a while, but then makes you slower for a while afterward.
 
 name:Purging
@@ -580,14 +656,14 @@ graphics:,:d
 type:mushroom
 level:15
 weight:1
-cost:60
+cost:150
 alloc:1:15 to 100
 pile:70:1d4
 effect:CURE:POISONED
 effect:RESTORE_STAT:CON
 effect:RESTORE_STAT:STR
 effect:NOURISH:SET_TO
-dice:5
+dice:7
 msg_self:Your stomach heaves.
 desc:It makes you very hungry but otherwise healthy.
 
@@ -596,19 +672,92 @@ graphics:,:d
 type:mushroom
 level:50
 weight:1
-cost:300
+cost:1500
 alloc:20:50 to 100
-pile:70:1d4
+pile:70:1d3
 effect:TIMED_INC:STEALTH
 dice:10+1d10
 effect:NOURISH:INC_BY
-dice:5
+dice:3
 desc:It makes you very stealthy for a short while.
+
+name:Paranoia
+graphics:,:d
+type:mushroom
+level:5
+weight:1
+cost:0
+alloc:5:5 to 40
+pile:70:1d4
+effect:TIMED_INC_NO_RES:AFRAID
+dice:25+5d5
+effect:TIMED_INC:STEALTH
+dice:5+1d5
+effect:NOURISH:INC_BY
+dice:3
+desc:It allows you to run for your life.
+
+name:Hallucination
+graphics:,:d
+type:mushroom
+level:5
+weight:1
+cost:0
+alloc:10:5 to 40
+pile:70:1d4
+effect:TIMED_INC_NO_RES:IMAGE
+dice:5+5d5
+effect:NOURISH:INC_BY
+dice:5
+desc:It allows you to run for your life.
+
+name:Toadstool
+graphics:,:d
+type:mushroom
+level:5
+weight:1
+cost:0
+alloc:10:5 to 40
+pile:70:1d4
+effect:TIMED_INC_NO_RES:IMAGE
+dice:5+5d5
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:2
+effect:NOURISH:SET_TO
+dice:5
+effect:TIMED_INC:POISONED
+dice:10+2d7
+desc:It allows you to run for your life.
 
 
 ##### Weapons #####
 
 ### Swords ###
+
+name:& Broken Dagger~
+graphics:|:W
+type:sword
+level:0
+weight:9
+cost:0
+alloc:3:1 to 100
+attack:1d1:-2:-4
+armor:0:0
+flags:THROWING
+desc:A short two-edged blade... It's broken.
+
+name:& Broken Sword~
+graphics:|:W
+type:sword
+level:10
+weight:65
+cost:0
+alloc:3:0 to 100
+attack:1d2:-2:-4
+armor:0:0
+desc:A broken sword which was long and straight in it's better days.
+desc: Now it's mainly good for break-opening chests or jamming doors.
+desc: Also it's rusty...
 
 name:& Dagger~
 graphics:|:W
@@ -1373,7 +1522,7 @@ graphics:\:s
 type:digger
 level:5
 weight:60
-cost:10
+cost:200
 alloc:20:5 to 100
 attack:1d2:0:0
 armor:0:0
@@ -1385,7 +1534,7 @@ graphics:\:g
 type:digger
 level:30
 weight:180
-cost:300
+cost:600
 alloc:20:30 to 100
 attack:1d3:0:0
 armor:0:0
@@ -1399,7 +1548,7 @@ graphics:\:D
 type:digger
 level:50
 weight:250
-cost:700
+cost:1400
 alloc:20:50 to 100
 attack:1d8:0:0
 armor:0:0
@@ -1573,6 +1722,32 @@ desc:A gorgeous-looking silver crown, adorned with several gems. You might wear
 desc: it on your head, if you really think you're worthy.
 
 ### Body armours ###
+
+name:& Filthy Rag~
+graphics:(:s
+type:soft armour
+level:1
+weight:10
+cost:0
+alloc:20:1 to 100
+attack:0d0:0:0
+armor:1:0
+desc:Stinky (and it's pointless to try to get rid of the smell as it magical)
+desc: and utterly filthy rags. You don't want to imagine who wore this rags
+desc: before you...
+
+name:Old Rusty Chain Mail~
+graphics:[:u
+type:hard armour
+level:10
+weight:225
+cost:550
+alloc:20:10 to 100
+attack:1d4:-5:0
+armor:27:0
+desc:An aaancient chain mail.. You grand grandfather is a little boy
+desc: compared to it. Nonetheless by the dens on it you could tell that it's
+desc: guarded its owners pretty well.
 
 name:& Robe~
 graphics:(:b
@@ -1888,6 +2063,7 @@ alloc:10:50 to 100
 attack:1d1:0:0
 armor:0:5+d5
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+#flags:SPELLS_OK
 desc:Highly protective gloves designed for an alchemist's elemental magics.
 
 ### Shields ###
@@ -2032,7 +2208,7 @@ level:5
 weight:2
 cost:250
 alloc:20:5 to 90
-values:SEARCH[d4M2]
+values:SEARCH[d4M2] | STEALTH[1]
 desc:This ring magically improves your attention, so you can detect hidden
 desc: things better.
 
@@ -2046,6 +2222,7 @@ weight:2
 cost:750
 alloc:20:30 to 100
 flags:SUST_STR | SUST_DEX | SUST_CON | EASY_KNOW
+values:CON[1]
 desc:This magical bauble protects your body against draining attacks.
 
 name:Soulkeeping
@@ -2056,6 +2233,7 @@ weight:2
 cost:600
 alloc:20:30 to 100
 flags:SUST_STR | SUST_INT | SUST_WIS | EASY_KNOW
+values:CON[1]
 desc:This magical ring protects your mind against draining attacks.
 
 ### Resistance rings ###
@@ -2106,7 +2284,7 @@ alloc:20:20 to 100
 attack:0d0:0:0
 armor:0:5+d5M10
 flags:IGNORE_FIRE
-values:RES_FIRE[1]
+values:RES_FIRE[1] | CON[1]
 act:RING_FLAMES
 time:50+d50
 desc:This fiery circlet grants you protection, makes fire less dangerous and
@@ -2122,7 +2300,7 @@ alloc:20:20 to 100
 attack:0d0:0:0
 armor:0:5+d5M10
 flags:IGNORE_ACID
-values:RES_ACID[1]
+values:RES_ACID[1] | CON[1]
 act:RING_ACID
 time:50+d50
 desc:This magical ring is imbued with spells of devouring acid, granting
@@ -2139,7 +2317,7 @@ alloc:20:20 to 100
 attack:0d0:0:0
 armor:0:5+d5M10
 flags:IGNORE_COLD
-values:RES_COLD[1]
+values:RES_COLD[1] | CON[1]
 act:RING_ICE
 time:50+d50
 desc:This ring is imbued with supernatural cold, which makes you less vulnerable
@@ -2156,7 +2334,7 @@ alloc:20:20 to 100
 attack:0d0:0:0
 armor:0:5+d5M10
 flags:IGNORE_ELEC
-values:RES_ELEC[1]
+values:RES_ELEC[1] | CON[1]
 act:RING_LIGHTNING
 time:50+d50
 desc:This sparkling circlet grants you protection, makes electricity less
@@ -2243,6 +2421,7 @@ weight:2
 cost:700
 alloc:20:10 to 50
 flags:IMPAIR_HP | EASY_KNOW
+values:CON[1]
 act:CURE_SERIOUS
 time:10+5d8
 
@@ -2254,7 +2433,8 @@ weight:2
 cost:4000
 alloc:50:15 to 80
 flags:AFRAID | EASY_KNOW
-values:SPEED[2]
+curse:hallucination:100
+values:SPEED[3]
 
 name:the Mouse
 graphics:=:d
@@ -2275,17 +2455,32 @@ weight:2
 cost:100
 alloc:50:10 to 50
 flags:PROT_FEAR | EASY_KNOW
-values:STEALTH[-2]
+values:STEALTH[-2] | CON[1]
 
 ### Misc rings ###
+
+name:Woe
+graphics:=:d
+type:ring
+level:10
+weight:2
+cost:0
+alloc:1:10 to 50
+flags:EASY_KNOW | FEATHER | SEE_INVIS
+curse:teleportation:100
+values:INT[3]
+values:WIS[3]
+#values:INT[-1+-M5]
+#values:WIS[-1+-M5]
+desc:This ring emanated with dark powers.
 
 name:Slow Digestion
 graphics:=:d
 type:ring
 level:10
 weight:2
-cost:250
-alloc:30:10 to 50
+cost:9999
+alloc:1:10 to 50
 flags:SLOW_DIGEST | EASY_KNOW
 desc:This magical bauble grants you some sustenance, allowing you to subsist on
 desc: less food.
@@ -2330,7 +2525,7 @@ level:10
 weight:2
 cost:800
 alloc:20:10 to 50
-values:TUNNEL[2+d3]
+values:TUNNEL[2+d3] | CON[1]
 act:STONE_TO_MUD
 time:15+2d10
 
@@ -2360,7 +2555,7 @@ weight:3
 cost:300
 alloc:50:10 to 50
 flags:IGNORE_ELEC | EASY_KNOW
-values:RES_ELEC[1]
+values:RES_ELEC[1] | CON[1]
 desc:This amulet will protect you from electrical discharges and storms.
 
 name:Resist Acid
@@ -2371,7 +2566,7 @@ weight:3
 cost:300
 alloc:50:10 to 50
 flags:IGNORE_ACID | EASY_KNOW
-values:RES_ACID[1]
+values:RES_ACID[1] | CON[1]
 desc:This magical talisman will make the corroding forces of acid less
 desc: threatening to your health.
 
@@ -2397,7 +2592,7 @@ weight:3
 cost:20000
 alloc:10:60 to 100
 flags:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON |
-flags:HOLD_LIFE | SLOW_DIGEST | EASY_KNOW |
+flags:HOLD_LIFE | EASY_KNOW |
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 desc:This blessed amulet will make the wearer impervious to evil magics
 desc: that would sap innate abilities. It also slows down the digestive
@@ -2473,6 +2668,21 @@ desc:The ultimate amulet for a rogue or assassin, it protects the
 desc: wearer against some evil magics, granting improvements in
 desc: the abilities vital to these adventurers.
 
+name:the Cat
+graphics:":d
+type:amulet
+level:70
+weight:2
+cost:0
+alloc:1:70 to 100
+flags:IGNORE_ELEC | GOOD
+flags:HOLD_LIFE | SEE_INVIS
+values:SEARCH[1+d4M5] | STEALTH[1+d2M3] | INFRA[1+d4M5] | SPEED[2+d4M6] | MOVES[10]
+values:LIGHT[-1] | DAM_RED[-3] | WIS[-5]
+desc:This medallions were ones worn by one of Beruthiel's cats.
+desc:Maybe it will be good idea to try to wear it.. even though you are
+desc:definitely not a cat. 
+
 ### Ability boosts ###
 
 name:Regeneration
@@ -2493,7 +2703,7 @@ level:10
 weight:3
 cost:200
 alloc:30:10 to 70
-values:INFRA[1+M5]
+values:INFRA[1+M5] | CON[1]
 desc:This amulet will increase your ability to sense warm-blooded
 desc: creatures in your vicinity.
 
@@ -2504,7 +2714,7 @@ level:10
 weight:3
 cost:600
 alloc:20:10 to 40
-values:SEARCH[d5M5]
+values:SEARCH[d5M5] | STEALTH[1]
 desc:This amulet grants keen sight, finding things that are hidden.
 
 ### Powers ###
@@ -2518,6 +2728,7 @@ cost:10
 alloc:20:10 to 40
 flags:EASY_KNOW
 curse:teleportation:100
+values:SEARCH[d5M5] | MOVES[10]
 desc:This amulet will randomly teleport you all over the place.
 
 name:Slow Digestion
@@ -2525,8 +2736,8 @@ graphics:":d
 type:amulet
 level:15
 weight:3
-cost:200
-alloc:20:15 to 40
+cost:9999
+alloc:1:15 to 40
 flags:SLOW_DIGEST | EASY_KNOW
 desc:This talisman will make you hungry less quickly when worn.
 
@@ -2538,7 +2749,22 @@ weight:3
 cost:0
 alloc:20:10 to 40
 flags:EASY_KNOW
-desc:This amulet is not magical. It just looks good.
+values:INT[1] | WIS[-1]
+desc:Is this amulet magical? It looks good though..
+
+name:Doom
+graphics:":d
+type:amulet
+level:70
+weight:3
+cost:0
+alloc:1:70 to 100
+attack:0d0:0:0
+armor:0:d5M5
+flags:FREE_ACT | SEE_INVIS | PROT_BLIND
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+values:STR[-5] | DEX[-5] | INT[-5] | WIS[-5] | CON[-5] | SPEED[1+M2]
+desc:This amulet is full of dark magical power.
 
 ### Mixed ###
 
@@ -2547,10 +2773,10 @@ graphics:":d
 type:amulet
 level:15
 weight:3
-cost:10
+cost:0
 alloc:20:15 to 40
-flags:FREE_ACT
-values:SPEED[-3+1d2]
+flags:FREE_ACT | SUST_DEX
+values:MOVES[-10] | SPEED[1]
 
 
 ##### Scrolls #####
@@ -2574,7 +2800,7 @@ graphics:?:w
 type:scroll
 level:10
 weight:5
-cost:40
+cost:600
 alloc:40:10 to 100
 pile:25:2
 effect:TELEPORT:NONE:0:1
@@ -2587,10 +2813,29 @@ graphics:?:w
 type:scroll
 level:20
 weight:5
-cost:800
-alloc:16:20 to 100
+cost:2800
+alloc:15:20 to 100
 pile:10:2
 effect:TELEPORT_LEVEL:NONE:1
+effect:TIMED_INC_NO_RES:IMAGE
+dice:2+1d7
+
+name:Dimension Shake
+graphics:?:w
+type:scroll
+level:20
+weight:5
+cost:0
+alloc:1:20 to 100
+effect:ALTER_REALITY:NONE:1
+effect:TIMED_INC_NO_RES:IMAGE
+dice:10+1d15
+effect:DISENCHANT
+effect:SPOT:ACID:0
+dice:4d$S
+expr:S:DUNGEON_LEVEL:/ 2
+msg_self:Suddenly world shatters!
+msg_other: trembles reality!
 
 ### Detection ###
 
@@ -2599,11 +2844,17 @@ graphics:?:w
 type:scroll
 level:5
 weight:5
-cost:65
+cost:500
 alloc:50:5 to 100
 pile:70:1d3
 effect:MAP_AREA
-effect-yx:22:40
+effect-yx:15:32
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:3d1
+effect:TIMED_INC_NO_RES:BLIND
+dice:5+1d13
+effect:TIMED_INC_NO_RES:IMAGE
+dice:11+1d24
 
 name:Treasure Detection
 graphics:?:w
@@ -2735,8 +2986,9 @@ graphics:?:w
 type:scroll
 level:20
 weight:5
-cost:5000
-alloc:10:20 to 100
+cost:0
+#cost:15000
+alloc:2:20 to 40
 effect:ACQUIRE
 dice:1
 
@@ -2745,8 +2997,9 @@ graphics:?:w
 type:scroll
 level:60
 weight:5
-cost:10000
-alloc:5:60 to 100
+cost:0
+#cost:30000
+alloc:1:40 to 60
 effect:ACQUIRE
 dice:1+1d2
 
@@ -2788,9 +3041,9 @@ graphics:?:w
 type:scroll
 level:5
 weight:5
-cost:10
-alloc:60:5 to 100
-pile:100:2d3
+cost:0
+alloc:40:20 to 100
+pile:100:1d1
 effect:NOURISH:INC_TO
 dice:50
 
@@ -2844,10 +3097,14 @@ graphics:?:w
 type:scroll
 level:10
 weight:5
-cost:50
+cost:0
 alloc:40:10 to 60
 pile:25:2d3
+effect:ALTER:KILL_TRAP
 effect:TOUCH:KILL_DOOR
+effect:TOUCH:KILL_DOOR
+effect:RANDOM
+dice:3
 
 name:Deep Descent
 graphics:?:w
@@ -2859,6 +3116,17 @@ alloc:20:1 to 100
 pile:20:2
 effect:DEEP_DESCENT
 
+name:Forest Spirit
+graphics:?:w
+type:scroll
+level:1
+weight:5
+cost:0
+alloc:1:20 to 100
+effect:CREATE_TREES
+effect:SUMMON:ANIMAL:0:-1
+dice:1d4
+
 ### "Holy" spells ###
 
 name:Blessing
@@ -2866,7 +3134,7 @@ graphics:?:w
 type:scroll
 level:1
 weight:5
-cost:15
+cost:30
 alloc:50:1 to 50
 pile:70:1d3
 effect:TIMED_INC:BLESSED
@@ -2877,7 +3145,7 @@ graphics:?:w
 type:scroll
 level:10
 weight:5
-cost:40
+cost:80
 alloc:40:10 to 70
 pile:25:2
 effect:TIMED_INC:BLESSED
@@ -2888,7 +3156,7 @@ graphics:?:w
 type:scroll
 level:50
 weight:5
-cost:80
+cost:220
 alloc:40:50 to 100
 pile:25:2
 effect:TIMED_INC:BLESSED
@@ -2899,7 +3167,7 @@ graphics:?:w
 type:scroll
 level:30
 weight:5
-cost:50
+cost:350
 alloc:40:30 to 100
 pile:25:2
 effect:TIMED_INC:PROTEVIL
@@ -2913,18 +3181,18 @@ graphics:?:w
 type:scroll
 level:5
 weight:5
-cost:30
+cost:50
 alloc:16:5 to 60
 pile:25:2
 effect:TIMED_INC:ATT_CONF
-dice:10000
+dice:250+1d50
 
 name:Rune of Protection
 graphics:?:w
 type:scroll
 level:70
 weight:5
-cost:500
+cost:1500
 alloc:30:70 to 100
 effect:GLYPH:WARDING:1
 
@@ -2933,9 +3201,18 @@ graphics:?:w
 type:scroll
 level:40
 weight:5
-cost:1000
+cost:2000
 alloc:30:40 to 100
 effect:DESTRUCTION:LIGHT:15
+
+name:Rumours
+graphics:?:w
+type:scroll
+level:20
+weight:5
+cost:0
+alloc:1:1 to 100
+effect:COOKIE
 
 ### Bad scrolls ###
 
@@ -2975,8 +3252,135 @@ pile:70:1d3
 effect:TOUCH:MAKE_TRAP:3:1
 msg_self:You hear a low-pitched whistling sound.
 
+name:Curse Weapon
+graphics:?:w
+type:scroll
+level:2
+weight:5
+cost:0
+alloc:10:2 to 30
+pile:25:2
+effect:CURSE_WEAPON
+effect:DETECT_EVIL
+effect-yx:11:11
+msg_self:Suddenly your weapon inflamed in black fire!
+msg_other: weapon inflamed in black fire!
+
+name:Animate Weapon
+graphics:?:w
+type:scroll
+level:2
+weight:5
+cost:0
+alloc:10:30 to 70
+pile:25:2
+effect:DAMAGE
+dice:$B
+expr:B:WEAPON_DAMAGE:+ 0
+effect:DAMAGE
+dice:$B
+expr:B:WEAPON_DAMAGE:+ 0
+effect:DAMAGE
+dice:$B
+expr:B:WEAPON_DAMAGE:+ 0
+effect:DETECT_EVIL
+effect-yx:11:11
+msg_self:Suddenly your weapon turns on you!
+msg_other: weapon turns on him!
+
+name:Curse Armour
+graphics:?:w
+type:scroll
+level:2
+weight:5
+cost:0
+alloc:10:2 to 30
+pile:25:2
+effect:CURSE_ARMOR
+effect:DETECT_EVIL
+effect-yx:11:11
+msg_self:Suddenly you armour burns!
+msg_other: armour became cursed!
+
+name:Evil Spirit
+graphics:?:w
+type:scroll
+level:2
+weight:5
+cost:0
+alloc:10:30 to 70
+pile:25:2
+effect:WAKE
+effect:TIMED_INC:STUN
+dice:10+1d10
+#good:
+effect:DETECT_EVIL
+effect-yx:11:11
+effect:CURE:IMAGE
+msg_self:Your scroll made an ear-piercing shriek!
+msg_other: read foul scroll which shrieks!
+
+name:Damned Jail
+graphics:?:w
+type:scroll
+level:1
+weight:5
+cost:0
+alloc:1:20 to 100
+effect:CREATE_WALLS
+effect:SUMMON:SPIRIT:0:-1
+dice:1+1d4
+
+#name:The Void
+#effect:BIZARRE
 
 ##### Potions #####
+
+name:Philosopher's stone
+# test potion for dev purpose
+graphics:!:d
+type:potion
+level:100
+weight:4
+cost:0
+alloc:1:126 to 127
+effect:TELEPORT:NONE:0:1
+dice:10
+effect:CURE:IMAGE
+effect:TIMED_INC:SHERO
+dice:25+1d25
+effect:TIMED_INC:SINVIS
+dice:50+2d6
+effect:TIMED_INC:SINFRA
+dice:100+4d25
+effect:TIMED_INC:INVIS:0:5
+dice:$B+1d20
+effect:NOURISH:INC_BY
+dice:1
+effect:NOURISH:DEC_BY
+dice:1
+effect:BOLT_AWARE:TURN_ALL
+dice:10
+effect:BOLT_OR_BEAM:ACID
+dice:10d8
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+effect:BOLT_STATUS_DAM:MON_DRAIN
+dice:250
+effect:EARTHQUAKE:NONE:10
+effect:PROJECT_LOS_AWARE:MON_CONF
+dice:5+1d5
+effect:PROJECT_LOS_AWARE:MON_SLOW
+dice:10+1d10
+effect:PROJECT_LOS_AWARE:SLEEP_ALL
+effect:DETECT_INVISIBLE_MONSTERS
+effect-yx:22:40
+effect:DETECT_EVIL
+effect-yx:22:40
+effect:PROJECT_LOS_AWARE:DISP_EVIL:0:1
+dice:60
+effect:DESTRUCTION:LIGHT:15
+effect:MASS_BANISH
+effect:DARKEN_LEVEL
 
 ### Statgain ###
 
@@ -3035,6 +3439,23 @@ pile:10:2
 effect:GAIN_STAT:CON
 effect:RESTORE_STAT:CON
 
+name:Ugliness
+graphics:!:d
+type:potion
+level:30
+weight:4
+cost:0
+alloc:1:30 to 100
+pile:10:2
+effect:LOSE_RANDOM_STAT:CON
+effect:GAIN_STAT:CON
+effect:RESTORE_STAT:CON
+effect:DRAIN_STAT:WIS
+dice:15
+effect:TIMED_INC_NO_RES:CONFUSED
+dice:1+2d2
+msg_self:You feel that something missing!
+
 name:Augmentation
 graphics:!:d
 type:potion
@@ -3058,10 +3479,11 @@ graphics:!:d
 type:potion
 level:65
 weight:4
-cost:25000
+cost:0
 alloc:50:65 to 100
 effect:GAIN_EXP
-dice:100000
+dice:$B
+expr:B:PLAYER_LEVEL:* 1000 - 1000
 effect:RESTORE_EXP
 
 ### Healings ###
@@ -3074,6 +3496,16 @@ weight:4
 cost:20
 alloc:80:1 to 15
 pile:90:2d3
+effect:NOURISH:DEC_BY
+dice:1
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:0
+effect:RANDOM
+dice:4
 effect:TIMED_DEC:CONFUSED
 dice:20
 effect:TIMED_DEC:CUT
@@ -3081,8 +3513,8 @@ dice:20
 effect:CURE:BLIND
 effect:HEAL_HP
 dice:20
-effect:NOURISH:INC_BY
-dice:1
+effect:TIMED_INC:OPP_CONF
+dice:1d1
 
 name:Cure Serious Wounds
 graphics:!:d
@@ -3092,13 +3524,21 @@ weight:4
 cost:70
 alloc:80:5 to 40
 pile:80:2d3
+effect:NOURISH:DEC_BY
+dice:1
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:0
+effect:RANDOM
+dice:3
 effect:CURE:CONFUSED
 effect:CURE:BLIND
 effect:CURE:CUT
 effect:HEAL_HP
 dice:40
-effect:NOURISH:INC_BY
-dice:1
+effect:TIMED_INC:OPP_CONF
+dice:1d1
 
 name:Cure Critical Wounds
 graphics:!:d
@@ -3108,6 +3548,12 @@ weight:4
 cost:200
 alloc:80:12 to 100
 pile:70:2d3
+effect:NOURISH:DEC_BY
+dice:1
+effect:NOURISH:INC_BY
+dice:0
+effect:RANDOM
+dice:2
 effect:CURE:AMNESIA
 effect:CURE:CUT
 effect:CURE:STUN
@@ -3116,8 +3562,8 @@ effect:CURE:CONFUSED
 effect:CURE:BLIND
 effect:HEAL_HP
 dice:60
-effect:NOURISH:INC_BY
-dice:1
+effect:TIMED_INC:OPP_CONF
+dice:1d1
 
 name:Healing
 graphics:!:d
@@ -3135,7 +3581,7 @@ effect:CURE:CONFUSED
 effect:CURE:BLIND
 effect:HEAL_HP
 dice:300+m35
-effect:NOURISH:INC_BY
+effect:NOURISH:DEC_BY
 dice:1
 
 name:*Healing*
@@ -3143,7 +3589,7 @@ graphics:!:d
 type:potion
 level:40
 weight:4
-cost:1500
+cost:3000
 alloc:40:40 to 100
 effect:CURE:AMNESIA
 effect:CURE:CUT
@@ -3153,13 +3599,15 @@ effect:CURE:CONFUSED
 effect:CURE:BLIND
 effect:HEAL_HP
 dice:1200
+effect:NOURISH:INC_BY
+dice:1
 
 name:Life
 graphics:!:d
 type:potion
 level:60
 weight:4
-cost:5000
+cost:6000
 alloc:20:60 to 100
 effect:HEAL_HP
 dice:5000
@@ -3177,6 +3625,8 @@ effect:CURE:POISONED
 effect:CURE:CONFUSED
 effect:CURE:BLIND
 effect:RESTORE_EXP
+effect:NOURISH:INC_BY
+dice:1
 msg_self:You feel life flow through your body!
 
 name:Neutralize Poison
@@ -3194,7 +3644,7 @@ graphics:!:d
 type:potion
 level:15
 weight:4
-cost:350
+cost:1000
 alloc:64:15 to 100
 pile:25:2
 effect:RESTORE_MANA
@@ -3226,7 +3676,7 @@ effect:LOSE_RANDOM_STAT:STR
 effect:GAIN_STAT:STR
 effect:RESTORE_STAT:STR
 
-name:Intellect
+name:Smartness
 graphics:!:d
 type:potion
 level:20
@@ -3281,18 +3731,26 @@ graphics:!:d
 type:potion
 level:25
 weight:4
-cost:800
-alloc:40:25 to 100
-pile:25:2
+cost:0
+alloc:20:25 to 100
 effect:LIGHT_LEVEL:NONE:1
+effect:RESTORE_EXP
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:2d1
+effect:TIMED_INC_NO_RES:BLIND
+dice:3+1d6
+effect:TIMED_INC_NO_RES:IMAGE
+dice:9+1d18
+effect:NOURISH:DEC_BY
+dice:5
 
 name:*Enlightenment*
 graphics:!:d
 type:potion
 level:70
 weight:4
-cost:12000
-alloc:8:70 to 100
+cost:0
+alloc:4:70 to 100
 effect:DETECT_ALL_MONSTERS
 effect:DETECT_TREASURES:NONE:1
 effect-yx:22:40
@@ -3301,6 +3759,13 @@ effect:RESTORE_STAT:WIS
 effect:GAIN_STAT:INT
 effect:RESTORE_STAT:INT
 effect:LIGHT_LEVEL:NONE:1
+effect:RESTORE_EXP
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:1d1
+effect:TIMED_INC_NO_RES:IMAGE
+dice:6+1d12
+effect:NOURISH:DEC_BY
+dice:5
 
 ### Buffs ###
 
@@ -3309,7 +3774,7 @@ graphics:!:d
 type:potion
 level:1
 weight:4
-cost:75
+cost:550
 alloc:40:1 to 100
 pile:25:2
 effect:TIMED_INC:FAST:0:5
@@ -3323,6 +3788,14 @@ weight:4
 cost:25
 alloc:40:1 to 100
 pile:25:2
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:1
+effect:RANDOM
+dice:3
 effect:TIMED_INC:HERO
 dice:25+1d25
 effect:TIMED_INC:BOLD
@@ -3336,7 +3809,7 @@ graphics:!:d
 type:potion
 level:3
 weight:4
-cost:80
+cost:100
 alloc:40:3 to 100
 pile:25:2
 effect:TIMED_INC:SHERO
@@ -3386,7 +3859,7 @@ graphics:!:d
 type:potion
 level:20
 weight:4
-cost:30
+cost:90
 alloc:40:20 to 100
 pile:25:2
 effect:TIMED_INC:OPP_POIS
@@ -3404,6 +3877,9 @@ pile:25:2
 effect:TIMED_INC:SINVIS
 dice:50+2d6
 effect:CURE:BLIND
+effect:TIMED_INC:IMAGE
+dice:1d2
+msg_self:This tastes like slime mold juice.
 
 name:Infravision
 graphics:!:d
@@ -3413,8 +3889,60 @@ weight:4
 cost:20
 alloc:40:3 to 40
 pile:25:2
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:1
+effect:RANDOM
+dice:3
 effect:TIMED_INC:SINFRA
 dice:100+4d25
+effect:TIMED_INC:IMAGE
+dice:1d1
+msg_self:*Boom!* For a moment you had stars in your eyes..
+
+name:Invisibility
+graphics:!:d
+type:potion
+level:70
+weight:4
+cost:0
+alloc:1:70 to 100
+effect:TIMED_INC:INVIS:0:5
+dice:$B+1d20
+expr:B:PLAYER_LEVEL:/ 2
+effect:TIMED_INC_NO_RES:CONFUSED
+dice:$B+1d10
+expr:B:PLAYER_LEVEL:/ 2
+
+name:Wraith
+graphics:!:d
+type:potion
+level:70
+weight:4
+cost:0
+alloc:1:70 to 100
+attack:3d4:0:0
+effect:TIMED_INC:WRAITHFORM
+dice:$B+1d10
+expr:B:PLAYER_LEVEL:/ 3
+effect:TIMED_INC_NO_RES:BLIND
+dice:$B+1d20
+expr:B:PLAYER_LEVEL:+ 0
+effect:TIMED_INC_NO_RES:SLOW
+dice:$B+1d20
+expr:B:PLAYER_LEVEL:+ 0
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:1
+effect:TIMED_INC_NO_RES:SCRAMBLE
+dice:75+1d50
+effect:DRAIN_MANA
+dice:$Dd1
+expr:D:DUNGEON_LEVEL:* 4
+# good:
+effect:CURE:IMAGE
 
 ### Useless buggers ###
 
@@ -3423,11 +3951,12 @@ graphics:!:d
 type:potion
 level:1
 weight:4
-cost:2
+cost:600
 alloc:10:1 to 10
-pile:70:2d3
+pile:70:1d3
 effect:NOURISH:INC_BY
 dice:10
+effect:CURE:BLIND
 msg_self:You feel less thirsty.
 
 name:Sleep
@@ -3443,7 +3972,7 @@ armor:0:0
 effect:TIMED_INC:PARALYZED
 dice:5+1d5
 effect:NOURISH:INC_BY
-dice:1
+dice:3
 
 name:Blindness
 graphics:!:d
@@ -3457,6 +3986,10 @@ attack:3d4:0:0
 armor:0:0
 effect:TIMED_INC:BLIND
 dice:75+4d25
+effect:TIMED_INC:SINVIS
+dice:1+1d2
+effect:NOURISH:INC_BY
+dice:1
 
 name:Confusion
 graphics:!:d
@@ -3470,6 +4003,8 @@ attack:3d4:0:0
 armor:0:0
 effect:TIMED_INC:CONFUSED
 dice:10+4d5
+effect:TIMED_INC:SINFRA
+dice:30+4d25
 effect:NOURISH:INC_BY
 dice:1
 
@@ -3499,6 +4034,46 @@ attack:3d4:0:0
 armor:0:0
 effect:TIMED_INC:SLOW
 dice:15+1d25
+effect:TIMED_INC:SHERO
+dice:10+1d25
+effect:NOURISH:INC_BY
+dice:1
+
+name:Lose Memories
+graphics:!:d
+type:potion
+level:10
+weight:4
+cost:0
+alloc:10:10 to 30
+pile:99:2
+effect:BATTY
+effect:TIMED_INC:SCRAMBLE
+dice:20+1d20
+effect:DRAIN_STAT:INT
+dice:1
+effect:RANDOM
+dice:3
+effect:LOSE_EXP
+effect:NOURISH:DEC_BY
+dice:3
+#good:
+effect:CURE:IMAGE
+msg_self:Where am I? Oh.. What happened?
+msg_other: lost mind!
+
+name:Novice Alchemist's Creation
+graphics:!:d
+type:potion
+level:10
+weight:4
+cost:0
+alloc:10:2 to 15
+pile:25:2
+effect:DRAIN_STAT:INT
+dice:3
+effect:DRAIN_STAT:WIS
+dice:3
 effect:NOURISH:INC_BY
 dice:1
 
@@ -3519,6 +4094,8 @@ effect:TIMED_INC:SCRAMBLE
 dice:20+1d20
 effect:RANDOM
 dice:5
+effect:NOURISH:INC_BY
+dice:1
 
 name:Salt Water
 graphics:!:d
@@ -3532,9 +4109,110 @@ effect:TIMED_INC_NO_RES:PARALYZED
 dice:4
 effect:CURE:POISONED
 effect:NOURISH:SET_TO
-dice:2
+dice:5
 msg_self:The potion makes you queasy.
 msg_other: vomits!
+
+name:Stomach Water
+graphics:!:d
+type:potion
+level:3
+weight:4
+cost:1
+effect:NOURISH:SET_TO
+dice:2
+msg_self:The potion calms your stomach, but leaves you very hungry.
+msg_other: hiccups.
+
+name:Death
+graphics:!:d
+type:potion
+level:0
+weight:4
+cost:0
+alloc:1:2 to 40
+pile:70:1d3
+attack:3d6:0:0
+armor:0:0
+flags:EXPLODE
+effect:DAMAGE
+dice:$B
+expr:B:PLAYER_HP:- 7
+effect:DRAIN_MANA
+dice:$Dd1
+expr:D:DUNGEON_LEVEL:* 4
+#good:
+effect:DETECT_EVIL
+effect-yx:22:40
+desc:The last enemy that shall be destroyed is death...
+desc: Long time ago this potion was one of the most deadlies of all.
+desc: But it seems time took most of it's harm, it's not so strong anymore...
+msg_self:Once again you've cheated death!
+msg_other: beats in spasms!
+
+name:Ruination
+graphics:!:d
+type:potion
+level:0
+weight:4
+cost:0
+alloc:1:2 to 40
+pile:70:1d3
+attack:1d4:0:0
+armor:0:0
+effect:TIMED_INC_NO_RES:STUN
+dice:5d3
+effect:DRAIN_STAT:STR
+dice:1
+effect:DRAIN_STAT:DEX
+dice:1
+effect:DRAIN_STAT:CON
+dice:1
+effect:DRAIN_STAT:INT
+dice:1
+effect:DRAIN_STAT:WIS
+dice:1
+effect:TIMED_INC_NO_RES:SCRAMBLE
+dice:20+1d20
+effect:TIMED_INC_NO_RES:SLOW
+dice:5+1d20
+#good:
+effect:TIMED_INC:SINVIS
+dice:50+2d6
+effect:TIMED_INC:SINFRA
+dice:100+4d25
+desc:Alas! There are some wounds that cannot be wholly cured..
+msg_self:You are feeling devastated..
+msg_other: was devastated..
+
+name:Detonation
+graphics:!:d
+type:potion
+level:0
+weight:4
+cost:0
+alloc:1:2 to 40
+pile:70:1d3
+attack:1d10:0:0
+armor:0:0
+flags:EXPLODE
+effect:TELEPORT:NONE:0:1
+dice:2
+effect:SPOT:FIRE:0
+dice:4d$S
+expr:S:DUNGEON_LEVEL:/ 2
+effect:TIMED_INC_NO_RES:CUT
+dice:$B+5d3
+expr:B:PLAYER_LEVEL:* 2
+effect:TIMED_INC_NO_RES:IMAGE
+dice:5+2d10
+#good:
+effect:TIMED_INC:SHERO
+dice:25+1d25
+effect:CURE:IMAGE
+msg_self:You are on fire!
+#msg_self:It's blow up on the attempt to drink it!
+msg_other: was blown by a detonation potion.
 
 ### Weird one ###
 
@@ -3543,7 +4221,7 @@ graphics:!:d
 type:potion
 level:40
 weight:4
-cost:100
+cost:0
 pile:100:1d2
 alloc:20:40 to 100
 pile:70:1d3
@@ -3553,6 +4231,13 @@ effect:BREATH:FIRE:1:20
 dice:80
 effect:RANDOM
 dice:2
+effect:NOURISH:INC_BY
+dice:1
+# buff:
+effect:TIMED_INC:OPP_FIRE
+dice:50+1d10
+effect:TIMED_INC:OPP_COLD
+dice:50+1d10
 
 
 ##### Wands #####
@@ -3863,8 +4548,8 @@ graphics:-:d
 type:wand
 level:20
 weight:10
-cost:700
-alloc:20:20 to 60
+cost:3000
+alloc:1:20 to 60
 attack:1d1:0:0
 armor:0:0
 charges:4+d5
@@ -4067,7 +4752,7 @@ graphics:_:d
 type:staff
 level:50
 weight:50
-cost:6000
+cost:12000
 alloc:20:50 to 100
 attack:1d2:0:0
 armor:0:0
@@ -4153,7 +4838,13 @@ attack:1d2:0:0
 armor:0:0
 charges:5+d5
 effect:MAP_AREA
-effect-yx:22:40
+effect-yx:15:32
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:3d1
+effect:TIMED_INC_NO_RES:BLIND
+dice:5+1d13
+effect:TIMED_INC_NO_RES:IMAGE
+dice:11+1d24
 
 ### Healing ###
 
@@ -4307,6 +4998,8 @@ armor:0:0
 charges:6+d5
 effect:STAR:LIGHT
 dice:6d8
+effect:DETECT_EVIL
+effect-yx:7:11
 msg_self:Light shoots in all directions!
 
 name:Teleportation
@@ -4362,6 +5055,19 @@ charges:2+d2
 effect:RESTORE_MANA
 effect:RESTORE_STAT:INT
 
+name:Door Creation
+graphics:_:d
+type:staff
+level:70
+weight:50
+cost:0
+alloc:1:70 to 100
+attack:1d2:0:0
+armor:0:0
+charges:2+d2
+effect:TIMED_INC_NO_RES:IMAGE
+dice:5+5d5
+effect:TOUCH:MAKE_DOOR:1
 
 ##### Rods #####
 
@@ -4384,8 +5090,8 @@ graphics:-:d
 type:rod
 level:50
 weight:15
-cost:3000
-alloc:30:50 to 100
+cost:30000
+alloc:1:50 to 100
 attack:1d1:0:0
 armor:0:0
 flags:IGNORE_ELEC
@@ -4633,8 +5339,8 @@ graphics:-:d
 type:rod
 level:10
 weight:15
-cost:2100
-alloc:10:10 to 100
+cost:30000
+alloc:1:10 to 100
 attack:1d1:0:0
 armor:0:0
 act:DISABLE_TRAPS
@@ -4699,7 +5405,7 @@ type:chest
 level:5
 weight:250
 cost:20
-alloc:15:5 to 100
+alloc:7:5 to 100
 attack:2d3:0:0
 armor:0:0
 desc:A small wooden box, locked and possibly trapped. You wonder what might be
@@ -4711,7 +5417,7 @@ type:chest
 level:15
 weight:500
 cost:60
-alloc:10:15 to 100
+alloc:5:15 to 100
 attack:2d5:0:0
 armor:0:0
 desc:A large wooden box. It doesn't seem to be locked - why not risk a look
@@ -4723,7 +5429,7 @@ type:chest
 level:25
 weight:300
 cost:100
-alloc:15:25 to 100
+alloc:7:25 to 100
 attack:2d4:0:0
 armor:0:0
 desc:A small rectangular container made of wood and reinforced with iron corners
@@ -4735,7 +5441,7 @@ type:chest
 level:35
 weight:1000
 cost:150
-alloc:10:35 to 100
+alloc:5:35 to 100
 attack:2d6:0:0
 armor:0:0
 desc:A big container made of wood, with a heavy iron lock.
@@ -4746,7 +5452,7 @@ type:chest
 level:45
 weight:500
 cost:200
-alloc:15:45 to 100
+alloc:7:45 to 100
 attack:2d4:0:0
 armor:0:0
 desc:A small wooden box with strong steel locks and reinforcements.
@@ -4757,21 +5463,31 @@ type:chest
 level:55
 weight:1000
 cost:250
-alloc:10:55 to 100
+alloc:5:55 to 100
 attack:2d6:0:0
 armor:0:0
 desc:A nearly indestructible chest of wood and steel. The lock doesn't look
 desc: impenetrable, but it might be trapped.
 
-
 ##### Junk #####
+
+name:& Ruined chest~
+graphics:~:s
+type:stone
+level:5
+weight:220
+cost:0
+alloc:1:5 to 30
+attack:1d2:0:0
+armor:0:0
+desc:Ancient, partly rotten chest.
 
 name:& Empty Bottle~
 graphics:!:w
 type:bottle
 level:0
 weight:2
-cost:1
+cost:35
 alloc:50:0 to 100
 desc:A plain bottle made of glass. It can be filled with various liquids...
 
@@ -5067,10 +5783,9 @@ flags:QUEST_ART
 name:& House Foundation Stone~
 graphics:~:v
 type:stone
-level:70
+level:0
 weight:200
 cost:1000
-alloc:20:70 to 127
 desc:A rectangular stone. It can be used to build houses.
 
 name:& Pint~ of Fine Ale
@@ -5078,9 +5793,29 @@ graphics:,:Y
 type:food
 level:0
 weight:5
-cost:1
+cost:50
+alloc:10:0 to 50
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:1+1d4
+effect:TIMED_INC:BLIND
+dice:1+1d8
+effect:TIMED_INC:IMAGE
+dice:1+1d4
+effect:TIMED_INC:AMNESIA
+dice:1+1d8
+effect:TIMED_INC:POISONED
+dice:8+1d8
+effect:TIMED_INC:SLOW
+dice:1+1d11
+effect:RANDOM
+dice:6
 effect:NOURISH:INC_BY
-dice:5
+dice:2
+effect:TIMED_INC:CONFUSED
+dice:1+1d8
+effect:TIMED_INC:BOLD
+dice:30+1d20
+effect:RESTORE_STAT:STR
 msg_self:That tastes good.
 desc:A fine way to wash down some otherwise unappetising rations.
 
@@ -5089,59 +5824,64 @@ graphics:,:u
 type:crop
 level:0
 weight:2
-cost:1
+cost:0
+alloc:5:1 to 20
 effect:HEAL_HP
 dice:1d4
 effect:NOURISH:INC_BY
-dice:15
+dice:3
 msg_self:That tastes especially good.
 
 name:& Head~ of Cabbage
 graphics:,:G
 type:crop
 level:0
-weight:3
-cost:1
-effect:HEAL_HP
-dice:1d4
-effect:NOURISH:INC_BY
-dice:15
-msg_self:That tastes especially good.
-
-name:& Carrot~
-graphics:,:o
-type:crop
-level:0
-weight:1
-cost:2
+weight:2
+cost:0
+alloc:5:1 to 20
 effect:HEAL_HP
 dice:1d4
 effect:NOURISH:INC_BY
 dice:5
 msg_self:That tastes especially good.
 
+name:& Carrot~
+graphics:,:o
+type:crop
+level:0
+weight:2
+cost:0
+alloc:5:1 to 20
+effect:HEAL_HP
+dice:1d4
+effect:NOURISH:INC_BY
+dice:6
+msg_self:That tastes especially good.
+
 name:& Beet~
 graphics:,:r
 type:crop
 level:0
-weight:1
-cost:2
+weight:2
+cost:0
+alloc:5:1 to 20
 effect:HEAL_HP
 dice:1d4
 effect:NOURISH:INC_BY
-dice:7
+dice:5
 msg_self:That tastes especially good.
 
 name:& Squash~
 graphics:,:y
 type:crop
 level:0
-weight:3
-cost:1
+weight:2
+cost:0
+alloc:5:1 to 20
 effect:HEAL_HP
 dice:1d4
 effect:NOURISH:INC_BY
-dice:20
+dice:7
 msg_self:That tastes especially good.
 
 name:& Ear~ of Corn
@@ -5149,11 +5889,12 @@ graphics:`:y
 type:crop
 level:0
 weight:2
-cost:2
+cost:0
+alloc:5:1 to 20
 effect:HEAL_HP
 dice:1d4
 effect:NOURISH:INC_BY
-dice:15
+dice:6
 msg_self:That tastes especially good.
 
 name:& Pair~ of Witan Boots
@@ -5234,7 +5975,7 @@ graphics:":d
 type:amulet
 level:35
 weight:3
-cost:10000
+cost:40000
 alloc:10:35 to 100
 values:SPEED[d5]
 
@@ -5243,10 +5984,15 @@ graphics:?:w
 type:scroll
 level:0
 weight:5
-cost:100
+cost:250
 alloc:40:0 to 100
-pile:25:2
-effect:RESURRECT
+pile:25:1d2
+effect:CURE:POISONED
+effect:HEAL_HP
+dice:1d30
+effect:NOURISH:INC_BY
+dice:5
+effect:RESTORE_EXP
 
 name:House Creation
 graphics:?:w
@@ -5266,10 +6012,14 @@ graphics:!:d
 type:potion
 level:0
 weight:4
-cost:1
+cost:0
 alloc:50:0 to 100
 pile:70:1d3
 effect:NOURISH:INC_BY
+dice:0
+effect:NOURISH:INC_BY
+dice:1
+effect:RANDOM
 dice:2
 msg_self:You feel less thirsty.
 
@@ -5295,8 +6045,8 @@ graphics:,:G
 type:food
 level:1
 weight:10
-cost:2
-alloc:20:1 to 100
+cost:0
+alloc:3:1 to 100
 attack:2d3:0:0
 armor:0:0
 effect:NOURISH:INC_BY
@@ -5399,7 +6149,7 @@ type:ring
 level:0
 weight:2
 cost:0
-flags:AGGRAVATE | DRAIN_EXP
+flags:AGGRAVATE
 flags:INSTA_ART
 desc:"Nine rings for mortal men doomed to die."
 
@@ -5408,18 +6158,20 @@ graphics:?:w
 type:scroll
 level:95
 weight:5
-cost:1000
+cost:0
 alloc:2:95 to 100
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 effect:TIMED_INC:PROBTRAVEL
 dice:20+1d20
+effect:TIMED_INC_NO_RES:IMAGE
+dice:5+5d5
 
 name:*Restore Mana*
 graphics:!:d
 type:potion
 level:70
 weight:4
-cost:3500
+cost:7500
 alloc:50:70 to 100
 effect:RESTORE_MANA
 
@@ -5508,12 +6260,13 @@ name:& Mage Staff~
 graphics:|:B
 type:mage staff
 level:5
-weight:12
+weight:20
 cost:10
 alloc:10:5 to 100
 attack:1d1:0:0
 armor:0:0
-flags:REGEN | TWO_HANDED
+flags:TWO_HANDED
+values:MANA[1]
 desc:It looks like a simple walking stick, plain and nondescript.
 desc: In the hands of a spellcaster, it can be a deadly weapon.
 
@@ -5526,7 +6279,8 @@ cost:2500
 alloc:10:20 to 100
 attack:1d1:0:0
 armor:0:0
-flags:REGEN | SEE_INVIS | TWO_HANDED
+flags:REGEN | TWO_HANDED
+values:MANA[1]
 desc:It looks like a simple walking stick, plain and nondescript.
 desc: In the hands of a spellcaster, it can be a deadly weapon.
 
@@ -5572,7 +6326,7 @@ type:ring
 level:1
 weight:2
 cost:100
-alloc:3:1 to 127
+alloc:1:1 to 127
 values:POLY_RACE[d1000]
 effect:POLY_RACE
 
@@ -5594,14 +6348,2763 @@ cost:0
 alloc:40:1 to 100
 effect:MAP_WILD
 effect-yx:22:40
+effect:MAP_AREA
+effect-yx:7:7
 
 name:& Fortune Cookie~
 graphics:,:U
 type:fortune cookie
 level:0
 weight:2
-cost:1
+cost:0
+#alloc:1:1 to 100
+# DO NOT ALLOCATE? or it will appear at BM?
 effect:COOKIE
 effect:NOURISH:INC_BY
 dice:5
 desc:A biscuit containing a small piece of paper telling your fortune.
+
+##############
+# new items  #
+##############
+
+name:& Old Lantern~
+graphics:~:U
+type:light
+level:5
+weight:100
+cost:100
+alloc:70:1 to 10
+flags:BURNS_OUT | LIGHT_3
+attack:3d3:0:0
+flags:EXPLODE
+desc:An old glass light source with a crackling emerging from it.
+desc:It can be carried by a handle. You don't think it can be refilled.
+desc:It looks like good idea to throw it and burn your enemies!
+
+name:Ancient Vessel
+graphics:,:U
+type:food
+level:30
+weight:5
+cost:0
+alloc:10:20 to 100
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:-1
+dice:1d3
+effect:SUMMON:AINU:0:-1
+dice:1d5
+effect:SUMMON:AINU:0:-1
+dice:1d10
+effect:RANDOM
+dice:25
+effect:ACQUIRE
+dice:1
+msg_self:You rubbed an ancient vessel...
+desc:Rumours say that such vessels could contain a djinn...
+
+name:Magic Lamp
+graphics:,:U
+type:food
+level:30
+weight:5
+cost:0
+alloc:5:60 to 100
+#last number is a chance to summon friendly djinn
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:50
+dice:1d1
+effect:SUMMON:AINU:0:-1
+dice:1d3
+effect:SUMMON:AINU:0:-1
+dice:1d5
+effect:SUMMON:AINU:0:-1
+dice:1d10
+effect:RANDOM
+dice:25
+effect:ACQUIRE
+dice:1
+msg_self:You rubbed an ancient vessel...
+desc:Rumours say that such lamps could contain a djinn...
+
+name:Cursed Jar
+graphics:,:U
+type:food
+level:30
+weight:5
+cost:0
+alloc:1:1 to 30
+effect:BATTY
+effect:SUMMON:UNDEAD:0:-1
+dice:1d1
+effect:UNDEAD_FORM
+effect:DARKEN_LEVEL
+effect:READ_MINDS
+dice:$Dd$S
+expr:D:PLAYER_LEVEL:/ 10 + 1
+expr:S:PLAYER_LEVEL:/ 10 + 1
+effect:DETECT_SOUL
+effect-yx:22:40
+#positive:
+effect:DESTRUCTION:LIGHT:15
+effect:MASS_BANISH
+msg_self:Why did you touch it!.. It was CURSED!
+desc:You feel wicked evil energy oozing through this object...
+desc: It's better to do not touch it. RUN!
+
+name:'Stormbringer'
+graphics:|:x
+type:sword
+level:45
+weight:180
+cost:0
+attack:6d6:16:16
+armor:0:0
+flags:FREE_ACT | HOLD_LIFE | PROT_CONF | AGGRAVATE
+values:STR[1] | CON[1] | RES_CHAOS[1] | RES_NETHER[1]
+brand:VAMPIRIC
+curse:treacherous weapon:100
+desc:Death is all. Beware, cursed is the wielder.
+
+##############
+#newbie items#
+##############
+
+name:& Old Arrow~
+graphics:{:U
+type:arrow
+level:3
+weight:1
+cost:0
+attack:1d4:0:0
+armor:0:0
+flags:AMMO_NORMAL
+desc:A simple metal head on a piece of wood or bamboo, fitted with some
+desc: feathers. It can be shot with a bow.
+
+name:& Rusty Lantern~
+graphics:~:U
+type:light
+level:0
+weight:70
+cost:0
+attack:1d3:0:0
+flags:BURNS_OUT | LIGHT_3 | IGNORE_FIRE
+desc:A tiny brass light source with a soft emerging from it,
+desc: protected from draughts by a sheet of dirty paper. It can be carried by
+desc: a handle. It looks so old that you don't think it can be refilled.
+
+name:Remove Hunger (tattered)
+graphics:?:w
+type:scroll
+level:0
+weight:5
+cost:0
+effect:NOURISH:SET_TO
+dice:50
+desc:Smelly... It looks like someone covered fish with this scroll.
+
+name:& Spade~
+graphics:\:s
+type:digger
+level:5
+weight:50
+cost:10
+alloc:20:5 to 100
+attack:1d1:0:0
+flags:DIG_1
+desc:A primitive digging tool for removing away soil and rubble.
+
+name:Word of Recall (rugged)
+graphics:?:w
+type:scroll
+level:0
+weight:5
+cost:0
+effect:RECALL
+dice:14+1d20
+desc:This parchment is oily and ragged, but looks readable.
+
+
+##############
+#  NPC chat  #
+##############
+name:Hello, stranger. What are you doing there, in
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:this wild lands? You are not the first who came
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:though.. Strange folk appeared recently.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And all of them ar interested in Old Ruins to the
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:north-east from my tavern. But I don't complain..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Finally I could get a few coins by selling some
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:of this goods.. Take a look at them...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Be careful in Mountain Gorge to the east..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I didn't visit town for some time already..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Maybe its time for me to go on adventure with you
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(you take the cat in your arms..)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:meow
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*purrr*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Who are ya? What do ya need? Whaat? I can't hear 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:you.. *grumbles* They come.. and go.. come.. and
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:sometimes not come back..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*whipped up* So.. Can ya read? If you can't,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I can't help ya.. But if you do - take a look at
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:this finest books about miracles. With them you 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:would be able to conquer world!.. What?? 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I can't hear ya!! Speak louder, yongster! Whaat?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*sings* Once I came to the land of dreams...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*sings* Three trolls.. In the forest of mourn..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*sings* Don ya tell me wat to do, little fairy..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Did ya know there is a secret passage nearby? shh
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(You hear shuffling) *growl* Arr.. Who is there?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(small narrow window on the door opened)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(you see bright blue eyes through it)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(it appeared to be a mirror to hide from arrows)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Oh! A human-beign! Are you in union with this
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:cave orcs?! Darn orcish beasts! Filthy maggots!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:...Erm.. Anyway. Got any tabacco, mate?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I got plenty of food there, but no darn weed to
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:fill my pipe.. I'm alone there, you see..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:All horizon run away back to town on the west 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:months ago.. Filthy cowards! Went back to mommy!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:But I won't run from this stupid orcish beasts!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:They would know how to come to The Guards Tower!!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Darn.. Are you pretty sure ya don have any weed?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I see.. *sight* You are not the first who came..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Anyway If you wanna hunt some orcs - get to
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:their cave on the west from the lake..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Long time ago this was a heart of trade ways..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:It was well guarded dwarven trade route.. 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:A lot of caravans traveled over this lands.. 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And now everything gone.. Only orcs left. And me.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hello, stranger. Don't you mind to put your
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:weapons away, to sheath them.. I don't like
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:people going around with all this fighting stuff.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Erhh. Even villagers like me nowadays took
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:weapons in their hands. I heard old Mag run away
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:to the forest.. Old mad dog.. Everything went to
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:dogs nowadays.. No food to grow, only mushrooms..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And I hate mushrooms.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Marta could cook mushrooms in 57 different ways..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:It doesn't help though. Nothing help..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I can't sell you food, adventurer.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I don't need you gold. There is no food. NO FOOD.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:My pumpkin's were famous all over Middle-Lands!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And now I'm broken. People kill for food.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Oh, dear.. It's a pity I can't feed you.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:We barely survive from hunger by our-self..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:But you could look for smthing in tavern in town
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Nowadays there are so much adventurers around..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I hope you won't make trouble to us.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Be safe..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hi.. Don't look at me with such hungry eyes..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Didn't you know about catastrophe?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Oh.. You are outlander.. Well.. I wonder why you
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:came there.. At your place I wouldn't come to
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:this lands even for all gold of the world.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Anyway.. In short words - gods cursed us.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*whispers* (they say). No one knows really.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Fields don't provide yeild anymore..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:All cattle died by unknown diseases.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:So bag of wheat cost more then two bags of gold.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Eeh.. But we still got some booze left.. *hic*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:We got troubles with burglars from town severs..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Someone should give a lesson to this thiefs...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(you are trying to pat the dog)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(the dog carefully sniff your arm)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(the dog allow you to pat it on the head)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(the dog wing it's tail)
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Gaf-gaf!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Bow-vo!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Arf-arf!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*rrrr*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I'd shoot rat in the eye, so I wont spoil its fur
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hm. Hello. I'm Archy - and who are you?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Oh.. A hero. Alright. Can you shoot with a bow?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Crossbow? Catapult? Haha! Anyway..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:If ya can't shoot - then try to throw rocks.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Still effective way to survive. Just dont forget
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Dont become a dead hero. Run. Use plan B. Escape.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Good hero - is alive hero. You won't help the
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:world if you would die. Many tried...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*Grins* Dont run from archer. You will die tired!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Your strength is in your guts, not muscles..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:An dont forget to bring me some ale from sewers..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Stay awhile.. Er.. Wait.. Come closer, young men
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:or woman? I can not see well.. Damn manuscripts!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:(Old man hears your voice) Oh. Hello there.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I am headman of this village. Deckard is my name.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And we are not doing well, you know. All this
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:food problem and everything.. But we get used to
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:it. I love mushrooms, you know.. But there is
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:another problem. Scoundrels, rogues and bandits.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Someone say they got a headquaters in severs.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Could you help us with it? I heard they got
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:plenty of gold..and what is more important - food
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:down there.. You will find severs to the east of
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:our village. 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Take care, friend.. And good luck to thee..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:There always were a lot of criminal.. But not so.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:We thought the worse was lack of food...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Outlaws, robbers..and even monsters. Gods save us
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Stranger, don't make trouble in our town..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Or I'll take care of you.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:... 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:You look tought.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I hope you won't make trouble.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Mind to help us in this dire days? 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I wanna point out immideatelly - we don't recruit
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:to the guard. Magistrate has to cut our funds
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:recently.. I got only a few mushrooms per day..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Aa-ah. Anyway. We need a hand with all this 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:madness happening around. Our mayor is missing..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Last time he was seen coming to the Hunter Valley
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:to the south-east to visit Old Sorcerer, to ask
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:him to help us with wraiths from the north..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Maybe you can help to find him? I can't go myself
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:as I need to protect this town...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Years ago I was an adventurer myself.. But..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Life is tought. I had enought scars on my face.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:You would understand me one day.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey dol! merry dol! ring a dong dillo!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Ring a dong! hop along! Fal lal the willow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom Bom, jolly Tom, Tom Bombadillo!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey! Come merry dol! derry dol! My darling!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Light goes weather-wind n the feathered starling!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Down along under Hill, shining in the sunlight!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Waiting on the doorstep for the cold starlight!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:There my pretty lady is, River-woman's daughter!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Slender as willow-wand, clearer than the water!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Old Tom Bombadil water-lilies bringing!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Comes hopping home again. Can y hear him singing?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey! Come merry dol! derry dol! and merry-o!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Goldberry, Goldberry, merry yellow berry-o!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Poor old Willow-man, you tuck your roots away!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom's in a hurry now. Evening will follow day.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom's going home again water-lilies bringing.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey! Come derry dol! Can you hear me singing?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hop along, my little friends, up the Withywindle!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom's going on ahead candles for to kindle!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Down west sinks the Sun - soon you'll be groping!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:When night-shadows fall, then the door will open!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Out of window-panes light will twinkle yellow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Fear no alder black! Heed no hoary willow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Fear neighter root nor bough! 
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom goes on before you!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey now! merry dol! We'll be waiting for you!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hey! Come derry dol! Hop along, my hearties!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Hobbits! Ponies all! We are fond of parties.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now let the fun begin! Let us sing together!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now let the song begin! Let us sing together!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Of sun, stars, moon and mist!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Rain and cloudy weather!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Light on the budding leaf, dew on the feather!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Wind on the open hill, bells on the heather!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Reeds by the shady pool, lilies on the water!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Old Tom Bombadil and the River-daughter!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I had an errand there - gathering water-lilies!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Green leaves and lilies white for my pretty lady!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Ho! Tom Bombadil, Tom Bombadillo!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:By water, wood and hill, by the reed and willow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:By fire, sun and moon, harken now and hear us!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Come, Tom Bombadil, for our need is near us!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Old Tom Bombadil is a merry fellow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Bright blue his jacket is, n his boots ar yellow!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Non hs evr caugt him et, for Tom, he's th master!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:His songs ar stronger songs, n his feet r faster!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Wake now my merry lads! Wake and hear me calling!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Warm now be heart and limb!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The cold stone is fallen!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Dark door is standing wide; dead hand is broken!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Night under Night is flown, and the Gate is open!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Tom has his house to mind, n Goldbery is waiting!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:There is an inn, a merry old inn
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:beneath an old grey hill,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And there they brew a beer so brown
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:That the Man in the Moon himself came down
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:One night to drink his fill.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The ostler has a tipsy cat
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:that plays a five-stringed fiddle;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And up and down he runs his bow,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now squeaking high, now purring low,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now sawing in the middle.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The landlord keeps a little dog
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:that is mighty fond of jokes;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:When there's good cheer among the guests,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:He cocks an ear at all the jests
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And laughs until he chokes.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:They also keep a horned cow
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:as proud as any queen;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:But music turns her head like ale,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And makes her wave her tufted tail
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and dance upon the green.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And O! the rows of silver dishes
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and the store of silver spoons!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:For Sunday there's a special pair,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And these they polish up with care
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:on Saturday afternoons.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The Man in the Moon was drinking deep,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and the cat began to wail;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:A dish and a spoon on the table danced,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The cow in the garden madly pranced,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and the little dog chased his tail.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The Man in the Moon took another mug,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and then rolled beneath his chair;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And there he dozed and dreamed of ale,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Till in the sky the stars were pale,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and dawn was in the air.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Then the ostler said to his tipsy cat
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The white horses of the Moon,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:They neigh and champ their silver bits;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:But their master's been and drowned his wits,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and the Sun'll be rising soon!'
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:So the cat on his fiddle played hey-diddle-diddle
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:a jig that would wake the dead
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:He squeaked and sawed and quickened the tune,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:While the landlord shook the Man in the Moon
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:'It's after three!' he said.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:They rolled the Man slowly up the hill
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and bundled him into the Moon,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:While his horses galloped up in rear,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And the cow came capering like a deer,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and a dish ran up with the spoon.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now quicker the fiddle went deedle-dum-diddle;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:the dog began to roar,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The cow and the horses stood on their heads;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The guests all bounded from their beds
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and danced upon the floor.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:With a ping and a pong the fiddle-strings broke!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:the cow jumped over the Moon,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And the little dog laughed to see such fun,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And the Saturday dish went off at a run
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:with the silver Sunday spoon.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The round Moon rolled behind the hill
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:as the Sun raised up her head.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:She hardly believed her fiery eyes;
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:For though it was day, to her surprise
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:they all went back to bed!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Elves seldom give unguarded advice...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Advice is a dangerous gift,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:even from the wise to the wise,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:and all courses may run ill.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The wide world is all about you -
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:you can fence yourselves in,
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:but you cannot forever fence it out.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Courage is found in unlikely places.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Do not meddle in the affairs of Wizards...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:The choice is yours - to go or wait.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Errr...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Who are you?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Anyway..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*spits*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Kek..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*whispers* All this damn rag-tag danglers..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:And this thatched barn...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Need a pony? Twelve silver pennies and its yours!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Off early?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Found some friends at last?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I suppose you know who you've taken up with?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Watch out tonight!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*spits*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I'm training there.. Don't mess around.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:If ever such a tale was told in the South...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Believe not that the blood of Numenor is spent.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:By our valour the East are still restrained..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Barliman is my name.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Barliman Butterbur at your service!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:My granddaughter is in charge right now...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Now what does that remind me of?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:There now!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:It's gone again!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:But it'll come back, when I have time to think.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I'm run off my feet..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I'll see what I can do for you..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Here is a nice little parlour!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I hope it will suit.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Excuse me now. I'm that busy.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:No time for talking.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I must be trotting.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:It's hard work for two legs..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:If you want anything, ring the hand bell.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Give. Eat. Me. Hungry.
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*blowing his nose*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*burps*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*picking his nose*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Coming! Coming!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*grins*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*winks*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Ring the bell, if you lack anything!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Will you be wanting anything to drink, master?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Shall I show you the bedrooms?
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Supper is getting ready...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*smiles*
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:I saw Gandalf onces...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:Gandalf makes so great fireworks!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:My grandfarther was a warrior too!
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*sings* Once I came to the land of dreams...
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.
+
+name:*sings* Three trolls.. In the forest of mourn..
+graphics:?:y
+type:fortune cookie
+level:0
+weight:5
+cost:99999999
+desc:.

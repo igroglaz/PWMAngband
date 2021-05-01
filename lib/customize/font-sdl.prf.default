@@ -1,0 +1,37 @@
+# File: font-sdl.prf
+
+#
+# This file is used by PWMAngband (when it was compiled using "main-sdl.c")
+# to specify simple attr/char remappings using a standard font, allowing
+# the use of special pseudo-graphic pictures for walls and such.
+#
+# Note that this file is extremely similar to the "font-ibm.prf" file,
+# but it uses different codes, since it uses the special pseudo-graphic
+# symbols defined in the "lib/fonts/*.FON" files, and there is only
+# one special wall type, so we have to use special "colors".
+#
+
+
+### Terrain features ###
+
+# Floors (white : centered dot)
+feat:open floor:*:1:7
+
+# Simplified version to specify default attribute for all lighting effects
+# glyph : terrain name : symbol
+# glyph:open floor:7
+
+
+### Monster features ###
+
+# Regular version to bypass default value from monster.txt
+# monster : name : attr : char
+# monster:Uvatha the Horseman:1:205
+#
+# Simplified version to specify default attribute (client only)
+# monster-char : name : char
+# monster-char:Uvatha the Horseman:205
+#
+# Alternate version to specify attr by symbol (client only)
+# monster-attr : name : attr : char
+# monster-attr:Uvatha the Horseman:w:205

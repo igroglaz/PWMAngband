@@ -1,22 +1,24 @@
-
-{mud}                                                    ^{/}
-{mud}                                                   ^^^{/}
-{mud}         ^                                        ^^^^^             ^{/}
-{mud}        ^^^                                      ^^^^^^^           ^^^{/}
-{mud}       ^^^^^                                    ^^^^^^^^^         ^^^^^{/}
-{red}      _ __   _    _  _    _     _{/}{mud}              ^{/}{red} _{/}{mud}  ^^^^^^{/}{red}             _ {/}
-{red}     | '_ \ | |  | || \  / |   / \   _ __   __ _| |__   __ _ _ __   __| |{/}
-{red}     | |_) || |/\| ||  \/  |  / _ \ | '_ \ / _` | '_ \ / _` | '_ \ / _` |{/}
-{mud}   ^{/}{red} | .__/ |  /\  || |\/| | / ___ \| | | | (_| | |_) | (_| | | | | (_| |{/}{mud} ^{/}
-{mud}  ^^{/}{red} |_|    |_/  \_||_|  |_|/_/   \_\_| |_|\__, |_.__/ \__,_|_| |_|\__,_|{/}{mud} ^^{/}
-{mud} ^^^{/}{red}                                       |___/{/}  $VERSION
-{mud}^^^^^^^^^^^^^^^^^^^                                        ^^^^^^^^^^^^^^^^^^^{/}
-{light slate}        "When the world is old and the Powers grow weary, then Morgoth,{/}
-{light slate}         seeing that the guard sleepeth, shall come back through the{/}
-{light slate}         Door of Night out of the Timeless Void.  Then shall the Last{/}
-{light slate}         Battle be gathered..."{/}
-
-{light slate}                       Website: http://www.mangband.org{/}
-{light slate}              Forums: http://mangband.org/forum/viewforum.php?f=9{/}
-
-                For help, press '?' in-game.  Press ':' to talk.{/}
+{Light Green}        ,-={/}{Light Red}.  {/}         {Light Slate} ~ ~~~   ~~~    ({/}                   .
+{Light Green}  _/\__//__/\ {/}           {Light Slate}    ~~ ) ~~   ){/}              *          .
+{Light Green}  7~7~7|F~F~F {/}           {Light Slate}      )~ {/}{Light Red},.{/}{Light Slate}~ (   ({/}                  *        .
+{Light Green} 7^7^7||F^F^F {/}           {Light Slate}     _{/}{Light Red},-"##`-^  {/}{Light Slate}  ){/}            *                  *
+{Light Green}      |/      {/}{Light Slate}              ,{/}{Light Dark}#####{/}{Light Red}`W='{/}{Light Dark}#{/}{Light Slate}`. (){/}
+{Light Green}      /       {/}           {Light Slate}  ,{/}{Light Dark}##########{/}{Light Dark}##{/}{Light Slate}:{/}{Light Red},=.{/}
+{Light Green}   -'`        {/}           {Light Slate} /.{/}{Light Dark}##,".##,".#####{/}{Light Red}"{/}{Light Slate}#\{/}
+{Light Slate}  ,-.   _,-= /"._  ,-. {/}{White} ,"   {/}{Light Slate}   `:'   `:{/}{Light Dark}##{/}{Light Slate}[JW] ,.{/}
+{Light Slate},"   `,"    `=._ `"   -{/}{White};{/}               {Light Dark}\##;"' V  \            __,-.     ,-=.{/}
+{Light Slate}     /        " `-. {/}{White}  /  {/}{Light Purple}   Tangaria   {/}{Light Slate} `"       `-.__,-""._,"     "--,"    >-=-{/}
+{Light Slate}  ,-"`.{/}{White}             _'    {/}{Umber}__            __{/}{White}         "._      {/}{Light Slate}`       _/{/}
+                 _,"      {Umber} /|\__^,.^__/|\.  {/}{White}       "=.".{/}
+              _,"         {Violet}                     {/}{White}           `._,=-._    _,-.{/}
+  _._   ,"._,"   {Light Teal}      ,    .{/}{Yellow}                  {/}{White}                   "-."    \,-.{/}
+-"   `-"         {Light Teal}     /|    @{/}{Yellow} ==(W{==========- {/}{White}                               `-{/}
+                 {Light Teal}   _/_\_   ={/}{Yellow}   ||  (.--.)     {/}{Light Dark}  .Ash nazg durbatuluk..{/}
+   ./            {Light Teal}  .-\-/.   |{/}{Yellow}   | \_,|**|,__   {/}{Light Dark}  ..ash nazg gimbatul...{/}
+  <_n_           {Light Teal} /  | | \_ |{/}{Yellow}   `\ ' `--'   ), {/}
+   `B'\)         {Light Teal} \ \| |\__(/{/}{Yellow}    /`\_. .__/\ \ {/}{Light Dark} ..Ash nazg thrakatuluk..{/}
+   /^>           {Light Teal} /(`---')  |{/}{Yellow}   (   | .  |~~~~|{/}{Light Dark}  ..agh burzum-ishi krimpatul..{/}
+  `  `           {Light Teal}/ /     \  |{/}{Yellow}   )__/==0==-\<>/ {/}
+ {Red}Powered by{/}{Light Teal}   _.'  \'-'  /  |{/}{Yellow}     /~\___/~~\/  {/}{Teal}.:*~*:._.:*~*:._.:*~*;._.:*~*:.{/}
+ {Red}PWMAngband{/}{Light Teal}   `----'`=-='   '{/}                   {Light Dark}..Akha gum-ishi ashi gurum...{/}
+.

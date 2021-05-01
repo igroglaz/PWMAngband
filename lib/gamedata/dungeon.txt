@@ -1,12 +1,3 @@
-# File: dungeon.txt
-
-
-# This file is used to initialize the "dungeon" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # === Understanding dungeon.txt ===
 
 # name : dungeon name
@@ -65,32 +56,898 @@
 # up is the random value used for extra up staircases
 # down is the random value used for extra down staircases
 
+# For example: "stairs:1d2:2+1d2"
+# add 1d2 stairs up and 2+1d2 stairs down on any level for that dungeon.
 
-# Main Angband dungeon
+# number before dungeon name - max player lvl to enter
+# the dungeon... and at endgame 50+: lvl of monsters (1-127) who lives there
+#
+# NO_STAIRS
+#
+
+#CAVERN, "Cavern levels are generated more often")
+#CIRCULAR_ROOMS, "Circular and simple rooms are swapped")
+#EMPTY, "May have arena levels")
+#LAVA_RIVER, "May have lava streams")
+#MAZE, "Has labyrinth levels")
+#NO_DOORS, "Has no doors in corridors")
+#SAND_VEIN, "May have sand streams")
+#WATER_RIVER, "May have water streams")
+#WINNERS_ONLY, "Winners only can enter")
+#STREAMS (quartz/magma veins)
+
+########################## 75 Main Angband dungeon
 name:Angband
-wpos:-9:37
+wpos:1:-3
 flags:STREAMS
+min-depth:75
+max-depth:100
+stairs:1:1d2
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+floor:E0 dark floor w:1
+floor:E0 dark floor x:1
+floor:E0 dark floor y:1
+floor:E0 dark floor z:1
+floor:E0 dark floor A:5
+floor:E0 dark floor B:5
+floor:E0 dark floor C:1
+floor:E0 dark floor D:1
+floor:E0 dark floor E:1
+floor:E0 dark floor F:5
+floor:E0 dark floor G:1
+floor:E0 dark floor H:1
+floor:E0 dark floor I:1
+floor:E0 dark floor J:1
+floor:E0 dark floor K:1
+floor:E0 dark floor L:1
+# brown:
+floor:E0 dark floor M:1
+floor:E0 dark floor N:1
+floor:E0 dark floor O:2
+floor:E0 dark floor P:3
+floor:E0 dark floor Q:2
+floor:E0 dark floor R:3
+floor:E0 dark floor S:1
+floor:E0 dark floor T:3
+floor:E0 dark floor U:5
+###############################
+floor:E5 blood 0:10
+floor:E5 blood 1:10
+floor:E5 blood 2:10
+floor:E5 blood 3:10
+floor:E5 blood 4:10
+floor:E5 blood 5:10
+floor:E5 blood 6:10
+floor:E5 blood 7:10
+floor:E5 blood 8:10
+floor:E5 blood 9:10
+floor:E5 blood a:10
+floor:E5 blood b:10
+floor:E5 blood c:10
+floor:E5 blood d:10
+floor:E5 blood e:10
+floor:E5 blood f:10
+floor:E5 blood g:10
+floor:E5 blood h:10
+floor:E5 blood i:10
+floor:E5 blood j:10
+floor:E5 blood k:10
+floor:E5 blood l:10
+floor:E5 blood m:10
+floor:E5 blood n:10
+floor:E5 blood o:10
+floor:E5 blood p:10
+floor:E5 blood q:10
+floor:E5 blood r:10
+floor:E5 blood s:10
+floor:E5 blood t:10
+floor:E5 blood u:10
+floor:E5 blood v:10
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E6 blood X CAPITAL
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+floor:E6 blood w:10
+floor:E6 blood x:10
+floor:E6 blood y:10
+floor:E6 blood z:10
+floor:E6 blood A:10
+floor:E6 blood B:10
+floor:E6 blood C:10
+floor:E6 blood D:10
+floor:E6 blood E:10
+floor:E6 blood F:10
+floor:E6 blood G:10
+floor:E6 blood H:10
+floor:E6 blood I:10
+floor:E6 blood J:10
+floor:E6 blood K:10
+floor:E6 blood L:10
+floor:E6 blood M:10
+floor:E6 blood N:10
+floor:E6 blood O:10
+floor:E6 blood P:10
+floor:E6 blood Q:10
+floor:E6 blood R:10
+floor:E6 blood S:10
+floor:E6 blood T:10
+floor:E6 blood U:10
+floor:E6 blood V:10
+floor:E6 blood W:10
+########
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E2 jail wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+wall:E2 jail wall w:50
+wall:E2 jail wall x:50
+wall:E2 jail wall y:50
+wall:E2 jail wall z:50
+wall:E2 jail wall A:50
+wall:E2 jail wall B:50
+wall:E2 jail wall C:450
+# flag:
+wall:E2 jail wall D:50
+# 4x walls:
+wall:E2 jail wall E:450
+wall:E2 jail wall F:450
+wall:E2 jail wall G:450
+wall:E2 jail wall H:450
+# skels:
+wall:E2 jail wall I:50
+wall:E2 jail wall J:50
+# 
+wall:E2 jail wall K:50
+wall:E2 jail wall L:50
+wall:E2 jail wall M:50
+wall:E2 jail wall N:50
+wall:E2 jail wall O:50
+wall:E2 jail wall P:50
+# fire:
+wall:E2 jail wall Q:25
+wall:E2 jail wall R:25
+wall:E2 jail wall S:25
+wall:E2 jail wall T:25
+# walls
+wall:E2 jail wall U:450
+wall:E2 jail wall V:450
+wall:E2 jail wall W:400
+wall:E2 jail wall X:400
+# 
+wall:E2 jail wall Y:50
+wall:E2 jail wall Z:50
+wall:E2 jail wall ~:50
+wall:E2 jail wall `:50
+################################
+wall:E3 dungeon wall 0:100
+wall:E3 dungeon wall 1:100
+wall:E3 dungeon wall 2:100
+wall:E3 dungeon wall 3:100
+wall:E3 dungeon wall 4:50
+wall:E3 dungeon wall 5:50
+wall:E3 dungeon wall 6:50
+wall:E3 dungeon wall 7:50
+wall:E3 dungeon wall 8:50
+wall:E3 dungeon wall 9:100
+wall:E3 dungeon wall a:50
+wall:E3 dungeon wall b:50
+# walls:
+wall:E3 dungeon wall c:800
+wall:E3 dungeon wall d:800
+wall:E3 dungeon wall e:800
+wall:E3 dungeon wall f:750
+#
+wall:E3 dungeon wall g:100
+wall:E3 dungeon wall h:100
+wall:E3 dungeon wall i:50
+wall:E3 dungeon wall j:50
+# cand skel
+wall:E3 dungeon wall k:100
+wall:E3 dungeon wall l:100
+wall:E3 dungeon wall m:100
+#
+wall:E3 dungeon wall n:50
+wall:E3 dungeon wall o:50
+# skel
+wall:E3 dungeon wall p:100
+# ornaments
+wall:E3 dungeon wall q:50
+wall:E3 dungeon wall r:50
+# fire
+wall:E3 dungeon wall s:25
+wall:E3 dungeon wall t:25
+wall:E3 dungeon wall u:25
+wall:E3 dungeon wall v:25
+#
+perma:E2 P jail wall C:600
+perma:E2 P jail wall E:600
+perma:E2 P jail wall F:600
+perma:E2 P jail wall G:600
+perma:E2 P jail wall H:600
+perma:E2 P jail wall U:600
+perma:E2 P jail wall V:600
+perma:E2 P jail wall W:600
+perma:E2 P jail wall X:600
+perma:E3 P dungeon wall c:1150
+perma:E3 P dungeon wall d:1150
+perma:E3 P dungeon wall e:1150
+perma:E3 P dungeon wall f:1150
+#
 rule:10000:1
 
-# The Training Cave
-name:The Training Cave
-wpos:-21:20
+########################## 1
+name:The Old Ruins
+wpos:0:0
 min-depth:1
-max-depth:2
-max-level:10
-flags:EMPTY | STREAMS | FAST_SPAWN
+max-depth:1
+max-level:1
+flags:EMPTY | FAST_SPAWN
+stairs:2+1d2:0
+#
+stair:9F stair down 0:9F stair up 1:10000
+#stair:A9 stair down leaf:A9 stair up leaf:8000
+#stair:A9 stair down gloomy:A9 stair up gloomy:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 9 fountain:A9 dried fountain:9900
+fountain:obj_grass 2 well:A9 dried well:100
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+#
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass:
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:650
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+#1x40 ^
+#
+#
+#1x20 V
+# B1
+
+############################
+# floor:floor 0 grass:
+floor:light grass:2100
+############################
+
+###############################
+# floor:floor 1 grass:
+floor:light grass plants:2700
+#############################
+
+# B2
+################################
+#floor:floor w grass:
+floor:light grass flowers:2500
+###############################
+
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+#
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:41
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+#24 total; 
+#A1
+###################################################
+#a1
+wall:tree 1:100
+wall:tree 3:100
+wall:tree 4 maple:100
+wall:tree 5 maple:100
+wall:tree 6 coniferous:100
+wall:tree 8 coniferous:100
+wall:tree 9 willow:100
+wall:tree d birch:100
+wall:tree e linden:100
+wall:tree g larch:100
+wall:tree n dead tree:100
+wall:tree o dead tree:100
+#a2
+wall:tree D tree:100
+wall:tree E tree:100
+wall:tree F tree:100
+wall:tree V:100
+wall:tree W:100
+wall:tree X:100
+wall:tree Y:100
+#a7
+wall:obj_grass L ruins:300
+wall:obj_grass M ruins:100
+wall:obj_grass N ruins:300
+wall:obj_grass O ruins:300
+wall:obj_grass P ruins:300
+wall:obj_grass Q ruins:300
+wall:big dark wall 0:100
+wall:big dark wall 1:100
+wall:big dark wall 9 entrance:50
+wall:big dark wall a low entrance:50
+wall:big dark wall b window:71
+#64 total
+#=========
+# 96-wall: ....... 29 total:
+wall:dark wall:1
+# 
+wall:96 wall M:1
+wall:96 wall N:1
+wall:96 wall O:1
+wall:96 wall P:1
+wall:96 wall Q:1
+wall:96 wall R:1
+wall:96 wall S:1
+wall:96 wall T:1
+wall:96 wall U:1
+wall:96 wall V:1
+wall:96 wall W:1
+wall:96 wall X:1
+# 98-wall:
+wall:98 wall 0:1
+wall:98 wall 1:1
+wall:98 wall 2:1
+wall:98 wall 3:1
+wall:98 wall 4:1
+wall:98 wall 5:1
+wall:98 wall 6:1
+wall:98 wall 7:1
+wall:98 wall 8:1
+wall:98 wall 9:1
+wall:98 wall a:1
+wall:98 wall b:1
+wall:98 wall c:1
+wall:98 wall d:1
+# 9D-wall:
+wall:9D wall 5:1
+wall:9D wall 6:1
+############################# new addition:
+wall:obj_grass2 f:300
+wall:obj_grass2 g:300
+wall:obj_grass2 h:300
+wall:obj_grass2 i:300
+wall:obj_grass2 j:300
+wall:obj_grass2 k:300
+wall:obj_grass2 l:300
+wall:obj_grass2 m:300
+wall:obj_grass2 n:300
+wall:obj_grass2 o:300
+#
+perma:P big dark wall 1:10000
+####
 rule:10000:1
 
-# The Orc Cave (boss: Azog, Enemy of the Dwarves)
+########################## 5 (boss: Baba Yaga)
+name:The Mountain Gorge
+wpos:1:0
+min-depth:2
+max-depth:5
+max-level:5
+stairs:1d2:3+1d2
+flags:STREAMS | SAND_VEIN | WATER_RIVER |  NO_DOORS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:5
+floor:EB dirt 2:5
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:35
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:10
+floor:EB dirt s:25
+floor:EB dirt t:5
+floor:EB dirt u:25
+#
+floor:EB dirt v:100
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:100
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+#floor:EC dirt F
+#floor:EC dirt G
+#floor:EC dirt H
+floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+floor:EC dirt S:1
+floor:EC dirt T:2
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+wall:ED dirt F2W 0:3400
+wall:ED dirt F2W 1:900
+wall:ED dirt F2W 2:3400
+wall:ED dirt F2W 3:1000
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: -750
+wall:ED dirt F2W m:25
+wall:ED dirt F2W n:25
+wall:ED dirt F2W o:25
+wall:ED dirt F2W p:25
+wall:ED dirt F2W q:25
+wall:ED dirt F2W r:25
+wall:ED dirt F2W s:25
+wall:ED dirt F2W t:25
+wall:ED dirt F2W u:25
+wall:ED dirt F2W v:25
+##
+perma:ED P dirt F2W 0:2500
+perma:ED P dirt F2W 1:2500
+perma:ED P dirt F2W 2:2500
+perma:ED P dirt F2W 3:2500
+rule:4000:0
+rule-flags:ANIMAL
+rule:3000:0
+rule-flags:UNDEAD
+rule-symbols:h
+rule:3000:1
+
+########################## 10 (boss: Solovei the Robber)
 name:The Orc Cave
-wpos:-14:28
-min-depth:10
-max-depth:23
-max-level:30
-flags:CAVERN | STREAMS
-floor:packed dirt:1000
-wall:mountain:1200
-fill:mountain:600
+wpos:1:1
+min-depth:4
+max-depth:12
+max-level:10
+stairs:1d2:3+1d2
+flags:STREAMS | SAND_VEIN | WATER_RIVER | CIRCULAR_ROOMS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:1400
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:3650
+floor:EB dirt 1:5
+floor:EB dirt 2:5
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:35
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:10
+floor:EB dirt s:25
+floor:EB dirt t:5
+floor:EB dirt u:25
+#
+floor:EB dirt v:100
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:100
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+#floor:EC dirt F
+#floor:EC dirt G
+#floor:EC dirt H
+floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+floor:EC dirt S:1
+floor:EC dirt T:2
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+wall:EB dirt F2W 0:11
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#
+wall:ED dirt F2W 0:3100
+wall:ED dirt F2W 1:1000
+wall:ED dirt F2W 2:3400
+wall:ED dirt F2W 3:900
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:1
+wall:EC dirt F2W H:1
+wall:EC dirt F2W I:1
+#
+wall:EC dirt F2W J:1
+wall:EC dirt F2W K:1
+wall:EC dirt F2W L:1
+wall:EC dirt F2W M:1
+wall:EC dirt F2W N:1
+wall:EC dirt F2W O:1
+wall:EC dirt F2W P:1
+wall:EC dirt F2W Q:1
+wall:EC dirt F2W R:1
+wall:EC dirt F2W S:1
+wall:EC dirt F2W T:1
+#rocks:
+wall:EC dirt F2W U:1
+wall:EC dirt F2W V:1
+wall:EC dirt F2W W:1
+wall:EC dirt F2W X:1
+wall:EC dirt F2W Y:1
+wall:EC dirt F2W Z:1
+wall:EC dirt F2W ~:1
+wall:EC dirt F2W `:1
+#
+wall:EE dirt F2W w:1
+wall:EE dirt F2W x:1
+wall:EE dirt F2W y:1
+wall:EE dirt F2W z:1
+wall:EE dirt F2W A:1
+wall:EE dirt F2W B:1
+wall:EE dirt F2W C:1
+wall:EE dirt F2W D:1
+wall:EE dirt F2W E:1
+wall:EE dirt F2W F:1
+wall:EE dirt F2W G:1
+wall:EE dirt F2W H:1
+wall:EE dirt F2W I:1
+wall:EE dirt F2W J:1
+wall:EE dirt F2W K:1
+wall:EE dirt F2W L:1
+wall:EE dirt F2W M:1
+wall:EE dirt F2W N:1
+wall:EE dirt F2W O:1
+wall:EE dirt F2W P:1
+wall:EE dirt F2W Q:1
+wall:EE dirt F2W R:1
+wall:EE dirt F2W S:1
+wall:EE dirt F2W T:1
+wall:EE dirt F2W U:1
+wall:EE dirt F2W V:1
+wall:EE dirt F2W W:1
+wall:EE dirt F2W X:1
+wall:EE dirt F2W Y:1
+wall:EE dirt F2W Z:1
+wall:EE dirt F2W ~:1
+wall:EE dirt F2W `:14
+#
+perma:ED P dirt F2W 0:2500
+perma:ED P dirt F2W 1:2500
+perma:ED P dirt F2W 2:2500
+perma:ED P dirt F2W 3:2500
 rule:5000:0
 rule-flags:ORC
 rule-symbols:koO
@@ -98,34 +955,1772 @@ rule:3000:0
 rule-flags:TROLL
 rule:2000:1
 
-# The Old Forest (boss: Old Man Willow)
-name:The Old Forest
-wpos:-18:19
-min-depth:13
-max-depth:25
-max-level:30
-flags:NO_DOORS | WATER_RIVER | STREAMS
-floor:packed dirt:8
-floor:water:200
-wall:tree:1200
-fill:tree:600
+########################## 15 (boss: Shtukensia the Rogue)
+name:The Severs
+wpos:0:1
+min-depth:8
+max-depth:15
+max-level:15
+stairs:1d2:3+1d2
+flags:WATER_RIVER
+#flags:!NO_DOORS
+stair:9F stair down 0:9F stair up 1:10000
+#
+door:DD wood wall 0:DD wood wall 1:DD wood wall 2:7000
+door:DD wood wall 3:DD wood wall 4:DD wood wall 5:1000
+door:DD wood wall 6:DD wood wall 7:DD wood wall 8:1000
+#slime-blood:
+floor:E6 blood w:20
+floor:E6 blood x:20
+floor:E6 blood y:20
+floor:E6 blood z:20
+floor:E6 blood A:20
+floor:E6 blood B:3
+#
+floor:E5 blood 0:1
+floor:E5 blood 1:1
+floor:E5 blood 2:1
+floor:E5 blood 3:1
+floor:E5 blood 4:1
+floor:E5 blood 5:1
+floor:E5 blood 6:1
+floor:E5 blood 7:1
+floor:E5 blood 8:1
+floor:E5 blood 9:1
+floor:E5 blood a:1
+floor:E5 blood b:1
+floor:E5 blood c:1
+floor:E5 blood d:1
+floor:E5 blood e:1
+floor:E5 blood f:1
+floor:E5 blood g:1
+floor:E5 blood h:1
+floor:E5 blood i:1
+floor:E5 blood j:1
+floor:E5 blood k:1
+floor:E5 blood l:1
+floor:E5 blood m:1
+floor:E5 blood n:1
+floor:E5 blood o:1
+floor:E5 blood p:1
+floor:E5 blood q:1
+floor:E5 blood r:1
+floor:E5 blood s:1
+floor:E5 blood t:1
+floor:E5 blood u:1
+floor:E5 blood v:1
+#floor:B6 floors luquid T:1
+#floor:B6 floors luquid S:1
+#floor:B3 floors 9:97
+########################################
+#wall:big dark wall 0:20
+#
+wall:A3 severs 0:2100
+wall:A3 severs 1:1000
+wall:A3 severs 2:100
+wall:A3 severs 3:100
+wall:A3 severs 4:100
+wall:A3 severs 5:100
+wall:A3 severs 6:100
+wall:A3 severs 7:100
+wall:A3 severs 8:100
+wall:A3 severs 9:100
+wall:A3 severs a:100
+wall:A3 severs b:100
+wall:A3 severs c:100
+wall:A3 severs d:100
+wall:A3 severs e:100
+wall:A3 severs f:100
+wall:A3 severs g:100
+wall:A3 severs h:100
+wall:A3 severs i:100
+wall:A3 severs j:100
+wall:A3 severs k:100
+wall:A3 severs l:100
+wall:A3 severs m:100
+wall:A3 severs n:100
+wall:A3 severs o:100
+wall:A3 severs p:100
+wall:A3 severs q:100
+wall:A3 severs r:100
+wall:A3 severs s:100
+wall:A3 severs t:100
+wall:A3 severs u:100
+wall:A3 severs v:100
+# AA
+wall:AA wall w:2100
+wall:AA wall x:1100
+wall:AA wall y:100
+wall:AA wall z:100
+wall:AA wall A:100
+wall:AA wall B:100
+#
+wall:B6 floors luquid X:100
+wall:B6 floors luquid Y:100
+wall:B6 floors luquid Z:33
+wall:B6 floors luquid ~:33
+wall:B6 floors luquid `:34
+#
+perma:AA P wall w:2500
+perma:AA P wall x:2500
+perma:A3 P severs 0:2500
+perma:A3 P severs 1:2500
+#if green walls:
+#wall:big dark wall 9 entrance:1
+#wall:big dark wall a low entrance:1
+#wall:big dark wall b window:1
+rule:2000:0
+rule-symbols:p
+rule:8000:1
+
+########################## 20 (boss: Kikimora)
+name:Fetid Swamps
+wpos:-1:0
+min-depth:12
+max-depth:20
+max-level:20
+stairs:1d2:3+1d2
+flags:SAND_VEIN | WATER_RIVER | EMPTY | NO_DOORS
+#
+stair:A9 stair down leaf:A9 stair up leaf:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 2 well:A9 dried well:10000
+#floor:floor 1 grass:24
+#floor:floor w grass:12
+#
+# 74
+#
+# A1
+floor:tree 0 stump:100
+floor:tree 2 little:100
+floor:tree 7 coniferous small:100
+floor:tree a small willow:100
+floor:tree b broken log:100
+floor:tree c broken log:100
+floor:tree f linden small:100
+floor:tree h larch small:100
+floor:tree i bush:100
+floor:tree k gervais small:100
+floor:tree m palm small:100
+floor:tree n dead tree:100
+floor:tree o dead tree:100
+floor:tree p stump:100
+floor:tree q stump:100
+floor:tree r branch:100
+floor:tree s branch:100
+floor:tree t branch:100
+floor:tree u branch:100
+floor:tree v branch:100
+# A2
+floor:tree w fallen:100
+floor:tree x fallen:100
+floor:tree y fallen:100
+floor:tree z fallen:100
+floor:tree A fallen:100
+floor:tree B fallen:100
+floor:tree C small tree:100
+floor:tree G small tree:100
+floor:tree H:100
+floor:tree I:100
+floor:tree J:100
+floor:tree K:100
+floor:tree L:100
+floor:tree M:100
+floor:tree N:100
+floor:tree O:100
+floor:tree P:100
+floor:tree Q:100
+floor:tree R:100
+floor:tree S:100
+floor:tree U:100
+floor:tree V:100
+floor:tree W:100
+floor:tree X:100
+floor:tree Y:100
+floor:tree Z:100
+#a4
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+#
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass:
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:300
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:1
+floor:A5 plants L:1
+#######################################
+# B1
+floor:floor 0 grass:300
+floor:floor 1 grass:2050
+# B2
+floor:floor w grass:100
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+# ! was 44 20
+floor:floor E grass:100
+floor:floor F grass:100
+#
+floor:floor G rocks:100
+floor:floor I rocks:100
+floor:floor J rocks:100
+floor:floor N rock:100
+floor:floor O rock:100
+floor:floor W hills:100
+# B3
+floor:B3 floors 1:100
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+# A7
+floor:obj_grass A puddle:7
+floor:obj_grass K puddle:6
+###################################################
+#
+# 20
+#
+#A1
+wall:tree 1:100
+wall:tree 3:100
+wall:tree 4 maple:100
+wall:tree 5 maple:100
+wall:tree 6 coniferous:100
+wall:tree 8 coniferous:100
+# !
+wall:tree 9 willow:2000
+wall:tree d birch:100
+wall:tree e linden:100
+wall:tree g larch:100
+#!
+wall:tree n dead tree:1500
+wall:tree o dead tree:1500
+#a2
+wall:tree D tree:100
+wall:tree E tree:100
+wall:tree F tree:100
+wall:tree V:1000
+wall:tree W:700
+wall:tree X:1000
+wall:tree Y:1000
+#
+wall:A5 plants N:100
+#
+perma:P tree 9 willow:4000
+perma:P tree n dead tree:1000
+perma:P tree o dead tree:1000
+perma:P tree V:1000
+perma:P tree W:1000
+perma:P tree X:1000
+perma:P tree Y:1000
+#
 rule:4000:0
 rule-flags:ANIMAL
 rule:3000:0
 rule-flags:UNDEAD
 rule-symbols:hl
-rule:3000:1
+rule:1000:0
+rule-symbols:caS
+#hybrid:
+rule:500:0
+rule-symbols:H
+#
+rule:500:0
+rule-symbols:J
+rule:1000:1
 
-# The Ettenmoors (boss: Bert/Bill/Tom)
-name:The Ettenmoors
-wpos:-6:30
+########################## 20 (boss: Azog, King of the Uruk-Hai)
+name:The Orc Mountains
+wpos:1:2
+min-depth:15
+max-depth:23
+max-level:20
+stairs:1d2:3+1d2
+flags:STREAMS | SAND_VEIN | WATER_RIVER | CAVERN
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:5
+floor:EB dirt 2:5
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:35
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:10
+floor:EB dirt s:25
+floor:EB dirt t:5
+floor:EB dirt u:25
+#
+floor:EB dirt v:100
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:100
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+#floor:EC dirt F
+#floor:EC dirt G
+#floor:EC dirt H
+floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+floor:EC dirt S:1
+floor:EC dirt T:2
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+wall:EB dirt F2W 0:541
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#
+wall:ED dirt F2W 0:2600
+wall:ED dirt F2W 1:1000
+wall:ED dirt F2W 2:3150
+wall:ED dirt F2W 3:900
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:10
+wall:EC dirt F2W H:10
+wall:EC dirt F2W I:10
+#
+wall:EC dirt F2W J:10
+wall:EC dirt F2W K:10
+wall:EC dirt F2W L:10
+wall:EC dirt F2W M:10
+wall:EC dirt F2W N:10
+wall:EC dirt F2W O:10
+wall:EC dirt F2W P:10
+wall:EC dirt F2W Q:10
+wall:EC dirt F2W R:10
+wall:EC dirt F2W S:10
+wall:EC dirt F2W T:10
+#rocks:
+wall:EC dirt F2W U:10
+wall:EC dirt F2W V:10
+wall:EC dirt F2W W:10
+wall:EC dirt F2W X:10
+wall:EC dirt F2W Y:10
+wall:EC dirt F2W Z:10
+wall:EC dirt F2W ~:10
+wall:EC dirt F2W `:10
+#
+wall:EE dirt F2W w:10
+wall:EE dirt F2W x:10
+wall:EE dirt F2W y:10
+wall:EE dirt F2W z:10
+wall:EE dirt F2W A:10
+wall:EE dirt F2W B:10
+wall:EE dirt F2W C:10
+wall:EE dirt F2W D:10
+wall:EE dirt F2W E:10
+wall:EE dirt F2W F:10
+wall:EE dirt F2W G:10
+wall:EE dirt F2W H:10
+wall:EE dirt F2W I:10
+wall:EE dirt F2W J:10
+wall:EE dirt F2W K:10
+wall:EE dirt F2W L:10
+wall:EE dirt F2W M:10
+wall:EE dirt F2W N:10
+wall:EE dirt F2W O:10
+wall:EE dirt F2W P:10
+wall:EE dirt F2W Q:10
+wall:EE dirt F2W R:10
+wall:EE dirt F2W S:10
+wall:EE dirt F2W T:10
+wall:EE dirt F2W U:10
+wall:EE dirt F2W V:10
+wall:EE dirt F2W W:10
+wall:EE dirt F2W X:10
+wall:EE dirt F2W Y:10
+wall:EE dirt F2W Z:10
+wall:EE dirt F2W ~:10
+wall:EE dirt F2W `:24
+#
+perma:ED P dirt F2W 0:2500
+perma:ED P dirt F2W 1:2500
+perma:ED P dirt F2W 2:2500
+perma:ED P dirt F2W 3:2500
+#
+rule:5000:0
+rule-flags:ORC
+rule-symbols:koO
+rule:3000:0
+rule-flags:TROLL
+rule:2000:1
+
+########################## 25 (boss: Old Man Willow)
+name:The Old Forest
+wpos:0:-1
 min-depth:18
+max-depth:25
+max-level:25
+stairs:1d2:3+1d2
+flags:STREAMS | WATER_RIVER | CIRCULAR_ROOMS | NO_DOORS
+#
+stair:A9 stair down leaf:A9 stair up leaf:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 2 well:A9 dried well:10000
+# A1
+floor:tree 0 stump:82
+floor:tree 1:1
+floor:tree 2 little:100
+floor:tree 3:1
+floor:tree 4 maple:1
+floor:tree 5 maple:1
+floor:tree 6 coniferous:1
+floor:tree 7 coniferous small:100
+floor:tree 8 coniferous:1
+floor:tree 9 willow:1
+floor:tree a small willow:100
+floor:tree b broken log:100
+floor:tree c broken log:100
+floor:tree d birch:1
+floor:tree e linden:1
+floor:tree f linden small:100
+floor:tree g larch:1
+floor:tree h larch small:100
+floor:tree i bush:100
+floor:tree j gervais:1
+floor:tree k gervais small:100
+floor:tree l palm:1
+floor:tree m palm small:100
+floor:tree n dead tree:100
+floor:tree o dead tree:100
+floor:tree p stump:100
+floor:tree q stump:100
+floor:tree r branch:100
+floor:tree s branch:100
+floor:tree t branch:100
+floor:tree u branch:100
+floor:tree v branch:100
+# ^
+# A2 - trees
+floor:tree w fallen:100
+floor:tree x fallen:100
+floor:tree y fallen:100
+floor:tree z fallen:100
+floor:tree A fallen:100
+floor:tree B fallen:100
+floor:tree C small tree:100
+floor:tree D tree:1
+floor:tree E tree:1
+floor:tree F tree:1
+floor:tree G small tree:100
+# 11^
+#### FURTHER ON: SMALL TREES
+floor:tree H:100
+floor:tree I:100
+floor:tree J:100
+floor:tree K:100
+floor:tree L:100
+floor:tree M:100
+floor:tree N:100
+floor:tree O:100
+floor:tree P:100
+floor:tree Q:100
+floor:tree R:100
+floor:tree S:100
+#floor:tree T:1 ! basic symbol
+floor:tree U:100
+#### 4x dry:
+floor:tree V:100
+floor:tree W:100
+floor:tree X:100
+floor:tree Y:100
+floor:tree Z:1
+floor:tree ~:1
+floor:tree `:1
+############################
+# (1x18+82) + 4400 = 4500
+#
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+# 700 ^
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass: 35 ^
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:286
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+# 400^ - 9
+#
+#
+#1x20 V
+################################ 1659 + 4500
+# B1
+floor:floor 0 grass:650
+#################################### 
+floor:floor 1 grass:1633
+# B2
+floor:floor w grass:1600
+# 3x^=7350
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+# 700^
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:18
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+#24 total; 
+# A7
+floor:obj_grass A puddle:7
+floor:obj_grass K puddle:6
+# 1x32^ + 468 = 500
+#A1
+###################################################
+wall:tree 1:1100
+wall:tree 3:1100
+wall:tree 4 maple:100
+wall:tree 5 maple:100
+wall:tree 6 coniferous:1000
+wall:tree 8 coniferous:800
+wall:tree 9 willow:2000
+wall:tree d birch:500
+wall:tree e linden:500
+wall:tree g larch:100
+wall:tree n dead tree:500
+wall:tree o dead tree:500
+#a2
+wall:tree D tree:300
+wall:tree E tree:300
+wall:tree F tree:100
+# withered trees:
+wall:tree V:300
+wall:tree W:300
+wall:tree X:80
+wall:tree Y:500
+#a7
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:1
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:1
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+wall:big dark wall 0:1
+#
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+#
+perma:P tree 9 willow:4000
+perma:P tree n dead tree:1000
+perma:P tree o dead tree:1000
+perma:P tree V:1000
+perma:P tree W:1000
+perma:P tree X:1000
+perma:P tree Y:1000
+#
+rule:4000:0
+rule-flags:ANIMAL
+rule:2000:0
+rule-symbols:hl
+rule:500:0
+rule-flags:UNDEAD
+rule:1000:0
+rule-symbols:caS
+#hybrid:
+rule:500:0
+rule-symbols:H
+rule:500:0
+rule-symbols:J
+rule:1500:1
+
+########################## 25 (boss: Koschei the Deathless)
+name:Abandoned Manor
+wpos:-1:2
+min-depth:21
+max-depth:27
+max-level:25
+stairs:1d2:3+1d2
+#floor:packed dirt:10
+#B3 DC (yellow ornament square in cirle)
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:E6 dark floor rubble:E6 dark floor pass rubble:10000
+#
+fill:dark wall 0:10000
+#
+floor:E6 blood X:2500
+floor:E6 blood Y:2500
+floor:E6 blood Z:2500
+floor:E6 blood ~:2500
+#floor:B3 floors n:300
+#floor:B3 floors o:9700
+#
+floor:E6 blood X:2500
+floor:E6 blood Y:2500
+floor:E6 blood Z:2500
+floor:E6 blood ~:2500
+# B9
+wall:dark wall 0:3050
+wall:dark wall 1 narrow window:100
+wall:dark wall 2 window:100
+wall:dark wall 3 candelabra:100
+wall:dark wall 4 torch:100
+wall:dark wall 5 lamp:100
+wall:dark wall 6 niche:100
+wall:dark wall 7 swords:100
+wall:dark wall 8 shield:100
+wall:dark wall 9 statue:100
+wall:dark wall a fountain:100
+wall:dark wall b portrait:100
+wall:dark wall c portrait:100
+wall:dark wall d portrait:100
+wall:dark wall e portrait:100
+wall:dark wall f banner:100
+wall:dark wall g banner:100
+wall:dark wall h banner:100
+wall:dark wall k empty window:100
+wall:dark wall l window:100
+wall:dark wall m barred window:100
+wall:dark wall n glass window:100
+wall:dark wall q jail window:1
+wall:dark wall r prison bars:1
+wall:dark wall u:100
+wall:dark wall v:100
+# BA ^5350 + 3200 + 1450
+wall:dark wall w:50
+wall:dark wall x:50
+wall:dark wall y:50
+wall:dark wall z:50
+wall:dark wall A:50
+wall:dark wall B:50
+wall:dark wall C:50
+wall:dark wall D:50
+wall:dark wall E:50
+wall:dark wall F:50
+wall:dark wall G:50
+wall:dark wall H:50
+wall:dark wall I:50
+wall:dark wall J:50
+wall:dark wall K:50
+wall:dark wall L:50
+wall:dark wall M:50
+wall:dark wall N:50
+wall:dark wall O:50
+wall:dark wall P:50
+wall:dark wall Q:50
+wall:dark wall R:50
+wall:dark wall S:50
+wall:dark wall T:50
+wall:dark wall U:50
+wall:dark wall V:50
+wall:dark wall W:50
+wall:dark wall X:50
+wall:dark wall Y:50
+wall:dark wall Z:50
+wall:dark wall ~:50
+wall:dark wall `:50
+######################### DF tiles will be moved..
+wall:DC dark stone S:1
+wall:DC dark stone T:1
+wall:DC dark stone U:1
+wall:DC dark stone V:1
+wall:DC dark stone W:1
+wall:DC dark stone X:1
+wall:DC dark stone Y:1
+wall:DC dark stone Z:1
+wall:DC dark stone ~:1
+# ^11
+######################## E0 tiles will be moved..
+wall:DC dark stone w:50
+wall:DC dark stone x:50
+wall:DC dark stone y:50
+wall:DC dark stone z:50
+wall:DC dark stone A:50
+wall:DC dark stone B:50
+wall:DC dark stone C:50
+wall:DC dark stone D:50
+wall:DC dark stone E:50
+wall:DC dark stone F:50
+wall:DC dark stone G:50
+wall:DC dark stone H:50
+wall:DC dark stone I:50
+wall:DC dark stone J:50
+wall:DC dark stone K:50
+wall:DC dark stone L:50
+wall:DC dark stone M:50
+wall:DC dark stone N:50
+wall:DC dark stone O:50
+wall:DC dark stone P:50
+wall:DC dark stone Q:50
+wall:DC dark stone R:50
+wall:DC dark stone S:50
+wall:DC dark stone T:50
+wall:DC dark stone U:50
+wall:DC dark stone V:50
+wall:DC dark stone W:50
+wall:DC dark stone X:50
+wall:DC dark stone Y:50
+wall:DC dark stone Z:50
+wall:DC dark stone ~:50
+wall:DC dark stone `:50
+##########
+# 96-wall: ....... all below: 1450 total
+wall:dark wall:1
+# 
+wall:96 wall M:1
+wall:96 wall N:1
+wall:96 wall O:1
+wall:96 wall P:1
+wall:96 wall Q:1
+wall:96 wall R:1
+wall:96 wall S:1
+wall:96 wall T:1
+wall:96 wall U:1
+wall:96 wall V:1
+wall:96 wall W:1
+wall:96 wall X:1
+# 98-wall:
+wall:98 wall 2:50
+wall:98 wall 3:50
+wall:98 wall 4:50
+wall:98 wall a:50
+# 9D-wall:
+wall:9D wall 5:1
+wall:9D wall 6:1
+#
+# AA
+wall:AA wall I:1
+wall:AA wall J:200
+wall:AA wall K:200
+wall:AA wall L:200
+wall:AA wall M:21
+wall:AA wall N:200
+wall:AA wall O:200
+wall:AA wall P:199
+#bloody:          
+wall:AA wall W:1
+wall:AA wall X:1
+wall:AA wall Y:1
+# 1x29
+perma:P dark wall 0:10000
+#
+rule:2000:0
+rule-symbols:ph
+rule:5000:0
+rule-flags:UNDEAD
+rule:1000:0
+rule-flags:UNDEAD
+rule-symbols:V
+rule:2000:1
+
+########################## 30 (boss: The Sandworm Queen)
+name:The Sandworm Lair
+wpos:-2:2
+min-depth:23
 max-depth:30
-max-level:35
-flags:CAVERN | STREAMS
-floor:packed dirt:1000
-wall:mountain:1200
-fill:mountain:600
+max-level:30
+stairs:1d2:3+1d2
+flags:STREAMS | CAVERN | NO_DOORS
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:E9 desert e:E9 desert f:10000
+#
+floor:E7 desert 0:6130
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E7 100 V
+floor:E7 desert 7:5
+floor:E7 desert 8:5
+floor:E7 desert 9:5
+floor:E7 desert a:5
+floor:E7 desert b:5
+floor:E7 desert c:1
+floor:E7 desert d:1
+floor:E7 desert e:1
+floor:E7 desert f:1
+floor:E7 desert g:1
+floor:E7 desert h:1
+floor:E7 desert i:1
+floor:E7 desert j:1
+floor:E7 desert k:1
+floor:E7 desert l:1
+floor:E7 desert m:1
+floor:E7 desert n:41
+floor:E7 desert o:5
+floor:E7 desert p:5
+floor:E7 desert q:1
+floor:E7 desert r:4
+floor:E7 desert s:3
+floor:E7 desert t:3
+floor:E7 desert u:1
+floor:E7 desert v:1
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E8 40 V
+floor:E8 desert w:3
+floor:E8 desert x:2
+floor:E8 desert y:2
+floor:E8 desert z:1
+floor:E8 desert A:2
+floor:E8 desert B:2
+floor:E8 desert C:2
+floor:E8 desert D:2
+floor:E8 desert E:2
+floor:E8 desert F:2
+floor:E8 desert G:1
+floor:E8 desert H:1
+floor:E8 desert I:1
+floor:E8 desert J:1
+floor:E8 desert K:1
+floor:E8 desert L:2
+floor:E8 desert M:2
+floor:E8 desert N:2
+#floor:E8 desert O:1
+#floor:E8 desert P:1
+#floor:E8 desert Q:1
+#floor:E8 desert R:1
+#floor:E8 desert S:1 wagon
+floor:E8 desert T:1
+floor:E8 desert U:1
+floor:E8 desert V:1
+floor:E8 desert W:1
+floor:E8 desert X:1
+floor:E8 desert Y:1
+floor:E8 desert Z:1
+floor:E8 desert ~:1
+floor:E8 desert `:1
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E9 30 V
+floor:E9 desert 4:1
+floor:E9 desert 5:1
+floor:E9 desert 6:1
+floor:E9 desert 7:1
+floor:E9 desert 8:1
+floor:E9 desert 9:1
+floor:E9 desert a:1
+floor:E9 desert b:1
+#rocks:
+floor:E9 desert c:2
+floor:E9 desert d:2
+floor:E9 desert e:1
+floor:E9 desert f:1
+floor:E9 desert g:1
+floor:E9 desert h:1
+floor:E9 desert i:1
+floor:E9 desert j:1
+floor:E9 desert k:1
+floor:E9 desert l:1
+floor:E9 desert m:1
+floor:E9 desert n:1
+floor:E9 desert o:1
+floor:E9 desert p:1
+floor:E9 desert q:1
+floor:E9 desert r:1
+floor:E9 desert s:1
+floor:E9 desert t:1
+floor:E9 desert u:1
+floor:E9 desert v:1
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# EA 1000
+floor:EA sand w:1
+floor:EA sand x:1
+floor:EA sand y:1
+floor:EA sand z:1
+floor:EA sand A:500
+floor:EA sand B:400
+floor:EA sand C:400
+floor:EA sand D:100
+floor:EA sand E:500
+floor:EA sand F:10
+floor:EA sand G:685
+floor:EA sand H:100
+floor:EA sand I:600
+floor:EA sand J:200
+floor:EA sand K:33
+floor:EA sand L:33
+floor:EA sand M:34
+# lots of stones 100V
+floor:EA sand N:1
+#
+floor:EA sand O:1
+floor:EA sand P:1
+floor:EA sand Q:1
+floor:EA sand R:1
+floor:EA sand S:1
+floor:EA sand T:10
+floor:EA sand U:10
+floor:EA sand V:10
+floor:EA sand W:10
+floor:EA sand X:10
+floor:EA sand Y:10
+floor:EA sand Z:10
+floor:EA sand ~:10
+floor:EA sand `:14
+####
+wall:E4 wall w:1250
+wall:E4 wall x:1250
+wall:E4 wall y:1250
+wall:E4 wall z:1200
+################################ 5050 V
+#
+####################### 800
+wall:E7 desert F2W 0:570
+wall:E7 desert F2W 7:34
+wall:E7 desert F2W 8:34
+wall:E7 desert F2W 9:16
+wall:E7 desert F2W a:16
+wall:E7 desert F2W b:10
+wall:E7 desert F2W c:10
+wall:E7 desert F2W d:10
+wall:E7 desert F2W e:10
+wall:E7 desert F2W f:10
+wall:E7 desert F2W g:10
+wall:E7 desert F2W h:10
+wall:E7 desert F2W i:10
+wall:E7 desert F2W j:10
+wall:E7 desert F2W k:10
+wall:E7 desert F2W l:10
+wall:E7 desert F2W m:10
+wall:E7 desert F2W n:10
+####################### 700
+wall:E7 desert F2W o:100
+wall:E7 desert F2W p:140
+wall:E7 desert F2W q:10
+wall:E7 desert F2W r:100
+wall:E7 desert F2W s:100
+wall:E7 desert F2W t:100
+wall:E7 desert F2W u:50
+wall:E7 desert F2W v:100
+###################### 200
+wall:E8 desert F2W w:30
+wall:E8 desert F2W x:20
+wall:E8 desert F2W y:20
+wall:E8 desert F2W z:10
+wall:E8 desert F2W A:20
+wall:E8 desert F2W B:20
+wall:E8 desert F2W C:20
+wall:E8 desert F2W D:20
+wall:E8 desert F2W E:20
+wall:E8 desert F2W F:20
+########### big bones: 80
+wall:E8 desert F2W G:10
+wall:E8 desert F2W H:10
+wall:E8 desert F2W I:10
+# well:
+wall:E8 desert F2W J:1
+wall:E8 desert F2W K:16
+wall:E8 desert F2W L:1
+wall:E8 desert F2W M:1
+#wall:E8 desert F2W N
+wall:E8 desert F2W O:10
+wall:E8 desert F2W P:1
+wall:E8 desert F2W Q:10
+wall:E8 desert F2W R:10
+############### wagon: 90
+wall:E8 desert F2W S:1
+wall:E8 desert F2W T:9
+wall:E8 desert F2W U:10
+wall:E8 desert F2W V:10
+wall:E8 desert F2W W:10
+wall:E8 desert F2W X:10
+wall:E8 desert F2W Y:10
+wall:E8 desert F2W Z:10
+wall:E8 desert F2W ~:10
+wall:E8 desert F2W `:10
+##################### 30
+wall:E9 desert F2W 4:1
+wall:E9 desert F2W 5:1
+wall:E9 desert F2W 6:1
+wall:E9 desert F2W 7:1
+wall:E9 desert F2W 8:1
+wall:E9 desert F2W 9:1
+wall:E9 desert F2W a:12
+wall:E9 desert F2W b:12
+###############rocks: 130
+wall:E9 desert F2W c:20
+wall:E9 desert F2W d:20
+wall:E9 desert F2W e:10
+wall:E9 desert F2W f:10
+wall:E9 desert F2W g:10
+wall:E9 desert F2W h:10
+wall:E9 desert F2W i:10
+wall:E9 desert F2W j:10
+wall:E9 desert F2W k:10
+wall:E9 desert F2W l:10
+wall:E9 desert F2W m:10
+######## ugly stones: 20
+wall:E9 desert F2W n:1
+wall:E9 desert F2W o:1
+wall:E9 desert F2W p:1
+wall:E9 desert F2W q:1
+wall:E9 desert F2W r:1
+wall:E9 desert F2W s:1
+wall:E9 desert F2W t:1
+wall:E9 desert F2W u:12
+wall:E9 desert F2W v:1
+##################### 1600
+wall:EA sand F2W w:100
+wall:EA sand F2W x:100
+wall:EA sand F2W y:100
+wall:EA sand F2W z:100
+wall:EA sand F2W A:100
+wall:EA sand F2W B:100
+wall:EA sand F2W C:100
+wall:EA sand F2W D:100
+wall:EA sand F2W E:90
+wall:EA sand F2W F:20
+wall:EA sand F2W G:90
+wall:EA sand F2W H:100
+wall:EA sand F2W I:100
+wall:EA sand F2W J:100
+wall:EA sand F2W K:100
+wall:EA sand F2W L:100
+wall:EA sand F2W M:100
+# lots of stones ##### 1400
+wall:EA sand F2W N:1
+#
+wall:EA sand F2W O:99
+wall:EA sand F2W P:100
+wall:EA sand F2W Q:100
+wall:EA sand F2W R:100
+wall:EA sand F2W S:100
+wall:EA sand F2W T:100
+wall:EA sand F2W U:100
+wall:EA sand F2W V:100
+wall:EA sand F2W W:100
+wall:EA sand F2W X:100
+wall:EA sand F2W Y:100
+wall:EA sand F2W Z:100
+wall:EA sand F2W ~:100
+wall:EA sand F2W `:100
+#
+perma:E4 P wall w:2500
+perma:E4 P wall x:2500
+perma:E4 P wall y:2500
+perma:E4 P wall z:2500
+#
+rule:9000:0
+rule-symbols:w
+rule:950:0
+rule-flags:MULTIPLY
+rule:50:1
+
+########################## 49 (boss: Trolls)
+name:Ettenmoors
+wpos:2:1
+min-depth:23
+max-depth:30
+max-level:30
+stairs:1d2:3+1d2
+flags:NO_DOORS | CIRCULAR_ROOMS
+#
+stair:A9 stair down gloomy:A9 stair up gloomy:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 9 fountain:A9 dried fountain:10000
+#
+floor:tree 0 stump:82
+floor:tree 1:1
+floor:tree 2 little:100
+floor:tree 3:1
+floor:tree 4 maple:1
+floor:tree 5 maple:1
+floor:tree 6 coniferous:1
+floor:tree 7 coniferous small:100
+floor:tree 8 coniferous:1
+floor:tree 9 willow:1
+floor:tree a small willow:100
+floor:tree b broken log:50
+floor:tree c broken log:50
+floor:tree d birch:1
+floor:tree e linden:1
+floor:tree f linden small:100
+floor:tree g larch:1
+floor:tree h larch small:100
+floor:tree i bush:100
+floor:tree j gervais:1
+floor:tree k gervais small:100
+floor:tree l palm:1
+floor:tree m palm small:100
+floor:tree n dead tree:50
+floor:tree o dead tree:50
+floor:tree p stump:50
+floor:tree q stump:50
+floor:tree r branch:100
+floor:tree s branch:100
+floor:tree t branch:100
+floor:tree u branch:100
+floor:tree v branch:100
+# ^
+# A2 - trees
+floor:tree w fallen:50
+floor:tree x fallen:50
+floor:tree y fallen:50
+floor:tree z fallen:50
+floor:tree A fallen:50
+floor:tree B fallen:50
+floor:tree C small tree:100
+floor:tree D tree:1
+floor:tree E tree:1
+floor:tree F tree:1
+floor:tree G small tree:100
+# 11^
+#### FURTHER ON: SMALL TREES
+floor:tree H:100
+floor:tree I:100
+floor:tree J:100
+floor:tree K:100
+floor:tree L:100
+floor:tree M:100
+floor:tree N:100
+floor:tree O:200
+floor:tree P:200
+floor:tree Q:200
+floor:tree R:200
+floor:tree S:200
+#floor:tree T:1 ! basic symbol
+floor:tree U:100
+#### 4x dry:
+floor:tree V:10
+floor:tree W:10
+floor:tree X:10
+floor:tree Y:10
+floor:tree Z:1
+floor:tree ~:1
+floor:tree `:1
+############################
+# (1x18+82) + 4400 = 4500
+#
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+# 700 ^
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass: 35 ^
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:286
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+# 400^ - 9
+#
+#
+#1x20 V
+################################ 1659 + 4500
+# B1
+
+#
+#       3x light tiles (lightning all stuff around)
+
+############################
+# floor:floor 0 grass:810
+floor:light grass:810
+############################
+
+#################################### 
+# floor:floor 1 grass:1933
+floor:light grass plants:1933
+#############################
+
+# B2
+################################
+#floor:floor w grass:1600
+floor:light grass flowers:1600
+###############################
+
+
+# 3x^=7350
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+# 700^
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:18
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+######################################################
+#-#-#-#-#-#-#-#-#-#-# AB - grass mountains 2400
+wall:grass mountain F2W 0:130
+wall:grass mountain F2W 1:100
+wall:grass mountain F2W 2:100
+wall:grass mountain F2W 3:100
+wall:grass mountain F2W 4:100
+wall:grass mountain F2W 5:100
+wall:grass mountain F2W 6:100
+wall:grass mountain F2W 7:100
+wall:grass mountain F2W 8:100
+wall:grass mountain F2W 9:100
+wall:grass mountain F2W a:100
+wall:grass mountain F2W b:100
+wall:grass mountain F2W c rocks:50
+wall:grass mountain F2W d small rocks:50
+wall:grass mountain F2W e rubble:50
+wall:grass mountain F2W f passable rubble:50
+wall:grass mountain F2W g big rocks:100
+wall:grass mountain F2W h moss rubble:100
+wall:grass mountain F2W i boulders:100
+wall:grass mountain F2W j boulders:100
+wall:grass mountain F2W k boulders:100
+wall:grass mountain F2W l big boulders:100
+wall:grass mountain F2W m rocks:100
+wall:grass mountain F2W n rocks:10
+wall:grass mountain F2W o rock:10
+wall:grass mountain F2W p rocks:10
+wall:grass mountain F2W q rock:10
+wall:grass mountain F2W r rocks:10
+wall:grass mountain F2W s rocks:10
+wall:grass mountain F2W t rocks:10
+wall:grass mountain F2W u rocks:10
+wall:grass mountain F2W v rock:10
+#-#-#-#-#-#-#-#-#-#- AC - grass mountain F2Ws 2010
+wall:grass mountain F2W w:590
+wall:grass mountain F2W x:400
+wall:grass mountain F2W y:300
+wall:grass mountain F2W z:300
+wall:grass mountain F2W A:200
+wall:grass mountain F2W B:200
+wall:grass mountain F2W C:500
+wall:grass mountain F2W D:500
+wall:grass mountain F2W E:100
+wall:grass mountain F2W F:200
+wall:grass mountain F2W G:100
+wall:grass mountain F2W H:80
+wall:grass mountain F2W I:100
+wall:grass mountain F2W J:10
+wall:grass mountain F2W K:10
+wall:grass mountain F2W L:10
+######################
+# A1
+###################################   200
+wall:tree F2W 0 stump:10
+wall:tree F2W 1:10
+wall:tree F2W 2 little:10
+wall:tree F2W 3:10
+wall:tree F2W 4 maple:10
+wall:tree F2W 5 maple:10
+wall:tree F2W 6 coniferous:10
+wall:tree F2W 7 coniferous small:10
+wall:tree F2W 8 coniferous:10
+wall:tree F2W 9 willow:10
+wall:tree F2W a small willow:10
+wall:tree F2W b broken log:10
+wall:tree F2W c broken log:10
+wall:tree F2W d birch:10
+wall:tree F2W e linden:10
+wall:tree F2W f linden small:10
+wall:tree F2W g larch:10
+wall:tree F2W h larch small:10
+wall:tree F2W i bush:10
+#wall:tree F2W j gervais:1
+wall:tree F2W k gervais small:10
+#wall:tree F2W l palm:1############### 100
+wall:tree F2W m palm small:10
+wall:tree F2W n dead tree:10
+wall:tree F2W o dead tree:10
+wall:tree F2W p stump:10
+wall:tree F2W q stump:10
+wall:tree F2W r branch:10
+wall:tree F2W s branch:10
+wall:tree F2W t branch:10
+wall:tree F2W u branch:10
+wall:tree F2W v branch:10
+# A2 - trees######################### 110
+wall:tree F2W w fallen:10
+wall:tree F2W x fallen:10
+wall:tree F2W y fallen:10
+wall:tree F2W z fallen:10
+wall:tree F2W A fallen:10
+wall:tree F2W B fallen:10
+wall:tree F2W C small tree:10
+wall:tree F2W D tree:10
+wall:tree F2W E tree:10
+wall:tree F2W F tree:10
+wall:tree F2W G small tree:10
+#### FURTHER ON: SMALL TREES ######## 1300
+wall:tree F2W H:100
+wall:tree F2W I:100
+wall:tree F2W J:100
+wall:tree F2W K:100
+wall:tree F2W L:100
+wall:tree F2W M:100
+wall:tree F2W N:100
+wall:tree F2W O:100
+wall:tree F2W P:100
+wall:tree F2W Q:100
+wall:tree F2W R:100
+wall:tree F2W S:100
+wall:tree F2W U:100
+#### 4x dry: ############ 50
+wall:tree F2W V:10
+wall:tree F2W W:10
+wall:tree F2W X:10
+wall:tree F2W Y:10
+wall:tree F2W Z:8
+wall:tree F2W ~:1
+wall:tree F2W `:1
+# A7 ################################# 10
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:2
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:1
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+################################## more old ruins:
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+######################################## 2000
+# A4 F2W
+wall:flower F2W 0 green:100
+wall:flower F2W 1 green:100
+wall:flower F2W 2 green:100
+wall:flower F2W 3 green:100
+wall:flower F2W 4 green:100
+wall:flower F2W 5 green:100
+wall:flower F2W 6 green:100
+wall:flower F2W 7 grass:100
+# B1 F2W
+wall:floor F2W 0 grass:100
+wall:floor F2W 1 grass:100
+# B2 F2W
+wall:floor F2W w grass:100
+wall:floor F2W x grass:100
+wall:floor F2W y grass:100
+wall:floor F2W z grass:100
+wall:floor F2W A grass:100
+wall:floor F2W B grass:100
+wall:floor F2W C grass:100
+wall:floor F2W D grass:100
+wall:floor F2W E grass:100
+wall:floor F2W F grass:100
+########################## 400
+wall:floor F2W G rocks:10
+wall:floor F2W H rocks:10
+wall:floor F2W I rocks:10
+wall:floor F2W J rocks:10
+wall:floor F2W K rocks:10
+wall:floor F2W L rock:10
+wall:floor F2W M rock:10
+wall:floor F2W N rock:10
+wall:floor F2W O rock:10
+wall:floor F2W P rocks:10
+wall:floor F2W Q dirt:10
+wall:floor F2W R dirt:10
+wall:floor F2W S dirt:10
+wall:floor F2W T dirt:10
+wall:floor F2W U dirt:10
+wall:floor F2W V dirt:10
+wall:floor F2W W hills:10
+wall:floor F2W X hill:10
+wall:floor F2W Y hill:10
+wall:floor F2W Z lowland:10
+wall:floor F2W ~ lowland:10
+wall:floor F2W ` lowland:10
+# B3 F2W
+wall:B3 floors F2W 2:80
+wall:B3 floors F2W 3:100
+#
+perma:P grass mountain w:4000
+perma:P grass mountain x:500
+perma:P grass mountain y:500
+perma:P grass mountain z:500
+perma:P grass mountain A:500
+perma:P grass mountain B:500
+perma:P grass mountain C:1500
+perma:P grass mountain D:1600
+perma:P grass mountain E:100
+perma:P grass mountain F:100
+perma:P grass mountain H:100
+perma:P grass mountain I:100
+#
 rule:5000:0
 rule-flags:TROLL
 rule:3000:0
@@ -133,90 +2728,735 @@ rule-flags:GIANT
 rule-symbols:O
 rule:2000:1
 
-# The Sandworm Lair (boss: The Sandworm Queen)
-name:The Sandworm Lair
-wpos:40:-40
-min-depth:22
-max-depth:30
-max-level:35
-flags:NO_DOORS | SAND_VEIN | STREAMS
-floor:sand:1000
-wall:sandwall:1200
-fill:sandwall:600
-rule:9000:0
-rule-symbols:w
-rule:1000:0
-rule-flags:MULTIPLY
-
-# The Land Of Rhûn (boss: Ulfang the Black)
-name:The Land Of Rhûn
-wpos:32:12
-min-depth:20
+########################## 35 (boss: Ulfang the Black)
+name:The Land Of Rhun
+wpos:0:-2
+min-depth:27
 max-depth:34
-max-level:40
-flags:STREAMS
-floor:grass:1000
-wall:tree:400
-wall:water:400
-fill:tree:200
-fill:water:200
+max-level:30
+stairs:1d2:2+1d2
+flags:NO_DOORS | EMPTY | CIRCULAR_ROOMS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 2 well:A9 dried well:10000
+#
+floor:light grass:3300
+floor:light grass plants:3400
+floor:light grass flowers:3300
+# A1
+###################################   1700
+wall:tree F2W 0 stump:10
+wall:tree F2W 1:90
+wall:tree F2W 2 little:100
+wall:tree F2W 3:100
+wall:tree F2W 4 maple:100
+wall:tree F2W 5 maple:100
+wall:tree F2W 6 coniferous:100
+wall:tree F2W 7 coniferous small:100
+wall:tree F2W 8 coniferous:100
+wall:tree F2W 9 willow:100
+wall:tree F2W a small willow:100
+wall:tree F2W b broken log:50
+wall:tree F2W c broken log:50
+wall:tree F2W d birch:100
+wall:tree F2W e linden:100
+wall:tree F2W f linden small:100
+wall:tree F2W g larch:100
+wall:tree F2W h larch small:100
+wall:tree F2W i bush:99
+#wall:tree F2W j gervais:1
+wall:tree F2W k gervais small:1
+#wall:tree F2W l palm:1############## 900
+wall:tree F2W m palm small:1
+wall:tree F2W n dead tree:99
+wall:tree F2W o dead tree:100
+wall:tree F2W p stump:100
+wall:tree F2W q stump:100
+wall:tree F2W r branch:100
+wall:tree F2W s branch:100
+wall:tree F2W t branch:100
+wall:tree F2W u branch:100
+wall:tree F2W v branch:100
+# A2 - trees######################### 600
+wall:tree F2W w fallen:10
+wall:tree F2W x fallen:10
+wall:tree F2W y fallen:10
+wall:tree F2W z fallen:10
+wall:tree F2W A fallen:10
+wall:tree F2W B fallen:10
+wall:tree F2W C small tree:120
+wall:tree F2W D tree:100
+wall:tree F2W E tree:100
+wall:tree F2W F tree:100
+wall:tree F2W G small tree:120
+#### FURTHER ON: SMALL TREES ######## 2500:
+wall:tree F2W H:200
+wall:tree F2W I:200
+wall:tree F2W J:200
+wall:tree F2W K:200
+wall:tree F2W L:200
+wall:tree F2W M:200
+wall:tree F2W N:200
+wall:tree F2W O:200
+wall:tree F2W P:200
+wall:tree F2W Q:200
+wall:tree F2W R:200
+wall:tree F2W S:300
+#wall:tree F2W T:1 ! basic symbol ##### 500
+wall:tree F2W U:100
+#### 4x dry:
+wall:tree F2W V:100
+wall:tree F2W W:100
+wall:tree F2W X:90
+wall:tree F2W Y:97
+wall:tree F2W Z:1
+wall:tree F2W ~:1
+wall:tree F2W `:1
+# A7
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:1
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:2
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+#
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+######################################## 3400
+# A4 F2W
+wall:flower 0 green:100
+wall:flower 1 green:100
+wall:flower 2 green:100
+wall:flower 3 green:100
+wall:flower 4 green:100
+wall:flower 5 green:100
+wall:flower 6 green:100
+wall:flower 7 grass:100
+# B1 F2W
+wall:floor 0 grass:100
+wall:floor 1 grass:1490
+# B2 F2W
+wall:floor w grass:100
+wall:floor x grass:100
+wall:floor y grass:100
+wall:floor z grass:100
+wall:floor A grass:100
+wall:floor B grass:100
+wall:floor C grass:100
+wall:floor D grass:100
+wall:floor E grass:100
+wall:floor F grass:100
+########################## 420
+wall:floor G rocks:10
+wall:floor H rocks:10
+wall:floor I rocks:10
+wall:floor J rocks:10
+wall:floor K rocks:10
+wall:floor L rock:10
+wall:floor M rock:10
+wall:floor N rock:10
+wall:floor O rock:10
+wall:floor P rocks:10
+wall:floor Q dirt:10
+wall:floor R dirt:10
+wall:floor S dirt:10
+wall:floor T dirt:10
+wall:floor U dirt:10
+wall:floor V dirt:10
+wall:floor W hills:10
+wall:floor X hill:10
+wall:floor Y hill:10
+wall:floor Z lowland:10
+wall:floor ~ lowland:10
+wall:floor ` lowland:10
+# B3 F2W
+wall:B3 floors 2:80
+wall:B3 floors 3:100
+#
+perma:P tree 6 coniferous:2000
+perma:P tree 8 coniferous:2000
+perma:P tree n dead tree:1000
+perma:P tree o dead tree:1000
+perma:P tree V:1000
+perma:P tree W:1000
+perma:P tree X:1000
+perma:P tree Y:1000
+#
 rule:3000:0
 rule-symbols:ph
 rule:3000:0
 rule-flags:ANIMAL
 rule:4000:1
 
-# The Barrow-downs (boss: The Wight-King of the Barrow-downs)
+########################## 35 (boss: The Wight-King of the Barrow-downs)
 name:The Barrow-downs
-wpos:-16:19
-min-depth:1
+wpos:0:2
+min-depth:28
 max-depth:35
-max-level:40
-flags:STREAMS
-floor:packed dirt:800
-floor:grass:200
-wall:tree:400
-wall:mountain:800
-fill:tree:200
-fill:mountain:400
+max-level:35
+stairs:1d2:2+1d2
+flags:STREAMS | EMPTY
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 9 fountain:A9 dried fountain:10000
+#
+#################################### 100
+floor:tree 0 stump:1
+floor:tree 1:1
+floor:tree 2 little:1
+floor:tree 3:1
+floor:tree 4 maple:1
+floor:tree 5 maple:1
+floor:tree 6 coniferous:1
+floor:tree 7 coniferous small:1
+floor:tree 8 coniferous:1
+floor:tree 9 willow:1
+floor:tree a small willow:1
+floor:tree b broken log:1
+floor:tree c broken log:1
+floor:tree d birch:1
+floor:tree e linden:1
+floor:tree f linden small:1
+floor:tree g larch:1
+floor:tree h larch small:1
+floor:tree i bush:1
+floor:tree j gervais:1
+floor:tree k gervais small:1
+floor:tree l palm:1
+floor:tree m palm small:1
+floor:tree n dead tree:1
+floor:tree o dead tree:1
+floor:tree p stump:1
+floor:tree q stump:1
+floor:tree r branch:15
+floor:tree s branch:15
+floor:tree t branch:15
+floor:tree u branch:15
+floor:tree v branch:13
+# A2 - trees #################### 11
+floor:tree w fallen:1
+floor:tree x fallen:1
+floor:tree y fallen:1
+floor:tree z fallen:1
+floor:tree A fallen:1
+floor:tree B fallen:1
+floor:tree C small tree:1
+floor:tree D tree:1
+floor:tree E tree:1
+floor:tree F tree:1
+floor:tree G small tree:1
+#### FURTHER ON: SMALL TREES ###### 170
+floor:tree H:10
+floor:tree I:10
+floor:tree J:10
+floor:tree K:10
+floor:tree L:10
+floor:tree M:10
+floor:tree N:10
+floor:tree O:10
+floor:tree P:10
+floor:tree Q:10
+floor:tree R:10
+floor:tree S:10
+#floor:tree T:1 ! basic symbol
+floor:tree U:10
+#### 4x dry:
+floor:tree V:9
+floor:tree W:9
+floor:tree X:9
+floor:tree Y:10
+floor:tree Z:1
+floor:tree ~:1
+floor:tree `:1
+#
+# A4 ########################### 700
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+##############################  25
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5 ############################## 750
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass:
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:635
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+# B1 ########################### 3156... + :
+floor:floor 0 grass:1500
+floor:floor 1 grass:2744
+# B2
+floor:floor w grass:2600
+################################ 700
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+############################### 19 + 31 + 450 = 500
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:31
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+##################################### 25+75+50+50=200
+# A6
+floor:obj_grass 1 skull altar:1
+floor:obj_grass 5 skulls pile:1
+floor:obj_grass 6 grave:1
+floor:obj_grass 8 old ruins:1
+floor:obj_grass d gravestone:1
+floor:obj_grass e bone pile:1
+floor:obj_grass h graves:1
+floor:obj_grass i graves:1
+floor:obj_grass l altar:50
+# A8
+floor:obj_grass2 8:1
+floor:obj_grass2 9:1
+floor:obj_grass2 a:1
+floor:obj_grass2 b:75
+# AC
+floor:grass mountain I:50
+floor:grass mountain J:10
+floor:grass mountain K:3
+floor:grass mountain L:1
+##################################
+##################################
+wall:obj_grass L ruins:300
+wall:obj_grass M ruins:100
+wall:obj_grass N ruins:300
+wall:obj_grass O ruins:300
+wall:obj_grass P ruins:300
+wall:obj_grass Q ruins:300
+wall:big dark wall 0:100
+wall:big dark wall 9 entrance:50
+wall:big dark wall a low entrance:50
+wall:big dark wall b window:71
+# 98 ##################################### 130
+wall:98 wall 0:10
+wall:98 wall 1:10
+wall:98 wall 2:10
+wall:98 wall 3:10
+wall:98 wall 4:10
+wall:98 wall 5:10
+wall:98 wall 6:10
+wall:98 wall 7:1
+wall:98 wall 8:1
+wall:98 wall 9:10
+wall:98 wall a:10
+wall:98 wall b:10
+wall:98 wall c:8
+wall:98 wall d:10
+###################
+wall:obj_grass2 f:300
+wall:obj_grass2 g:300
+wall:obj_grass2 h:300
+wall:obj_grass2 i:300
+wall:obj_grass2 j:300
+wall:obj_grass2 k:300
+wall:obj_grass2 l:300
+wall:obj_grass2 m:300
+wall:obj_grass2 n:300
+wall:obj_grass2 o:300
+#
+perma:P big dark wall 1:10000
+#
 rule:2500:0
 rule-flags:UNDEAD
 rule:7500:1
 
-# The Maze (boss: The Minotaur of the Labyrinth)
+########################## 35 (boss: The Minotaur of the Labyrinth)
 name:The Maze
-wpos:-12:18
-min-depth:25
+wpos:-1:-1
+min-depth:33
 max-depth:40
-max-level:40
+max-level:35
+stairs:1:2+1d2
 flags:MAZE
+stair:9F stair down 0:9F stair up 1:10000
+#
+door:DD wood wall 0:DD wood wall 1:DD wood wall 2:7000
+door:DD wood wall 3:DD wood wall 4:DD wood wall 5:1000
+door:DD wood wall 6:DD wood wall 7:DD wood wall 8:1000
+#
+#slime-blood: 
+floor:E6 blood w:1
+floor:E6 blood x:1
+floor:E6 blood y:1
+floor:E6 blood z:1
+floor:E6 blood A:1
+floor:E6 blood B:1
+#
+floor:E5 blood 0:1
+floor:E5 blood 1:1
+floor:E5 blood 2:1
+floor:E5 blood 3:1
+floor:E5 blood 4:1
+floor:E5 blood 5:1
+floor:E5 blood 6:1
+floor:E5 blood 7:1
+floor:E5 blood 8:1
+floor:E5 blood 9:1
+floor:E5 blood a:1
+floor:E5 blood b:1
+floor:E5 blood c:1
+floor:E5 blood d:1
+floor:E5 blood e:1
+floor:E5 blood f:1
+floor:E5 blood g:1
+floor:E5 blood h:1
+floor:E5 blood i:1
+floor:E5 blood j:1
+floor:E5 blood k:1
+floor:E5 blood l:1
+floor:E5 blood m:1
+floor:E5 blood n:1
+floor:E5 blood o:1
+floor:E5 blood p:1
+floor:E5 blood q:1
+floor:E5 blood r:1
+floor:E5 blood s:1
+floor:E5 blood t:1
+floor:E5 blood u:1
+floor:E5 blood v:1
+########################## 5600
+wall:A3 severs 0:900
+wall:A3 severs 1:800
+wall:A3 severs 3:100
+wall:A3 severs 6:100
+wall:A3 severs 7:100
+wall:A3 severs 8:100
+wall:A3 severs 9:100
+wall:A3 severs a:100
+wall:A3 severs b:100
+wall:A3 severs c:100
+wall:A3 severs d:100
+wall:A3 severs e:100
+wall:A3 severs g:100
+wall:A3 severs h:100
+wall:A3 severs i:100
+# lattice
+wall:A3 severs j:10
+wall:A3 severs k:90
+wall:A3 severs k:90
+wall:A3 severs l:100
+wall:A3 severs m:100
+wall:A3 severs n:100
+wall:A3 severs o:100
+wall:A3 severs p:100
+wall:A3 severs q:100
+wall:A3 severs r:100
+wall:A3 severs s:1300
+wall:A3 severs t:1000
+wall:A3 severs u:2000
+# AA #################### 3600
+wall:AA wall w:1000
+wall:AA wall x:500
+wall:AA wall y:100
+wall:AA wall z:100
+wall:AA wall A:100
+wall:AA wall B:100
+#if green walls:
+#wall:big dark wall 9 entrance:1
+#wall:big dark wall a low entrance:1
+#wall:big dark wall b window:1
+perma:A3 P severs s:3334
+perma:A3 P severs t:3333
+perma:A3 P severs u:3333
+#
 rule:2000:0
 rule-symbols:p
 rule:8000:1
 
-# The Heart of the Earth (boss: Golgarach, the Living Rock)
-name:The Heart of the Earth
-wpos:21:29
-min-depth:25
+########################## 35 (boss: The Watcher in the Water)
+name:The Small Watery Cave
+wpos:-1:3
+min-depth:35
 max-depth:45
-max-level:45
-flags:STREAMS
-rule:4000:0
-rule-symbols:#XgE
-rule:3000:0
-rule-flags:PASS_WALL | KILL_WALL | HURT_ROCK
-rule:3000:1
-
-# The Small Water Cave (boss: The Watcher in the Water)
-name:The Small Water Cave
-wpos:-5:10
-min-depth:32
-max-depth:45
-max-level:45
-flags:STREAMS
-floor:water:1000
-wall:mountain:1200
-fill:mountain:600
+max-level:35
+stairs:1:1+1d2
+flags:STREAMS | WATER_RIVER | NO_DOORS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:F3 shallow water e:F3 shallow water f:10000
+#
+floor:B6 floors luquid w:7000
+floor:B6 floors luquid x:1500
+##############################
+# F3 shallow water E ############# 32
+floor:F3 shallow water 0:1
+floor:F3 shallow water 1:1
+floor:F3 shallow water 2:1
+floor:F3 shallow water 3:1
+floor:F3 shallow water 4:1
+floor:F3 shallow water 5:1
+floor:F3 shallow water 6:1
+floor:F3 shallow water 7:1
+floor:F3 shallow water 8:1
+floor:F3 shallow water 9:1
+floor:F3 shallow water a:1
+floor:F3 shallow water b:1
+floor:F3 shallow water c:1
+floor:F3 shallow water d:1
+floor:F3 shallow water e:1
+floor:F3 shallow water f:1
+floor:F3 shallow water g:1
+floor:F3 shallow water h:1
+floor:F3 shallow water i:1
+floor:F3 shallow water j:1
+floor:F3 shallow water k:1
+floor:F3 shallow water l:1
+floor:F3 shallow water m:1
+floor:F3 shallow water n:1
+floor:F3 shallow water o:1
+floor:F3 shallow water p:1
+floor:F3 shallow water q:1
+floor:F3 shallow water r:1
+floor:F3 shallow water s:1
+floor:F3 shallow water t:1
+floor:F3 shallow water u:1
+floor:F3 shallow water v:1
+# F4 E       #-#-#-#-#-#-#-#-# 1500
+floor:F4 shallow water w:9
+floor:F4 shallow water x:1
+floor:F4 shallow water y:40
+floor:F4 shallow water z:50
+floor:F4 shallow water A:50
+floor:F4 shallow water B:50
+floor:F4 shallow water C:50
+floor:F4 shallow water D:50
+floor:F4 shallow water E:50
+floor:F4 shallow water F:50
+floor:F4 shallow water G:50
+floor:F4 shallow water H:50
+floor:F4 shallow water I:50
+floor:F4 shallow water J:50
+floor:F4 shallow water K:50
+floor:F4 shallow water L:50
+floor:F4 shallow water M:50
+floor:F4 shallow water N:50
+floor:F4 shallow water O:50
+floor:F4 shallow water P:50
+floor:F4 shallow water Q:50
+floor:F4 shallow water R:50
+floor:F4 shallow water S:50
+floor:F4 shallow water T:50
+floor:F4 shallow water U:50
+floor:F4 shallow water V:50
+floor:F4 shallow water W:50
+floor:F4 shallow water X:50
+floor:F4 shallow water Y:50
+floor:F4 shallow water Z:50
+floor:F4 shallow water ~:50
+floor:F4 shallow water `:50
+####################################
+wall:B6 floors luquid F2W w:1500
+wall:B6 floors luquid F2W x:1000
+# F3 shallow water F2W E ############### 4020
+wall:F3 shallow water F2W 0:120
+wall:F3 shallow water F2W 1:100
+wall:F3 shallow water F2W 2:100
+wall:F3 shallow water F2W 3:100
+################################### 80
+wall:F3 shallow water F2W 4:10
+wall:F3 shallow water F2W 5:10
+wall:F3 shallow water F2W 6:10
+wall:F3 shallow water F2W 7:10
+wall:F3 shallow water F2W 8:10
+wall:F3 shallow water F2W 9:10
+wall:F3 shallow water F2W a:10
+wall:F3 shallow water F2W b:10
+################################### x
+wall:F3 shallow water F2W c:200
+wall:F3 shallow water F2W d:200
+wall:F3 shallow water F2W e:100
+wall:F3 shallow water F2W f:200
+wall:F3 shallow water F2W g:200
+wall:F3 shallow water F2W h:200
+wall:F3 shallow water F2W i:200
+wall:F3 shallow water F2W j:200
+wall:F3 shallow water F2W k:200
+wall:F3 shallow water F2W l:200
+wall:F3 shallow water F2W m:200
+################################### 90
+wall:F3 shallow water F2W n:10
+wall:F3 shallow water F2W o:10
+wall:F3 shallow water F2W p:10
+wall:F3 shallow water F2W q:10
+wall:F3 shallow water F2W r:10
+wall:F3 shallow water F2W s:10
+wall:F3 shallow water F2W t:10
+wall:F3 shallow water F2W u:10
+wall:F3 shallow water F2W v:10
+# F4 E -#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 310
+wall:F4 shallow water F2W w:10
+wall:F4 shallow water F2W y:10
+wall:F4 shallow water F2W z:10
+wall:F4 shallow water F2W A:10
+wall:F4 shallow water F2W B:10
+wall:F4 shallow water F2W C:10
+wall:F4 shallow water F2W D:10
+wall:F4 shallow water F2W E:10
+wall:F4 shallow water F2W F:10
+wall:F4 shallow water F2W G:10
+wall:F4 shallow water F2W H:10
+wall:F4 shallow water F2W I:10
+wall:F4 shallow water F2W J:10
+wall:F4 shallow water F2W K:10
+wall:F4 shallow water F2W L:10
+wall:F4 shallow water F2W M:10
+wall:F4 shallow water F2W N:10
+wall:F4 shallow water F2W O:10
+wall:F4 shallow water F2W P:10
+wall:F4 shallow water F2W Q:10
+wall:F4 shallow water F2W R:10
+wall:F4 shallow water F2W S:10
+wall:F4 shallow water F2W T:10
+wall:F4 shallow water F2W U:10
+wall:F4 shallow water F2W V:10
+wall:F4 shallow water F2W W:10
+wall:F4 shallow water F2W X:10
+wall:F4 shallow water F2W Y:10
+wall:F4 shallow water F2W Z:10
+wall:F4 shallow water F2W ~:10
+wall:F4 shallow water F2W `:10
+#######################################
+##################################      ! 5000
+wall:F7 deep water F2W 0:200
+wall:F7 deep water F2W 1:50
+wall:F7 deep water F2W 2:200
+wall:F7 deep water F2W 3:200
+wall:F7 deep water F2W 4:200
+wall:F7 deep water F2W 5:200
+wall:F7 deep water F2W 6:700
+wall:F7 deep water F2W 7:200
+wall:F7 deep water F2W 8:200
+wall:F7 deep water F2W 9:200
+wall:F7 deep water F2W a:200
+wall:F7 deep water F2W b:200
+wall:F7 deep water F2W c:600
+wall:F7 deep water F2W d:600
+wall:F7 deep water F2W e:50
+################################ 5k
+wall:big dark wall 1:330
+wall:big dark wall 9 entrance:20
+wall:big dark wall a low entrance:10
+wall:big dark wall b window:30
+# 98 ############################ 110
+wall:98 wall 0:4
+wall:98 wall 1:3
+wall:98 wall 2:10
+wall:98 wall 3:10
+wall:98 wall 4:3
+wall:98 wall 5:10
+wall:98 wall 6:10
+wall:98 wall 7:1
+wall:98 wall 8:1
+wall:98 wall 9:10
+wall:98 wall a:10
+wall:98 wall b:10
+wall:98 wall c:8
+wall:98 wall d:10
+#
+perma:F5 P deep water 0:2500
+perma:F5 P deep water 1:2500
+perma:F5 P deep water 2:2500
+perma:F5 P deep water 3:2500
+#
 rule:4000:0
 rule-flags:IM_COLD
 rule:4000:0
@@ -225,29 +3465,368 @@ rule:1000:0
 rule-flags:IM_WATER
 rule:1000:1
 
-# The Helcaraxe (boss: The White Balrog)
-name:The Helcaraxe
-wpos:-14:42
-min-depth:20
-max-depth:50
-max-level:45
-flags:CAVERN | WATER_RIVER | STREAMS
-floor:ice:1000
-wall:ice wall:1200
-fill:ice wall:600
-rule:10000:0
-rule-flags:IM_COLD
+########################## 40 (boss: Golgarach, the Living Rock)
+name:The Heart of the Earth
+wpos:-1:-2
+min-depth:38
+max-depth:45
+max-level:35
+stairs:1:1+1d2
+flags:STREAMS | SAND_VEIN | LAVA_RIVER
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+#floor:B3 floors q:10000
+#
+# 96-wall: ############# 6000
+wall:96 wall M:900
+wall:96 wall N:1000
+wall:96 wall O:1080
+wall:96 wall P:20
+wall:96 wall Q:100
+wall:96 wall R:100
+wall:96 wall S:500
+wall:96 wall T:500
+wall:96 wall U:500
+wall:96 wall V:500
+wall:96 wall W:500
+wall:96 wall X:500
+###################### 4000
+wall:big dark wall 0:100
+wall:dark wall:100
+wall:AA wall C:900
+wall:AA wall D:90
+wall:AA wall E:10
+wall:AA wall F:900
+wall:AA wall G:900
+wall:AA wall H:1000
+#
+perma:96 P wall T:3334
+perma:96 P wall U:3333
+perma:96 P wall V:3333
+#
+rule:4000:0
+rule-symbols:#XgE
+rule:3000:0
+rule-flags:PASS_WALL | KILL_WALL | HURT_ROCK
+rule:3000:1
 
-# The Mines of Moria (boss: The Balrog of Moria)
-name:The Mines of Moria
-wpos:-4:11
-min-depth:30
+########################## 40 (boss: The White Balrog)
+name:The Helcaraxe
+wpos:0:4
+min-depth:42
 max-depth:50
-max-level:45
-flags:WATER_RIVER | STREAMS
-floor:packed dirt:1000
-wall:mountain:1200
-fill:mountain:600
+max-level:40
+stairs:1:1+1d2
+flags:STREAMS | WATER_RIVER | NO_DOORS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:F2 snow e:F2 snow f:10000
+#
+floor:F1 snow 0:9000
+floor:ice:1000
+wall:floor f ice wall:10000
+perma:P floor f ice wall:10000
+rule:9950:0
+rule-flags:IM_COLD
+rule:50:1
+
+########################## 40 (boss: The Balrog of Moria)
+name:The Mines of Moria
+wpos:1:3
+min-depth:43
+max-depth:50
+max-level:40
+stairs:1:1+1d2
+flags:STREAMS | WATER_RIVER
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:5
+floor:EB dirt 2:5
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:35
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:10
+floor:EB dirt s:25
+floor:EB dirt t:5
+floor:EB dirt u:25
+#
+floor:EB dirt v:100
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:100
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+#floor:EC dirt F
+#floor:EC dirt G
+#floor:EC dirt H
+floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+floor:EC dirt S:1
+floor:EC dirt T:2
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+wall:EB dirt F2W 0:541
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#######################################
+# 96-wall: ############# 
+wall:96 wall M:800
+wall:96 wall N:700
+wall:96 wall O:680
+wall:96 wall P:20
+wall:96 wall Q:100
+wall:96 wall R:100
+wall:96 wall S:700
+wall:96 wall T:200
+wall:96 wall U:200
+wall:96 wall V:200
+wall:96 wall W:200
+wall:96 wall X:200
+######################
+wall:big dark wall 0:100
+wall:dark wall:100
+wall:AA wall C:700
+wall:AA wall D:90
+wall:AA wall E:10
+wall:AA wall F:700
+wall:AA wall G:700
+wall:AA wall H:700
+#################################### 7200
+wall:ED dirt F2W 0:100
+wall:ED dirt F2W 1:100
+wall:ED dirt F2W 2:150
+wall:ED dirt F2W 3:100
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:10
+wall:EC dirt F2W H:10
+wall:EC dirt F2W I:10
+#
+wall:EC dirt F2W J:10
+wall:EC dirt F2W K:10
+wall:EC dirt F2W L:10
+wall:EC dirt F2W M:10
+wall:EC dirt F2W N:10
+wall:EC dirt F2W O:10
+wall:EC dirt F2W P:10
+wall:EC dirt F2W Q:10
+wall:EC dirt F2W R:10
+wall:EC dirt F2W S:10
+wall:EC dirt F2W T:10
+#rocks:
+wall:EC dirt F2W U:10
+wall:EC dirt F2W V:10
+wall:EC dirt F2W W:10
+wall:EC dirt F2W X:10
+wall:EC dirt F2W Y:10
+wall:EC dirt F2W Z:10
+wall:EC dirt F2W ~:10
+wall:EC dirt F2W `:10
+#
+wall:EE dirt F2W w:10
+wall:EE dirt F2W x:10
+wall:EE dirt F2W y:10
+wall:EE dirt F2W z:10
+wall:EE dirt F2W A:10
+wall:EE dirt F2W B:10
+wall:EE dirt F2W C:10
+wall:EE dirt F2W D:10
+wall:EE dirt F2W E:10
+wall:EE dirt F2W F:10
+wall:EE dirt F2W G:10
+wall:EE dirt F2W H:10
+wall:EE dirt F2W I:10
+wall:EE dirt F2W J:10
+wall:EE dirt F2W K:10
+wall:EE dirt F2W L:10
+wall:EE dirt F2W M:10
+wall:EE dirt F2W N:10
+wall:EE dirt F2W O:10
+wall:EE dirt F2W P:10
+wall:EE dirt F2W Q:10
+wall:EE dirt F2W R:10
+wall:EE dirt F2W S:10
+wall:EE dirt F2W T:10
+wall:EE dirt F2W U:10
+wall:EE dirt F2W V:10
+wall:EE dirt F2W W:10
+wall:EE dirt F2W X:10
+wall:EE dirt F2W Y:10
+wall:EE dirt F2W Z:10
+wall:EE dirt F2W ~:10
+wall:EE dirt F2W `:24
+#
+perma:96 P wall T:3334
+perma:96 P wall U:3333
+perma:96 P wall V:3333
+#
 rule:4000:0
 rule-flags:ORC
 rule:3000:0
@@ -256,36 +3835,479 @@ rule:2000:0
 rule-flags:DEMON
 rule:1000:1
 
-# The Illusory Castle (boss: The Glass Golem)
+########################## 45 (boss: The Glass Golem)
 name:The Illusory Castle
-wpos:-7:2
-min-depth:35
+wpos:-2:1
+min-depth:44
 max-depth:52
-max-level:45
-flags:STREAMS
-wall:glass wall:600
-wall:illusion wall:600
-fill:glass wall:300
-fill:illusion wall:300
+max-level:40
+stairs:1:1+1d2
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+fill:dark wall 0:10000
+#
+# add custom rubble?
+#
+floor:B5 floors 0:640
+floor:B5 floors 1:312
+floor:B5 floors 2:312
+floor:B5 floors 3:312
+floor:B5 floors 4:312
+floor:B5 floors 5:312
+floor:B5 floors 6:312
+floor:B5 floors 7:312
+floor:B5 floors 8:312
+floor:B5 floors 9:312
+floor:B5 floors a:312
+floor:B5 floors b:312
+floor:B5 floors c:312
+floor:B5 floors d:312
+floor:B5 floors e:312
+floor:B5 floors f:312
+floor:B5 floors g:312
+floor:B5 floors h:312
+floor:B5 floors i:312
+floor:B5 floors j:312
+floor:B5 floors k:312
+floor:B5 floors l:312
+floor:B5 floors m:312
+floor:B5 floors n:312
+floor:B5 floors o:312
+floor:B5 floors p:1
+floor:B5 floors q:312
+floor:B5 floors r:312
+floor:B5 floors s:312
+floor:B5 floors t:312
+floor:B5 floors u:312
+floor:B5 floors v:312
+# B9
+wall:glass wall:1
+wall:illusion brick wall:550
+#
+wall:dark wall 0:2499
+wall:dark wall 1 narrow window:100
+wall:dark wall 2 window:100
+wall:dark wall 3 candelabra:100
+wall:dark wall 4 torch:100
+wall:dark wall 5 lamp:100
+wall:dark wall 6 niche:100
+wall:dark wall 7 swords:100
+wall:dark wall 8 shield:100
+wall:dark wall 9 statue:100
+wall:dark wall a fountain:100
+wall:dark wall b portrait:100
+wall:dark wall c portrait:100
+wall:dark wall d portrait:100
+wall:dark wall e portrait:100
+wall:dark wall f banner:100
+wall:dark wall g banner:100
+wall:dark wall h banner:100
+wall:dark wall k empty window:100
+wall:dark wall l window:100
+wall:dark wall m barred window:100
+wall:dark wall n glass window:100
+wall:dark wall q jail window:1
+wall:dark wall r prison bars:1
+wall:dark wall u:100
+wall:dark wall v:100
+# BA ^5350 + 3200 + 1450
+wall:dark wall w:50
+wall:dark wall x:50
+wall:dark wall y:50
+wall:dark wall z:50
+wall:dark wall A:50
+wall:dark wall B:50
+wall:dark wall C:50
+wall:dark wall D:50
+wall:dark wall E:50
+wall:dark wall F:50
+wall:dark wall G:50
+wall:dark wall H:50
+wall:dark wall I:50
+wall:dark wall J:50
+wall:dark wall K:50
+wall:dark wall L:50
+wall:dark wall M:50
+wall:dark wall N:50
+wall:dark wall O:50
+wall:dark wall P:50
+wall:dark wall Q:50
+wall:dark wall R:50
+wall:dark wall S:50
+wall:dark wall T:50
+wall:dark wall U:50
+wall:dark wall V:50
+wall:dark wall W:50
+wall:dark wall X:50
+wall:dark wall Y:50
+wall:dark wall Z:50
+wall:dark wall ~:50
+wall:dark wall `:50
+######################### DF tiles will be moved..
+wall:DC dark stone S:1
+wall:DC dark stone T:1
+wall:DC dark stone U:1
+wall:DC dark stone V:1
+wall:DC dark stone W:1
+wall:DC dark stone X:1
+wall:DC dark stone Y:1
+wall:DC dark stone Z:1
+wall:DC dark stone ~:1
+# ^11
+######################## E0 tiles will be moved..
+wall:DC dark stone w:50
+wall:DC dark stone x:50
+wall:DC dark stone y:50
+wall:DC dark stone z:50
+wall:DC dark stone A:50
+wall:DC dark stone B:50
+wall:DC dark stone C:50
+wall:DC dark stone D:50
+wall:DC dark stone E:50
+wall:DC dark stone F:50
+wall:DC dark stone G:50
+wall:DC dark stone H:50
+wall:DC dark stone I:50
+wall:DC dark stone J:50
+wall:DC dark stone K:50
+wall:DC dark stone L:50
+wall:DC dark stone M:50
+wall:DC dark stone N:50
+wall:DC dark stone O:50
+wall:DC dark stone P:50
+wall:DC dark stone Q:50
+wall:DC dark stone R:50
+wall:DC dark stone S:50
+wall:DC dark stone T:50
+wall:DC dark stone U:50
+wall:DC dark stone V:50
+wall:DC dark stone W:50
+wall:DC dark stone X:50
+wall:DC dark stone Y:50
+wall:DC dark stone Z:50
+wall:DC dark stone ~:50
+wall:DC dark stone `:50
+##########
+# 96-wall: ....... all below: 1450 total
+wall:dark wall:1
+# 
+wall:96 wall M:1
+wall:96 wall N:1
+wall:96 wall O:1
+wall:96 wall P:1
+wall:96 wall Q:1
+wall:96 wall R:1
+wall:96 wall S:1
+wall:96 wall T:1
+wall:96 wall U:1
+wall:96 wall V:1
+wall:96 wall W:1
+wall:96 wall X:1
+# 98-wall:
+wall:98 wall 2:50
+wall:98 wall 3:50
+wall:98 wall 4:50
+wall:98 wall a:50
+# 9D-wall:
+wall:9D wall 5:1
+wall:9D wall 6:1
+#
+# AA
+wall:AA wall I:1
+wall:AA wall J:200
+wall:AA wall K:200
+wall:AA wall L:200
+wall:AA wall M:21
+wall:AA wall N:200
+wall:AA wall O:200
+wall:AA wall P:199
+#bloody:          
+wall:AA wall W:1
+wall:AA wall X:1
+wall:AA wall Y:1
+# 1x29
+perma:P dark wall 0:10000
+#
 rule:7000:0
 rule-flags:STUPID | WEIRD_MIND | ATTR_MULTI | ATTR_FLICKER | RAND_25 |
 rule-flags:RAND_50 | EMPTY_MIND | INVISIBLE | PASS_WALL | KILL_WALL | MULTIPLY
 rule-spells:BR_CHAO | CONF | FORGET | TRAPS
 rule:3000:1
 
-# Cirith Ungol (boss: Shelob, Spider of Darkness)
+########################## 45 (boss: Shelob, Spider of Darkness)
 name:Cirith Ungol
-wpos:13:-16
-min-depth:25
+wpos:-2:-1
+min-depth:47
 max-depth:55
-max-level:45
-flags:CIRCULAR_ROOMS | STREAMS
-floor:packed dirt:700
-floor:web:300
-wall:mountain:1000
-wall:web:120
-fill:mountain:500
-fill:web:60
+max-level:40
+stairs:1:1+1d2
+flags:STREAMS | SAND_VEIN | CIRCULAR_ROOMS | MAZE
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:5
+floor:EB dirt 2:5
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:35
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:10
+floor:EB dirt s:25
+floor:EB dirt t:5
+floor:EB dirt u:25
+#
+floor:EB dirt v:100
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:100
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+#floor:EC dirt F
+#floor:EC dirt G
+#floor:EC dirt H
+floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+floor:EC dirt S:1
+floor:EC dirt T:2
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+wall:EB dirt F2W 0:541
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#
+wall:ED dirt F2W 0:2600
+wall:ED dirt F2W 1:1000
+wall:ED dirt F2W 2:3150
+wall:ED dirt F2W 3:900
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:10
+wall:EC dirt F2W H:10
+wall:EC dirt F2W I:10
+#
+wall:EC dirt F2W J:10
+wall:EC dirt F2W K:10
+wall:EC dirt F2W L:10
+wall:EC dirt F2W M:10
+wall:EC dirt F2W N:10
+wall:EC dirt F2W O:10
+wall:EC dirt F2W P:10
+wall:EC dirt F2W Q:10
+wall:EC dirt F2W R:10
+wall:EC dirt F2W S:10
+wall:EC dirt F2W T:10
+#rocks:
+wall:EC dirt F2W U:10
+wall:EC dirt F2W V:10
+wall:EC dirt F2W W:10
+wall:EC dirt F2W X:10
+wall:EC dirt F2W Y:10
+wall:EC dirt F2W Z:10
+wall:EC dirt F2W ~:10
+wall:EC dirt F2W `:10
+#
+wall:EE dirt F2W w:10
+wall:EE dirt F2W x:10
+wall:EE dirt F2W y:10
+wall:EE dirt F2W z:10
+wall:EE dirt F2W A:10
+wall:EE dirt F2W B:10
+wall:EE dirt F2W C:10
+wall:EE dirt F2W D:10
+wall:EE dirt F2W E:10
+wall:EE dirt F2W F:10
+wall:EE dirt F2W G:10
+wall:EE dirt F2W H:10
+wall:EE dirt F2W I:10
+wall:EE dirt F2W J:10
+wall:EE dirt F2W K:10
+wall:EE dirt F2W L:10
+wall:EE dirt F2W M:10
+wall:EE dirt F2W N:10
+wall:EE dirt F2W O:10
+wall:EE dirt F2W P:10
+wall:EE dirt F2W Q:10
+wall:EE dirt F2W R:10
+wall:EE dirt F2W S:10
+wall:EE dirt F2W T:10
+wall:EE dirt F2W U:10
+wall:EE dirt F2W V:10
+wall:EE dirt F2W W:10
+wall:EE dirt F2W X:10
+wall:EE dirt F2W Y:10
+wall:EE dirt F2W Z:10
+wall:EE dirt F2W ~:10
+wall:EE dirt F2W `:24
+#
+perma:ED P dirt F2W 0:2500
+perma:ED P dirt F2W 1:2500
+perma:ED P dirt F2W 2:2500
+perma:ED P dirt F2W 3:2500
+#
 rule:4900:0
 rule-symbols:caIS
 rule:4900:0
@@ -293,80 +4315,1687 @@ rule-flags:ORC
 rule-symbols:wmj
 rule:200:1
 
-# Númenor (boss: Ar-Pharazôn the Golden)
-name:Númenor
-wpos:-39:-17
-min-depth:35
+########################## 45 (boss: Ar-Pharazon the Golden)
+name:Numenor
+wpos:-2:3
+min-depth:47
 max-depth:55
-max-level:45
-flags:STREAMS
-floor:water:1000
-wall:water:1000
-fill:water:500
+max-level:40
+stairs:1:1+1d2
+flags:STREAMS | WATER_RIVER | SAND_VEIN
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:F3 shallow water e:F3 shallow water f:10000
+#
+floor:B6 floors luquid w:7000
+floor:B6 floors luquid x:1500
+##############################
+# F3 shallow water E ############# 32
+floor:F3 shallow water 0:1
+floor:F3 shallow water 1:1
+floor:F3 shallow water 2:1
+floor:F3 shallow water 3:1
+floor:F3 shallow water 4:1
+floor:F3 shallow water 5:1
+floor:F3 shallow water 6:1
+floor:F3 shallow water 7:1
+floor:F3 shallow water 8:1
+floor:F3 shallow water 9:1
+floor:F3 shallow water a:1
+floor:F3 shallow water b:1
+floor:F3 shallow water c:1
+floor:F3 shallow water d:1
+floor:F3 shallow water e:1
+floor:F3 shallow water f:1
+floor:F3 shallow water g:1
+floor:F3 shallow water h:1
+floor:F3 shallow water i:1
+floor:F3 shallow water j:1
+floor:F3 shallow water k:1
+floor:F3 shallow water l:1
+floor:F3 shallow water m:1
+floor:F3 shallow water n:1
+floor:F3 shallow water o:1
+floor:F3 shallow water p:1
+floor:F3 shallow water q:1
+floor:F3 shallow water r:1
+floor:F3 shallow water s:1
+floor:F3 shallow water t:1
+floor:F3 shallow water u:1
+floor:F3 shallow water v:1
+# F4 E       #-#-#-#-#-#-#-#-# 1500
+floor:F4 shallow water w:9
+floor:F4 shallow water x:1
+floor:F4 shallow water y:40
+floor:F4 shallow water z:50
+floor:F4 shallow water A:50
+floor:F4 shallow water B:50
+floor:F4 shallow water C:50
+floor:F4 shallow water D:50
+floor:F4 shallow water E:50
+floor:F4 shallow water F:50
+floor:F4 shallow water G:50
+floor:F4 shallow water H:50
+floor:F4 shallow water I:50
+floor:F4 shallow water J:50
+floor:F4 shallow water K:50
+floor:F4 shallow water L:50
+floor:F4 shallow water M:50
+floor:F4 shallow water N:50
+floor:F4 shallow water O:50
+floor:F4 shallow water P:50
+floor:F4 shallow water Q:50
+floor:F4 shallow water R:50
+floor:F4 shallow water S:50
+floor:F4 shallow water T:50
+floor:F4 shallow water U:50
+floor:F4 shallow water V:50
+floor:F4 shallow water W:50
+floor:F4 shallow water X:50
+floor:F4 shallow water Y:50
+floor:F4 shallow water Z:50
+floor:F4 shallow water ~:50
+floor:F4 shallow water `:50
+#############################
+####################################
+wall:B6 floors luquid F2W w:700
+wall:B6 floors luquid F2W x:300
+# F3 shallow water F2W E ############### 4020
+wall:F3 shallow water F2W 0:120
+wall:F3 shallow water F2W 1:100
+wall:F3 shallow water F2W 2:100
+wall:F3 shallow water F2W 3:100
+################################### 80
+wall:F3 shallow water F2W 4:10
+wall:F3 shallow water F2W 5:10
+wall:F3 shallow water F2W 6:10
+wall:F3 shallow water F2W 7:10
+wall:F3 shallow water F2W 8:10
+wall:F3 shallow water F2W 9:10
+wall:F3 shallow water F2W a:10
+wall:F3 shallow water F2W b:10
+################################### x
+wall:F3 shallow water F2W c:250
+wall:F3 shallow water F2W d:250
+# wall:F3 shallow water F2W e:100 rubble
+# wall:F3 shallow water F2W f:200 pass rubble
+wall:F3 shallow water F2W g:250
+wall:F3 shallow water F2W h:250
+wall:F3 shallow water F2W i:250
+wall:F3 shallow water F2W j:250
+wall:F3 shallow water F2W k:200
+wall:F3 shallow water F2W l:200
+wall:F3 shallow water F2W m:200
+################################### 90
+wall:F3 shallow water F2W n:10
+wall:F3 shallow water F2W o:10
+wall:F3 shallow water F2W p:10
+wall:F3 shallow water F2W q:10
+wall:F3 shallow water F2W r:10
+wall:F3 shallow water F2W s:10
+wall:F3 shallow water F2W t:10
+wall:F3 shallow water F2W u:10
+wall:F3 shallow water F2W v:10
+# F4 E -#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 310
+wall:F4 shallow water F2W w:10
+wall:F4 shallow water F2W y:10
+wall:F4 shallow water F2W z:10
+wall:F4 shallow water F2W A:10
+wall:F4 shallow water F2W B:10
+wall:F4 shallow water F2W C:10
+wall:F4 shallow water F2W D:10
+wall:F4 shallow water F2W E:10
+wall:F4 shallow water F2W F:10
+wall:F4 shallow water F2W G:10
+wall:F4 shallow water F2W H:10
+wall:F4 shallow water F2W I:10
+wall:F4 shallow water F2W J:10
+wall:F4 shallow water F2W K:10
+wall:F4 shallow water F2W L:10
+wall:F4 shallow water F2W M:10
+wall:F4 shallow water F2W N:10
+wall:F4 shallow water F2W O:10
+wall:F4 shallow water F2W P:10
+wall:F4 shallow water F2W Q:10
+wall:F4 shallow water F2W R:10
+wall:F4 shallow water F2W S:10
+wall:F4 shallow water F2W T:10
+wall:F4 shallow water F2W U:10
+wall:F4 shallow water F2W V:10
+wall:F4 shallow water F2W W:10
+wall:F4 shallow water F2W X:10
+wall:F4 shallow water F2W Y:10
+wall:F4 shallow water F2W Z:10
+wall:F4 shallow water F2W ~:10
+wall:F4 shallow water F2W `:10
+#######################################
+##################################      ! 5000
+wall:F7 deep water F2W 0:200
+wall:F7 deep water F2W 1:50
+wall:F7 deep water F2W 2:400
+wall:F7 deep water F2W 3:400
+wall:F7 deep water F2W 4:400
+wall:F7 deep water F2W 5:400
+wall:F7 deep water F2W 6:1100
+wall:F7 deep water F2W 7:400
+wall:F7 deep water F2W 8:400
+wall:F7 deep water F2W 9:400
+wall:F7 deep water F2W a:300
+wall:F7 deep water F2W b:300
+wall:F7 deep water F2W c:200
+wall:F7 deep water F2W d:200
+wall:F7 deep water F2W e:50
+wall:F7 deep water F2W f:300
+################################ 5k
+wall:big dark wall 1:330
+wall:big dark wall 9 entrance:20
+wall:big dark wall a low entrance:10
+wall:big dark wall b window:30
+# 98 ############################ 110
+wall:98 wall 0:4
+wall:98 wall 1:3
+wall:98 wall 2:10
+wall:98 wall 3:10
+wall:98 wall 4:3
+wall:98 wall 5:10
+wall:98 wall 6:10
+wall:98 wall 7:1
+wall:98 wall 8:1
+wall:98 wall 9:10
+wall:98 wall a:10
+wall:98 wall b:10
+wall:98 wall c:8
+wall:98 wall d:10
+#
+perma:F7 P deep water F2W 0:600
+perma:F7 P deep water F2W 2:600
+perma:F7 P deep water F2W 3:600
+perma:F7 P deep water F2W 4:600
+perma:F7 P deep water F2W 5:600
+perma:F7 P deep water F2W 6:2200
+perma:F7 P deep water F2W 7:600
+perma:F7 P deep water F2W 8:600
+perma:F7 P deep water F2W 9:600
+perma:F7 P deep water F2W a:600
+perma:F7 P deep water F2W b:600
+perma:F7 P deep water F2W c:600
+perma:F7 P deep water F2W d:600
+perma:F7 P deep water F2W f:600
+#
 rule:8000:0
 rule-flags:IM_WATER
 rule:2000:1
 
-# Mirkwood (boss: Radagast the Brown)
+########################## 49 (boss: Radagast the Brown)
 name:Mirkwood
-wpos:7:24
-min-depth:11
+wpos:0:-3
+min-depth:55
 max-depth:64
-flags:NO_DOORS | STREAMS
-floor:grass:1000
-wall:tree:1200
-fill:tree:600
+max-level:45
+stairs:1:1+1d2
+flags:NO_DOORS | CIRCULAR_ROOMS | MAZE
+#
+stair:A9 stair down leaf:A9 stair up leaf:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 2 well:A9 dried well:10000
+# A1
+floor:tree 0 stump:82
+floor:tree 1:1
+floor:tree 2 little:100
+floor:tree 3:1
+floor:tree 4 maple:1
+floor:tree 5 maple:1
+floor:tree 6 coniferous:1
+floor:tree 7 coniferous small:100
+floor:tree 8 coniferous:1
+floor:tree 9 willow:1
+floor:tree a small willow:100
+floor:tree b broken log:100
+floor:tree c broken log:100
+floor:tree d birch:1
+floor:tree e linden:1
+floor:tree f linden small:100
+floor:tree g larch:1
+floor:tree h larch small:100
+floor:tree i bush:100
+floor:tree j gervais:1
+floor:tree k gervais small:100
+floor:tree l palm:1
+floor:tree m palm small:100
+floor:tree n dead tree:100
+floor:tree o dead tree:100
+floor:tree p stump:100
+floor:tree q stump:100
+floor:tree r branch:100
+floor:tree s branch:100
+floor:tree t branch:100
+floor:tree u branch:100
+floor:tree v branch:100
+# ^
+# A2 - trees
+floor:tree w fallen:100
+floor:tree x fallen:100
+floor:tree y fallen:100
+floor:tree z fallen:100
+floor:tree A fallen:100
+floor:tree B fallen:100
+floor:tree C small tree:100
+floor:tree D tree:1
+floor:tree E tree:1
+floor:tree F tree:1
+floor:tree G small tree:100
+# 11^
+#### FURTHER ON: SMALL TREES
+floor:tree H:100
+floor:tree I:100
+floor:tree J:100
+floor:tree K:100
+floor:tree L:100
+floor:tree M:100
+floor:tree N:100
+floor:tree O:100
+floor:tree P:100
+floor:tree Q:100
+floor:tree R:100
+floor:tree S:100
+#floor:tree T:1 ! basic symbol
+floor:tree U:100
+#### 4x dry:
+floor:tree V:100
+floor:tree W:100
+floor:tree X:100
+floor:tree Y:100
+floor:tree Z:1
+floor:tree ~:1
+floor:tree `:1
+############################
+# (1x18+82) + 4400 = 4500
+#
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+# 700 ^
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass: 35 ^
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:286
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+# 400^ - 9
+#
+#
+#1x20 V
+################################ 1659 + 4500
+# B1
+floor:floor 0 grass:650
+#################################### 
+floor:floor 1 grass:1633
+# B2
+floor:floor w grass:1600
+# 3x^=7350
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+# 700^
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:18
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+#24 total; 
+# A7
+floor:obj_grass A puddle:7
+floor:obj_grass K puddle:6
+# 1x32^ + 468 = 500
+#A1
+###################################################
+wall:tree 1:1100
+wall:tree 3:1100
+wall:tree 4 maple:100
+wall:tree 5 maple:100
+wall:tree 6 coniferous:1000
+wall:tree 8 coniferous:800
+wall:tree 9 willow:2000
+wall:tree d birch:500
+wall:tree e linden:500
+wall:tree g larch:100
+wall:tree n dead tree:500
+wall:tree o dead tree:500
+#a2
+wall:tree D tree:300
+wall:tree E tree:300
+wall:tree F tree:100
+# withered trees:
+wall:tree V:300
+wall:tree W:300
+wall:tree X:90
+wall:tree Y:490
+#a7
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:1
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:1
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+wall:big dark wall 0:1
+#
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+#
+perma:P tree 9 willow:4000
+perma:P tree n dead tree:1000
+perma:P tree o dead tree:1000
+perma:P tree V:1000
+perma:P tree W:1000
+perma:P tree X:1000
+perma:P tree Y:1000
+#
 rule:2500:0
 rule-symbols:S
 rule:7500:1
 
-# Mordor (boss: The Mouth of Sauron)
+########################## 49 (boss: The Mouth of Sauron)
 name:Mordor
-wpos:13:-10
-min-depth:34
+wpos:1:-1
+min-depth:56
 max-depth:65
-flags:CAVERN | LAVA_RIVER | STREAMS
-floor:packed dirt:700
-floor:ash:300
-wall:mountain:600
-fill:mountain:300
+max-level:45
+stairs:1:1d2
+flags:STREAMS | CAVERN | LAVA_RIVER
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:1
+floor:EB dirt 2:1
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:1
+floor:EB dirt l:1
+floor:EB dirt m:1
+floor:EB dirt n:1
+floor:EB dirt o:1
+floor:EB dirt p:1
+floor:EB dirt q:1
+floor:EB dirt r:1
+floor:EB dirt s:1
+floor:EB dirt t:1
+floor:EB dirt u:1
+#
+floor:EB dirt v:596
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:1
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+floor:EC dirt F:1
+floor:EC dirt G:1
+floor:EC dirt H:1
+#floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+#floor:EC dirt S:1
+floor:EC dirt T:1
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+############################### 5100
+wall:A3 severs 0:399
+wall:A3 severs 1:200
+wall:A3 severs 2:100
+wall:A3 severs 3:100
+wall:A3 severs 4:100
+wall:A3 severs 5:100
+wall:A3 severs 6:100
+wall:A3 severs 7:100
+wall:A3 severs 8:100
+wall:A3 severs 9:100
+wall:A3 severs a:100
+wall:A3 severs b:100
+wall:A3 severs c:100
+wall:A3 severs d:100
+wall:A3 severs e:100
+# stairs:
+wall:A3 severs f:1
+wall:A3 severs g:100
+wall:A3 severs h:100
+wall:A3 severs i:100
+wall:A3 severs j:100
+wall:A3 severs k:100
+wall:A3 severs l:100
+wall:A3 severs m:100
+wall:A3 severs n:100
+wall:A3 severs o:100
+wall:A3 severs p:100
+wall:A3 severs q:100
+wall:A3 severs r:100
+wall:A3 severs s:100
+wall:A3 severs t:100
+wall:A3 severs u:100
+wall:A3 severs v:100
+# AA
+wall:AA wall w:300
+wall:AA wall x:200
+wall:AA wall y:100
+wall:AA wall z:100
+wall:AA wall A:100
+wall:AA wall B:100
+#
+wall:B6 floors luquid X:100
+wall:B6 floors luquid Y:100
+wall:B6 floors luquid Z:33
+wall:B6 floors luquid ~:33
+wall:B6 floors luquid `:34
+################################
+wall:EB dirt F2W 0:541
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#
+wall:ED dirt F2W 0:1000
+wall:ED dirt F2W 1:400
+wall:ED dirt F2W 2:1050
+wall:ED dirt F2W 3:800
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:10
+wall:EC dirt F2W H:10
+wall:EC dirt F2W I:10
+#
+wall:EC dirt F2W J:10
+wall:EC dirt F2W K:10
+wall:EC dirt F2W L:10
+wall:EC dirt F2W M:10
+wall:EC dirt F2W N:10
+wall:EC dirt F2W O:10
+wall:EC dirt F2W P:10
+wall:EC dirt F2W Q:10
+wall:EC dirt F2W R:10
+wall:EC dirt F2W S:10
+wall:EC dirt F2W T:10
+#rocks:
+wall:EC dirt F2W U:10
+wall:EC dirt F2W V:10
+wall:EC dirt F2W W:10
+wall:EC dirt F2W X:10
+wall:EC dirt F2W Y:10
+wall:EC dirt F2W Z:10
+wall:EC dirt F2W ~:10
+wall:EC dirt F2W `:10
+#
+wall:EE dirt F2W w:10
+wall:EE dirt F2W x:10
+wall:EE dirt F2W y:10
+wall:EE dirt F2W z:10
+wall:EE dirt F2W A:10
+wall:EE dirt F2W B:10
+wall:EE dirt F2W C:10
+wall:EE dirt F2W D:10
+wall:EE dirt F2W E:10
+wall:EE dirt F2W F:10
+wall:EE dirt F2W G:10
+wall:EE dirt F2W H:10
+wall:EE dirt F2W I:10
+wall:EE dirt F2W J:10
+wall:EE dirt F2W K:10
+wall:EE dirt F2W L:10
+wall:EE dirt F2W M:10
+wall:EE dirt F2W N:10
+wall:EE dirt F2W O:10
+wall:EE dirt F2W P:10
+wall:EE dirt F2W Q:10
+wall:EE dirt F2W R:10
+wall:EE dirt F2W S:10
+wall:EE dirt F2W T:10
+wall:EE dirt F2W U:10
+wall:EE dirt F2W V:10
+wall:EE dirt F2W W:10
+wall:EE dirt F2W X:10
+wall:EE dirt F2W Y:10
+wall:EE dirt F2W Z:10
+wall:EE dirt F2W ~:10
+wall:EE dirt F2W `:24
+#
+perma:AA P wall w:2500
+perma:AA P wall x:2500
+perma:A3 P severs 0:2500
+perma:A3 P severs 1:2500
+#
+#floor:packed dirt:7
+#floor:ash:3
 rule:10000:1
 
-# Erebor (boss: Glaurung, Father of the Dragons)
+########################## 49 (boss: Trone, the Rebel Thunderlord)
+name:The Sacred Land Of Mountains
+wpos:2:2
+min-depth:60
+max-depth:72
+max-level:46
+stairs:1:1d2
+flags:NO_DOORS
+#
+stair:A9 stair down gloomy:A9 stair up gloomy:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 9 fountain:A9 dried fountain:10000
+#
+floor:tree 0 stump:82
+floor:tree 1:1
+floor:tree 2 little:100
+floor:tree 3:1
+floor:tree 4 maple:1
+floor:tree 5 maple:1
+floor:tree 6 coniferous:1
+floor:tree 7 coniferous small:100
+floor:tree 8 coniferous:1
+floor:tree 9 willow:1
+floor:tree a small willow:100
+floor:tree b broken log:50
+floor:tree c broken log:50
+floor:tree d birch:1
+floor:tree e linden:1
+floor:tree f linden small:100
+floor:tree g larch:1
+floor:tree h larch small:100
+floor:tree i bush:100
+floor:tree j gervais:1
+floor:tree k gervais small:100
+floor:tree l palm:1
+floor:tree m palm small:100
+floor:tree n dead tree:50
+floor:tree o dead tree:50
+floor:tree p stump:50
+floor:tree q stump:50
+floor:tree r branch:100
+floor:tree s branch:100
+floor:tree t branch:100
+floor:tree u branch:100
+floor:tree v branch:100
+# ^
+# A2 - trees
+floor:tree w fallen:50
+floor:tree x fallen:50
+floor:tree y fallen:50
+floor:tree z fallen:50
+floor:tree A fallen:50
+floor:tree B fallen:50
+floor:tree C small tree:100
+floor:tree D tree:1
+floor:tree E tree:1
+floor:tree F tree:1
+floor:tree G small tree:100
+# 11^
+#### FURTHER ON: SMALL TREES
+floor:tree H:100
+floor:tree I:100
+floor:tree J:100
+floor:tree K:100
+floor:tree L:100
+floor:tree M:100
+floor:tree N:100
+floor:tree O:200
+floor:tree P:200
+floor:tree Q:200
+floor:tree R:200
+floor:tree S:200
+#floor:tree T:1 ! basic symbol
+floor:tree U:100
+#### 4x dry:
+floor:tree V:50
+floor:tree W:50
+floor:tree X:50
+floor:tree Y:50
+floor:tree Z:1
+floor:tree ~:1
+floor:tree `:1
+############################
+# (1x18+82) + 4400 = 4500
+#
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+# 700 ^
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass: 35 ^
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:286
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+# 400^ - 9
+#
+#
+#1x20 V
+################################ 1659 + 4500
+# B1
+floor:floor 0 grass:650
+#################################### 
+floor:floor 1 grass:1933
+# B2
+floor:floor w grass:1600
+# 3x^=7350
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+# 700^
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:18
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+######################################################
+#-#-#-#-#-#-#-#-#-#-# AB - grass mountains 2400
+wall:grass mountain F2W 0:130
+wall:grass mountain F2W 1:100
+wall:grass mountain F2W 2:100
+wall:grass mountain F2W 3:100
+wall:grass mountain F2W 4:100
+wall:grass mountain F2W 5:100
+wall:grass mountain F2W 6:100
+wall:grass mountain F2W 7:100
+wall:grass mountain F2W 8:100
+wall:grass mountain F2W 9:100
+wall:grass mountain F2W a:100
+wall:grass mountain F2W b:100
+wall:grass mountain F2W c rocks:50
+wall:grass mountain F2W d small rocks:50
+wall:grass mountain F2W e rubble:50
+wall:grass mountain F2W f passable rubble:50
+wall:grass mountain F2W g big rocks:100
+wall:grass mountain F2W h moss rubble:100
+wall:grass mountain F2W i boulders:100
+wall:grass mountain F2W j boulders:100
+wall:grass mountain F2W k boulders:100
+wall:grass mountain F2W l big boulders:100
+wall:grass mountain F2W m rocks:100
+wall:grass mountain F2W n rocks:10
+wall:grass mountain F2W o rock:10
+wall:grass mountain F2W p rocks:10
+wall:grass mountain F2W q rock:10
+wall:grass mountain F2W r rocks:10
+wall:grass mountain F2W s rocks:10
+wall:grass mountain F2W t rocks:10
+wall:grass mountain F2W u rocks:10
+wall:grass mountain F2W v rock:10
+#-#-#-#-#-#-#-#-#-#- AC - grass mountain F2Ws 2010
+wall:grass mountain F2W w:590
+wall:grass mountain F2W x:400
+wall:grass mountain F2W y:300
+wall:grass mountain F2W z:300
+wall:grass mountain F2W A:200
+wall:grass mountain F2W B:200
+wall:grass mountain F2W C:500
+wall:grass mountain F2W D:500
+wall:grass mountain F2W E:100
+wall:grass mountain F2W F:200
+wall:grass mountain F2W G:100
+wall:grass mountain F2W H:80
+wall:grass mountain F2W I:100
+wall:grass mountain F2W J:10
+wall:grass mountain F2W K:10
+wall:grass mountain F2W L:10
+######################
+# A1
+###################################   200
+wall:tree F2W 0 stump:10
+wall:tree F2W 1:10
+wall:tree F2W 2 little:10
+wall:tree F2W 3:10
+wall:tree F2W 4 maple:10
+wall:tree F2W 5 maple:10
+wall:tree F2W 6 coniferous:10
+wall:tree F2W 7 coniferous small:10
+wall:tree F2W 8 coniferous:10
+wall:tree F2W 9 willow:10
+wall:tree F2W a small willow:10
+wall:tree F2W b broken log:10
+wall:tree F2W c broken log:10
+wall:tree F2W d birch:10
+wall:tree F2W e linden:10
+wall:tree F2W f linden small:10
+wall:tree F2W g larch:10
+wall:tree F2W h larch small:10
+wall:tree F2W i bush:10
+#wall:tree F2W j gervais:1
+wall:tree F2W k gervais small:10
+#wall:tree F2W l palm:1############### 100
+wall:tree F2W m palm small:10
+wall:tree F2W n dead tree:10
+wall:tree F2W o dead tree:10
+wall:tree F2W p stump:10
+wall:tree F2W q stump:10
+wall:tree F2W r branch:10
+wall:tree F2W s branch:10
+wall:tree F2W t branch:10
+wall:tree F2W u branch:10
+wall:tree F2W v branch:10
+# A2 - trees######################### 110
+wall:tree F2W w fallen:10
+wall:tree F2W x fallen:10
+wall:tree F2W y fallen:10
+wall:tree F2W z fallen:10
+wall:tree F2W A fallen:10
+wall:tree F2W B fallen:10
+wall:tree F2W C small tree:10
+wall:tree F2W D tree:10
+wall:tree F2W E tree:10
+wall:tree F2W F tree:10
+wall:tree F2W G small tree:10
+#### FURTHER ON: SMALL TREES ######## 1300
+wall:tree F2W H:100
+wall:tree F2W I:100
+wall:tree F2W J:100
+wall:tree F2W K:100
+wall:tree F2W L:100
+wall:tree F2W M:100
+wall:tree F2W N:100
+wall:tree F2W O:100
+wall:tree F2W P:100
+wall:tree F2W Q:100
+wall:tree F2W R:100
+wall:tree F2W S:100
+wall:tree F2W U:100
+#### 4x dry: ############ 50
+wall:tree F2W V:10
+wall:tree F2W W:10
+wall:tree F2W X:10
+wall:tree F2W Y:10
+wall:tree F2W Z:8
+wall:tree F2W ~:1
+wall:tree F2W `:1
+# A7 ################################# 10
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:2
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:1
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+################################## more old ruins:
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+######################################## 2000
+# A4 F2W
+wall:flower F2W 0 green:100
+wall:flower F2W 1 green:100
+wall:flower F2W 2 green:100
+wall:flower F2W 3 green:100
+wall:flower F2W 4 green:100
+wall:flower F2W 5 green:100
+wall:flower F2W 6 green:100
+wall:flower F2W 7 grass:100
+# B1 F2W
+wall:floor F2W 0 grass:100
+wall:floor F2W 1 grass:100
+# B2 F2W
+wall:floor F2W w grass:100
+wall:floor F2W x grass:100
+wall:floor F2W y grass:100
+wall:floor F2W z grass:100
+wall:floor F2W A grass:100
+wall:floor F2W B grass:100
+wall:floor F2W C grass:100
+wall:floor F2W D grass:100
+wall:floor F2W E grass:100
+wall:floor F2W F grass:100
+########################## 400
+wall:floor F2W G rocks:10
+wall:floor F2W H rocks:10
+wall:floor F2W I rocks:10
+wall:floor F2W J rocks:10
+wall:floor F2W K rocks:10
+wall:floor F2W L rock:10
+wall:floor F2W M rock:10
+wall:floor F2W N rock:10
+wall:floor F2W O rock:10
+wall:floor F2W P rocks:10
+wall:floor F2W Q dirt:10
+wall:floor F2W R dirt:10
+wall:floor F2W S dirt:10
+wall:floor F2W T dirt:10
+wall:floor F2W U dirt:10
+wall:floor F2W V dirt:10
+wall:floor F2W W hills:10
+wall:floor F2W X hill:10
+wall:floor F2W Y hill:10
+wall:floor F2W Z lowland:10
+wall:floor F2W ~ lowland:10
+wall:floor F2W ` lowland:10
+# B3 F2W
+wall:B3 floors F2W 2:80
+wall:B3 floors F2W 3:100
+#
+perma:P grass mountain w:4000
+perma:P grass mountain x:500
+perma:P grass mountain y:500
+perma:P grass mountain z:500
+perma:P grass mountain A:500
+perma:P grass mountain B:500
+perma:P grass mountain C:1500
+perma:P grass mountain D:1600
+perma:P grass mountain E:100
+perma:P grass mountain F:100
+perma:P grass mountain H:100
+perma:P grass mountain I:100
+#
+rule:10000:1
+
+#lonely mountain
+########################## 49 (boss: Glaurung, Father of the Dragons)
 name:Erebor
-wpos:12:30
-min-depth:58
-max-depth:70
-flags:CAVERN | LAVA_RIVER | STREAMS
-floor:packed dirt:1000
-wall:mountain:1000
-wall:dark wall:120
-fill:mountain:500
-fill:dark wall:60
+wpos:-1:-3
+min-depth:62
+max-depth:75
+max-level:46
+stairs:1:1d2
+flags:STREAMS | CAVERN | WATER_RIVER
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1400
+floor:EB dirt 1:1
+floor:EB dirt 2:1
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:100
+floor:EB dirt e:100
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:50
+floor:EB dirt l:50
+floor:EB dirt m:50
+floor:EB dirt n:50
+floor:EB dirt o:50
+floor:EB dirt p:50
+floor:EB dirt q:50
+floor:EB dirt r:50
+floor:EB dirt s:50
+floor:EB dirt t:50
+floor:EB dirt u:26
+#
+floor:EB dirt v:70
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:26
+floor:EE dirt V:75
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:1
+floor:EC dirt x:1
+floor:EC dirt y:1
+floor:EC dirt z:1
+floor:EC dirt A:1
+floor:EC dirt B:1
+floor:EC dirt C:1
+floor:EC dirt D:1
+floor:EC dirt E:1
+#3x major bones:
+floor:EC dirt F:1
+floor:EC dirt G:1
+floor:EC dirt H:1
+#floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+#floor:EC dirt S:1
+floor:EC dirt T:1
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#
+############################### 5100
+wall:F0 dirt mountain w:400
+wall:F0 dirt mountain x:400
+wall:F0 dirt mountain y:400
+wall:F0 dirt mountain z:400
+wall:F0 dirt mountain A:400
+wall:F0 dirt mountain B:400
+wall:F0 dirt mountain C:400
+wall:F0 dirt mountain D:400
+wall:F0 dirt mountain E:400
+wall:F0 dirt mountain F:400
+wall:F0 dirt mountain G:300
+wall:F0 dirt mountain H:400
+wall:F0 dirt mountain I:400
+########################################
+wall:EB dirt F2W 0:541
+wall:EB dirt F2W 1:1
+wall:EB dirt F2W 2:1
+wall:EB dirt F2W 3:1
+wall:EB dirt F2W 4:1
+wall:EB dirt F2W 5:1
+wall:EB dirt F2W 6:1
+wall:EB dirt F2W 7:1
+wall:EB dirt F2W 8:1
+wall:EB dirt F2W 9:1
+wall:EB dirt F2W a:1
+wall:EB dirt F2W b:1
+wall:EB dirt F2W c:1
+wall:EB dirt F2W d:11
+wall:EB dirt F2W e:11
+wall:EB dirt F2W f:11
+wall:EB dirt F2W g:11
+wall:EB dirt F2W h:11
+wall:EB dirt F2W i:11
+wall:EB dirt F2W j:11
+wall:EB dirt F2W k:11
+wall:EB dirt F2W l:11
+wall:EB dirt F2W m:11
+wall:EB dirt F2W n:11
+wall:EB dirt F2W o:11
+wall:EB dirt F2W p:11
+wall:EB dirt F2W q:11
+wall:EB dirt F2W r:11
+wall:EB dirt F2W s:11
+wall:EB dirt F2W t:11
+wall:EB dirt F2W u:11
+wall:EB dirt F2W v:11
+#
+wall:ED dirt F2W 0:1000
+wall:ED dirt F2W 1:400
+wall:ED dirt F2W 2:1050
+wall:ED dirt F2W 3:800
+wall:ED dirt F2W 4:30
+wall:ED dirt F2W 5:15
+wall:ED dirt F2W 6:5
+wall:ED dirt F2W 7:15
+wall:ED dirt F2W 8:10
+wall:ED dirt F2W 9:10
+wall:ED dirt F2W a:40
+wall:ED dirt F2W b:25
+# 800-150 = -650
+#rocks:
+wall:ED dirt F2W c:100
+wall:ED dirt F2W d:100
+wall:ED dirt F2W e:100
+wall:ED dirt F2W f:100
+wall:ED dirt F2W g:100
+wall:ED dirt F2W h:100
+wall:ED dirt F2W i:100
+wall:ED dirt F2W j:100
+wall:ED dirt F2W k:100
+wall:ED dirt F2W l:100
+#lonely ugly rocks: 
+wall:ED dirt F2W m:5
+wall:ED dirt F2W n:5
+wall:ED dirt F2W o:5
+wall:ED dirt F2W p:5
+wall:ED dirt F2W q:5
+wall:ED dirt F2W r:5
+wall:ED dirt F2W s:5
+wall:ED dirt F2W t:5
+wall:ED dirt F2W u:5
+wall:ED dirt F2W v:5
+#
+#skeletons minor:
+wall:EC dirt F2W w:10
+wall:EC dirt F2W x:10
+wall:EC dirt F2W y:10
+wall:EC dirt F2W z:10
+wall:EC dirt F2W A:10
+wall:EC dirt F2W B:10
+wall:EC dirt F2W C:10
+wall:EC dirt F2W D:10
+wall:EC dirt F2W E:10
+wall:EC dirt F2W F:10
+# big skel: 54 V +EB32 = 86 + 14 EE`
+wall:EC dirt F2W G:10
+wall:EC dirt F2W H:10
+wall:EC dirt F2W I:10
+#
+wall:EC dirt F2W J:10
+wall:EC dirt F2W K:10
+wall:EC dirt F2W L:10
+wall:EC dirt F2W M:10
+wall:EC dirt F2W N:10
+wall:EC dirt F2W O:10
+wall:EC dirt F2W P:10
+wall:EC dirt F2W Q:10
+wall:EC dirt F2W R:10
+wall:EC dirt F2W S:10
+wall:EC dirt F2W T:10
+#rocks:
+wall:EC dirt F2W U:10
+wall:EC dirt F2W V:10
+wall:EC dirt F2W W:10
+wall:EC dirt F2W X:10
+wall:EC dirt F2W Y:10
+wall:EC dirt F2W Z:10
+wall:EC dirt F2W ~:10
+wall:EC dirt F2W `:10
+#
+wall:EE dirt F2W w:10
+wall:EE dirt F2W x:10
+wall:EE dirt F2W y:10
+wall:EE dirt F2W z:10
+wall:EE dirt F2W A:10
+wall:EE dirt F2W B:10
+wall:EE dirt F2W C:10
+wall:EE dirt F2W D:10
+wall:EE dirt F2W E:10
+wall:EE dirt F2W F:10
+wall:EE dirt F2W G:10
+wall:EE dirt F2W H:10
+wall:EE dirt F2W I:10
+wall:EE dirt F2W J:10
+wall:EE dirt F2W K:10
+wall:EE dirt F2W L:10
+wall:EE dirt F2W M:10
+wall:EE dirt F2W N:10
+wall:EE dirt F2W O:10
+wall:EE dirt F2W P:10
+wall:EE dirt F2W Q:10
+wall:EE dirt F2W R:10
+wall:EE dirt F2W S:10
+wall:EE dirt F2W T:10
+wall:EE dirt F2W U:10
+wall:EE dirt F2W V:10
+wall:EE dirt F2W W:10
+wall:EE dirt F2W X:10
+wall:EE dirt F2W Y:10
+wall:EE dirt F2W Z:10
+wall:EE dirt F2W ~:10
+wall:EE dirt F2W `:24
+#
+perma:ED P dirt F2W 0:2500
+perma:ED P dirt F2W 1:2500
+perma:ED P dirt F2W 2:2500
+perma:ED P dirt F2W 3:2500
+#
 rule:6000:0
 rule-symbols:D
 rule:3000:0
 rule-symbols:d
 rule:1000:1
 
-# The Sacred Land Of Mountains (boss: Trone, the Rebel Thunderlord)
-name:The Sacred Land Of Mountains
-wpos:25:3
-min-depth:45
-max-depth:72
-flags:STREAMS
-floor:grass:1000
-wall:mountain:1200
-fill:mountain:600
-rule:10000:1
-
-# Dol Guldur (boss: The Necromancer of Dol Guldur)
+########################## 49 (boss: The Necromancer of Dol Guldur)
 name:Dol Guldur
-wpos:6:9
-min-depth:57
+wpos:-2:0
+min-depth:63
 max-depth:75
+max-level:47
+stairs:1:1d2
 flags:STREAMS
-floor:water:200
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:ED dirt e:ED dirt f:10000
+#
+floor:packed dirt:3650
+#20 + (1+8) + 71
+#900+2k^
+floor:EB dirt 0:1500
+floor:EB dirt 1:1
+floor:EB dirt 2:1
+floor:EB dirt 3:50
+floor:EB dirt 4:50
+floor:EB dirt 5:5
+floor:EB dirt 6:5
+floor:EB dirt 7:5
+floor:EB dirt 8:5
+floor:EB dirt 9:5
+floor:EB dirt a:5
+floor:EB dirt b:5
+floor:EB dirt c:5
+# 1700 - 150 - 100 = 1450
+# 2x dry tree
+floor:EB dirt d:5
+floor:EB dirt e:4
+#
+floor:EB dirt f:15
+floor:EB dirt g:15
+floor:EB dirt h:50
+floor:EB dirt i:10
+floor:EB dirt j:10
+# plants: 1100-400 = -700
+floor:EB dirt k:1
+floor:EB dirt l:1
+floor:EB dirt m:1
+floor:EB dirt n:1
+floor:EB dirt o:1
+floor:EB dirt p:1
+floor:EB dirt q:1
+floor:EB dirt r:1
+floor:EB dirt s:1
+floor:EB dirt t:1
+floor:EB dirt u:1
+#
+floor:EB dirt v:596
+###
+floor:EE dirt w:100
+floor:EE dirt x:100
+floor:EE dirt y:100
+floor:EE dirt z:100
+floor:EE dirt A:100
+floor:EE dirt B:100
+floor:EE dirt C:100
+floor:EE dirt D:100
+floor:EE dirt E:100
+floor:EE dirt F:100
+floor:EE dirt G:100
+floor:EE dirt H:100
+floor:EE dirt I:100
+floor:EE dirt J:100
+floor:EE dirt K:100
+floor:EE dirt L:100
+floor:EE dirt M:100
+# lots of rocks:
+floor:EE dirt N:1
+floor:EE dirt O:100
+floor:EE dirt P:100
+floor:EE dirt Q:100
+floor:EE dirt R:100
+floor:EE dirt S:100
+floor:EE dirt T:100
+floor:EE dirt U:1
+floor:EE dirt V:100
+floor:EE dirt W:100
+floor:EE dirt X:100
+floor:EE dirt Y:100
+floor:EE dirt Z:100
+floor:EE dirt ~:100
+floor:EE dirt `:100
+### EC
+floor:EC dirt w:10
+floor:EC dirt x:10
+floor:EC dirt y:10
+floor:EC dirt z:10
+floor:EC dirt A:10
+floor:EC dirt B:10
+floor:EC dirt C:10
+floor:EC dirt D:10
+floor:EC dirt E:10
+#3x major bones:
+floor:EC dirt F:10
+floor:EC dirt G:10
+floor:EC dirt H:10
+#floor:EC dirt I:1
+floor:EC dirt J:1
+floor:EC dirt K:1
+floor:EC dirt L:1
+#floor:EC dirt M
+floor:EC dirt N:1
+#floor:EC dirt O
+floor:EC dirt P:1
+floor:EC dirt Q:1
+floor:EC dirt R:1
+# wagon:
+#floor:EC dirt S:1
+floor:EC dirt T:1
+# +1x20 ^
+# rocks:
+floor:EC dirt U:100
+# -20:
+floor:EC dirt V:80
+floor:EC dirt W:100
+floor:EC dirt X:100
+floor:EC dirt Y:100
+floor:EC dirt Z:100
+floor:EC dirt ~:100
+floor:EC dirt `:100
+# grass 4x:
+floor:floor Q dirt:100
+floor:floor R dirt:100
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E2 jail wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+wall:E2 jail wall w:100
+wall:E2 jail wall x:100
+wall:E2 jail wall y:100
+wall:E2 jail wall z:100
+wall:E2 jail wall A:100
+wall:E2 jail wall B:100
+wall:E2 jail wall C:900
+# flag:
+wall:E2 jail wall D:100
+# 4x walls:
+wall:E2 jail wall E:900
+wall:E2 jail wall F:900
+wall:E2 jail wall G:900
+wall:E2 jail wall H:900
+# skels:
+wall:E2 jail wall I:100
+wall:E2 jail wall J:100
+# 
+wall:E2 jail wall K:100
+wall:E2 jail wall L:100
+wall:E2 jail wall M:100
+wall:E2 jail wall N:100
+wall:E2 jail wall O:100
+wall:E2 jail wall P:100
+# fire:
+wall:E2 jail wall Q:50
+wall:E2 jail wall R:50
+wall:E2 jail wall S:50
+wall:E2 jail wall T:50
+# walls
+wall:E2 jail wall U:900
+wall:E2 jail wall V:900
+wall:E2 jail wall W:800
+wall:E2 jail wall X:800
+# 
+wall:E2 jail wall Y:100
+wall:E2 jail wall Z:100
+wall:E2 jail wall ~:100
+wall:E2 jail wall `:100
+#
+perma:E2 P jail wall C:1200
+perma:E2 P jail wall E:1200
+perma:E2 P jail wall F:1200
+perma:E2 P jail wall G:1200
+perma:E2 P jail wall H:1200
+perma:E2 P jail wall U:1000
+perma:E2 P jail wall V:1000
+perma:E2 P jail wall W:1000
+perma:E2 P jail wall X:1000
+#
 rule:3000:0
 rule-symbols:pP
 rule:3000:0
@@ -377,33 +6006,248 @@ rule:1000:0
 rule-flags:ORC | TROLL
 rule:1000:1
 
-# The Paths of the Dead (boss: Feagwath, the Undead Sorcerer)
+########################## 49 (boss: Feagwath, the Undead Sorcerer)
 name:The Paths of the Dead
-wpos:-2:-10
-min-depth:40
+wpos:-1:-4
+min-depth:66
 max-depth:77
-flags:STREAMS
-floor:packed dirt:900
-floor:water:100
-wall:dark wall:400
-fill:dark wall:200
+max-level:47
+stairs:1:1d2
+flags:WATER_RIVER
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:E6 dark floor rubble:E6 dark floor pass rubble:10000
+#
+floor:E6 blood X:2500
+floor:E6 blood Y:2500
+floor:E6 blood Z:2500
+floor:E6 blood ~:2500
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E3 dungeon wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+wall:E3 dungeon wall 0:200
+wall:E3 dungeon wall 1:200
+wall:E3 dungeon wall 2:200
+wall:E3 dungeon wall 3:200
+wall:E3 dungeon wall 4:100
+wall:E3 dungeon wall 5:100
+wall:E3 dungeon wall 6:100
+wall:E3 dungeon wall 7:100
+wall:E3 dungeon wall 8:100
+wall:E3 dungeon wall 9:200
+wall:E3 dungeon wall a:100
+wall:E3 dungeon wall b:100
+# walls:
+wall:E3 dungeon wall c:1600
+wall:E3 dungeon wall d:1600
+wall:E3 dungeon wall e:1600
+wall:E3 dungeon wall f:1500
+#
+wall:E3 dungeon wall g:200
+wall:E3 dungeon wall h:200
+wall:E3 dungeon wall i:100
+wall:E3 dungeon wall j:100
+# cand skel
+wall:E3 dungeon wall k:200
+wall:E3 dungeon wall l:200
+wall:E3 dungeon wall m:200
+#
+wall:E3 dungeon wall n:100
+wall:E3 dungeon wall o:100
+# skel
+wall:E3 dungeon wall p:200
+# ornaments
+wall:E3 dungeon wall q:100
+wall:E3 dungeon wall r:100
+# fire
+wall:E3 dungeon wall s:50
+wall:E3 dungeon wall t:50
+wall:E3 dungeon wall u:50
+wall:E3 dungeon wall v:50
+#
+perma:E3 P dungeon wall c:2500
+perma:E3 P dungeon wall d:2500
+perma:E3 P dungeon wall e:2500
+perma:E3 P dungeon wall f:2500
+#
 rule:8500:0
 rule-flags:UNDEAD | NONLIVING
 rule:1000:0
 rule-symbols:p
 rule:500:1
 
+#### ANGBAND for 50 lvl (at beginning)
+
 # Fallen Gondolin (boss: Maeglin, the Traitor of Gondolin)
 name:Fallen Gondolin
-wpos:-30:36
+wpos:2:0
 min-depth:70
 max-depth:87
-flags:STREAMS
-floor:street:2000
-floor:packed dirt:1000
-floor:pile of hard passable rubble:500
-wall:pile of hard rubble:2000
-fill:pile of hard rubble:1000
+max-level:48
+stairs:1:1d2
+flags:STREAMS | WATER_RIVER | CIRCULAR_ROOMS | SAND_VEIN
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:E6 dark floor rubble:E6 dark floor pass rubble:10000
+#
+fill:dark wall 0:10000
+#
+floor:E6 blood X:2500
+floor:E6 blood Y:2500
+floor:E6 blood Z:2500
+floor:E6 blood ~:2500
+#floor:B3 floors n:300
+#floor:B3 floors o:9700
+#
+floor:E6 blood X:2500
+floor:E6 blood Y:2500
+floor:E6 blood Z:2500
+floor:E6 blood ~:2500
+# B9
+wall:dark wall 0:3050
+wall:dark wall 1 narrow window:100
+wall:dark wall 2 window:100
+wall:dark wall 3 candelabra:100
+wall:dark wall 4 torch:100
+wall:dark wall 5 lamp:100
+wall:dark wall 6 niche:100
+wall:dark wall 7 swords:100
+wall:dark wall 8 shield:100
+wall:dark wall 9 statue:100
+wall:dark wall a fountain:100
+wall:dark wall b portrait:100
+wall:dark wall c portrait:100
+wall:dark wall d portrait:100
+wall:dark wall e portrait:100
+wall:dark wall f banner:100
+wall:dark wall g banner:100
+wall:dark wall h banner:100
+wall:dark wall k empty window:100
+wall:dark wall l window:100
+wall:dark wall m barred window:100
+wall:dark wall n glass window:100
+wall:dark wall q jail window:1
+wall:dark wall r prison bars:1
+wall:dark wall u:100
+wall:dark wall v:100
+# BA ^5350 + 3200 + 1450
+wall:dark wall w:50
+wall:dark wall x:50
+wall:dark wall y:50
+wall:dark wall z:50
+wall:dark wall A:50
+wall:dark wall B:50
+wall:dark wall C:50
+wall:dark wall D:50
+wall:dark wall E:50
+wall:dark wall F:50
+wall:dark wall G:50
+wall:dark wall H:50
+wall:dark wall I:50
+wall:dark wall J:50
+wall:dark wall K:50
+wall:dark wall L:50
+wall:dark wall M:50
+wall:dark wall N:50
+wall:dark wall O:50
+wall:dark wall P:50
+wall:dark wall Q:50
+wall:dark wall R:50
+wall:dark wall S:50
+wall:dark wall T:50
+wall:dark wall U:50
+wall:dark wall V:50
+wall:dark wall W:50
+wall:dark wall X:50
+wall:dark wall Y:50
+wall:dark wall Z:50
+wall:dark wall ~:50
+wall:dark wall `:50
+######################### DF tiles will be moved..
+wall:DC dark stone S:1
+wall:DC dark stone T:1
+wall:DC dark stone U:1
+wall:DC dark stone V:1
+wall:DC dark stone W:1
+wall:DC dark stone X:1
+wall:DC dark stone Y:1
+wall:DC dark stone Z:1
+wall:DC dark stone ~:1
+# ^11
+######################## E0 tiles will be moved..
+wall:DC dark stone w:50
+wall:DC dark stone x:50
+wall:DC dark stone y:50
+wall:DC dark stone z:50
+wall:DC dark stone A:50
+wall:DC dark stone B:50
+wall:DC dark stone C:50
+wall:DC dark stone D:50
+wall:DC dark stone E:50
+wall:DC dark stone F:50
+wall:DC dark stone G:50
+wall:DC dark stone H:50
+wall:DC dark stone I:50
+wall:DC dark stone J:50
+wall:DC dark stone K:50
+wall:DC dark stone L:50
+wall:DC dark stone M:50
+wall:DC dark stone N:50
+wall:DC dark stone O:50
+wall:DC dark stone P:50
+wall:DC dark stone Q:50
+wall:DC dark stone R:50
+wall:DC dark stone S:50
+wall:DC dark stone T:50
+wall:DC dark stone U:50
+wall:DC dark stone V:50
+wall:DC dark stone W:50
+wall:DC dark stone X:50
+wall:DC dark stone Y:50
+wall:DC dark stone Z:50
+wall:DC dark stone ~:50
+wall:DC dark stone `:50
+##########
+# 96-wall: ....... all below: 1450 total
+wall:dark wall:1
+# 
+wall:96 wall M:1
+wall:96 wall N:1
+wall:96 wall O:1
+wall:96 wall P:1
+wall:96 wall Q:1
+wall:96 wall R:1
+wall:96 wall S:1
+wall:96 wall T:1
+wall:96 wall U:1
+wall:96 wall V:1
+wall:96 wall W:1
+wall:96 wall X:1
+# 98-wall:
+wall:98 wall 2:50
+wall:98 wall 3:50
+wall:98 wall 4:50
+wall:98 wall a:50
+# 9D-wall:
+wall:9D wall 5:1
+wall:9D wall 6:1
+#
+# AA
+wall:AA wall I:1
+wall:AA wall J:200
+wall:AA wall K:200
+wall:AA wall L:200
+wall:AA wall M:21
+wall:AA wall N:200
+wall:AA wall O:200
+wall:AA wall P:199
+#bloody:          
+wall:AA wall W:1
+wall:AA wall X:1
+wall:AA wall Y:1
+# 1x29
+perma:P dark wall 0:10000
+#
 rule:2000:0
 rule-symbols:h
 rule:2000:0
@@ -412,42 +6256,666 @@ rule:2000:0
 rule-flags:ORC | TROLL
 rule:4000:1
 
-# Mount Doom (boss: The Balrog of the Sammath Naur)
+########################## 50 (boss: The Balrog of the Sammath Naur)
 name:Mount Doom
-wpos:16:-13
+wpos:1:-2
 min-depth:84
 max-depth:98
-flags:CAVERN | LAVA_RIVER
-floor:lava stream:1000
-wall:lava:1200
-fill:lava:600
-rule:10000:0
+max-level:49
+stairs:1:1d2
+flags:CIRCULAR_ROOMS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:FA lava rubble:FA lava pass rubble:10000
+#
+#wall:lava wall:9000
+#wall:lava rock:1000
+wall:B4 walls L:1250
+wall:B4 walls M:1250
+wall:B4 walls N:1250
+wall:B4 walls O:1250
+wall:B4 walls P:1250
+wall:B4 walls Q:1250
+wall:B4 walls R:1250
+wall:B4 walls S:1250
+############################
+floor:lava:100
+#
+floor:FA lava h:600
+floor:FA lava i:600
+floor:FA lava j:600
+floor:FA lava k:600
+floor:FA lava l:600
+floor:FA lava m:600
+floor:FA lava n:600
+floor:FA lava o:600
+floor:FA lava p:600
+floor:FA lava q:600
+floor:FA lava r:600
+floor:FA lava s:600
+floor:FA lava t:600
+floor:FA lava u:500
+floor:FA lava v:500
+floor:FA lava w:500
+# FB  #-#-#-#-#-#  liquid: 600
+floor:FB lava h:50
+floor:FB lava i:50
+floor:FB lava j:50
+floor:FB lava k:50
+floor:FB lava l:50
+floor:FB lava m:50
+floor:FB lava n:50
+floor:FB lava o:50
+floor:FB lava p:50
+floor:FB lava q:50
+floor:FB lava r:50
+floor:FB lava s:50
+#
+perma:E3 P dungeon wall c:2500
+perma:E3 P dungeon wall d:2500
+perma:E3 P dungeon wall e:2500
+perma:E3 P dungeon wall f:2500
+#
+rule:9950:0
 rule-flags:IM_FIRE
+rule:50:1
 
-# The Nether Realm (boss: Xakaze, Father of Abominations)
-name:The Nether Realm
-wpos:39:37
+########################## X (boss: Tulkas)
+name:The Straight Road
+wpos:-3:0
+min-depth:101
+max-depth:124
+stairs:1:1d2
+flags:STREAMS | LAVA_RIVER | WINNERS_ONLY |  WATER_RIVER | NO_DOORS
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:F3 shallow water e:F3 shallow water f:10000
+#
+floor:B6 floors luquid w:7000
+floor:B6 floors luquid x:1500
+##############################
+# F3 shallow water E ############# 32
+floor:F3 shallow water 0:1
+floor:F3 shallow water 1:1
+floor:F3 shallow water 2:1
+floor:F3 shallow water 3:1
+floor:F3 shallow water 4:1
+floor:F3 shallow water 5:1
+floor:F3 shallow water 6:1
+floor:F3 shallow water 7:1
+floor:F3 shallow water 8:1
+floor:F3 shallow water 9:1
+floor:F3 shallow water a:1
+floor:F3 shallow water b:1
+floor:F3 shallow water c:1
+floor:F3 shallow water d:1
+floor:F3 shallow water e:1
+floor:F3 shallow water f:1
+floor:F3 shallow water g:1
+floor:F3 shallow water h:1
+floor:F3 shallow water i:1
+floor:F3 shallow water j:1
+floor:F3 shallow water k:1
+floor:F3 shallow water l:1
+floor:F3 shallow water m:1
+floor:F3 shallow water n:1
+floor:F3 shallow water o:1
+floor:F3 shallow water p:1
+floor:F3 shallow water q:1
+floor:F3 shallow water r:1
+floor:F3 shallow water s:1
+floor:F3 shallow water t:1
+floor:F3 shallow water u:1
+floor:F3 shallow water v:1
+# F4 E       #-#-#-#-#-#-#-#-# 1500
+floor:F4 shallow water w:9
+floor:F4 shallow water x:1
+floor:F4 shallow water y:40
+floor:F4 shallow water z:50
+floor:F4 shallow water A:50
+floor:F4 shallow water B:50
+floor:F4 shallow water C:50
+floor:F4 shallow water D:50
+floor:F4 shallow water E:50
+floor:F4 shallow water F:50
+floor:F4 shallow water G:50
+floor:F4 shallow water H:50
+floor:F4 shallow water I:50
+floor:F4 shallow water J:50
+floor:F4 shallow water K:50
+floor:F4 shallow water L:50
+floor:F4 shallow water M:50
+floor:F4 shallow water N:50
+floor:F4 shallow water O:50
+floor:F4 shallow water P:50
+floor:F4 shallow water Q:50
+floor:F4 shallow water R:50
+floor:F4 shallow water S:50
+floor:F4 shallow water T:50
+floor:F4 shallow water U:50
+floor:F4 shallow water V:50
+floor:F4 shallow water W:50
+floor:F4 shallow water X:50
+floor:F4 shallow water Y:50
+floor:F4 shallow water Z:50
+floor:F4 shallow water ~:50
+floor:F4 shallow water `:50
+####################################
+wall:E1 moss wall 0:1000
+wall:E1 moss wall 1:1000
+# vines
+wall:E1 moss wall 2:300
+wall:E1 moss wall 3:300
+# lattice
+wall:E1 moss wall 4:100
+# vines
+wall:E1 moss wall 5:300
+wall:E1 moss wall 6:300
+wall:E1 moss wall 7:300
+# etc
+wall:E1 moss wall 8:100
+wall:E1 moss wall 9:100
+wall:E1 moss wall a:100
+wall:E1 moss wall b:100
+# vines
+wall:E1 moss wall c:300
+wall:E1 moss wall d:200
+wall:E1 moss wall e:200
+wall:E1 moss wall f:200
+wall:E1 moss wall g:200
+wall:E1 moss wall h:200
+wall:E1 moss wall i:200
+# skel
+wall:E1 moss wall j:100
+# fire
+wall:E1 moss wall k:50
+wall:E1 moss wall l:50
+wall:E1 moss wall m:50
+wall:E1 moss wall n:50
+# wall
+wall:E1 moss wall o:1000
+wall:E1 moss wall p:1000
+wall:E1 moss wall q:1000
+wall:E1 moss wall r:1000
+# lattice
+wall:E1 moss wall s:50
+wall:E1 moss wall t:50
+wall:E1 moss wall u:50
+wall:E1 moss wall v:50
+#############################
+perma:E1 P moss wall 0:1700
+perma:E1 P moss wall 1:1700
+perma:E1 P moss wall o:1700
+perma:E1 P moss wall p:1700
+perma:E1 P moss wall q:1700
+perma:E1 P moss wall r:1500
+#
+rule:10000:1
+
+########################## XX (boss: Manwe)
+#
+# monsters could spawn in 'walls'.. feature?
+#
+name:Valinor
+wpos:-5:0
 min-depth:101
 max-depth:126
-flags:EMPTY | LAVA_RIVER | WINNERS_ONLY | STREAMS
-floor:nether mist:800
-floor:lava stream:200
-wall:lava:900
-wall:dark wall:300
-fill:lava:450
-fill:dark wall:150
-rule:9500:0
-rule-flags:IM_NETHER
-rule-symbols:GWU
-rule:500:1
+stairs:0:1d2
+flags:WINNERS_ONLY | WATER_RIVER
+#
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:grass mountain e rubble:grass mountain f passable rubble:10000
+#
+fountain:obj_grass 9 fountain:A9 dried fountain:10000
+#
+stair:A9 stair down gloomy:A9 stair up gloomy:10000
+#
+# A4
+floor:flower 0 green:100
+floor:flower 1 green:100
+floor:flower 2 green:100
+floor:flower 3 green:100
+floor:flower 4 green:100
+floor:flower 5 green:100
+floor:flower 6 green:100
+#
+floor:flower 7 grass:1
+floor:flower 8 grass:1
+floor:flower 9 grass yellow:1
+floor:flower a grass brown:1
+floor:flower b orange:1
+floor:flower c white:1
+floor:flower d orange:1
+floor:flower e red:1
+floor:flower f violet:1
+floor:flower g yellow:1
+floor:flower h red:1
+floor:flower i white:1
+floor:flower j red:1
+floor:flower k yellow:1
+floor:flower l rose:1
+floor:flower m purple:1
+floor:flower n orange:1
+floor:flower o rose:1
+floor:flower p blue:1
+floor:flower q rose:1
+floor:flower r red:1
+floor:flower s rose:1
+floor:flower t white:1
+floor:flower u red white:1
+floor:flower v blue white:1
+# A5
+floor:flower w rose:1
+floor:flower x blue:1
+floor:flower y purple:1
+floor:flower z blue:1
+floor:flower A red:1
+floor:flower B orange:1
+floor:flower C pink:1
+floor:flower D red:1
+floor:flower E blue:1
+floor:flower F red:1
+# 4x grass:
+floor:A5 plants G:34
+floor:A5 plants H:33
+#common (floor 0 grass) altered:
+floor:A5 plants I:650
+floor:A5 plants J:33
+# 2x mushrooms:
+floor:A5 plants K:3
+floor:A5 plants L:2
+#1x40 ^
+#
+#
+#1x20 V
+# B1
+floor:floor 0 grass:2100
+floor:floor 1 grass:2700
+# B2
+floor:floor w grass:2500
+floor:floor x grass:100
+floor:floor y grass:100
+floor:floor z grass:100
+floor:floor A grass:100
+floor:floor B grass:100
+floor:floor C grass:100
+floor:floor D grass:100
+#
+floor:floor E grass:1
+floor:floor F grass:1
+#
+floor:floor G rocks:50
+#
+floor:floor H rocks:1
+#
+floor:floor I rocks:50
+floor:floor J rocks:50
+#
+floor:floor K rocks:1
+floor:floor L rock:1
+floor:floor M rock:1
+#
+floor:floor N rock:50
+floor:floor O rock:50
+#
+floor:floor P rocks:1
+floor:floor Q dirt:1
+floor:floor R dirt:1
+floor:floor S dirt:1
+floor:floor T dirt:1
+floor:floor U dirt:1
+floor:floor V dirt:1
+#
+floor:floor W hills:41
+#
+floor:floor X hill:1
+floor:floor Y hill:1
+floor:floor Z lowland:1
+floor:floor ~ lowland:1
+floor:floor ` lowland:1
+#
+#b3
+floor:B3 floors 2:100
+floor:B3 floors 3:100
+#
+floor:floor d hills dungeon:1
+########################################
+wall:grass mountain 0:130
+wall:grass mountain 1:100
+wall:grass mountain 2:100
+wall:grass mountain 3:100
+wall:grass mountain 4:100
+wall:grass mountain 5:100
+wall:grass mountain 6:100
+wall:grass mountain 7:100
+wall:grass mountain 8:100
+wall:grass mountain 9:100
+wall:grass mountain a:100
+wall:grass mountain b:100
+wall:grass mountain c rocks:50
+wall:grass mountain d small rocks:50
+wall:grass mountain e rubble:50
+wall:grass mountain f passable rubble:50
+wall:grass mountain g big rocks:100
+wall:grass mountain h moss rubble:100
+wall:grass mountain i boulders:100
+wall:grass mountain j boulders:100
+wall:grass mountain k boulders:100
+wall:grass mountain l big boulders:100
+wall:grass mountain m rocks:100
+wall:grass mountain n rocks:10
+wall:grass mountain o rock:10
+wall:grass mountain p rocks:10
+wall:grass mountain q rock:10
+wall:grass mountain r rocks:10
+wall:grass mountain s rocks:10
+wall:grass mountain t rocks:10
+wall:grass mountain u rocks:10
+wall:grass mountain v rock:10
+#-#-#-#-#-#-#-#-#-#- AC - grass mountains 2010 --- 2300
+wall:grass mountain w:100
+wall:grass mountain x:100
+wall:grass mountain y:100
+wall:grass mountain z:100
+wall:grass mountain A:100
+wall:grass mountain B:100
+wall:grass mountain C:100
+wall:grass mountain D:100
+wall:grass mountain E:100
+wall:grass mountain F:100
+wall:grass mountain G:100
+wall:grass mountain H:80
+wall:grass mountain I:100
+wall:grass mountain J:10
+wall:grass mountain K:10
+wall:grass mountain L:10
+######################
+# A1
+###################################   200
+wall:tree F2W 0 stump:10
+wall:tree F2W 1:210
+wall:tree F2W 2 little:110
+wall:tree F2W 3:210
+wall:tree F2W 4 maple:200
+wall:tree F2W 5 maple:210
+wall:tree F2W 6 coniferous:10
+wall:tree F2W 7 coniferous small:10
+wall:tree F2W 8 coniferous:10
+wall:tree F2W 9 willow:210
+wall:tree F2W a small willow:10
+wall:tree F2W b broken log:10
+wall:tree F2W c broken log:10
+wall:tree F2W d birch:210
+wall:tree F2W e linden:210
+wall:tree F2W f linden small:10
+wall:tree F2W g larch:210
+wall:tree F2W h larch small:10
+wall:tree F2W i bush:10
+#wall:tree F2W j gervais:1
+wall:tree F2W k gervais small:10
+#wall:tree F2W l palm:1############### 100
+wall:tree F2W m palm small:10
+wall:tree F2W n dead tree:10
+wall:tree F2W o dead tree:10
+wall:tree F2W p stump:10
+wall:tree F2W q stump:10
+wall:tree F2W r branch:10
+wall:tree F2W s branch:10
+wall:tree F2W t branch:10
+wall:tree F2W u branch:10
+wall:tree F2W v branch:10
+# A2 - trees######################### 110
+wall:tree F2W w fallen:10
+wall:tree F2W x fallen:10
+wall:tree F2W y fallen:10
+wall:tree F2W z fallen:10
+wall:tree F2W A fallen:10
+wall:tree F2W B fallen:10
+wall:tree F2W C small tree:10
+wall:tree F2W D tree:210
+wall:tree F2W E tree:210
+wall:tree F2W F tree:210
+wall:tree F2W G small tree:10
+#### FURTHER ON: SMALL TREES ######## 1300
+wall:tree F2W H:100
+wall:tree F2W I:100
+wall:tree F2W J:100
+wall:tree F2W K:100
+wall:tree F2W L:100
+wall:tree F2W M:100
+wall:tree F2W N:100
+wall:tree F2W O:100
+wall:tree F2W P:100
+wall:tree F2W Q:100
+wall:tree F2W R:100
+wall:tree F2W S:100
+wall:tree F2W U:100
+#### 4x dry: ############ 50
+wall:tree F2W V:10
+wall:tree F2W W:10
+wall:tree F2W X:10
+wall:tree F2W Y:10
+wall:tree F2W Z:8
+wall:tree F2W ~:1
+wall:tree F2W `:1
+# A7 ################################# 10
+wall:obj_grass L ruins:1
+wall:obj_grass M ruins:2
+wall:obj_grass N ruins:1
+wall:obj_grass O ruins:1
+wall:obj_grass P ruins:1
+wall:obj_grass Q ruins:1
+wall:big dark wall 9 entrance:1
+wall:big dark wall a low entrance:1
+wall:big dark wall b window:1
+#############
+wall:obj_grass2 f:1
+wall:obj_grass2 g:1
+wall:obj_grass2 h:1
+wall:obj_grass2 i:1
+wall:obj_grass2 j:1
+wall:obj_grass2 k:1
+wall:obj_grass2 l:1
+wall:obj_grass2 m:1
+wall:obj_grass2 n:1
+wall:obj_grass2 o:1
+######################################## 2000
+# A4 F2W
+wall:flower 0 green:100
+wall:flower 1 green:100
+wall:flower 2 green:100
+wall:flower 3 green:100
+wall:flower 4 green:100
+wall:flower 5 green:100
+wall:flower 6 green:100
+wall:flower 7 grass:100
+# B1 F2W
+wall:floor 0 grass:100
+wall:floor 1 grass:100
+# B2 F2W
+wall:floor w grass:100
+wall:floor x grass:100
+wall:floor y grass:100
+wall:floor z grass:100
+wall:floor A grass:100
+wall:floor B grass:100
+wall:floor C grass:100
+wall:floor D grass:100
+wall:floor E grass:100
+wall:floor F grass:100
+########################## 400
+wall:floor G rocks:10
+wall:floor H rocks:10
+wall:floor I rocks:10
+wall:floor J rocks:10
+wall:floor K rocks:10
+wall:floor L rock:10
+wall:floor M rock:10
+wall:floor N rock:10
+wall:floor O rock:10
+wall:floor P rocks:10
+wall:floor Q dirt:10
+wall:floor R dirt:10
+wall:floor S dirt:10
+wall:floor T dirt:10
+wall:floor U dirt:10
+wall:floor V dirt:10
+wall:floor W hills:10
+wall:floor X hill:10
+wall:floor Y hill:10
+wall:floor Z lowland:10
+wall:floor ~ lowland:10
+wall:floor ` lowland:10
+# B3 F2W
+wall:B3 floors 2:80
+wall:B3 floors 3:100
+#
+perma:P grass mountain 0:2500
+perma:P grass mountain 1:2500
+perma:P grass mountain 2:2500
+perma:P grass mountain 3:2500
+#
+rule:10000:1
 
-# Utumno, Portal to the Void (boss: Melkor, Lord of Darkness)
+#nether realm
+#rule:95:0
+#rule-flags:IM_NETHER
+#rule-symbols:GWU
+#rule:5:1
+
+########################## XXX (boss: Eru Iluvatar)
 name:Utumno, Portal to the Void
-wpos:42:42
+wpos:0:-5
 min-depth:102
 max-depth:127
-flags:EMPTY | WINNERS_ONLY | STREAMS
-floor:void:1000
+stairs:0:1
+#########################
+flags:EMPTY | WINNERS_ONLY
+# EMPTY.. ?
+stair:9F stair down 0:9F stair up 1:10000
+#
+rubble:FA bizarre rubble:FA bizarre pass rubble:10000
+#
+floor:FA lava x:1150
+floor:FA lava y:1150
+floor:FA lava z:1100
+floor:FA lava A:1100
+floor:FA lava B:1100
+floor:FA lava C:1100
+floor:FA lava D:1100
+floor:FA lava E:1100
+floor:FA lava F:1100
+#floor:void:1000
+#################################
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
+# E2 jail wall v
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+wall:E2 jail wall w:50
+wall:E2 jail wall x:50
+wall:E2 jail wall y:50
+wall:E2 jail wall z:50
+wall:E2 jail wall A:50
+wall:E2 jail wall B:50
+wall:E2 jail wall C:450
+# flag:
+wall:E2 jail wall D:50
+# 4x walls:
+wall:E2 jail wall E:450
+wall:E2 jail wall F:450
+wall:E2 jail wall G:450
+wall:E2 jail wall H:450
+# skels:
+wall:E2 jail wall I:50
+wall:E2 jail wall J:50
+# 
+wall:E2 jail wall K:50
+wall:E2 jail wall L:50
+wall:E2 jail wall M:50
+wall:E2 jail wall N:50
+wall:E2 jail wall O:50
+wall:E2 jail wall P:50
+# fire:
+wall:E2 jail wall Q:25
+wall:E2 jail wall R:25
+wall:E2 jail wall S:25
+wall:E2 jail wall T:25
+# walls
+wall:E2 jail wall U:450
+wall:E2 jail wall V:450
+wall:E2 jail wall W:400
+wall:E2 jail wall X:400
+# 
+wall:E2 jail wall Y:50
+wall:E2 jail wall Z:50
+wall:E2 jail wall ~:50
+wall:E2 jail wall `:50
+################################
+wall:E3 dungeon wall 0:100
+wall:E3 dungeon wall 1:100
+wall:E3 dungeon wall 2:100
+wall:E3 dungeon wall 3:100
+wall:E3 dungeon wall 4:50
+wall:E3 dungeon wall 5:50
+wall:E3 dungeon wall 6:50
+wall:E3 dungeon wall 7:50
+wall:E3 dungeon wall 8:50
+wall:E3 dungeon wall 9:100
+wall:E3 dungeon wall a:50
+wall:E3 dungeon wall b:50
+# walls:
+wall:E3 dungeon wall c:800
+wall:E3 dungeon wall d:800
+wall:E3 dungeon wall e:800
+wall:E3 dungeon wall f:750
+#
+wall:E3 dungeon wall g:100
+wall:E3 dungeon wall h:100
+wall:E3 dungeon wall i:50
+wall:E3 dungeon wall j:50
+# cand skel
+wall:E3 dungeon wall k:100
+wall:E3 dungeon wall l:100
+wall:E3 dungeon wall m:100
+#
+wall:E3 dungeon wall n:50
+wall:E3 dungeon wall o:50
+# skel
+wall:E3 dungeon wall p:100
+# ornaments
+wall:E3 dungeon wall q:50
+wall:E3 dungeon wall r:50
+# fire
+wall:E3 dungeon wall s:25
+wall:E3 dungeon wall t:25
+wall:E3 dungeon wall u:25
+wall:E3 dungeon wall v:25
+#
+#wall:B4 walls L:1250
+#wall:B4 walls M:1250
+#wall:B4 walls N:1250
+#wall:B4 walls O:1250
+#wall:B4 walls P:1250
+#wall:B4 walls Q:1250
+#wall:B4 walls R:1250
+#wall:B4 walls S:1250
+#
+perma:E2 P jail wall C:600
+perma:E2 P jail wall E:600
+perma:E2 P jail wall F:600
+perma:E2 P jail wall G:600
+perma:E2 P jail wall H:600
+perma:E2 P jail wall U:600
+perma:E2 P jail wall V:600
+perma:E2 P jail wall W:600
+perma:E2 P jail wall X:600
+perma:E3 P dungeon wall c:1150
+perma:E3 P dungeon wall d:1150
+perma:E3 P dungeon wall e:1150
+perma:E3 P dungeon wall f:1150
+#
 rule:9900:0
 rule-flags:UNDEAD | DEMON | DRAGON | NONLIVING
 rule:100:1

@@ -1,0 +1,136 @@
+# === Understanding town_test.txt (Test town) ===
+
+# feat : special feat : special feat : % chance of generating the second feat
+# D : lines giving full layout of town using symbols in town_feat.txt
+
+# 'feat' is the special feats replacing fake blank features (' ')
+
+# 'D' lines describe the layout of the town. There MUST be "dungeon-hgt" lines
+# with a size of "dungeon-wid" (see constants.txt).
+
+
+# Special feats: grass/tree
+feat:grass:tree:0
+
+#          1         2         3         4         5         6         7         8         9         0         1         2         3         4         5         6         7         8         9
+# 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+map:######################################################################################################################################################################################################
+map:#                                                                                                                                                                                                    #
+map:#TTTTTTTTTTTTTTTTTTTTTTTT                                                                                                                                                                            #
+map:#                                                                                                                                                                                                    #
+map:#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                                                                                                                                                           #
+map:#                                                                                                                                                                                                    #
+map:#:::::::::::::::::::::::::::::::::::::::::::::                                                                                                                                                       #
+map:#                                                                                                                                                                                                    #
+map:#^^^^^^^^^^^^^^^^^                                                                                                                                                                                   #
+map:#                                                                                                                                                                                                    #
+map:#wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                                                                                                                                                   #
+map:#                                                                                                                                                                                                    #
+map:#...........................                                                                                                                                                                         #
+map:#                                                                                                                                                                                                    #
+map:#~~~~                                                                                                                                                                                                #
+map:#                                                                                                                                                                                                    #
+map:###                                                                                                                                                                                                  #
+map:#                                                                                                                                                                                                    #
+map:#aaaaaaa                                                                                                                                                                                             #
+map:#                                                                                                                                                                                                    #
+map:#bbbbbbbbbbbbbbbbbbbbbbbbbbbbb                                                                                                                                                                       #
+map:#                                                                                                                                                                                                    #
+map:#ccccc                                                                                                                                                                                               #
+map:#                                                                                                                                                                                                    #
+map:#ddddddddd                                                                                                                                                                                           #
+map:#                                                                                                                                                                                                    #
+map:#eeeee                                                                                                                                                                                               #
+map:#                                                                                                                                                                                                    #
+map:#ffffffffffffffffffffffff                                                                                                                                                                            #
+map:#ffffffffffffffffffffffff                                                                                                                                                                            #
+map:#gggggggggggggggggggggggg                                                                                                                                                                            #
+map:#gggggggggggggggggggggggg                                                                                                                                                                            #
+map:#hhhhhhhhhhhhhhhhhhhhhhhh                                                                                                                                                                            #
+map:#hhhhhhhhhhhhhhhhhhhhhhhh                                                                                                                                                                            #
+map:#iiiiiiiiiiiiiiiiiiiiiiii                                                                                                                                                                            #
+map:#iiiiiiiiiiiiiiiiiiiiiiii                                                                                                                                                                            #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                ####                                                                                                                                #
+map:#                                                                #~~#                                                                                                                                #
+map:#                                                                ##8#                                                                                                                                #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:######################################################################################################################################################################################################
+
+mask:######################################################################################################################################################################################################
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmno                                                                                                                                                                           #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmnoprstuvwxyzABCDEF                                                                                                                                                           #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmnoprstuvwxyzABCDEFGHIJ                                                                                                                                                       #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefg                                                                                                                                                                                   #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmnoprstuvwx                                                                                                                                                                   #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmnopr                                                                                                                                                                         #
+mask:#                                                                                                                                                                                                    #
+mask:#0123                                                                                                                                                                                                #
+mask:#                                                                                                                                                                                                    #
+mask:#01                                                                                                                                                                                                  #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456                                                                                                                                                                                             #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmnoprst                                                                                                                                                                       #
+mask:#                                                                                                                                                                                                    #
+mask:#01234                                                                                                                                                                                               #
+mask:#                                                                                                                                                                                                    #
+mask:#012345678                                                                                                                                                                                           #
+mask:#                                                                                                                                                                                                    #
+mask:#01234                                                                                                                                                                                               #
+mask:#                                                                                                                                                                                                    #
+mask:#0123456789abcdefghijklmn                                                                                                                                                                            #
+mask:#opqrstuvwxyzABCDEFGHIJKL                                                                                                                                                                            #
+mask:#0123456789abcdefghijklmn                                                                                                                                                                            #
+mask:#opqrstuvwxyzABCDEFGHIJKL                                                                                                                                                                            #
+mask:#0123456789abcdef                                                                                                                                                                                    #
+mask:#opqrstuvwxyzABCD                                                                                                                                                                                    #
+mask:#0123456789abcdef                                                                                                                                                                                    #
+mask:#opqrstuvwxyzABCD                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                ####                                                                                                                                #
+mask:#                                                                #~~#                                                                                                                                #
+mask:#                                                                ##8#                                                                                                                                #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:######################################################################################################################################################################################################

@@ -175,10 +175,12 @@ sound:death:plc_die_laugh
 #
 
 # You become blind.
-sound:blind:pls_tone_conk
+#sound:blind:pls_tone_conk
+sound:blind:blind blind1 blind2
 
 # You become confused.
-sound:confused:pls_man_ugh
+#sound:confused:pls_man_ugh
+sound:confused:confused
 
 # You become poisoned.
 sound:poisoned:pls_tone_guiro

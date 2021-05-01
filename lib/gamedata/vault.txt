@@ -1,15 +1,6 @@
-# File: vault.txt
-
-
-# This file is used to initialize the "vault template" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # Note that the "spacing" in the "description" lines is very important!
 
-# === Understanding vault.txt ===
+# === Understanding vault.txt ("vault template") ===
 
 # name:vault name
 # type:room type

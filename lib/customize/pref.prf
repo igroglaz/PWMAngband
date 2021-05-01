@@ -11,6 +11,142 @@
 # and your digger (or secondary weapon) as "@2@0".
 #
 
+#=#=#=#=#=#=#=#=#=#=##=#=#=#=#=#=#=#=#=#=##=#=#=#=#
+#=#=#=#=#=#=#=#=#=#=# OPTIONS #=#=#=#=#=#=#=#=#=#=#
+#=#=#=#=#=#=#=#=#=#=##=#=#=#=#=#=#=#=#=#=##=#=#=#=#
+
+# Option ''
+X:none
+
+# Option 'Use the roguelike command keyset'
+X:rogue_like_commands
+
+# Option 'Use old target by default'
+X:use_old_target
+
+# Option 'Always pickup items'
+X:pickup_always
+
+# Option 'Always pickup items matching inventory'
+Y:pickup_inven
+
+# Option 'Notify on object recharge'
+X:notify_recharge
+
+# Option 'Show flavors in object descriptions'
+X:show_flavors
+
+# Option 'Center map continuously'
+X:center_player
+
+# Option 'Disturb whenever viewable monster moves'
+Y:disturb_near
+
+# Option 'Show damage player deals to monsters'
+X:show_damage
+
+# Option 'Color: Illuminate torchlight in yellow'
+X:view_yellow_light
+
+# Option 'Color: Shimmer multi-colored things'
+X:animate_flicker
+
+# Option 'Color: Player color indicates % hit points'
+Y:hp_changes_color
+
+# Option 'Color: Show unique monsters in purple'
+X:purple_uniques
+
+# Option 'Show walls as solid blocks'
+X:solid_walls
+
+# Option 'Show walls with shaded background'
+X:hybrid_walls
+
+# Option 'Use sound'
+Y:use_sound
+
+# Option 'Show effective speed as multiplier'
+X:effective_speed
+
+# Option 'Color: Illuminate torchlight in orange'
+Y:view_orange_light
+
+# Option 'Use special color for party leader'
+X:highlight_leader
+
+# Option 'Disturb whenever map panel changes'
+Y:disturb_panel
+
+# Option 'Always say Yes to Yes/No prompts'
+X:auto_accept
+
+# Option 'Get out of icky screens when disturbed'
+X:disturb_icky
+
+# Option 'Active auto-retaliator'
+Y:active_auto_retaliator
+
+# Option 'Freeze screen after detecting monsters'
+Y:pause_after_detect
+
+# Option 'Disturb whenever monsters bash down doors'
+Y:disturb_bash
+
+# Option 'Activate fire-till-kill mode'
+Y:fire_till_kill
+
+# Option 'Kick out when starving while at full hps'
+X:disturb_faint
+
+# Option 'Risky casting'
+X:risky_casting
+
+# Option 'Use single items from floor instantly'
+Y:quick_floor
+
+# Option 'Hide terrain description on status line'
+X:hide_terrain
+
+# Option 'Disable Enter menu'
+Y:disable_enter
+
+# Option 'Force player descent'
+X:birth_force_descend
+
+# Option 'Word of Recall has no effect'
+X:birth_no_recall
+
+# Option 'Restrict creation of artifacts'
+X:birth_no_artifacts
+
+# Option 'Show level feelings'
+Y:birth_feelings
+
+# Option 'Increase gold drops but disable selling'
+Y:birth_no_selling
+
+# Option 'Start with a kit of useful gear'
+Y:birth_start_kit
+
+# Option 'Restrict the use of stores/home'
+X:birth_no_stores
+
+# Option 'Death is permanent'
+Y:birth_no_ghost
+
+# Option 'Play as a fruit bat'
+X:birth_fruit_bat
+
+# Hitpoint warning (0-9)
+O:hp_warn_factor:6
+
+# Base delay factor (0-255)
+O:delay_factor:10
+
+# Movement delay factor (0-9)
+O:lazymove_delay:0
+
 # Movement
 keymap-act:;1
 keymap-input:0:1

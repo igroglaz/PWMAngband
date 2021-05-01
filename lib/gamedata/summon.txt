@@ -1,9 +1,4 @@
-# File: summon.txt
-
-
-# Summon type details
-
-# === Understanding summon.txt ===
+# === Understanding summon.txt (Summon type details) ===
  
 # name      - summon type name
 # msgt      - message type

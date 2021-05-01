@@ -1,13 +1,4 @@
-# File: history.txt
-
-
-# This file is used to initialize the "player history" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding history.txt ===
+# === Understanding history.txt ("player history") ===
 
 # Background information:
 # Pieces of player backstory are chosen from "charts", which are lists of
@@ -476,3 +467,6 @@ chart:99:0:80
 phrase:$r mother was a mighty wyrm.
 chart:99:0:100
 phrase:$r mother was an ancient wyrm.
+
+chart:100:0:100
+phrase:You do not know your origin yet.

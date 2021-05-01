@@ -31,7 +31,7 @@ Original Keyset Command Summary
   @    Display connected players       ^B   -
   #    See abilities                   ^C   End character & quit
   $    Drop gold                       ^D   Describe object
-  %    Interact with keymaps           ^E   Toggle inven/equip window
+  %    Display current time            ^E   Toggle inven/equip window
   ^    (special - control key)         ^F   Repeat level feeling
   &    Enter Dungeon Master menu       ^G   (special - bell)
   *    Target monster or location      ^H   -
@@ -91,7 +91,7 @@ Roguelike Keyset Command Summary
   @    Center map                      ^B   (alter - south west)
   #    See abilities                   ^C   End character & quit
   $    Drop gold                       ^D   Ignore an item
-  %    Interact with keymaps           ^E   Toggle inven/equip window
+  %    Display current time            ^E   Toggle inven/equip window
   ^    (special - control key)         ^F   Repeat level feeling
   &    Enter Dungeon Master menu       ^G   (special - bell)
   *    Target monster or location      ^H   (alter - west)
@@ -116,5 +116,5 @@ Roguelike Keyset Command Summary
   \    (special - bypass keymap)        ~   Check knowledge
   `    (special - escape)               ?   Help
   /    Identify monster                 |   Quiver list
-  £    Buy a house
+  §    Buy a house
   TAB  Fire default ammo at target     BKS  Describe object

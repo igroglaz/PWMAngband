@@ -1,9 +1,4 @@
-# File: blow_methods.txt
-
-
-# Methods for monster blows
-
-# === Understanding blow_methods.txt ===
+# === Understanding blow_methods.txt (methods for monster blows) ===
 
 # name: blow method code
 # cut: 1 if the method can cut, 0 if not

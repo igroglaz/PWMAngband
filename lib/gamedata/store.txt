@@ -1,13 +1,17 @@
 # File: store.txt
-
-
-# === Understanding store.txt ===
-
+#
 # store: store name
 # type: store type
 # owner: max purse : name (as many or few as you like >1)
 # turnover: turnover (how many items the store turns over)
-# slots: min : max (number of 'normal' slots to keep stocked)
+# slots: min : max (number of 'normal' slots to keep stocked) 
+#
+#
+#
+#MAX SHOULD BE EQUAL TO NUMBER OF 'NORMAL' ITEMS in shop (exception - if there is no 'always' items, lie in 'weapons' shop).
+#
+#
+#
 # normal: type name : item name (for the normal stocking list) : rarity : price
 #         factor
 # always: type name : ?item name (for things to always stock)
@@ -31,50 +35,61 @@
 #
 # Don't forget to update terrain.txt (and the prf files) if you add custom
 # stores to this file.
-
+#
+#############################################
+# You can put "always" items inside, the code allows that for all stores. However,
+# by doing this, you need to remove the items you  add from all other stores (for 
+# example: if you add "Cure Critical Wounds" to the BM as a staple, you need to remove
+# them from  # the Temple as "normal" items), otherwise the item would not appear in the BM.
+#
+#3) Max store item is 24 (possible to change that in constants.txt). This means that slots:max + number of "always" items in a store should never be greater than 24.
+#
+#Store must have more than one owner, otherwise the shuffle feature will loop 
+#endlessly (Angband stores all have 4). If you #want only one, just duplicate the entry.
+#
+#example of normal:food:Ration of Food:10:300:
+#'10' means it would be 10 times less often then for common (1) items
+#300 is 300% price increase from 'cost' from object.txt
+#
 
 # Default welcome messages
 welcome:0:nods to you.
-welcome:1:says hello.
-welcome:2:"See anything you like, adventurer?"
-welcome:3:"How may I help you, %s?"
-welcome:4:"Welcome back, %s."
-welcome:5:"A pleasure to see you again, %s."
-welcome:6:"How may I be of assistance, %s?"
-welcome:7:"You do honour to my humble store, %s."
-welcome:8:"I and my family are entirely at your service, %s."
+welcome:1:nods to you.
+welcome:2:nods to you.
+welcome:3:nods to you.
+welcome:4:nods to you.
+welcome:5:nods to you.
+welcome:6:nods to you.
+welcome:7:nods to you.
+welcome:8:nods to you.
 
+#welcome:8:"I and my family are entirely at your service, %s."
 
 # General store
 store:General Store
 type:1
-owner:5000:Bilbo the Friendly (Hobbit)
-owner:10000:Rincewind the Chicken (Human)
-owner:20000:Snafu the Midget (Gnome)
-owner:30000:Lyar-el the Comely (Elf)
-slots:0:4
+owner:5000:Erkenbrand
+owner:10000:Erkenbrand
+owner:20000:Erkenbrand
+owner:30000:Erkenbrand
+slots:2:4
 turnover:2
 always:cloak:Cloak
-always:food:Ration of Food
 always:light:Wooden Torch
 always:flask:Flask of Oil
-always:digger:Shovel
-always:digger:Pick
 always:rock:Rock
-always:shot:Iron Shot
-always:arrow:Arrow
-always:bolt:Bolt
-normal:food:Pint of Fine Wine
-normal:food:Slime Mold
-normal:food:Flask of Whisky
-normal:food:Hard Biscuit
-normal:food:Pint of Fine Ale
-normal:mushroom:Stoneskin
-normal:mushroom:Purging
-normal:fortune cookie:Fortune Cookie
-normal:light:Lantern
-normal:stone:House Foundation Stone
-normal:scroll:House Creation
+always:stone:House Foundation Stone
+always:scroll:House Creation
+always:potion:Stomach Water
+always:light:Lantern
+# always:digger:Shovel
+# always:digger:Pick
+normal:potion:Cure Critical Wounds
+normal:potion:Restore Life Levels
+normal:bottle:Empty Bottle:1:500
+normal:food:Hard Biscuit:1:500
+#normal:food:Handful of Dried Fruits:9:500
+#normal:food:Ration of Food:10:500
 buy:light
 buy:food
 buy:mushroom
@@ -82,10 +97,6 @@ buy:flask
 buy:digger
 buy:crop
 buy:horn
-buy:cloak
-buy:shot
-buy:bolt
-buy:arrow
 
 # Armoury
 store:Armoury
@@ -127,14 +138,15 @@ buy:dragon armour
 store:Weapon Smiths
 owner:5000:Ithyl-Mak the Beastly (Half-Troll)
 owner:10000:Arndal Beast-Slayer (Half-Elf)
-owner:25000:Tarl Beast-Master (Hobbit)
+owner:25000:Tarl Beast-Master (Halfling)
 owner:30000:Oglign Dragon-Slayer (Dwarf)
 slots:3:14
 turnover:9
-normal:rock:Rock
-normal:shot:Iron Shot
-normal:arrow:Arrow
-normal:bolt:Bolt
+#normal:rock:Rock
+############################ add staves and hammers
+#normal:shot:Iron Shot
+#normal:arrow:Arrow
+#normal:bolt:Bolt
 normal:sword:Dagger
 normal:sword:Main Gauche
 normal:sword:Rapier
@@ -177,12 +189,12 @@ owner:15000:Ludwig the Humble (Human)
 owner:20000:Gunnar the Paladin (Human)
 owner:25000:Delilah the Pure (Elf)
 owner:30000:Keldon the Wise (Dwarf)
-slots:6:14
+slots:6:18
 turnover:9
 always:prayer book
 always:potion:Cure Light Wounds
+always:potion:Cure Serious Wounds
 always:scroll:Remove Curse
-always:scroll:Life
 normal:hafted:Whip
 normal:hafted:Quarterstaff
 normal:hafted:Mace
@@ -197,9 +209,10 @@ normal:scroll:Light
 normal:potion:Boldness
 normal:potion:Heroism
 normal:potion:Neutralize Poison
-normal:potion:Cure Serious Wounds
+normal:potion:Restore Life Levels
 normal:potion:Cure Critical Wounds
 normal:potion:Healing:10:300
+normal:potion:Resist Poison:1:400
 buy:prayer book
 buy:scroll
 buy:potion
@@ -210,51 +223,55 @@ buy-flag:BLESSED:polearm
 # Alchemist
 store:Alchemy Shop
 owner:10000:Mauser the Chemist (Half-Elf)
-owner:10000:Wizzle the Chaotic (Hobbit)
+owner:10000:Wizzle the Chaotic (Halfling)
 owner:15000:Ga-nat the Greedy (Gnome)
 owner:15000:Vella the Slender (Human)
-slots:6:10
+slots:6:12
 turnover:9
 always:scroll:Word of Recall
 always:scroll:Phase Door
+#normal:scroll:Magic Mapping
 normal:scroll:Monster Confusion
-normal:scroll:Magic Mapping
 normal:scroll:Detect Invisible
 normal:scroll:Recharging
-normal:scroll:Remove Hunger
 normal:potion:Boldness
 normal:potion:Berserk Strength
 normal:potion:Resist Heat
 normal:potion:Resist Cold
 normal:potion:Restore Life Levels
 normal:potion:Infravision
+normal:potion:Speed:10:400
+normal:potion:Resist Poison:10:400
+normal:potion:Restore Mana:10:400
 buy:scroll
 buy:potion
 
 # Magic-user's
 store:Magic Shop
-owner:15000:Ariel the Sorceress (Half-Elf)
-owner:20000:Buggerby the Great (Gnome)
-owner:25000:Inglorian the Mage (Human)
-owner:30000:Luthien Starshine (High-Elf)
-slots:4:14
+owner:15000:Romestamo the Wizard
+owner:20000:Romestamo the Wizard
+owner:25000:Romestamo the Wizard
+owner:30000:Romestamo the Wizard
+slots:4:15
 turnover:9
 always:magic book
 normal:ring:Searching
 normal:ring:Levitation
 normal:ring:Protection
-normal:ring:Open Wounds
-normal:amulet:Slow Digestion
+normal:ring:Resist Fire and Cold:1:400
+normal:ring:Free Action:1:400
+normal:ring:See Invisible:1:400
+normal:ring:Resist Poison:1:400
 normal:amulet:Resist Acid
-normal:wand:Light
 normal:wand:Slow Monster
 normal:wand:Confuse Monster
+normal:wand:Hold Monster
+normal:wand:Stun Monster
 normal:wand:Magic Missile
 normal:wand:Stinking Cloud
-normal:wand:Stone to Mud
+normal:wand:Wonder
 normal:staff:Teleportation
 normal:staff:Light
-normal:staff:Magic Mapping
 normal:staff:Detect Invisible
 normal:staff:Detect Evil
 buy:magic book
@@ -263,6 +280,8 @@ buy:ring
 buy:staff
 buy:wand
 buy:rod
+buy:scroll
+buy:potion
 
 # Bookseller
 store:Bookseller
@@ -273,6 +292,15 @@ owner:25000:Lord-X the Black (Human)
 owner:30000:Senya the Beautiful (High-Elf)
 slots:0:2
 turnover:0
+welcome:0:nods to you.
+welcome:1:says hello.
+welcome:2:"See anything you like, adventurer?"
+welcome:3:"How may I help you, %s?"
+welcome:4:"Welcome back, %s."
+welcome:5:"A pleasure to see you again, %s."
+welcome:6:"How may I be of assistance, %s?"
+welcome:7:"You do honour to my humble store, %s."
+welcome:8:"I am entirely at your service, %s."
 always:nature book
 always:shadow book
 always:psi book
@@ -284,7 +312,756 @@ buy:elemental book
 
 # Place custom stores here
 
-# Black Market - no stock given but we still need slot/turnover info
+# Starter town tavern
+store:Halbarad, the old ranger
+owner:5000:Halbarad, the old ranger
+owner:5000:Halbarad, the old ranger
+slots:0:1
+turnover:1
+welcome:0:looks at you with interest.
+welcome:1:curses.
+welcome:2:grunts.
+welcome:3:eyes you suspiciously.
+welcome:4:"There is an old mage living to the south west.."
+welcome:5:"Don't make me waste my time!"
+welcome:6:"Please hurry up, I need to chop wood for the fire."
+welcome:7:"Welcome..."
+welcome:8:"A pleasure to do business with you..."
+#######################################################################
+always:fortune cookie:Hello, stranger. What are you doing there, in
+always:fortune cookie:this wild lands? You are not the first who came
+always:fortune cookie:though.. Strange folk appeared recently.
+always:fortune cookie:And all of them ar interested in Old Ruins to the
+always:fortune cookie:north-east from my tavern. But I don't complain..
+always:fortune cookie:Finally I could get a few coins by selling some
+always:fortune cookie:of this goods.. Take a look at them...
+#######################################################################
+normal:fortune cookie:Be careful in Mountain Gorge to the east..
+normal:fortune cookie:I didn't visit town for some time already..
+normal:fortune cookie:Maybe its time for me to go on adventure with you
+#######################################################################
+always:cloak:Cloak
+always:light:Wooden Torch
+always:flask:Flask of Oil
+always:rock:Rock
+always:shot:Iron Shot
+always:arrow:Arrow
+always:bolt:Bolt
+always:shot:Rounded Pebble
+always:potion:Stomach Water
+#######################################################################
+buy:light
+buy:digger
+buy:horn
+
+# Starter town cat
+store:Sonya the cat
+owner:5000:Sonya (Cat)
+owner:5000:Sonya (Cat)
+slots:0:1
+turnover:1
+welcome:0:looks at you with interest.
+welcome:1:looks at you with interest.
+welcome:2:looks at you with interest.
+welcome:3:looks at you with interest.
+welcome:4:looks at you with interest.
+welcome:5:looks at you with interest.
+welcome:6:looks at you with interest.
+welcome:7:looks at you with interest.
+welcome:8:looks at you with interest.
+#######################################################################
+always:fortune cookie:(you take the cat in your arms..)
+normal:fortune cookie:meow
+normal:fortune cookie:*purrr*
+#######################################################################
+buy:flask
+
+# Starter town wizard hut
+#10
+store:Morinehtar the Wizard
+owner:5000:Morinehtar the Wizard
+owner:5000:Morinehtar the Wizard
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Who are ya? What do ya need? Whaat? I can't hear 
+always:fortune cookie:you.. *grumbles* They come.. and go.. come.. and
+always:fortune cookie:sometimes not come back..
+always:fortune cookie:*whipped up* So.. Can ya read? If you can't,
+always:fortune cookie:I can't help ya.. But if you do - take a look at
+always:fortune cookie:this finest books about miracles. With them you 
+always:fortune cookie:would be able to conquer world!.. What?? 
+always:fortune cookie:I can't hear ya!! Speak louder, yongster! Whaat?
+#######################################################################
+always:nature book:[Lesser Charms]
+always:shadow book:[Shadows for Beginners]
+always:psi book:of Telepathy
+always:elemental book:[Air]
+always:elemental book:[Fire]
+always:elemental book:[Earth]
+always:elemental book:[Water]
+always:prayer book:[Beginners Handbook]
+always:magic book:[Magic for Beginners]
+always:potion:Cure Light Wounds
+always:potion:Restore Life Levels
+always:scroll:Phase Door
+always:scroll:Detect Invisible
+#######################################################################
+normal:fortune cookie:*sings* Once I came to the land of dreams...
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+normal:fortune cookie:*sings* Don ya tell me wat to do, little fairy..
+normal:fortune cookie:Did ya know there is a secret passage nearby? shh
+buy:flask
+
+# Guard tower orcs
+store:Old guard Barry
+owner:5000:Barry the guard (Human)
+owner:5000:Barry the guard (Human)
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:(You hear shuffling) *growl* Arr.. Who is there?
+always:fortune cookie:(small narrow window on the door opened)
+always:fortune cookie:(you see bright blue eyes through it)
+always:fortune cookie:(it appeared to be a mirror to hide from arrows)
+always:fortune cookie:Oh! A human-beign! Are you in union with this
+always:fortune cookie:cave orcs?! Darn orcish beasts! Filthy maggots!
+always:fortune cookie:...Erm.. Anyway. Got any tabacco, mate?
+always:fortune cookie:I got plenty of food there, but no darn weed to
+always:fortune cookie:fill my pipe.. I'm alone there, you see..
+always:fortune cookie:All horizon run away back to town on the west 
+always:fortune cookie:months ago.. Filthy cowards! Went back to mommy!
+always:fortune cookie:But I won't run from this stupid orcish beasts!
+always:fortune cookie:They would know how to come to The Guards Tower!!
+always:fortune cookie:Darn.. Are you pretty sure ya don have any weed?
+always:fortune cookie:I see.. *sight* You are not the first who came..
+always:fortune cookie:Anyway If you wanna hunt some orcs - get to
+always:fortune cookie:their cave on the west from the lake..
+#######################################################################
+normal:fortune cookie:Long time ago this was a heart of trade ways..
+normal:fortune cookie:It was well guarded dwarven trade route.. 
+normal:fortune cookie:A lot of caravans traveled over this lands.. 
+normal:fortune cookie:And now everything gone.. Only orcs left. And me.
+#######################################################################
+normal:mushroom:Stoneskin:9:500
+buy:light
+buy:flask
+
+# Villagers in town
+store:Bob the villager
+owner:5000:Bob the villager (Human)
+owner:5000:Bob the villager (Human)
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Hello, stranger. Don't you mind to put your
+always:fortune cookie:weapons away, to sheath them.. I don't like
+always:fortune cookie:people going around with all this fighting stuff.
+always:fortune cookie:Erhh. Even villagers like me nowadays took
+always:fortune cookie:weapons in their hands. I heard old Mag run away
+always:fortune cookie:to the forest.. Old mad dog.. Everything went to
+always:fortune cookie:dogs nowadays.. No food to grow, only mushrooms..
+always:fortune cookie:And I hate mushrooms.
+always:fortune cookie:Marta could cook mushrooms in 57 different ways..
+always:fortune cookie:It doesn't help though. Nothing help..
+#######################################################################
+normal:fortune cookie:I can't sell you food, adventurer.
+normal:fortune cookie:I don't need you gold. There is no food. NO FOOD.
+normal:fortune cookie:My pumpkin's were famous all over Middle-Lands!
+normal:fortune cookie:And now I'm broken. People kill for food.
+buy:flask
+
+# Villagers in town
+store:Marta the villager
+owner:5000:Marta the villager (Human)
+owner:5000:Marta the villager (Human)
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Oh, dear.. It's a pity I can't feed you.
+always:fortune cookie:We barely survive from hunger by our-self..
+always:fortune cookie:But you could look for smthing in tavern in town
+#######################################################################
+normal:fortune cookie:Nowadays there are so much adventurers around..
+normal:fortune cookie:I hope you won't make trouble to us.
+normal:fortune cookie:Be safe..
+buy:flask
+
+# Town tavern
+store:Shtukensia the tavernkeeper
+owner:5000:Shtukensia the tavernkeeper (Human)
+owner:5000:Shtukensia the tavernkeeper (Human)
+slots:8:9
+turnover:1
+#######################################################################
+always:fortune cookie:Hi.. Don't look at me with such hungry eyes..
+always:fortune cookie:Didn't you know about catastrophe?
+always:fortune cookie:Oh.. You are outlander.. Well.. I wonder why you
+always:fortune cookie:came there.. At your place I wouldn't come to
+always:fortune cookie:this lands even for all gold of the world.
+always:fortune cookie:Anyway.. In short words - gods cursed us.
+always:fortune cookie:*whispers* (they say). No one knows really.
+always:fortune cookie:Fields don't provide yeild anymore..
+always:fortune cookie:All cattle died by unknown diseases.
+always:fortune cookie:So bag of wheat cost more then two bags of gold.
+always:fortune cookie:Eeh.. But we still got some booze left.. *hic*
+#######################################################################
+normal:fortune cookie:We got troubles with burglars from town severs..
+normal:fortune cookie:Someone should give a lesson to this thiefs...
+#######################################################################
+###
+### INSECTS? bleach,, Rotten food!!!!
+###
+normal:food:Flask of Whisky:2:150
+normal:food:Pint of Fine Wine:5:150
+normal:food:Pint of Fine Ale:3:150
+normal:potion:Resist Poison:1:500
+normal:potion:Healing:1:500
+normal:potion:Speed:1:500
+normal:potion:Restore Mana:1:500
+normal:scroll:Teleportation:1:500
+buy:light
+buy:flask
+buy:digger
+buy:horn
+
+# Town dog
+store:Danny the dog
+owner:5000:Danny (Dog)
+owner:5000:Danny (Dog)
+slots:0:1
+turnover:1
+welcome:0:looks at you with interest.
+welcome:1:looks at you with interest.
+welcome:2:looks at you with interest.
+welcome:3:looks at you with interest.
+welcome:4:looks at you with interest.
+welcome:5:looks at you with interest.
+welcome:6:looks at you with interest.
+welcome:7:looks at you with interest.
+welcome:8:looks at you with interest.
+#######################################################################
+normal:fortune cookie:(you are trying to pat the dog)
+normal:fortune cookie:(the dog carefully sniff your arm)
+normal:fortune cookie:(the dog allow you to pat it on the head)
+normal:fortune cookie:(the dog wing it's tail)
+normal:fortune cookie:Gaf-gaf!
+normal:fortune cookie:Bow-vo!
+normal:fortune cookie:Arf-arf!
+normal:fortune cookie:*rrrr*
+#######################################################################
+buy:flask
+
+#town
+store:Arthur the Archer
+owner:5000:Arthur the Archer (Human)
+owner:5000:Arthur the Archer (Human)
+slots:10:11
+turnover:9
+#######################################################################
+always:fortune cookie:I'd shoot rat in the eye, so I wont spoil its fur
+always:fortune cookie:Hm. Hello. I'm Archy - and who are you?
+always:fortune cookie:Oh.. A hero. Alright. Can you shoot with a bow?
+always:fortune cookie:Crossbow? Catapult? Haha! Anyway..
+always:fortune cookie:If ya can't shoot - then try to throw rocks.
+always:fortune cookie:Still effective way to survive. Just dont forget
+always:fortune cookie:Dont become a dead hero. Run. Use plan B. Escape.
+always:fortune cookie:Good hero - is alive hero. You won't help the
+always:fortune cookie:world if you would die. Many tried...
+#######################################################################
+normal:fortune cookie:*Grins* Dont run from archer. You will die tired!
+normal:fortune cookie:Your strength is in your guts, not muscles..
+normal:fortune cookie:An dont forget to bring me some ale from sewers..
+#######################################################################
+always:shot:Rounded Pebble
+always:shot:Iron Shot
+always:arrow:Arrow
+always:bolt:Bolt
+#######################################################################
+normal:shot:Iron Shot
+normal:arrow:Arrow
+normal:bolt:Bolt
+normal:shot:Rounded Pebble
+normal:arrow:Magic Arrow:1:900
+normal:bolt:Magic Bolt:1:900
+normal:shot:Magic Shot:1:900
+normal:bow:Sling
+normal:bow:Short Bow
+normal:bow:Long Bow
+normal:bow:Light Crossbow
+buy:shot
+buy:bolt
+buy:rock
+buy:arrow
+
+#town
+store:Deckard Coin
+owner:5000:Deckard Coin
+owner:5000:Deckard Coin
+slots:0:10
+turnover:1
+#######################################################################
+always:fortune cookie:Stay awhile.. Er.. Wait.. Come closer, young men
+always:fortune cookie:or woman? I can not see well.. Damn manuscripts!
+always:fortune cookie:(Old man hears your voice) Oh. Hello there.
+always:fortune cookie:I am headman of this village. Deckard is my name.
+always:fortune cookie:And we are not doing well, you know. All this
+always:fortune cookie:food problem and everything.. But we get used to
+always:fortune cookie:it. I love mushrooms, you know.. But there is
+always:fortune cookie:another problem. Scoundrels, rogues and bandits.
+always:fortune cookie:Someone say they got a headquaters in severs.
+always:fortune cookie:Could you help us with it? I heard they got
+always:fortune cookie:plenty of gold..and what is more important - food
+always:fortune cookie:down there.. You will find severs to the east of
+always:fortune cookie:our village. 
+always:fortune cookie:Take care, friend.. And good luck to thee..
+#######################################################################
+normal:fortune cookie:There always were a lot of criminal.. But not so.
+normal:fortune cookie:We thought the worse was lack of food...
+normal:fortune cookie:Outlaws, robbers..and even monsters. Gods save us
+normal:scroll:Recharging
+normal:scroll:Identify Rune:1:500
+normal:scroll:*Remove Curse*:10:400
+normal:scroll:Teleport Level:10:400
+normal:scroll:Deep Descent:10:400
+normal:scroll:Enchant Weapon To-Hit:1:400
+normal:scroll:Enchant Weapon To-Dam:1:400
+normal:scroll:Enchant Armour:1:400
+buy:flask
+
+#town
+store:Boris the Guard
+owner:5000:Boris the Guard (Human)
+owner:5000:Boris the Guard (Human)
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Stranger, don't make trouble in our town..
+always:fortune cookie:Or I'll take care of you.
+always:fortune cookie:... 
+always:fortune cookie:You look tought.
+always:fortune cookie:I hope you won't make trouble.
+always:fortune cookie:Mind to help us in this dire days? 
+always:fortune cookie:I wanna point out immideatelly - we don't recruit
+always:fortune cookie:to the guard. Magistrate has to cut our funds
+always:fortune cookie:recently.. I got only a few mushrooms per day..
+always:fortune cookie:Aa-ah. Anyway. We need a hand with all this 
+always:fortune cookie:madness happening around. Our mayor is missing..
+always:fortune cookie:Last time he was seen coming to the Hunter Valley
+always:fortune cookie:to the south-east to visit Old Sorcerer, to ask
+always:fortune cookie:him to help us with wraiths from the north..
+always:fortune cookie:Maybe you can help to find him? I can't go myself
+always:fortune cookie:as I need to protect this town...
+#######################################################################
+normal:fortune cookie:Years ago I was an adventurer myself.. But..
+normal:fortune cookie:Life is tought. I had enought scars on my face.
+normal:fortune cookie:You would understand me one day.
+buy:flask
+
+store:Tom Bombadil
+owner:5000:Tom Bombadil
+owner:5000:Tom Bombadil
+slots:12:13
+turnover:7
+welcome:0:blinks!
+welcome:1:smiles!
+welcome:2:grinds!
+welcome:3:giggles!
+welcome:4:chuckles!
+welcome:5:snickers!
+welcome:6:sniggers!
+welcome:7:chortles!
+welcome:8:laughs!
+#######################################################################
+normal:fortune cookie:Hey dol! merry dol! ring a dong dillo!
+normal:fortune cookie:Ring a dong! hop along! Fal lal the willow!
+normal:fortune cookie:Tom Bom, jolly Tom, Tom Bombadillo!
+#######################################################################
+normal:fortune cookie:Hey! Come merry dol! derry dol! My darling!
+normal:fortune cookie:Light goes weather-wind n the feathered starling!
+normal:fortune cookie:Down along under Hill, shining in the sunlight!
+normal:fortune cookie:Waiting on the doorstep for the cold starlight!
+normal:fortune cookie:There my pretty lady is, River-woman's daughter!
+normal:fortune cookie:Slender as willow-wand, clearer than the water!
+normal:fortune cookie:Old Tom Bombadil water-lilies bringing!
+normal:fortune cookie:Comes hopping home again. Can y hear him singing?
+normal:fortune cookie:Hey! Come merry dol! derry dol! and merry-o!
+normal:fortune cookie:Goldberry, Goldberry, merry yellow berry-o!
+normal:fortune cookie:Poor old Willow-man, you tuck your roots away!
+normal:fortune cookie:Tom's in a hurry now. Evening will follow day.
+normal:fortune cookie:Tom's going home again water-lilies bringing.
+normal:fortune cookie:Hey! Come derry dol! Can you hear me singing?
+#######################################################################
+normal:fortune cookie:Hop along, my little friends, up the Withywindle!
+normal:fortune cookie:Tom's going on ahead candles for to kindle!
+normal:fortune cookie:Down west sinks the Sun - soon you'll be groping!
+normal:fortune cookie:When night-shadows fall, then the door will open!
+normal:fortune cookie:Out of window-panes light will twinkle yellow!
+normal:fortune cookie:Fear no alder black! Heed no hoary willow!
+normal:fortune cookie:Fear neighter root nor bough! 
+normal:fortune cookie:Tom goes on before you!
+normal:fortune cookie:Hey now! merry dol! We'll be waiting for you!
+#######################################################################
+normal:fortune cookie:Hey! Come derry dol! Hop along, my hearties!
+normal:fortune cookie:Hobbits! Ponies all! We are fond of parties.
+normal:fortune cookie:Now let the fun begin! Let us sing together!
+#######################################################################
+normal:fortune cookie:Now let the song begin! Let us sing together!
+normal:fortune cookie:Of sun, stars, moon and mist!
+normal:fortune cookie:Rain and cloudy weather!
+normal:fortune cookie:Light on the budding leaf, dew on the feather!
+normal:fortune cookie:Wind on the open hill, bells on the heather!
+normal:fortune cookie:Reeds by the shady pool, lilies on the water!
+normal:fortune cookie:Old Tom Bombadil and the River-daughter!
+#######################################################################
+# this song wont fit entirely (why he was down at Old Man Willow):
+normal:fortune cookie:I had an errand there - gathering water-lilies!
+normal:fortune cookie:Green leaves and lilies white for my pretty lady!
+#######################################################################
+normal:fortune cookie:Ho! Tom Bombadil, Tom Bombadillo!
+normal:fortune cookie:By water, wood and hill, by the reed and willow!
+normal:fortune cookie:By fire, sun and moon, harken now and hear us!
+normal:fortune cookie:Come, Tom Bombadil, for our need is near us!
+#######################################################################
+normal:fortune cookie:Old Tom Bombadil is a merry fellow!
+normal:fortune cookie:Bright blue his jacket is, n his boots ar yellow!
+normal:fortune cookie:Non hs evr caugt him et, for Tom, he's th master!
+normal:fortune cookie:His songs ar stronger songs, n his feet r faster!
+#######################################################################
+## excluded exorcism song
+normal:fortune cookie:Wake now my merry lads! Wake and hear me calling!
+normal:fortune cookie:Warm now be heart and limb!
+normal:fortune cookie:The cold stone is fallen!
+normal:fortune cookie:Dark door is standing wide; dead hand is broken!
+normal:fortune cookie:Night under Night is flown, and the Gate is open!
+#######################################################################
+normal:fortune cookie:Tom has his house to mind, n Goldbery is waiting!
+buy:flask
+
+store:Mr. Underhill
+owner:5000:Mr. Underhill
+owner:5000:Mr. Underhill
+slots:8:9
+turnover:5
+#######################################################################
+normal:fortune cookie:There is an inn, a merry old inn
+normal:fortune cookie:beneath an old grey hill,
+normal:fortune cookie:And there they brew a beer so brown
+normal:fortune cookie:That the Man in the Moon himself came down
+normal:fortune cookie:One night to drink his fill.
+normal:fortune cookie:The ostler has a tipsy cat
+normal:fortune cookie:that plays a five-stringed fiddle;
+normal:fortune cookie:And up and down he runs his bow,
+normal:fortune cookie:Now squeaking high, now purring low,
+normal:fortune cookie:Now sawing in the middle.
+normal:fortune cookie:The landlord keeps a little dog
+normal:fortune cookie:that is mighty fond of jokes;
+normal:fortune cookie:When there's good cheer among the guests,
+normal:fortune cookie:He cocks an ear at all the jests
+normal:fortune cookie:And laughs until he chokes.
+normal:fortune cookie:They also keep a horned cow
+normal:fortune cookie:as proud as any queen;
+normal:fortune cookie:But music turns her head like ale,
+normal:fortune cookie:And makes her wave her tufted tail
+normal:fortune cookie:and dance upon the green.
+normal:fortune cookie:And O! the rows of silver dishes
+normal:fortune cookie:and the store of silver spoons!
+normal:fortune cookie:For Sunday there's a special pair,
+normal:fortune cookie:And these they polish up with care
+normal:fortune cookie:on Saturday afternoons.
+normal:fortune cookie:The Man in the Moon was drinking deep,
+normal:fortune cookie:and the cat began to wail;
+normal:fortune cookie:A dish and a spoon on the table danced,
+normal:fortune cookie:The cow in the garden madly pranced,
+normal:fortune cookie:and the little dog chased his tail.
+normal:fortune cookie:The Man in the Moon took another mug,
+normal:fortune cookie:and then rolled beneath his chair;
+normal:fortune cookie:And there he dozed and dreamed of ale,
+normal:fortune cookie:Till in the sky the stars were pale,
+normal:fortune cookie:and dawn was in the air.
+normal:fortune cookie:Then the ostler said to his tipsy cat
+normal:fortune cookie:The white horses of the Moon,
+normal:fortune cookie:They neigh and champ their silver bits;
+normal:fortune cookie:But their master's been and drowned his wits,
+normal:fortune cookie:and the Sun'll be rising soon!'
+normal:fortune cookie:So the cat on his fiddle played hey-diddle-diddle
+normal:fortune cookie:a jig that would wake the dead
+normal:fortune cookie:He squeaked and sawed and quickened the tune,
+normal:fortune cookie:While the landlord shook the Man in the Moon
+normal:fortune cookie:'It's after three!' he said.
+normal:fortune cookie:They rolled the Man slowly up the hill
+normal:fortune cookie:and bundled him into the Moon,
+normal:fortune cookie:While his horses galloped up in rear,
+normal:fortune cookie:And the cow came capering like a deer,
+normal:fortune cookie:and a dish ran up with the spoon.
+normal:fortune cookie:Now quicker the fiddle went deedle-dum-diddle;
+normal:fortune cookie:the dog began to roar,
+normal:fortune cookie:The cow and the horses stood on their heads;
+normal:fortune cookie:The guests all bounded from their beds
+normal:fortune cookie:and danced upon the floor.
+normal:fortune cookie:With a ping and a pong the fiddle-strings broke!
+normal:fortune cookie:the cow jumped over the Moon,
+normal:fortune cookie:And the little dog laughed to see such fun,
+normal:fortune cookie:And the Saturday dish went off at a run
+normal:fortune cookie:with the silver Sunday spoon.
+normal:fortune cookie:The round Moon rolled behind the hill
+normal:fortune cookie:as the Sun raised up her head.
+normal:fortune cookie:She hardly believed her fiery eyes;
+normal:fortune cookie:For though it was day, to her surprise
+normal:fortune cookie:they all went back to bed!
+buy:flask
+
+store:Gildor
+owner:5000:Gildor
+owner:5000:Gildor
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Elves seldom give unguarded advice...
+always:fortune cookie:Advice is a dangerous gift,
+always:fortune cookie:even from the wise to the wise,
+always:fortune cookie:and all courses may run ill.
+always:fortune cookie:The wide world is all about you -
+always:fortune cookie:you can fence yourselves in,
+always:fortune cookie:but you cannot forever fence it out.
+#######################################################################
+normal:fortune cookie:Courage is found in unlikely places.
+normal:fortune cookie:Do not meddle in the affairs of Wizards...
+normal:fortune cookie:The choice is yours - to go or wait.
+buy:flask
+
+store:Squint-eyed Southerner
+owner:5000:Squint-eyed Southerner
+owner:5000:Squint-eyed Southerner
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Errr...
+#######################################################################
+normal:fortune cookie:Who are you?
+normal:fortune cookie:Anyway..
+normal:fortune cookie:*spits*
+normal:fortune cookie:Kek..
+normal:fortune cookie:*whispers* All this damn rag-tag danglers..
+normal:fortune cookie:And this thatched barn...
+buy:flask
+
+store:Bill Ferny
+owner:5000:Bill Ferny
+owner:5000:Bill Ferny
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Need a pony? Twelve silver pennies and its yours!
+#######################################################################
+normal:fortune cookie:Off early?
+normal:fortune cookie:Found some friends at last?
+normal:fortune cookie:I suppose you know who you've taken up with?
+normal:fortune cookie:Watch out tonight!
+normal:fortune cookie:*spits*
+buy:flask
+
+store:Boromir
+owner:5000:Boromir
+owner:5000:Boromir
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:I'm training there.. Don't mess around.
+#######################################################################
+normal:fortune cookie:If ever such a tale was told in the South...
+normal:fortune cookie:Believe not that the blood of Numenor is spent.
+normal:fortune cookie:By our valour the East are still restrained..
+buy:flask
+
+store:Barliman
+owner:5000:Barliman
+owner:5000:Barliman
+slots:0:2
+turnover:1
+#######################################################################
+always:fortune cookie:Barliman is my name.
+always:fortune cookie:Barliman Butterbur at your service!
+always:fortune cookie:My granddaughter is in charge right now...
+#######################################################################
+normal:fortune cookie:Now what does that remind me of?
+normal:fortune cookie:There now!
+normal:fortune cookie:It's gone again!
+normal:fortune cookie:But it'll come back, when I have time to think.
+normal:fortune cookie:I'm run off my feet..
+normal:fortune cookie:I'll see what I can do for you..
+normal:fortune cookie:Here is a nice little parlour!
+normal:fortune cookie:I hope it will suit.
+normal:fortune cookie:Excuse me now. I'm that busy.
+normal:fortune cookie:No time for talking.
+normal:fortune cookie:I must be trotting.
+normal:fortune cookie:It's hard work for two legs..
+normal:fortune cookie:If you want anything, ring the hand bell.
+buy:flask
+
+store:Torog
+owner:5000:Torog
+owner:5000:Torog
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:Give. Eat. Me. Hungry.
+#######################################################################
+normal:fortune cookie:*blowing his nose*
+normal:fortune cookie:*burps*
+normal:fortune cookie:*picking his nose*
+buy:flask
+
+store:Nob, a servant
+owner:5000:Nob, a servant
+owner:5000:Nob, a servant
+slots:0:1
+turnover:1
+#######################################################################
+normal:fortune cookie:Coming! Coming!
+normal:fortune cookie:*grins*
+normal:fortune cookie:*winks*
+normal:fortune cookie:Ring the bell, if you lack anything!
+normal:fortune cookie:Will you be wanting anything to drink, master?
+normal:fortune cookie:Shall I show you the bedrooms?
+normal:fortune cookie:Supper is getting ready...
+buy:flask
+
+store:Rose
+owner:5000:Rose
+owner:5000:Rose
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*smiles*
+#######################################################################
+normal:fortune cookie:I saw Gandalf onces...
+normal:fortune cookie:Gandalf makes so great fireworks!
+normal:fortune cookie:My grandfarther was a warrior too!
+buy:flask
+
+store:NPC l
+owner:5000:NPC l
+owner:5000:NPC l
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC m
+owner:5000:NPC m
+owner:5000:NPC m
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC n
+owner:5000:NPC n
+owner:5000:NPC n
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC o
+owner:5000:NPC o
+owner:5000:NPC o
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC p
+owner:5000:NPC p
+owner:5000:NPC p
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC q
+owner:5000:NPC q
+owner:5000:NPC q
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC r
+owner:5000:NPC r
+owner:5000:NPC r
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC s
+owner:5000:NPC s
+owner:5000:NPC s
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC t
+owner:5000:NPC t
+owner:5000:NPC t
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC u
+owner:5000:NPC u
+owner:5000:NPC u
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+store:NPC v
+owner:5000:NPC v
+owner:5000:NPC v
+slots:0:1
+turnover:1
+#######################################################################
+always:fortune cookie:*sings* Once I came to the land of dreams...
+#######################################################################
+normal:fortune cookie:*sings* Three trolls.. In the forest of mourn..
+buy:flask
+
+# Black Market - x3 price no stock given but we still need slot/turnover info
 store:Black Market
 type:4
 owner:15000:Lo-Hak the Awful (Half-Troll)
@@ -294,7 +1071,8 @@ owner:30000:Drago the Fair (Elf)
 slots:6:18
 turnover:9
 
-# Expensive Black Market - no stock given but we still need slot/turnover info
+
+# Expensive Black Market x8 price - no stock given but we still need slot/turnover info
 store:Expensive Black Market
 type:5
 owner:15000:Eek the Yeek (Yeek)
@@ -333,3 +1111,7 @@ owner:0:Player shop
 owner:0:Player shop
 owner:0:Player shop
 owner:0:Player shop
+
+############# Tangaria
+
+# General store

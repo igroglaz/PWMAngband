@@ -16,6 +16,24 @@ help: other class. A Warrior will be excellent at fighting, shooting and
 help: throwing, but bad at most other skills. A warrior has bad stealth and
 help: cannot learn any spells.
 
+class:Archer
+help:Archer could shoot squirell to the eye so fur will not be spoiled. Very good
+help: in archery, they don't really know from which side to hold a sword; they 
+help: don't need one honestly. Archers like bows; which shooting with them, 
+help: they could achieve incredible speed and precision; much better then with 
+help: crossbow or a sling.
+
+class:Monk
+help:Monks are warriors who decide to fight barehanded. As they advance in levels,
+help: they gain some new martial arts techniques to hit their opponents more
+help: effectively. With levels, they also gain interesting abilities: at level 10,
+help: they learn to fall like a feather; at level 15, they become resistant to
+help: fear; at level 20, they become resistant to confusion; finally, at level 25,
+help: they learn to resist paralysis effects. They can't wield weapons, but get
+help: extra damage, defense and attacks per round as they advance in levels.
+help: However, they must wear light armor to stay unencumbered and fully benefit
+help: from their class bonuses.
+
 class:Mage
 help:A Mage must live by their wits. They cannot hope to simply hack their way
 help: through the dungeon, and so must therefore use his magic to defeat,
@@ -122,23 +140,12 @@ help: Because they are so unattuned to magic, Unbelievers can prevent magical ga
 help: from opening around them, eventually extending to a complete suppression of
 help: teleportation abilities and all magic in the area around them.
 
-class:Archer
-help:Archers aren't good at fighting, but can deliever extremely high damage with
-help: their ranged weapons. They can die quickly too, however. Archers are to bows
+class:Hunter
+help:Hunters aren't good at fighting, but can deliever extremely high damage with
+help: their ranged weapons. They can die quickly too, however. Hunters are to bows
 help: what warriors are to melee. They are the best class around with any
-help: bow/xbow/sling. An Archer is very bad at melee, being only better than the
+help: bow/xbow/sling. Hunter is very bad at melee, being only better than the
 help: Sorceror. Wisdom and Dexterity are the archer's primary stats.
-
-class:Monk
-help:Monks are warriors who decide to fight barehanded. As they advance in levels,
-help: they gain some new martial arts techniques to hit their opponents more
-help: effectively. With levels, they also gain interesting abilities: at level 10,
-help: they learn to fall like a feather; at level 15, they become resistant to
-help: fear; at level 20, they become resistant to confusion; finally, at level 25,
-help: they learn to resist paralysis effects. They can't wield weapons, but get
-help: extra damage, defense and attacks per round as they advance in levels.
-help: However, they must wear light armor to stay unencumbered and fully benefit
-help: from their class bonuses.
 
 class:Telepath
 help:Telepaths are mindcrafters who use the powers of their mind to weaken or even

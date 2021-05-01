@@ -1,13 +1,4 @@
-# File: town_minas_anor.txt
-
-
-# This file is used to initialize the "town of Minas Anor" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding town_minas_anor.txt ===
+# === Understanding town_minas_anor.txt ("town of Minas Anor") ===
 
 # feat : special feat : special feat : % chance of generating the second feat
 # map : lines giving full layout of town using symbols in town_feat.txt

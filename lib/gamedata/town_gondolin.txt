@@ -1,13 +1,4 @@
-# File: town_gondolin.txt
-
-
-# This file is used to initialize the "town of Gondolin" information for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding town_gondolin.txt ===
+# === Understanding town_gondolin.txt (Gondolin town) ===
 
 # feat : special feat : special feat : % chance of generating the second feat
 # map : lines giving full layout of town using symbols in town_feat.txt

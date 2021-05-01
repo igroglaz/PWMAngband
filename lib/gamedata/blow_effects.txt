@@ -1,9 +1,4 @@
-# File: blow_effects.txt
-
-
-# Monster race blow effects
-
-# === Understanding blow_effects.txt ===
+# === Understanding blow_effects.txt (monster race blow effects) ===
 
 # name - blow effect name as in monster.txt
 # power - used for attack quality in check_hit()

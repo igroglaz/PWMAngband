@@ -1,6 +1,3 @@
-# File: object_power.txt
-
-
 # === Understanding object_power.txt ===
 
 # name: calculation name
@@ -152,10 +149,10 @@ dice:$P
 expr:P:OBJ_POWER_EXTRA_BLOWS:* 15 * 5 / 2
 operation:add
 
-# more than 20 (ie two) extra shots not allowed
+# more than 10 (ie one) extra shots not allowed
 name:extra shots inhibitor
 dice:$P
-expr:P:OBJ_POWER_EXTRA_SHOTS:- 20 * 20000
+expr:P:OBJ_POWER_EXTRA_SHOTS:- 10 * 20000
 operation:add if positive
 
 # extra (tenth) shots is a straight 10 + number multiplier...

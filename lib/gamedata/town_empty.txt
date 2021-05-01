@@ -1,0 +1,149 @@
+# === Understanding town_empty.txt ===
+
+# feat : special feat : special feat : % chance of generating the second feat
+# D : lines giving full layout of town using symbols in town_feat.txt
+
+# 'feat' is the special feats replacing fake blank features (' ')
+
+# 'D' lines describe the layout of the town. There MUST be "dungeon-hgt" lines
+# with a size of "dungeon-wid" (see constants.txt).
+
+
+# Special feats: grass/tree
+feat:grass:tree:50
+
+#          1         2         3         4         5         6         7         8         9         0         1         2         3         4         5         6         7         8         9
+# 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+map:######################################################################################################################################################################################################
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                               ######                               #
+map:#                                                                                                                                                               ######                               #
+map:#                                                                                                                                                               ######                               #
+map:#                                                                                                                                                               1#####                               #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                ####                                                                                                                                #
+map:#                                                                #x~#                                                                                                                                #
+map:#                                                                ##8#                                                                                                                                #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:#                                                                                                                                                                                                    #
+map:######################################################################################################################################################################################################
+
+mask:######################################################################################################################################################################################################
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                               ######                               #
+mask:#                                                                                                                                                               ######                               #
+mask:#                                                                                                                                                               ######                               #
+mask:#                                                                                                                                                               1#####                               #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                ####                                                                                                                                #
+mask:#                                                                #x~#                                                                                                                                #
+mask:#                                                                ##8#                                                                                                                                #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:#                                                                                                                                                                                                    #
+mask:######################################################################################################################################################################################################

@@ -1,9 +1,4 @@
-# File: names.txt
-
 # This file is used to initialize the random name fragments for the game.
-
-# Do not modify this file unless you know exactly what you are doing
-# unless you wish to risk possible system crashes and broken savefiles.
 
 # The code *doesn't* pick a name randomly from this list. What it does 
 # is build up a set of probabilities based on the list. For example, if 

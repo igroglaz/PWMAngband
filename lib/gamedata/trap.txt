@@ -1,13 +1,4 @@
-# File: trap.txt
-
-
-# This file is used to initialize the rune and trap definitions for 
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding trap.txt ===
+# === Understanding trap.txt (the rune and trap definitions) ===
 
 # name : trap name : short description
 # graphics : ASCII char used to represent the feature : color symbol
@@ -380,7 +371,7 @@ msg:A high-pitched whistle blares through the dungeon!
 
 # alarm -- siren
 
-name:alarm:siren
+name:alarm:horn
 graphics:^:R
 appear:1:1:0
 visibility:60+d10
@@ -388,6 +379,17 @@ flags:TRAP | FLOOR | MAGICAL
 effect:WAKE
 desc:A trap that wakes nearby monsters.
 msg:A horn blast sounds!
+
+name:alarm:siren
+graphics:^:R
+appear:1:10:0
+visibility:30+d10
+flags:TRAP | FLOOR | MAGICAL
+effect:WAKE
+effect:TIMED_INC:STUN
+dice:10+1d10
+desc:A trap that wakes nearby monsters.
+msg:A siren whistle sounds!
 
 # explosion -- mine
 
@@ -589,3 +591,31 @@ effect:TIMED_INC:STONESKIN
 dice:20+1d20
 desc:A trap that stuns you and gives you stoneskin.
 msg:You feel yourself turning to stone!
+
+### Tangaria
+
+# hunger
+
+name:trap:hunger trap
+graphics:^:light yellow
+appear:1:1:0
+visibility:10d50
+flags:TRAP | FLOOR | MAGICAL | ONETIME
+effect:NOURISH:SET_TO
+dice:5
+desc:A trap that makes you very hungry.
+msg:You feel yourself very hungry!
+
+# alarm -- aggro
+
+name:alarm:squeaky board
+graphics:^:R
+appear:1:1:0
+visibility:10+d10
+flags:TRAP | FLOOR
+effect:WAKE
+save:FEATHER
+desc:A trap that wakes nearby monsters.
+msg:A board beneath you squeaks loudly!
+
+

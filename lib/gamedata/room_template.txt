@@ -1,15 +1,6 @@
-# File: room_template.txt
-
-
-# This file is used to initialize the "room template" information 
-# for PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # Note that the "spacing" in the "description" lines is very important!
 
-# === Understanding room_template.txt ===
+# === Understanding room_template.txt ("room template") ===
 
 # name:room name
 # type:room type

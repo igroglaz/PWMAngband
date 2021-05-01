@@ -1,6 +1,3 @@
-# File: object_property.txt
-
-
 # === Understanding object_property.txt ===
 
 # name: the property name
@@ -326,7 +323,8 @@ type:flag
 subtype:misc ability
 id-type:timed
 code:SLOW_DIGEST
-power:2
+#power:2
+power:16
 msg:You realise your {name} is slowing your metabolism.
 desc:Slows your metabolism
 short-desc:Slow Digest
@@ -617,6 +615,25 @@ subtype:bad
 id-type:timed
 code:DRAIN_EXP
 power:-5
+type-mult:horn:0
+type-mult:bow:0
+type-mult:digger:0
+type-mult:hafted:0
+type-mult:polearm:0
+type-mult:sword:0
+type-mult:mage staff:0
+type-mult:boots:0
+type-mult:gloves:0
+type-mult:helm:0
+type-mult:crown:0
+type-mult:shield:0
+type-mult:cloak:0
+type-mult:soft armour:0
+type-mult:hard armour:0
+type-mult:dragon armour:0
+type-mult:amulet:0
+type-mult:ring:0
+type-mult:light:0
 msg:You sense your {name} is draining your life.
 desc:Drains experience
 
@@ -1206,3 +1223,15 @@ name:cold immunity
 type:immunity
 code:COLD
 power:43
+
+# new
+
+#name:swimming
+#type:flag
+#subtype:misc ability
+#id-type:on effect
+#code:SWIM
+#power:1
+#msg:Your {name} makes you able to swim.
+#desc:Makes you able to swim
+#short-desc:Swim

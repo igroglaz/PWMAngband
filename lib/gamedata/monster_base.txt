@@ -1,9 +1,4 @@
-# File: monster_base.txt
-
-
-# This file provides information for monster "templates".
-
-# === Understanding monster_base.txt ===
+# === Understanding monster_base.txt (monster "templates") ===
  
 # name : template name
 # glyph : default display character
@@ -25,6 +20,13 @@
 # 'desc' indicates the textual description of this template that is used by
 # the '/' command in-game.
 #
+#OLD Note that some templates have references to other data files. In particular,
+#OLD changing the name of the following templates will cause certain summon spells
+#OLD to break:
+#OLD ancient dragon, ainu, canine, hydra, lich, major demon, spider, vampire,
+#OLD wraith, zephyr hound.
+#OLD Changing other characteristics of these monsters is fine.
+
 # Note that these templates have references in other data files. Changing
 # characteristics of monster bases is fine, but the names are referenced in
 # several other data files (notably monster.txt), so any name changes will

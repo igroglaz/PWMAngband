@@ -1,11 +1,5 @@
 # File: socials.txt
 
-
-# This file is used to initialize the "socials" information for PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing,
-# unless you wish to risk possible system crashes and broken savefiles.
-
 # Simple role-playing messages.
 # A large portion of those messages was ported from CircleMUD 3.1:
 # http://www.circlemud.org/pub/CircleMUD/3.x/uncompressed/

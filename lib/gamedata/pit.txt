@@ -1,13 +1,4 @@
-# File: pit.txt
-
-
-# This file is used to initialize the "monster nest/pit" information for
-# PWMAngband.
-
-# Do not modify this file unless you know exactly what you are doing, unless
-# you wish to risk possible system crashes and broken savefiles.
-
-# === Understanding pit.txt ===
+# === Understanding pit.txt ("monster nest/pit" information) ===
 
 # name: name
 # room: room type
@@ -398,6 +389,13 @@ mon-base:mimic
 mon-base:feature mimic
 mon-base:object mimic
 mon-base:random mimic
+
+# death swords and base:mineral
+name:Unlife
+room:2
+alloc:1:110
+obj-rarity:20
+flags-req:NONLIVING
 
 name:People
 room:1
