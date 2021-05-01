@@ -549,7 +549,7 @@ value:1:CON[-20+20d25]
 obj-flag:1:AGGRAVATE
 value:15:SPEED[-10+2d7]
 value:15:MOVES[10]
-obj-flag:50:RACE_REGEN
+player-flags:RACE_REGEN
 value:50:DAM_RED[5]
 value:1:MANA[4+-1d10M40]
 value:10:TUNNEL[1+1d10]
@@ -610,7 +610,7 @@ value:1:WIS[-1+-1d27]
 value:1:DEX[-1+-1d27]
 value:1:CON[0]
 value:1:RES_TIME[1]
-obj-flag:15:RACE_REGEN
+player-flags:RACE_REGEN
 obj-flag:25:HOLD_LIFE
 
 name:Merfolk

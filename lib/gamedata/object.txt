@@ -2692,7 +2692,7 @@ level:30
 weight:3
 cost:600
 alloc:20:30 to 100
-flags:REGEN | EASY_KNOW
+flags:REGEN | EASY_KNOW | HUNGER
 desc:Wearing this amulet will trigger your body's regenerational
 desc: processes quicker and make them proceed faster.
 
@@ -6149,7 +6149,7 @@ type:ring
 level:0
 weight:2
 cost:0
-flags:AGGRAVATE
+flags:AGGRAVATE | HUNGER
 flags:INSTA_ART
 desc:"Nine rings for mortal men doomed to die."
 

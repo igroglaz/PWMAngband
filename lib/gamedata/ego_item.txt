@@ -141,7 +141,7 @@ name:of the Magi
 info:6000:25
 alloc:5:20 to 127
 item:light:Wooden Torch
-flags:PROT_BLIND | SEE_INVIS | REGEN | RAND_HI_RES | RAND_POWER
+flags:PROT_BLIND | SEE_INVIS | REGEN | HUNGER | RAND_HI_RES | RAND_POWER
 values:INT[d3] | WIS[d3]
 min-values:INT[0] | WIS[0]
 
@@ -149,7 +149,7 @@ name:of Perpetuity
 info:6000:25
 alloc:2:20 to 127
 item:light:Wooden Torch
-flags:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | HOLD_LIFE | REGEN |
+flags:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | HOLD_LIFE | REGEN | HUNGER
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
 name:(Dwarven)
@@ -195,7 +195,7 @@ combat:d4:d4:d8
 type:sword
 type:polearm
 type:hafted
-flags:FREE_ACT | SEE_INVIS | FEATHER | REGEN | RAND_SUSTAIN |
+flags:FREE_ACT | SEE_INVIS | FEATHER | REGEN | RAND_SUSTAIN | HUNGER
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 values:STEALTH[d4] | RES_ACID[1] | RES_ELEC[1] | RES_FIRE[1] | RES_COLD[1]
 min-values:STEALTH[0]
@@ -572,7 +572,7 @@ info:30000:25
 alloc:5:25 to 127
 combat:d10:d10:0
 type:bow
-flags:REGEN | RAND_HI_RES
+flags:REGEN | RAND_HI_RES | HUNGER
 values:MIGHT[1]
 min-values:MIGHT[0]
 
@@ -859,7 +859,7 @@ name:of Regeneration
 info:1500:10
 alloc:20:1 to 60
 type:helm
-flags:REGEN
+flags:REGEN | HUNGER
 
 name:of Serenity
 info:4000:20
