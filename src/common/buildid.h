@@ -6,7 +6,7 @@
 /*
  * Name of this Angband variant
  */
-#define VERSION_NAME    "PWMAngband"
+#define VERSION_NAME    "Tangaria"
 
 extern bool beta_version(void);
 extern u16b current_version(void);
