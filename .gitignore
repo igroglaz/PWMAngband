@@ -21,3 +21,7 @@ src/common/*.obj
 src/server/*.obj
 src/win/*.obj
 src/win/angband.RES
+*.ilc
+*.ild
+*.ilf
+*.ils
