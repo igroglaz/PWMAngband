@@ -234,7 +234,7 @@ static const char *player_flag_table[(RES_PANELS + 1) * RES_ROWS] =
     "Stck:", /* OF_STICKY */
     "Frag:", /* OF_FRAGILE */
     "LTel:", /* OF_LIMITED_TELE */
-    "",
+    "Hung:", /* OF_HUNGER */
     "Time:", /* ELEM_TIME */
     "Mana:", /* ELEM_MANA */
     "Wate:", /* ELEM_WATER */

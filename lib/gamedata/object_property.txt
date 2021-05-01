@@ -1224,14 +1224,14 @@ type:immunity
 code:COLD
 power:43
 
-# new
+# Tangaria
 
-#name:swimming
-#type:flag
-#subtype:misc ability
-#id-type:on effect
-#code:SWIM
-#power:1
-#msg:Your {name} makes you able to swim.
-#desc:Makes you able to swim
-#short-desc:Swim
+name:hunger
+type:flag
+subtype:misc ability
+id-type:timed
+code:HUNGER
+power:-3
+msg:You realise your {name} makes you want to eat more food.
+desc:Makes you need more food
+short-desc:Hunger

@@ -1747,8 +1747,11 @@ int player_digest(struct player *p)
     /* Adjust for food value */
     i = (i * 100) / z_info->food_value;
 
-    /* Regeneration takes more food */
-    if (player_of_has(p, OF_REGEN)) i *= 2;
+//  /* Regeneration takes more food */
+//  if (player_of_has(p, OF_REGEN)) i *= 2;
+
+    /* HUNGER need more food */
+    if (player_of_has(p, OF_HUNGER)) i *= 2;
 
     /* Slow digestion takes less food */
     if (player_of_has(p, OF_SLOW_DIGEST)) i /= 2;

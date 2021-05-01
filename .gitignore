@@ -25,3 +25,4 @@ src/win/angband.RES
 *.ild
 *.ilf
 *.ils
+*.obj

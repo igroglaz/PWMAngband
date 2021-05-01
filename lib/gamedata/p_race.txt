@@ -101,7 +101,8 @@ value:1:WIS[-2]
 value:1:DEX[-4]
 value:1:CON[3]
 obj-flag:1:SUST_STR
-obj-flag:1:REGEN
+player-flags:RACE_REGEN
+obj-flag:1:HUNGER
 value:1:INFRA[3]
 value:1:DAM_RED[0+1d12]
 value:1:TUNNEL[1+1d20]
@@ -548,7 +549,7 @@ value:1:CON[-20+20d25]
 obj-flag:1:AGGRAVATE
 value:15:SPEED[-10+2d7]
 value:15:MOVES[10]
-obj-flag:50:REGEN
+obj-flag:50:RACE_REGEN
 value:50:DAM_RED[5]
 value:1:MANA[4+-1d10M40]
 value:10:TUNNEL[1+1d10]
@@ -609,7 +610,7 @@ value:1:WIS[-1+-1d27]
 value:1:DEX[-1+-1d27]
 value:1:CON[0]
 value:1:RES_TIME[1]
-obj-flag:15:REGEN
+obj-flag:15:RACE_REGEN
 obj-flag:25:HOLD_LIFE
 
 name:Merfolk
@@ -818,7 +819,8 @@ value:1:DEX[-5]
 value:1:CON[1+1d8M30]
 value:1:INFRA[1+1d10]
 obj-flag:1:SUST_STR
-obj-flag:1:REGEN
+player-flags:RACE_REGEN
+obj-flag:1:HUNGER
 value:1:MOVES[-1+-1d5]
 value:50:SPEED[-1]
 ###########value:1:SPEED[-1+-1d35]
@@ -935,7 +937,8 @@ value:1:WIS[-2+-1d20]
 value:1:DEX[0]
 value:1:CON[-1+1d10M21]
 value:1:INFRA[3+1d24]
-obj-flag:1:REGEN
+player-flags:RACE_REGEN
+obj-flag:1:HUNGER
 obj-flag:20:ESP_ANIMAL
 value:35:RES_DARK[1]
 value:1:RES_LIGHT[-1]
@@ -1770,7 +1773,8 @@ value:1:INFRA[1+1d5]
 value:1:TUNNEL[1+1d24]
 obj-flag:1:PROT_BLIND
 value:1:RES_DARK[1]
-obj-flag:1:REGEN
+player-flags:RACE_REGEN
+obj-flag:1:HUNGER
 
 name:Naga
 skill-disarm-phys:-4
@@ -1858,6 +1862,7 @@ value:1:DAM_RED[1+1d15]
 value:25:TUNNEL[1]
 value:27:SPEED[1]
 player-flags:SHIELD_BASH
+player-flags:RACE_REGEN
 #player-flags:COMBAT_REGEN mana thingy.. add regen without spending satiation
 
 # mysterious creature woven out bright light

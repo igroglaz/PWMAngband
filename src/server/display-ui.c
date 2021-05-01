@@ -1183,7 +1183,7 @@ static const struct player_flag_record player_flag_table[(RES_PANELS + 1) * RES_
     {-1, OF_STICKY, -1, -1},
     {-1, OF_FRAGILE, -1, -1},
     {-1, OF_LIMITED_TELE, -1, -1},
-    {-1, -1, -1, -1},
+    {-1, OF_HUNGER, -1, -1},
     {-1, -1, ELEM_TIME, -1},
     {-1, -1, ELEM_MANA, -1},
     {-1, -1, ELEM_WATER, -1},

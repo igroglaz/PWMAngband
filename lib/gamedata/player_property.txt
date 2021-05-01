@@ -391,3 +391,8 @@ type:player
 code:RACE_REGEN
 name:Natural regeneration
 desc:Your wounds regenerate quickly.
+
+type:object
+code:HUNGER
+name:Hunger
+desc:You want to eat something.
