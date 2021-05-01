@@ -6149,7 +6149,7 @@ type:ring
 level:0
 weight:2
 cost:0
-flags:AGGRAVATE | HUNGER
+flags:AGGRAVATE | HUNGER | HUNGER_2
 flags:INSTA_ART
 desc:"Nine rings for mortal men doomed to die."
 

@@ -1752,6 +1752,9 @@ int player_digest(struct player *p)
 
     /* HUNGER need more food */
     if (player_of_has(p, OF_HUNGER)) i *= 2;
+    
+    /* 2x HUNGER */
+    if (player_of_has(p, OF_HUNGER_2)) i *= 2;
 
     /* Slow digestion takes less food */
     if (player_of_has(p, OF_SLOW_DIGEST)) i /= 2;

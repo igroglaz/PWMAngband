@@ -1235,3 +1235,32 @@ power:-3
 msg:You realise your {name} makes you want to eat more food.
 desc:Makes you need more food
 short-desc:Hunger
+
+name:hunger 2
+type:flag
+subtype:misc ability
+id-type:timed
+code:HUNGER_2
+power:-3
+type-mult:horn:0
+type-mult:bow:0
+type-mult:digger:0
+type-mult:hafted:0
+type-mult:polearm:0
+type-mult:sword:0
+type-mult:mage staff:0
+type-mult:boots:0
+type-mult:gloves:0
+type-mult:helm:0
+type-mult:crown:0
+type-mult:shield:0
+type-mult:cloak:0
+type-mult:soft armour:0
+type-mult:hard armour:0
+type-mult:dragon armour:0
+type-mult:amulet:0
+type-mult:ring:0
+type-mult:light:0
+msg:You realise your {name} makes you want to eat more food.
+desc:Makes you need more food
+short-desc:Hunger

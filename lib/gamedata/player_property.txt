@@ -396,3 +396,8 @@ type:object
 code:HUNGER
 name:Hunger
 desc:You want to eat something.
+
+type:object
+code:HUNGER_2
+name:Hunger
+desc:You want to eat something.
