@@ -344,7 +344,7 @@ type:flag
 subtype:misc ability
 id-type:timed
 code:REGEN
-power:5
+power:7
 msg:You note that your {name} is speeding up your recovery.
 type-mult:horn:2
 type-mult:digger:2
