@@ -327,7 +327,8 @@ void player_regen_hp(struct player *p, struct chunk *c)
     percent /= 100;
 
     /* Various things speed up regeneration */
-    if (player_of_has(p, OF_REGEN)) percent *= 2;
+    if (player_of_has(p, OF_REGEN) || player_of_has(p, PF_RACE_REGEN)) percent *= 2;
+    if (player_of_has(p, PF_RACE_REGEN)) percent += 50;
     if (player_resting_can_regenerate(p)) percent *= 2;
     if (p->timed[TMD_REGEN]) percent *= 3;
 

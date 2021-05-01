@@ -386,3 +386,8 @@ type:player
 code:NO_RECALL
 name:No recall
 desc:You can not recall.
+
+type:player
+code:RACE_REGEN
+name:Natural regeneration
+desc:Your wounds regenerate quickly.
