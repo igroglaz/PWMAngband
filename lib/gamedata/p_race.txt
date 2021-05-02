@@ -1968,12 +1968,9 @@ value:30:RES_DARK[1]
 value:40:RES_NETHER[1]
 value:50:RES_TIME[1]
 value:1:TUNNEL[-10]
-#temp:
-value:1:SPEED[1+-1d30]
-#value:1:SPEED[-1]
 value:1:MOVES[-1+-1d9]
 player-flags:NO_RECALL
-#obj-flag:50:DRAIN_EXP
+obj-flag:50:DRAIN_EXP
 ##########################PASS_WALL forms:
 player-flags:SHAPECHANGE
 shape:1:expulsion
