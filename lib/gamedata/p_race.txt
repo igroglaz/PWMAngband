@@ -637,6 +637,7 @@ value:1:CON[-3+1d24]
 value:1:INFRA[1+1d7]
 value:25:RES_WATER[1]
 value:1:TUNNEL[-1+-1d15]
+obj-flag:30:REGEN
 player-flags:CAN_SWIM
 #temp:
 obj-flag:1:FEATHER
@@ -1767,7 +1768,7 @@ value:1:STR[-1+1d24]
 value:1:INT[-1]
 value:1:WIS[-3]
 value:1:DEX[2]
-value:1:CON[-1]
+value:1:CON[-1+1d24]
 value:1:INFRA[1+1d5]
 value:1:TUNNEL[1+1d24]
 obj-flag:1:PROT_BLIND
@@ -1841,7 +1842,7 @@ skill-device:-3
 skill-save:-2
 skill-stealth:-1
 skill-search:-5
-skill-melee:7
+skill-melee:-1
 skill-shoot:-6
 skill-dig:0
 hitdie:10
