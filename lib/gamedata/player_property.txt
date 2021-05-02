@@ -401,3 +401,8 @@ type:object
 code:HUNGER_2
 name:Hunger
 desc:You want to eat something.
+
+type:player
+code:NO_BOOTS
+name:No boots
+desc:You can not wear footwear.

@@ -1117,6 +1117,12 @@ bool item_tester_hook_wear(struct player *p, const struct object *obj)
     {
         return false;
     }
+    
+    /* NO_BOOTS racial: can't wear boots */
+    if (player_has(p, PF_NO_BOOTS) && slot == slot_by_name(p, "feet"))
+    {
+        return false;
+    }
 
     /* Assume wearable */
     return true;

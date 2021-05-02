@@ -1667,6 +1667,7 @@ player-flags:ZERO_FAIL
 player-flags:KNOW_MUSHROOM
 player-flags:KNOW_ZAPPER
 player-flags:NO_RECALL
+player-flags:NO_BOOTS
 # _ // auto-id
 obj-flag:50:KNOWLEDGE
 value:1:DAM_RED[0+1d15]
