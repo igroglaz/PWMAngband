@@ -102,7 +102,6 @@ value:1:DEX[-4]
 value:1:CON[3]
 obj-flag:1:SUST_STR
 player-flags:RACE_REGEN
-obj-flag:1:HUNGER
 value:1:INFRA[3]
 value:1:DAM_RED[0+1d12]
 value:1:TUNNEL[1+1d20]
@@ -1764,7 +1763,7 @@ history:100
 age:14:4
 height:30:2
 weight:56:3
-value:1:STR[-1]
+value:1:STR[-1+1d24]
 value:1:INT[-1]
 value:1:WIS[-3]
 value:1:DEX[2]
